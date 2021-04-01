@@ -33,4 +33,4 @@
 
 # Nossos
 *.pro.user
-./build/
+build/
