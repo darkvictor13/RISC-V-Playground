@@ -64,9 +64,10 @@ int main(int argc, char **argv)
     MainWindow w;
 
     // Abrindo o tema
-    QFile file("/home/victor/Repos/Trab_2_OAC/RISC-V-Playground/theme.qss");
+    //QFile file("/home/victor/Repos/Trab_2_OAC/RISC-V-Playground/theme.qss");
 
-    //QFile file("theme.qss");
+    // o executavel esta dentro de Trab_2_OAC/build
+    QFile file("../RISC-V-Playground/theme.qss");
     file.open(QFile::ReadOnly);
 
     QString styleSheet = QLatin1String(file.readAll());
