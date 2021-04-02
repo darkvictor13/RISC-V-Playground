@@ -1,3 +1,10 @@
+/**
+  @file memory.h
+  @brief Arquivo que define a classe Memory
+  @author Victor Emanuel Almeida
+  @version 0.1
+*/
+
 #ifndef MEMORY_H
 #define MEMORY_H
 

@@ -12,18 +12,69 @@ A classe \mbox{\hyperlink{classRegisters}{Registers}}\+:
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRegisters_a1feb9d7c536b44cb0e014a706c3e0e99}\label{classRegisters_a1feb9d7c536b44cb0e014a706c3e0e99}} 
-int {\bfseries get} (int position)
-\item 
-\mbox{\Hypertarget{classRegisters_abe9a436b3dff64bc197582421ba4ed96}\label{classRegisters_abe9a436b3dff64bc197582421ba4ed96}} 
-void {\bfseries set} (int position, int value)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}\label{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}} 
+\mbox{\hyperlink{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}{Registers}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa todos os registradores com zero. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRegisters_a1feb9d7c536b44cb0e014a706c3e0e99}{get}} (int position)
+\begin{DoxyCompactList}\small\item\em Lê o valor contido em um registrador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegisters_abe9a436b3dff64bc197582421ba4ed96}{set}} (int position, int value)
+\begin{DoxyCompactList}\small\item\em Escreve o valor passado por referência em um registrador. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 A classe \mbox{\hyperlink{classRegisters}{Registers}}\+: 
 
+Definição na linha 16 do arquivo registers.\+h.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classRegisters_a1feb9d7c536b44cb0e014a706c3e0e99}\label{classRegisters_a1feb9d7c536b44cb0e014a706c3e0e99}} 
+\index{Registers@{Registers}!get@{get}}
+\index{get@{get}!Registers@{Registers}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily int Registers\+::get (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Lê o valor contido em um registrador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em position} & indica o registrador a ser lido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o valor contido no registrador x\mbox{[}position\mbox{]} 
+\end{DoxyReturn}
+
+
+Definição na linha 25 do arquivo registers.\+cpp.
+
+\mbox{\Hypertarget{classRegisters_abe9a436b3dff64bc197582421ba4ed96}\label{classRegisters_abe9a436b3dff64bc197582421ba4ed96}} 
+\index{Registers@{Registers}!set@{set}}
+\index{set@{set}!Registers@{Registers}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Registers\+::set (\begin{DoxyParamCaption}\item[{int}]{position,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Escreve o valor passado por referência em um registrador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em position} & indica o registrador a ser lido \\
+\hline
+{\em value} & valor a ser escrito \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 35 do arquivo registers.\+cpp.
+
+
+
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/registers.\+h\item 
-/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/registers.\+cpp\end{DoxyCompactItemize}
+/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/\mbox{\hyperlink{registers_8h}{registers.\+h}}\item 
+/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/\mbox{\hyperlink{registers_8cpp}{registers.\+cpp}}\end{DoxyCompactItemize}

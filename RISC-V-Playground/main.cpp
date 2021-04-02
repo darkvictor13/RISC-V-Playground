@@ -7,7 +7,7 @@
 
 #include "mainwindow.h"
 #include "instruction.h"
-#include "instruction_type_r.h"
+#include "instructiontyper.h"
 
 #include <QApplication>
 #include <QFile>

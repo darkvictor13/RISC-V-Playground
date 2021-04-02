@@ -18,21 +18,18 @@ Diagrama de hierarquia para Instruction\+:\begin{figure}[H]
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classInstruction_ac0e83542378590a70df7da99dc6d276b}\label{classInstruction_ac0e83542378590a70df7da99dc6d276b}} 
-{\bfseries Instruction} (int op, int rd, int f3, int rs1)
+\mbox{\hyperlink{classInstruction_aebd15229c1651af49dcb203707e7a2d5}{Instruction}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa todos os campos com zero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInstruction_ac0e83542378590a70df7da99dc6d276b}{Instruction}} (int op, int rd, int f3, int rs1)
 \item 
-\mbox{\Hypertarget{classInstruction_a6dd0d4d2200076de35aeb461b4cf03fe}\label{classInstruction_a6dd0d4d2200076de35aeb461b4cf03fe}} 
-int {\bfseries get\+Opcode} ()
-\item 
-\mbox{\Hypertarget{classInstruction_a3e50bba68037cb4b461eb461e20922b1}\label{classInstruction_a3e50bba68037cb4b461eb461e20922b1}} 
-int {\bfseries get\+Reg\+Dest} ()
-\item 
-\mbox{\Hypertarget{classInstruction_a31f04f67ed6c88cf04f7f95dad436bb6}\label{classInstruction_a31f04f67ed6c88cf04f7f95dad436bb6}} 
-int {\bfseries get\+Func3} ()
-\item 
-\mbox{\Hypertarget{classInstruction_ad8692d500e0a921097f1fa6c920bafe0}\label{classInstruction_ad8692d500e0a921097f1fa6c920bafe0}} 
-int {\bfseries get\+Reg\+Src1} ()
-\item 
+int \mbox{\hyperlink{classInstruction_a6dd0d4d2200076de35aeb461b4cf03fe}{get\+Opcode}} ()
+\begin{DoxyCompactList}\small\item\em Obtêm o valor do opcode para alguém fora da classe. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInstruction_a3e50bba68037cb4b461eb461e20922b1}{get\+Reg\+Dest}} ()
+\begin{DoxyCompactList}\small\item\em Obtêm o valor do registrador destino para alguém fora da classe. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInstruction_a31f04f67ed6c88cf04f7f95dad436bb6}{get\+Func3}} ()
+\begin{DoxyCompactList}\small\item\em Obtêm o valor do Funct 3 para alguém fora da classe. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInstruction_ad8692d500e0a921097f1fa6c920bafe0}{get\+Reg\+Src1}} ()
+\begin{DoxyCompactList}\small\item\em Obtêm o valor do registrador sorce 1 para alguém fora da classe. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classInstruction_a01fae104bc1781792d583761b2a0d7c5}\label{classInstruction_a01fae104bc1781792d583761b2a0d7c5}} 
 virtual void {\bfseries print\+Info} ()=0
 \item 
@@ -44,7 +41,122 @@ virtual bool $\ast$ {\bfseries instruction\+To\+Bin} ()=0
 \doxysubsection{Descrição detalhada}
 A classe \mbox{\hyperlink{classInstruction}{Instruction}}\+: Classe abstrata a qual é base para todos os modos de instrução. 
 
+Definição na linha 32 do arquivo instruction.\+h.
+
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classInstruction_aebd15229c1651af49dcb203707e7a2d5}\label{classInstruction_aebd15229c1651af49dcb203707e7a2d5}} 
+\index{Instruction@{Instruction}!Instruction@{Instruction}}
+\index{Instruction@{Instruction}!Instruction@{Instruction}}
+\doxysubsubsection{\texorpdfstring{Instruction()}{Instruction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Instruction\+::\+Instruction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa todos os campos com zero. 
+
+Vamos colocar algo mais detalhado 
+
+Definição na linha 15 do arquivo instruction.\+cpp.
+
+\mbox{\Hypertarget{classInstruction_ac0e83542378590a70df7da99dc6d276b}\label{classInstruction_ac0e83542378590a70df7da99dc6d276b}} 
+\index{Instruction@{Instruction}!Instruction@{Instruction}}
+\index{Instruction@{Instruction}!Instruction@{Instruction}}
+\doxysubsubsection{\texorpdfstring{Instruction()}{Instruction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Instruction\+::\+Instruction (\begin{DoxyParamCaption}\item[{int}]{op,  }\item[{int}]{rd,  }\item[{int}]{f3,  }\item[{int}]{rs1 }\end{DoxyParamCaption})}
+
+Esse é um método provido por conveniência. Ele difere do método acima apenas na lista de argumentos que devem ser utilizados.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em op} & valor do opcode \\
+\hline
+{\em rd} & valor do registrador destino \\
+\hline
+{\em f3} & valor do funct 3 \\
+\hline
+{\em rs1} & valor do registrador fonte 1 \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 31 do arquivo instruction.\+cpp.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classInstruction_a31f04f67ed6c88cf04f7f95dad436bb6}\label{classInstruction_a31f04f67ed6c88cf04f7f95dad436bb6}} 
+\index{Instruction@{Instruction}!getFunc3@{getFunc3}}
+\index{getFunc3@{getFunc3}!Instruction@{Instruction}}
+\doxysubsubsection{\texorpdfstring{getFunc3()}{getFunc3()}}
+{\footnotesize\ttfamily int Instruction\+::get\+Func3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtêm o valor do Funct 3 para alguém fora da classe. 
+
+\begin{DoxyReturn}{Retorna}
+o valor do funct3 
+\end{DoxyReturn}
+
+
+Definição na linha 63 do arquivo instruction.\+cpp.
+
+\mbox{\Hypertarget{classInstruction_a6dd0d4d2200076de35aeb461b4cf03fe}\label{classInstruction_a6dd0d4d2200076de35aeb461b4cf03fe}} 
+\index{Instruction@{Instruction}!getOpcode@{getOpcode}}
+\index{getOpcode@{getOpcode}!Instruction@{Instruction}}
+\doxysubsubsection{\texorpdfstring{getOpcode()}{getOpcode()}}
+{\footnotesize\ttfamily int Instruction\+::get\+Opcode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtêm o valor do opcode para alguém fora da classe. 
+
+\begin{DoxyReturn}{Retorna}
+o valor do opcode 
+\end{DoxyReturn}
+
+
+Definição na linha 43 do arquivo instruction.\+cpp.
+
+\mbox{\Hypertarget{classInstruction_a3e50bba68037cb4b461eb461e20922b1}\label{classInstruction_a3e50bba68037cb4b461eb461e20922b1}} 
+\index{Instruction@{Instruction}!getRegDest@{getRegDest}}
+\index{getRegDest@{getRegDest}!Instruction@{Instruction}}
+\doxysubsubsection{\texorpdfstring{getRegDest()}{getRegDest()}}
+{\footnotesize\ttfamily int Instruction\+::get\+Reg\+Dest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtêm o valor do registrador destino para alguém fora da classe. 
+
+\begin{DoxyReturn}{Retorna}
+o valor do registrador de destino 
+\end{DoxyReturn}
+
+
+Definição na linha 53 do arquivo instruction.\+cpp.
+
+\mbox{\Hypertarget{classInstruction_ad8692d500e0a921097f1fa6c920bafe0}\label{classInstruction_ad8692d500e0a921097f1fa6c920bafe0}} 
+\index{Instruction@{Instruction}!getRegSrc1@{getRegSrc1}}
+\index{getRegSrc1@{getRegSrc1}!Instruction@{Instruction}}
+\doxysubsubsection{\texorpdfstring{getRegSrc1()}{getRegSrc1()}}
+{\footnotesize\ttfamily int Instruction\+::get\+Reg\+Src1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtêm o valor do registrador sorce 1 para alguém fora da classe. 
+
+\begin{DoxyReturn}{Retorna}
+valor do registrador fonte 1 
+\end{DoxyReturn}
+
+
+Definição na linha 72 do arquivo instruction.\+cpp.
+
+
+
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
 /home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/\mbox{\hyperlink{instruction_8h}{instruction.\+h}}\item 
-/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/instruction.\+cpp\end{DoxyCompactItemize}
+/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/\mbox{\hyperlink{instruction_8cpp}{instruction.\+cpp}}\end{DoxyCompactItemize}

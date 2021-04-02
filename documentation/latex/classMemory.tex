@@ -12,18 +12,69 @@ A classe \mbox{\hyperlink{classMemory}{Memory}}\+:
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMemory_a3a4927a2f4811c4dadb2c0abef9a936a}\label{classMemory_a3a4927a2f4811c4dadb2c0abef9a936a}} 
-int {\bfseries get} (int position)
-\item 
-\mbox{\Hypertarget{classMemory_aed9bb5461b59cdf1c25e425f2f037b86}\label{classMemory_aed9bb5461b59cdf1c25e425f2f037b86}} 
-void {\bfseries set} (int position, int value)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classMemory_a585d7bb6fc6f2237bcebf94a86b7dd99}\label{classMemory_a585d7bb6fc6f2237bcebf94a86b7dd99}} 
+\mbox{\hyperlink{classMemory_a585d7bb6fc6f2237bcebf94a86b7dd99}{Memory}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa todas as células de memória com zero. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMemory_a3a4927a2f4811c4dadb2c0abef9a936a}{get}} (int position)
+\begin{DoxyCompactList}\small\item\em Lê o valor contido na memória. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMemory_aed9bb5461b59cdf1c25e425f2f037b86}{set}} (int position, int value)
+\begin{DoxyCompactList}\small\item\em Escreve o valor passado por referência na memória. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 A classe \mbox{\hyperlink{classMemory}{Memory}}\+: 
 
+Definição na linha 16 do arquivo memory.\+h.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classMemory_a3a4927a2f4811c4dadb2c0abef9a936a}\label{classMemory_a3a4927a2f4811c4dadb2c0abef9a936a}} 
+\index{Memory@{Memory}!get@{get}}
+\index{get@{get}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily int Memory\+::get (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+Lê o valor contido na memória. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em position} & indica o registrador a ser lido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o valor contido na memória na posição\mbox{[}position\mbox{]} 
+\end{DoxyReturn}
+
+
+Definição na linha 25 do arquivo memory.\+cpp.
+
+\mbox{\Hypertarget{classMemory_aed9bb5461b59cdf1c25e425f2f037b86}\label{classMemory_aed9bb5461b59cdf1c25e425f2f037b86}} 
+\index{Memory@{Memory}!set@{set}}
+\index{set@{set}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Memory\+::set (\begin{DoxyParamCaption}\item[{int}]{position,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Escreve o valor passado por referência na memória. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em position} & indica o registrador a ser lido \\
+\hline
+{\em value} & valor a ser escrito \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 35 do arquivo memory.\+cpp.
+
+
+
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/memory.\+h\item 
-/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/memory.\+cpp\end{DoxyCompactItemize}
+/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/\mbox{\hyperlink{memory_8h}{memory.\+h}}\item 
+/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/\mbox{\hyperlink{memory_8cpp}{memory.\+cpp}}\end{DoxyCompactItemize}

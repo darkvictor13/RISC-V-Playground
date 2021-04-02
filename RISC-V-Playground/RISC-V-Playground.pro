@@ -11,7 +11,7 @@ CONFIG += c++11
 SOURCES += \
     arithmeticlogicunit.cpp \
     instruction.cpp \
-    instruction_type_r.cpp \
+    instructiontyper.cpp \
     main.cpp \
     mainwindow.cpp \
     memory.cpp \
@@ -22,7 +22,7 @@ SOURCES += \
 HEADERS += \
     arithmeticlogicunit.h \
     instruction.h \
-    instruction_type_r.h \
+    instructiontyper.h \
     mainwindow.h \
     memory.h \
     programcounter.h \

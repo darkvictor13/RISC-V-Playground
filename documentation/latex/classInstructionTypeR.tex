@@ -7,7 +7,7 @@ A classe \mbox{\hyperlink{classInstructionTypeR}{Instruction\+TypeR}}\+:
 
 
 
-{\ttfamily \#include $<$instruction\+\_\+type\+\_\+r.\+h$>$}
+{\ttfamily \#include $<$instructiontyper.\+h$>$}
 
 Diagrama de hierarquia para Instruction\+TypeR\+:\begin{figure}[H]
 \begin{center}
@@ -18,21 +18,102 @@ Diagrama de hierarquia para Instruction\+TypeR\+:\begin{figure}[H]
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classInstructionTypeR_a8efba5e439c5d26a24d08ca7d1310473}\label{classInstructionTypeR_a8efba5e439c5d26a24d08ca7d1310473}} 
-{\bfseries Instruction\+TypeR} (int op, int rd, int f3, int rs1, int rs2, int f7)
+\mbox{\hyperlink{classInstructionTypeR_afaad9b91de47bd226ab3f031e1c01c03}{Instruction\+TypeR}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa todos os valores com zero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInstructionTypeR_a8efba5e439c5d26a24d08ca7d1310473}{Instruction\+TypeR}} (int op, int rd, int f3, int rs1, int rs2, int f7)
 \item 
-\mbox{\Hypertarget{classInstructionTypeR_a95115f1b924af7e429fe54b47bd681b6}\label{classInstructionTypeR_a95115f1b924af7e429fe54b47bd681b6}} 
-bool $\ast$ {\bfseries instruction\+To\+Bin} ()
-\item 
+bool $\ast$ \mbox{\hyperlink{classInstructionTypeR_a95115f1b924af7e429fe54b47bd681b6}{instruction\+To\+Bin}} ()
+\begin{DoxyCompactList}\small\item\em Cria um vetor contendo o valor binário da instrução. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classInstructionTypeR_a69775ded8ced1a8a3ee89118e25746e6}\label{classInstructionTypeR_a69775ded8ced1a8a3ee89118e25746e6}} 
-void {\bfseries print\+Info} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classInstructionTypeR_a69775ded8ced1a8a3ee89118e25746e6}{print\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Imprime na tela todas as informações dos membros da classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 A classe \mbox{\hyperlink{classInstructionTypeR}{Instruction\+TypeR}}\+: 
 
+Definição na linha 19 do arquivo instructiontyper.\+h.
+
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classInstructionTypeR_afaad9b91de47bd226ab3f031e1c01c03}\label{classInstructionTypeR_afaad9b91de47bd226ab3f031e1c01c03}} 
+\index{InstructionTypeR@{InstructionTypeR}!InstructionTypeR@{InstructionTypeR}}
+\index{InstructionTypeR@{InstructionTypeR}!InstructionTypeR@{InstructionTypeR}}
+\doxysubsubsection{\texorpdfstring{InstructionTypeR()}{InstructionTypeR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Instruction\+Type\+R\+::\+Instruction\+TypeR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa todos os valores com zero. 
+
+Explicar mais (Se remover isso quebra) 
+
+Definição na linha 15 do arquivo instructiontyper.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeR_a8efba5e439c5d26a24d08ca7d1310473}\label{classInstructionTypeR_a8efba5e439c5d26a24d08ca7d1310473}} 
+\index{InstructionTypeR@{InstructionTypeR}!InstructionTypeR@{InstructionTypeR}}
+\index{InstructionTypeR@{InstructionTypeR}!InstructionTypeR@{InstructionTypeR}}
+\doxysubsubsection{\texorpdfstring{InstructionTypeR()}{InstructionTypeR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Instruction\+Type\+R\+::\+Instruction\+TypeR (\begin{DoxyParamCaption}\item[{int}]{op,  }\item[{int}]{rd,  }\item[{int}]{f3,  }\item[{int}]{rs1,  }\item[{int}]{rs2,  }\item[{int}]{f7 }\end{DoxyParamCaption})}
+
+Esse é um método provido por conveniência. Ele difere do método acima apenas na lista de argumentos que devem ser utilizados.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em op} & valor do opcode \\
+\hline
+{\em rd} & valor do registrador destino \\
+\hline
+{\em f3} & valor do funct 3 \\
+\hline
+{\em rs1} & valor do registrador fonte 1 \\
+\hline
+{\em rs2} & valor do registrador fonte 1 \\
+\hline
+{\em f7} & valor do funct 7 \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 31 do arquivo instructiontyper.\+cpp.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classInstructionTypeR_a95115f1b924af7e429fe54b47bd681b6}\label{classInstructionTypeR_a95115f1b924af7e429fe54b47bd681b6}} 
+\index{InstructionTypeR@{InstructionTypeR}!instructionToBin@{instructionToBin}}
+\index{instructionToBin@{instructionToBin}!InstructionTypeR@{InstructionTypeR}}
+\doxysubsubsection{\texorpdfstring{instructionToBin()}{instructionToBin()}}
+{\footnotesize\ttfamily bool $\ast$ Instruction\+Type\+R\+::instruction\+To\+Bin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cria um vetor contendo o valor binário da instrução. 
+
+Dá para escrever mais aqui \begin{DoxyWarning}{Aviso}
+o vetor dinâmico de valores booleanos deve ser desalocado por quem chamou. 
+\end{DoxyWarning}
+\begin{DoxyPrecond}{Pré-\/condição}
+Todos os membros da classe devem estar inicializados. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Pós-\/condição}
+cria o vetor dinâmico de valores booleanos, contendo o valor binário da instrução. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Retorna}
+vetor de valores booleanos, contendo o valor binário da instrução. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classInstruction}{Instruction}}.
+
+
+
+Definição na linha 46 do arquivo instructiontyper.\+cpp.
+
+
+
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/instruction\+\_\+type\+\_\+r.\+h\item 
-/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/instruction\+\_\+type\+\_\+r.\+cpp\end{DoxyCompactItemize}
+/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/\mbox{\hyperlink{instructiontyper_8h}{instructiontyper.\+h}}\item 
+/home/victor/\+Repos/\+Trab\+\_\+2\+\_\+\+OAC/\+RISC-\/\+V-\/\+Playground/\mbox{\hyperlink{instructiontyper_8cpp}{instructiontyper.\+cpp}}\end{DoxyCompactItemize}
