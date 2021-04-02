@@ -1,3 +1,10 @@
+/**
+  @file instruction.h
+  @brief Arquivo que define a classe Instruction
+  @author Victor Emanuel Almeida
+  @version 0.1
+*/
+
 #ifndef INSTRUCTION_H
 #define INSTRUCTION_H
 
@@ -18,6 +25,10 @@
 
 using namespace std;
 
+/**
+ * @brief A classe Instruction: Classe abstrata a qual é base para
+ * todos os modos de instrução
+ */
 class Instruction
 {
 private:

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mainwindow_7',['MainWindow',['../classMainWindow.html',1,'']]]
+  ['instruction_12',['Instruction',['../classInstruction.html',1,'']]],
+  ['instructiontyper_13',['InstructionTypeR',['../classInstructionTypeR.html',1,'']]]
 ];

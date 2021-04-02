@@ -1,19 +1,19 @@
 #include "instruction_type_r.h"
 
-Instruction_Type_R::Instruction_Type_R() : Instruction()
+InstructionTypeR::InstructionTypeR() : Instruction()
 {
     this->funct_7   = 0;
     this->reg_src_2 = 0;
 }
 
-Instruction_Type_R::Instruction_Type_R(int op, int rd, int f3, int rs1, int rs2, int f7)
+InstructionTypeR::InstructionTypeR(int op, int rd, int f3, int rs1, int rs2, int f7)
     : Instruction(op, rd, f3, rs1)
 {
     this->funct_7   = f7;
     this->reg_src_2 = rs2;
 }
 
-bool * Instruction_Type_R::instructionToBin()
+bool * InstructionTypeR::instructionToBin()
 {
    bool *resp = (bool*)malloc(32 * sizeof(bool));
    *resp = {0};
@@ -53,7 +53,7 @@ bool * Instruction_Type_R::instructionToBin()
    return resp;
 }
 
-void Instruction_Type_R::printInfo()
+void InstructionTypeR::printInfo()
 {
     cout << "So p ver se compila\n\n";
     cout << "Opcode              = " << this->getOpcode()  << endl;

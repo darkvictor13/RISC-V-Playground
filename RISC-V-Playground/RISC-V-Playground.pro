@@ -9,15 +9,25 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arithmeticlogicunit.cpp \
     instruction.cpp \
     instruction_type_r.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    memory.cpp \
+    programcounter.cpp \
+    registers.cpp \
+    simulator.cpp
 
 HEADERS += \
+    arithmeticlogicunit.h \
     instruction.h \
     instruction_type_r.h \
-    mainwindow.h
+    mainwindow.h \
+    memory.h \
+    programcounter.h \
+    registers.h \
+    simulator.h
 
 FORMS += \
     mainwindow.ui
