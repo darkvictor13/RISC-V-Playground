@@ -18,8 +18,10 @@ private:
     Memory memory;
     ProgramCounter program_counter;
     Registers registers;
+
 public:
     Simulator();
+    ~Simulator();
 };
 
 #endif // SIMULATOR_H
