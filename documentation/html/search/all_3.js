@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['main_2ecpp_16',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['mainwindow_17',['MainWindow',['../classMainWindow.html',1,'']]],
-  ['memory_18',['Memory',['../classMemory.html',1,'Memory'],['../classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99',1,'Memory::Memory()']]],
-  ['memory_2ecpp_19',['memory.cpp',['../memory_8cpp.html',1,'']]],
-  ['memory_2eh_20',['memory.h',['../memory_8h.html',1,'']]]
+  ['get_7',['get',['../classMemory.html#a3a4927a2f4811c4dadb2c0abef9a936a',1,'Memory::get()'],['../classRegisters.html#a1feb9d7c536b44cb0e014a706c3e0e99',1,'Registers::get()']]],
+  ['getfunc3_8',['getFunc3',['../classInstruction.html#a31f04f67ed6c88cf04f7f95dad436bb6',1,'Instruction']]],
+  ['getopcode_9',['getOpcode',['../classInstruction.html#a6dd0d4d2200076de35aeb461b4cf03fe',1,'Instruction']]],
+  ['getregdest_10',['getRegDest',['../classInstruction.html#a3e50bba68037cb4b461eb461e20922b1',1,'Instruction']]],
+  ['getregsrc1_11',['getRegSrc1',['../classInstruction.html#ad8692d500e0a921097f1fa6c920bafe0',1,'Instruction']]]
 ];

@@ -47,8 +47,18 @@
 
   Dentro da documentação de cada método e classe possui o nome do author
 */
-int main(int argc, char *argv[])
+
+/**
+ * @brief Função principal do programa, aquela que chama todas as demais
+ * @param argc quantidade de argumentos passados pelo usuário
+ * @param argv matriz de char, com argc linhas, contendo cada um dos argumentos
+ * passados pelo usuário
+ * @return O código lançado pela QApplication, 0 se ocorreu tudo certo
+ */
+int main(int argc, char **argv)
 {
+    InstructionTypeR t(51, 5, 0, 0, 0, 0);
+    t.printInfo();
     QApplication a(argc, argv);
 
     MainWindow w;

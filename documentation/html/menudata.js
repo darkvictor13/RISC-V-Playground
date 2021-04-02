@@ -32,4 +32,8 @@ var menudata={children:[
 {text:"Todos",url:"functions.html"},
 {text:"Funções",url:"functions_func.html"}]}]},
 {text:"Arquivos",url:"files.html",children:[
-{text:"Lista de Arquivos",url:"files.html"}]}]}
+{text:"Lista de Arquivos",url:"files.html"},
+{text:"Membros dos Arquivos",url:"globals.html",children:[
+{text:"Todos",url:"globals.html"},
+{text:"Funções",url:"globals_func.html"},
+{text:"Definições e Macros",url:"globals_defs.html"}]}]}]}

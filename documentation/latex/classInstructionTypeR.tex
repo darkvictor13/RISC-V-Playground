@@ -2,7 +2,7 @@
 \label{classInstructionTypeR}\index{InstructionTypeR@{InstructionTypeR}}
 
 
-A classe \mbox{\hyperlink{classInstructionTypeR}{Instruction\+TypeR}}\+:  
+A classe \mbox{\hyperlink{classInstructionTypeR}{Instruction\+TypeR}}\+: Classe que tem como objetivo guardar e operar sobre os valores de uma instrução do tipo R.  
 
 
 
@@ -19,20 +19,23 @@ Diagrama de hierarquia para Instruction\+TypeR\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classInstructionTypeR_afaad9b91de47bd226ab3f031e1c01c03}{Instruction\+TypeR}} ()
-\begin{DoxyCompactList}\small\item\em Inicializa todos os valores com zero. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classInstructionTypeR}{Instruction\+TypeR}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classInstructionTypeR_a8efba5e439c5d26a24d08ca7d1310473}{Instruction\+TypeR}} (int op, int rd, int f3, int rs1, int rs2, int f7)
 \item 
 bool $\ast$ \mbox{\hyperlink{classInstructionTypeR_a95115f1b924af7e429fe54b47bd681b6}{instruction\+To\+Bin}} ()
 \begin{DoxyCompactList}\small\item\em Cria um vetor contendo o valor binário da instrução. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classInstructionTypeR_a69775ded8ced1a8a3ee89118e25746e6}\label{classInstructionTypeR_a69775ded8ced1a8a3ee89118e25746e6}} 
 void \mbox{\hyperlink{classInstructionTypeR_a69775ded8ced1a8a3ee89118e25746e6}{print\+Info}} ()
-\begin{DoxyCompactList}\small\item\em Imprime na tela todas as informações dos membros da classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Imprime na tela todas as informações dos membros da classe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInstructionTypeR_aa4cbc97cc8b03b7aa47252489482fdc3}\label{classInstructionTypeR_aa4cbc97cc8b03b7aa47252489482fdc3}} 
+\mbox{\hyperlink{classInstructionTypeR_aa4cbc97cc8b03b7aa47252489482fdc3}{$\sim$\+Instruction\+TypeR}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classInstructionTypeR}{Instruction\+TypeR}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-A classe \mbox{\hyperlink{classInstructionTypeR}{Instruction\+TypeR}}\+: 
+A classe \mbox{\hyperlink{classInstructionTypeR}{Instruction\+TypeR}}\+: Classe que tem como objetivo guardar e operar sobre os valores de uma instrução do tipo R. 
 
-Definição na linha 19 do arquivo instructiontyper.\+h.
+Definição na linha 29 do arquivo instructiontyper.\+h.
 
 
 
@@ -45,9 +48,9 @@ Definição na linha 19 do arquivo instructiontyper.\+h.
 
 
 
-Inicializa todos os valores com zero. 
+Construtor da classe \mbox{\hyperlink{classInstructionTypeR}{Instruction\+TypeR}}. 
 
-Explicar mais (Se remover isso quebra) 
+Inicializa todos os campos com zero 
 
 Definição na linha 15 do arquivo instructiontyper.\+cpp.
 
@@ -76,7 +79,7 @@ Esse é um método provido por conveniência. Ele difere do método acima apenas
 \end{DoxyParams}
 
 
-Definição na linha 31 do arquivo instructiontyper.\+cpp.
+Definição na linha 32 do arquivo instructiontyper.\+cpp.
 
 
 
@@ -105,11 +108,11 @@ vetor de valores booleanos, contendo o valor binário da instrução.
 \end{DoxyReturn}
 
 
-Implementa \mbox{\hyperlink{classInstruction}{Instruction}}.
+Implementa \mbox{\hyperlink{classInstruction_ac2dcbcdebf7a0351b20befaf3a202885}{Instruction}}.
 
 
 
-Definição na linha 46 do arquivo instructiontyper.\+cpp.
+Definição na linha 48 do arquivo instructiontyper.\+cpp.
 
 
 

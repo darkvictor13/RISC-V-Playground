@@ -76,29 +76,31 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99">   13</a></span>&#160;<a class="code" href="classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99">Memory::Memory</a>()</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; MEMORY_SIZE; i++) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        vector[i] = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classMemory.html#a3a4927a2f4811c4dadb2c0abef9a936a">   25</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classMemory.html#a3a4927a2f4811c4dadb2c0abef9a936a">Memory::get</a>(<span class="keywordtype">int</span> position)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> this-&gt;vector[position];</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classMemory.html#aed9bb5461b59cdf1c25e425f2f037b86">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMemory.html#aed9bb5461b59cdf1c25e425f2f037b86">Memory::set</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> value)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    this-&gt;vector[position] = value;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;Memory::~Memory()</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="ttc" id="aclassMemory_html_a3a4927a2f4811c4dadb2c0abef9a936a"><div class="ttname"><a href="classMemory.html#a3a4927a2f4811c4dadb2c0abef9a936a">Memory::get</a></div><div class="ttdeci">int get(int position)</div><div class="ttdoc">Lê o valor contido na memória.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00025">memory.cpp:25</a></div></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Destruindo a classe memória&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="memory_8h.html#a5ad3f75a4e38fd9bbed917c71ca4e9e0">MEMORY_SIZE</a>; i++) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        vector[i] = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classMemory.html#a3a4927a2f4811c4dadb2c0abef9a936a">   26</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classMemory.html#a3a4927a2f4811c4dadb2c0abef9a936a">Memory::get</a>(<span class="keywordtype">int</span> position)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">return</span> this-&gt;vector[position];</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classMemory.html#aed9bb5461b59cdf1c25e425f2f037b86">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMemory.html#aed9bb5461b59cdf1c25e425f2f037b86">Memory::set</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> value)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    this-&gt;vector[position] = value;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;Memory::~Memory()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Destruindo a classe memória&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="aclassMemory_html_a3a4927a2f4811c4dadb2c0abef9a936a"><div class="ttname"><a href="classMemory.html#a3a4927a2f4811c4dadb2c0abef9a936a">Memory::get</a></div><div class="ttdeci">int get(int position)</div><div class="ttdoc">Lê o valor contido na memória.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00026">memory.cpp:26</a></div></div>
 <div class="ttc" id="aclassMemory_html_a585d7bb6fc6f2237bcebf94a86b7dd99"><div class="ttname"><a href="classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99">Memory::Memory</a></div><div class="ttdeci">Memory()</div><div class="ttdoc">Inicializa todas as células de memória com zero.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00013">memory.cpp:13</a></div></div>
-<div class="ttc" id="aclassMemory_html_aed9bb5461b59cdf1c25e425f2f037b86"><div class="ttname"><a href="classMemory.html#aed9bb5461b59cdf1c25e425f2f037b86">Memory::set</a></div><div class="ttdeci">void set(int position, int value)</div><div class="ttdoc">Escreve o valor passado por referência na memória.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00035">memory.cpp:35</a></div></div>
+<div class="ttc" id="aclassMemory_html_aed9bb5461b59cdf1c25e425f2f037b86"><div class="ttname"><a href="classMemory.html#aed9bb5461b59cdf1c25e425f2f037b86">Memory::set</a></div><div class="ttdeci">void set(int position, int value)</div><div class="ttdoc">Escreve o valor passado por referência na memória.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00036">memory.cpp:36</a></div></div>
 <div class="ttc" id="amemory_8h_html"><div class="ttname"><a href="memory_8h.html">memory.h</a></div><div class="ttdoc">Arquivo que define a classe Memory.</div></div>
+<div class="ttc" id="amemory_8h_html_a5ad3f75a4e38fd9bbed917c71ca4e9e0"><div class="ttname"><a href="memory_8h.html#a5ad3f75a4e38fd9bbed917c71ca4e9e0">MEMORY_SIZE</a></div><div class="ttdeci">#define MEMORY_SIZE</div><div class="ttdoc">O Tamanho total do vetor que representa a memória.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00018">memory.h:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

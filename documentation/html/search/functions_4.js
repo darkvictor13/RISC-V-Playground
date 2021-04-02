@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['registers_65',['Registers',['../classRegisters.html#a3b172e33c0ee567e8d5f6a0e6729f5f3',1,'Registers']]]
+  ['main_87',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cpp']]],
+  ['mainwindow_88',['MainWindow',['../classMainWindow.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow']]],
+  ['memory_89',['Memory',['../classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99',1,'Memory']]]
 ];

@@ -16,7 +16,8 @@
 #include "registers.h"
 
 /**
- * @brief A classe Simulator:
+ * @brief A classe Simulator: Classe que tem como objetivo
+ * juntar todos os componentes do simulador.
  */
 class Simulator
 {

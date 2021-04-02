@@ -12,6 +12,7 @@
  */
 Registers::Registers()
 {
+    cout << "Criando classe registradores" << endl;
     for(int i = 0; i < QUANTITY_REGISTERS; i++) {
         vector[i] = 0;
     }
@@ -34,10 +35,17 @@ int Registers::get(int position)
  */
 void Registers::set(int position, int value)
 {
-    this->vector[position] = value;
+    if (position) {
+        this->vector[position] = value;
+    }else {
+        cout << "É impossível escrever no registrador x0, ele sempre armazena o valor 0" << endl;
+    }
 }
 
+/**
+ * @brief Construtor da classe Registers
+ */
 Registers::~Registers()
 {
-
+    cout << "Destruindo classe registradores" << endl;
 }

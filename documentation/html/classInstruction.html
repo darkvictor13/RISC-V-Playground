@@ -81,14 +81,14 @@ Diagrama de hierarquia para Instruction:</div>
  <div class="center">
   <img src="classInstruction.png" usemap="#Instruction_map" alt=""/>
   <map id="Instruction_map" name="Instruction_map">
-<area href="classInstructionTypeR.html" title="A classe InstructionTypeR:" alt="InstructionTypeR" shape="rect" coords="0,56,106,80"/>
+<area href="classInstructionTypeR.html" title="A classe InstructionTypeR: Classe que tem como objetivo guardar e operar sobre os valores de uma inst..." alt="InstructionTypeR" shape="rect" coords="0,56,106,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
 <tr class="memitem:aebd15229c1651af49dcb203707e7a2d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInstruction.html#aebd15229c1651af49dcb203707e7a2d5">Instruction</a> ()</td></tr>
-<tr class="memdesc:aebd15229c1651af49dcb203707e7a2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa todos os campos com zero.  <a href="classInstruction.html#aebd15229c1651af49dcb203707e7a2d5">Mais...</a><br /></td></tr>
+<tr class="memdesc:aebd15229c1651af49dcb203707e7a2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="classInstruction.html" title="A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução.">Instruction</a>.  <a href="classInstruction.html#aebd15229c1651af49dcb203707e7a2d5">Mais...</a><br /></td></tr>
 <tr class="separator:aebd15229c1651af49dcb203707e7a2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0e83542378590a70df7da99dc6d276b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInstruction.html#ac0e83542378590a70df7da99dc6d276b">Instruction</a> (int op, int rd, int f3, int rs1)</td></tr>
 <tr class="separator:ac0e83542378590a70df7da99dc6d276b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,17 +104,25 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:ad8692d500e0a921097f1fa6c920bafe0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInstruction.html#ad8692d500e0a921097f1fa6c920bafe0">getRegSrc1</a> ()</td></tr>
 <tr class="memdesc:ad8692d500e0a921097f1fa6c920bafe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtêm o valor do registrador sorce 1 para alguém fora da classe.  <a href="classInstruction.html#ad8692d500e0a921097f1fa6c920bafe0">Mais...</a><br /></td></tr>
 <tr class="separator:ad8692d500e0a921097f1fa6c920bafe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482023c73280fb7a6caef11f63bccb70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInstruction.html#a482023c73280fb7a6caef11f63bccb70">dafaultPrintInfo</a> ()</td></tr>
+<tr class="memdesc:a482023c73280fb7a6caef11f63bccb70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime todas as informações contidas na classe base.  <a href="classInstruction.html#a482023c73280fb7a6caef11f63bccb70">Mais...</a><br /></td></tr>
+<tr class="separator:a482023c73280fb7a6caef11f63bccb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01fae104bc1781792d583761b2a0d7c5"><td class="memItemLeft" align="right" valign="top"><a id="a01fae104bc1781792d583761b2a0d7c5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>printInfo</b> ()=0</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInstruction.html#a01fae104bc1781792d583761b2a0d7c5">printInfo</a> ()=0</td></tr>
+<tr class="memdesc:a01fae104bc1781792d583761b2a0d7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">printInfo: uma função virtual pura que permite que essa classe seja abstrata <br /></td></tr>
 <tr class="separator:a01fae104bc1781792d583761b2a0d7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2dcbcdebf7a0351b20befaf3a202885"><td class="memItemLeft" align="right" valign="top"><a id="ac2dcbcdebf7a0351b20befaf3a202885"></a>
-virtual bool *&#160;</td><td class="memItemRight" valign="bottom"><b>instructionToBin</b> ()=0</td></tr>
+<tr class="memitem:ac2dcbcdebf7a0351b20befaf3a202885"><td class="memItemLeft" align="right" valign="top">virtual bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885">instructionToBin</a> ()=0</td></tr>
+<tr class="memdesc:ac2dcbcdebf7a0351b20befaf3a202885"><td class="mdescLeft">&#160;</td><td class="mdescRight">instructionToBin: uma função virtual pura  <a href="classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885">Mais...</a><br /></td></tr>
 <tr class="separator:ac2dcbcdebf7a0351b20befaf3a202885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26eb634480beff1ad7a20235c11f521d"><td class="memItemLeft" align="right" valign="top"><a id="a26eb634480beff1ad7a20235c11f521d"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInstruction.html#a26eb634480beff1ad7a20235c11f521d">~Instruction</a> ()</td></tr>
+<tr class="memdesc:a26eb634480beff1ad7a20235c11f521d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe <a class="el" href="classInstruction.html" title="A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução.">Instruction</a>. <br /></td></tr>
+<tr class="separator:a26eb634480beff1ad7a20235c11f521d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>A classe <a class="el" href="classInstruction.html" title="A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução.">Instruction</a>: Classe abstrata a qual é base para todos os modos de instrução. </p>
 
-<p class="definition">Definição na linha <a class="el" href="instruction_8h_source.html#l00032">32</a> do arquivo <a class="el" href="instruction_8h_source.html">instruction.h</a>.</p>
+<p class="definition">Definição na linha <a class="el" href="instruction_8h_source.html#l00054">54</a> do arquivo <a class="el" href="instruction_8h_source.html">instruction.h</a>.</p>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
 <a id="aebd15229c1651af49dcb203707e7a2d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebd15229c1651af49dcb203707e7a2d5">&#9670;&nbsp;</a></span>Instruction() <span class="overload">[1/2]</span></h2>
@@ -131,8 +139,8 @@ virtual bool *&#160;</td><td class="memItemRight" valign="bottom"><b>instruction
       </table>
 </div><div class="memdoc">
 
-<p>Inicializa todos os campos com zero. </p>
-<p>Vamos colocar algo mais detalhado </p>
+<p>Construtor da classe <a class="el" href="classInstruction.html" title="A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução.">Instruction</a>. </p>
+<p>Inicializa todos os campos com zero </p>
 
 <p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00015">15</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
 
@@ -186,11 +194,33 @@ virtual bool *&#160;</td><td class="memItemRight" valign="bottom"><b>instruction
   </dd>
 </dl>
 
-<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00031">31</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00032">32</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Funções membros</h2>
+<a id="a482023c73280fb7a6caef11f63bccb70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482023c73280fb7a6caef11f63bccb70">&#9670;&nbsp;</a></span>dafaultPrintInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Instruction::dafaultPrintInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime todas as informações contidas na classe base. </p>
+<p>Essas informações devem ser usadas para imprimir dentro das classes derivadas adicionando as informações dos memvros específicos de cada classe </p>
+
+<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00085">85</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a31f04f67ed6c88cf04f7f95dad436bb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31f04f67ed6c88cf04f7f95dad436bb6">&#9670;&nbsp;</a></span>getFunc3()</h2>
 
@@ -209,7 +239,7 @@ virtual bool *&#160;</td><td class="memItemRight" valign="bottom"><b>instruction
 <p>Obtêm o valor do Funct 3 para alguém fora da classe. </p>
 <dl class="section return"><dt>Retorna</dt><dd>o valor do funct3 </dd></dl>
 
-<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00063">63</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00065">65</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
 
 </div>
 </div>
@@ -231,7 +261,7 @@ virtual bool *&#160;</td><td class="memItemRight" valign="bottom"><b>instruction
 <p>Obtêm o valor do opcode para alguém fora da classe. </p>
 <dl class="section return"><dt>Retorna</dt><dd>o valor do opcode </dd></dl>
 
-<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00043">43</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00045">45</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +283,7 @@ virtual bool *&#160;</td><td class="memItemRight" valign="bottom"><b>instruction
 <p>Obtêm o valor do registrador destino para alguém fora da classe. </p>
 <dl class="section return"><dt>Retorna</dt><dd>o valor do registrador de destino </dd></dl>
 
-<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00053">53</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00055">55</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +305,37 @@ virtual bool *&#160;</td><td class="memItemRight" valign="bottom"><b>instruction
 <p>Obtêm o valor do registrador sorce 1 para alguém fora da classe. </p>
 <dl class="section return"><dt>Retorna</dt><dd>valor do registrador fonte 1 </dd></dl>
 
-<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00072">72</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+<p class="definition">Definição na linha <a class="el" href="instruction_8cpp_source.html#l00074">74</a> do arquivo <a class="el" href="instruction_8cpp_source.html">instruction.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2dcbcdebf7a0351b20befaf3a202885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2dcbcdebf7a0351b20befaf3a202885">&#9670;&nbsp;</a></span>instructionToBin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool* Instruction::instructionToBin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>instructionToBin: uma função virtual pura </p>
+<dl class="section return"><dt>Retorna</dt><dd>nas classes derivadas deve ser um vetor de booleanos que representa o valor da instrução em binário </dd></dl>
+
+<p>Implementado por <a class="el" href="classInstructionTypeR.html#a95115f1b924af7e429fe54b47bd681b6">InstructionTypeR</a>.</p>
 
 </div>
 </div>

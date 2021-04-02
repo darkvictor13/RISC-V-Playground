@@ -7,7 +7,18 @@
 
 #include "simulator.h"
 
+/**
+ * @brief Construtor da classe Simulator
+ */
 Simulator::Simulator()
 {
+    cout << "Criando classe simulador" << endl;
+}
 
+/**
+ * @brief Destrutor da classe Simulator
+ */
+Simulator::~Simulator()
+{
+    cout << "Destruindo classe simulador" << endl;
 }

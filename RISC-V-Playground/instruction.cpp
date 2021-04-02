@@ -8,12 +8,13 @@
 #include "instruction.h"
 
 /**
- * @brief Inicializa todos os campos com zero
+ * @brief Construtor da classe Instruction
  *
- * Vamos colocar algo mais detalhado
+ * Inicializa todos os campos com zero
  */
 Instruction::Instruction()
 {
+    cout << "Inicializando uma instrução, com zeros" << endl;
     this->opcode    = 0;
     this->reg_dest  = 0;
     this->funct_3   = 0;
@@ -30,6 +31,7 @@ Instruction::Instruction()
  */
 Instruction::Instruction(int op, int rd, int f3, int rs1)
 {
+    cout << "Inicializando uma instrução com parâmetros" << endl;
     this->opcode    = op;
     this->reg_dest  = rd;
     this->funct_3   = f3;
@@ -72,4 +74,26 @@ int Instruction::getFunc3()
 int Instruction::getRegSrc1()
 {
     return this->reg_src_1;
+}
+
+/**
+ * @brief Imprime todas as informações contidas na classe base
+ *
+ * Essas informações devem ser usadas para imprimir dentro das classes derivadas
+ * adicionando as informações dos memvros específicos de cada classe
+ */
+void Instruction::dafaultPrintInfo()
+{
+    cout << "Opcode              = "  << this->getOpcode()  << endl;
+    cout << "Registrador destino = x" << this->getRegDest() << endl;
+    cout << "Funct 3             = "  << this->getFunc3()   << endl;
+    cout << "Registrador sorce 1 = x" << this->getRegSrc1() << endl;
+}
+
+/**
+ * @brief Destrutor da classe Instruction
+ */
+Instruction::~Instruction()
+{
+    cout << "Destruindo a instrução base" << endl;
 }

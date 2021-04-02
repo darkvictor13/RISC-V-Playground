@@ -11,19 +11,41 @@
 #include <iostream>
 #include <cstdlib>
 
+using namespace std;
+
 #define OP_SIZE  7
 #define RD_SIZE  5
 #define F3_SIZE  3
 #define RS1_SIZE 5
 
+/**
+  * @brief Indica o indice do vetor binário em que inicia o
+  * a informação de qual é o opcode
+  */
 #define OP_BEGIN  0
+
+/**
+  * @brief Indica o indice do vetor binário em que inicia o
+  * a informação de qual é o registrador destino
+  */
 #define RD_BEGIN  7
+
+/**
+  * @brief Indica o indice do vetor binário em que inicia o
+  * a informação de qual é o funct 3
+  */
 #define F3_BEGIN  12
+
+/**
+  * @brief Indica o indice do vetor binário em que inicia o
+  * a informação de qual é o registrador sorce 1
+  */
 #define RS1_BEGIN 15
 
+/**
+  * @brief Indica o tamanho total da instrução
+  */
 #define INSTRUCTION_SIZE 32
-
-using namespace std;
 
 /**
  * @brief A classe Instruction: Classe abstrata a qual é base para
@@ -45,8 +67,22 @@ public:
     int getFunc3();
     int getRegSrc1();
 
+    void dafaultPrintInfo();
+
+    /**
+     * @brief printInfo: uma função virtual pura que permite
+     * que essa classe seja abstrata
+     */
     virtual void printInfo() = 0;
+
+    /**
+     * @brief instructionToBin: uma função virtual pura
+     * @return nas classes derivadas deve ser um vetor de booleanos
+     * que representa o valor da instrução em binário
+     */
     virtual bool * instructionToBin() = 0;
+
+    virtual ~Instruction();
 };
 
 #endif // INSTRUCTION_H

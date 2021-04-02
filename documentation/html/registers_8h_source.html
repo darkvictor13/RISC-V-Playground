@@ -75,27 +75,29 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef REGISTERS_H</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define REGISTERS_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define QUANTITY_REGISTERS 32</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classRegisters.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRegisters.html">Registers</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> vector[QUANTITY_REGISTERS];</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classRegisters.html#a3b172e33c0ee567e8d5f6a0e6729f5f3">Registers</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classRegisters.html#a1feb9d7c536b44cb0e014a706c3e0e99">get</a>(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegisters.html#abe9a436b3dff64bc197582421ba4ed96">set</a>(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ~<a class="code" href="classRegisters.html">Registers</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// REGISTERS_H</span></div>
-<div class="ttc" id="aclassRegisters_html"><div class="ttname"><a href="classRegisters.html">Registers</a></div><div class="ttdoc">A classe Registers:</div><div class="ttdef"><b>Definition:</b> <a href="registers_8h_source.html#l00016">registers.h:17</a></div></div>
-<div class="ttc" id="aclassRegisters_html_a1feb9d7c536b44cb0e014a706c3e0e99"><div class="ttname"><a href="classRegisters.html#a1feb9d7c536b44cb0e014a706c3e0e99">Registers::get</a></div><div class="ttdeci">int get(int position)</div><div class="ttdoc">Lê o valor contido em um registrador.</div><div class="ttdef"><b>Definition:</b> <a href="registers_8cpp_source.html#l00025">registers.cpp:25</a></div></div>
-<div class="ttc" id="aclassRegisters_html_a3b172e33c0ee567e8d5f6a0e6729f5f3"><div class="ttname"><a href="classRegisters.html#a3b172e33c0ee567e8d5f6a0e6729f5f3">Registers::Registers</a></div><div class="ttdeci">Registers()</div><div class="ttdoc">Inicializa todos os registradores com zero.</div><div class="ttdef"><b>Definition:</b> <a href="registers_8cpp_source.html#l00013">registers.cpp:13</a></div></div>
-<div class="ttc" id="aclassRegisters_html_abe9a436b3dff64bc197582421ba4ed96"><div class="ttname"><a href="classRegisters.html#abe9a436b3dff64bc197582421ba4ed96">Registers::set</a></div><div class="ttdeci">void set(int position, int value)</div><div class="ttdoc">Escreve o valor passado por referência em um registrador.</div><div class="ttdef"><b>Definition:</b> <a href="registers_8cpp_source.html#l00035">registers.cpp:35</a></div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="registers_8h.html#a8cbc120eedf34962974e96c4830af2e7">   18</a></span>&#160;<span class="preprocessor">#define QUANTITY_REGISTERS 32</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classRegisters.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRegisters.html">Registers</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> vector[<a class="code" href="registers_8h.html#a8cbc120eedf34962974e96c4830af2e7">QUANTITY_REGISTERS</a>];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classRegisters.html">Registers</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> get(<span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> set(<span class="keywordtype">int</span> position, <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ~<a class="code" href="classRegisters.html">Registers</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// REGISTERS_H</span></div>
+<div class="ttc" id="aclassRegisters_html"><div class="ttname"><a href="classRegisters.html">Registers</a></div><div class="ttdoc">A classe Registers: Classe que tem como objetivo simular o comportamento dos registradores,...</div><div class="ttdef"><b>Definition:</b> <a href="registers_8h_source.html#l00024">registers.h:25</a></div></div>
+<div class="ttc" id="aregisters_8h_html_a8cbc120eedf34962974e96c4830af2e7"><div class="ttname"><a href="registers_8h.html#a8cbc120eedf34962974e96c4830af2e7">QUANTITY_REGISTERS</a></div><div class="ttdeci">#define QUANTITY_REGISTERS</div><div class="ttdoc">O Tamanho total do vetor que representa os registradores,.</div><div class="ttdef"><b>Definition:</b> <a href="registers_8h_source.html#l00018">registers.h:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

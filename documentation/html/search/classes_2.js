@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mainwindow_35',['MainWindow',['../classMainWindow.html',1,'']]],
-  ['memory_36',['Memory',['../classMemory.html',1,'']]]
+  ['mainwindow_55',['MainWindow',['../classMainWindow.html',1,'']]],
+  ['memory_56',['Memory',['../classMemory.html',1,'']]]
 ];

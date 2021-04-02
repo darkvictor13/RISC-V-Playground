@@ -8,12 +8,13 @@
 #include "instructiontyper.h"
 
 /**
- * @brief Inicializa todos os valores com zero
+ * @brief Construtor da classe InstructionTypeR
  *
- * Explicar mais (Se remover isso quebra)
+ * Inicializa todos os campos com zero
  */
 InstructionTypeR::InstructionTypeR() : Instruction()
 {
+    cout << "Inicializando uma instrução do TIPO R, com zeros" << endl;
     this->funct_7   = 0;
     this->reg_src_2 = 0;
 }
@@ -31,6 +32,7 @@ InstructionTypeR::InstructionTypeR() : Instruction()
 InstructionTypeR::InstructionTypeR(int op, int rd, int f3, int rs1, int rs2, int f7)
     : Instruction(op, rd, f3, rs1)
 {
+    cout << "Inicializando uma instrução do TIPO R, com parâmetros" << endl;
     this->funct_7   = f7;
     this->reg_src_2 = rs2;
 }
@@ -45,7 +47,7 @@ InstructionTypeR::InstructionTypeR(int op, int rd, int f3, int rs1, int rs2, int
  */
 bool * InstructionTypeR::instructionToBin()
 {
-   bool *resp = (bool*)malloc(32 * sizeof(bool));
+   bool *resp = (bool*)malloc(INSTRUCTION_SIZE * sizeof(bool));
    *resp = {0};
 
    int casa_atual;
@@ -88,11 +90,15 @@ bool * InstructionTypeR::instructionToBin()
  */
 void InstructionTypeR::printInfo()
 {
-    cout << "So p ver se compila\n\n";
-    cout << "Opcode              = " << this->getOpcode()  << endl;
-    cout << "Registrador destino = " << this->getRegDest() << endl;
-    cout << "Funct 3             = " << this->getFunc3()   << endl;
-    cout << "Registrador sorce 1 = " << this->getRegSrc1() << endl;
-    cout << "Registrador sorce 2 = " << this->reg_src_2    << endl;
-    cout << "Funct 7             = " << this->funct_7      << endl;
+    this->dafaultPrintInfo();
+    cout << "Registrador sorce 2 = x" << this->reg_src_2 << endl;
+    cout << "Funct 7             = " << this->funct_7   << endl;
+}
+
+/**
+ * @brief Destrutor da classe InstructionTypeR
+ */
+InstructionTypeR::~InstructionTypeR()
+{
+    cout << "Destruindo uma instrução do TIPO R" << endl;
 }

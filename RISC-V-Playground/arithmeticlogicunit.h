@@ -8,13 +8,19 @@
 #ifndef ARITHMETICLOGICUNIT_H
 #define ARITHMETICLOGICUNIT_H
 
+#include <iostream>
+
+using namespace std;
+
 /**
- * @brief A classe ArithmeticLogicUnit:
+ * @brief A classe ArithmeticLogicUnit: Classe que tem como objetivo
+ * simular o comportamento de uma unidade lógica e aritimética
  */
 class ArithmeticLogicUnit
 {
 public:
     ArithmeticLogicUnit();
+    ~ArithmeticLogicUnit();
 };
 
 #endif // ARITHMETICLOGICUNIT_H

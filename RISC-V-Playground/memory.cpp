@@ -12,6 +12,7 @@
  */
 Memory::Memory()
 {
+    cout << "Destruindo a classe memória" << endl;
     for(int i = 0; i < MEMORY_SIZE; i++) {
         vector[i] = 0;
     }
@@ -39,5 +40,5 @@ void Memory::set(int position, int value)
 
 Memory::~Memory()
 {
-
+    cout << "Destruindo a classe memória" << endl;
 }
