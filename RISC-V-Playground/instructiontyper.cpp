@@ -87,12 +87,14 @@ bool * InstructionTypeR::instructionToBin()
 
 /**
  * @brief Imprime na tela todas as informações dos membros da classe
+ *
+ * @warning utiliza a função Instruction::dafaultPrintInfo();
  */
 void InstructionTypeR::printInfo()
 {
     this->dafaultPrintInfo();
     cout << "Registrador sorce 2 = x" << this->reg_src_2 << endl;
-    cout << "Funct 7             = " << this->funct_7   << endl;
+    cout << "Funct 7             = " << this->funct_7    << endl;
 }
 
 /**
