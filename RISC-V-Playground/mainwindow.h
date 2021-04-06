@@ -11,6 +11,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QFileSystemModel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,6 +36,8 @@ private slots:
     void on_actionSobre_triggered();
 
     void on_actionSobre_o_QT_triggered();
+
+    void on_actionAbrir_codigo_assembly_triggered();
 
 private:
     Ui::MainWindow *ui;

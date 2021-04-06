@@ -68,3 +68,10 @@ void MainWindow::on_actionSobre_o_QT_triggered()
 {
     QMessageBox::aboutQt(this);
 }
+
+void MainWindow::on_actionAbrir_codigo_assembly_triggered()
+{
+    QFile file("../files/test.s");
+    file.open(QFile::ReadOnly | QFile::Text);
+    ui->plainTextEdit->setPlainText(file.readAll());
+}

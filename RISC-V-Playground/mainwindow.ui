@@ -204,7 +204,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QPlainTextEdit" name="plainTextEdit">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -221,7 +221,7 @@
      <x>0</x>
      <y>0</y>
      <width>791</width>
-     <height>18</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuRisc_V_Playground">
@@ -299,7 +299,6 @@
   <tabstop>tableWidget</tabstop>
   <tabstop>listWidget</tabstop>
   <tabstop>listWidget_2</tabstop>
-  <tabstop>textEdit</tabstop>
  </tabstops>
  <resources/>
  <connections/>
