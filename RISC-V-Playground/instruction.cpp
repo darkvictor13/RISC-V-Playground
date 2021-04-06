@@ -90,6 +90,15 @@ void Instruction::dafaultPrintInfo()
     cout << "Registrador sorce 1 = x" << this->getRegSrc1() << endl;
 }
 
+
+void Instruction::printBin(ostream &output, bool *v)
+{
+        for (int i = 0; i < INSTRUCTION_SIZE; i++) {
+            output << v[i] << " ";
+        }
+        output  << endl << endl;
+}
+
 /**
  * @brief Destrutor da classe Instruction
  */

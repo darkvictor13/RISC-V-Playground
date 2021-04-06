@@ -1,0 +1,103 @@
+\hypertarget{classInstructionTypeI}{}\doxysection{Referência da Classe Instruction\+TypeI}
+\label{classInstructionTypeI}\index{InstructionTypeI@{InstructionTypeI}}
+Diagrama de hierarquia para Instruction\+TypeI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInstructionTypeI}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInstructionTypeI_a57529723613dacb76af6008cb2883339}{Instruction\+TypeI}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classInstructionTypeI}{Instruction\+TypeI}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInstructionTypeI_a72b49884f4aaa4c4bc58fbdbff382018}{Instruction\+TypeI}} (int op, int rd, int f3, int rs1, int imm)
+\item 
+\mbox{\Hypertarget{classInstructionTypeI_a1257dbd6696245e62808de0d612b6e55}\label{classInstructionTypeI_a1257dbd6696245e62808de0d612b6e55}} 
+void \mbox{\hyperlink{classInstructionTypeI_a1257dbd6696245e62808de0d612b6e55}{print\+Info}} ()
+\begin{DoxyCompactList}\small\item\em print\+Info\+: uma função virtual pura que permite que essa classe seja abstrata \end{DoxyCompactList}\item 
+bool $\ast$ \mbox{\hyperlink{classInstructionTypeI_a9fb2ee032bdea259e517c5ce9d7836bf}{instruction\+To\+Bin}} ()
+\begin{DoxyCompactList}\small\item\em instruction\+To\+Bin\+: uma função virtual pura \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInstructionTypeI_aadf032f02f47d38140ba365f12079d54}\label{classInstructionTypeI_aadf032f02f47d38140ba365f12079d54}} 
+\mbox{\hyperlink{classInstructionTypeI_aadf032f02f47d38140ba365f12079d54}{$\sim$\+Instruction\+TypeI}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classInstructionTypeI}{Instruction\+TypeI}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+
+
+Definição na linha 15 do arquivo instructiontypei.\+h.
+
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classInstructionTypeI_a57529723613dacb76af6008cb2883339}\label{classInstructionTypeI_a57529723613dacb76af6008cb2883339}} 
+\index{InstructionTypeI@{InstructionTypeI}!InstructionTypeI@{InstructionTypeI}}
+\index{InstructionTypeI@{InstructionTypeI}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{InstructionTypeI()}{InstructionTypeI()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Instruction\+Type\+I\+::\+Instruction\+TypeI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{classInstructionTypeI}{Instruction\+TypeI}}. 
+
+Inicializa todos os campos com zero 
+
+Definição na linha 8 do arquivo instructiontypei.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeI_a72b49884f4aaa4c4bc58fbdbff382018}\label{classInstructionTypeI_a72b49884f4aaa4c4bc58fbdbff382018}} 
+\index{InstructionTypeI@{InstructionTypeI}!InstructionTypeI@{InstructionTypeI}}
+\index{InstructionTypeI@{InstructionTypeI}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{InstructionTypeI()}{InstructionTypeI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Instruction\+Type\+I\+::\+Instruction\+TypeI (\begin{DoxyParamCaption}\item[{int}]{op,  }\item[{int}]{rd,  }\item[{int}]{f3,  }\item[{int}]{rs1,  }\item[{int}]{imm }\end{DoxyParamCaption})}
+
+Esse é um método provido por conveniência. Ele difere do método acima apenas na lista de argumentos que devem ser utilizados.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em op} & valor do opcode \\
+\hline
+{\em rd} & valor do registrador destino \\
+\hline
+{\em f3} & valor do funct 3 \\
+\hline
+{\em rs1} & valor do registrador fonte 1 \\
+\hline
+{\em imm} & \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 23 do arquivo instructiontypei.\+cpp.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classInstructionTypeI_a9fb2ee032bdea259e517c5ce9d7836bf}\label{classInstructionTypeI_a9fb2ee032bdea259e517c5ce9d7836bf}} 
+\index{InstructionTypeI@{InstructionTypeI}!instructionToBin@{instructionToBin}}
+\index{instructionToBin@{instructionToBin}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{instructionToBin()}{instructionToBin()}}
+{\footnotesize\ttfamily bool $\ast$ Instruction\+Type\+I\+::instruction\+To\+Bin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+instruction\+To\+Bin\+: uma função virtual pura 
+
+\begin{DoxyReturn}{Retorna}
+nas classes derivadas deve ser um vetor de booleanos que representa o valor da instrução em binário 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classInstruction_ac2dcbcdebf7a0351b20befaf3a202885}{Instruction}}.
+
+
+
+Definição na linha 37 do arquivo instructiontypei.\+cpp.
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+instructiontypei.\+h\item 
+instructiontypei.\+cpp\end{DoxyCompactItemize}

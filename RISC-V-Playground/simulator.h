@@ -25,10 +25,11 @@ private:
     ArithmeticLogicUnit arithmetic_logic_unit;
     Memory memory;
     ProgramCounter program_counter;
-    Registers registers;
-
 public:
     Simulator();
+
+    void assembly(string filename);
+
     ~Simulator();
 };
 

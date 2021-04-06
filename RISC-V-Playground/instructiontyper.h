@@ -10,6 +10,22 @@
 
 #include "instruction.h"
 
+#define ADD_OPCODE  51
+#define SUB_OPCODE  51
+#define AND_OPCODE  51
+#define OR_OPCODE   51
+
+#define ADD_FUNCT_3  0
+#define SUB_FUNCT_3  0
+#define AND_FUNCT_3  7
+#define OR_FUNCT_3   6
+
+#define ADD_FUNCT_7  0
+#define SUB_FUNCT_7  32
+#define AND_FUNCT_7  0
+#define OR_FUNCT_7   0
+
+
 /**
   * @brief Indica o indice do vetor binário em que inicia o
   * a informação de qual é o registrador sorce 2

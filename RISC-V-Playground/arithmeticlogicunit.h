@@ -9,6 +9,10 @@
 #define ARITHMETICLOGICUNIT_H
 
 #include <iostream>
+#include "instruction.h"
+#include "instructiontyper.h"
+#include "instructiontypei.h"
+#include "registers.h"
 
 using namespace std;
 
@@ -18,7 +22,11 @@ using namespace std;
  */
 class ArithmeticLogicUnit
 {
+private:
+    Registers registers;
 public:
+    int operate(Instruction * instruction);
+
     ArithmeticLogicUnit();
     ~ArithmeticLogicUnit();
 };

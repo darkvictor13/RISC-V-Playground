@@ -13,6 +13,14 @@
 
 using namespace std;
 
+//tipo B
+#define BNE_OPCODE  99
+#define BEQ_OPCODE  99
+
+#define BNE_FUNCT_3  1
+#define BEQ_FUNCT_3  0
+
+
 #define OP_SIZE  7
 #define RD_SIZE  5
 #define F3_SIZE  3
@@ -81,6 +89,8 @@ public:
      * que representa o valor da instrução em binário
      */
     virtual bool * instructionToBin() = 0;
+
+    static void printBin(ostream &output, bool *v);
 
     virtual ~Instruction();
 };

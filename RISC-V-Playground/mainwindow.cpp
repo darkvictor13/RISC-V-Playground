@@ -27,3 +27,44 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+/*
+void MainWindow::loadFile(const QString &fileName)
+//! [42] //! [43]
+{
+    QFile file(fileName);
+    if (!file.open(QFile::ReadOnly | QFile::Text)) {
+        QMessageBox::warning(this, tr("Application"),
+                             tr("Cannot read file %1:\n%2.")
+                             .arg(QDir::toNativeSeparators(fileName), file.errorString()));
+        return;
+    }
+
+    QTextStream in(&file);
+#ifndef QT_NO_CURSOR
+    QGuiApplication::setOverrideCursor(Qt::WaitCursor);
+#endif
+    textEdit->setPlainText(in.readAll());
+#ifndef QT_NO_CURSOR
+    QGuiApplication::restoreOverrideCursor();
+#endif
+
+    setCurrentFile(fileName);
+    statusBar()->showMessage(tr("File loaded"), 2000);
+}
+
+void MainWindow::on_actionAbrir_codigo_assembly_triggered()
+{
+    QString fileName = QFileDialog::getOpenFileName(this);
+    if (!fileName.isEmpty())
+        loadFile(fileName);
+}*/
+
+void MainWindow::on_actionSobre_triggered()
+{
+    QMessageBox::about(this, "RISC-V-Playground", "Colocar aqui info");
+}
+
+void MainWindow::on_actionSobre_o_QT_triggered()
+{
+    QMessageBox::aboutQt(this);
+}

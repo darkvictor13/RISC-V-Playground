@@ -10,6 +10,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,7 +26,15 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+
+     void loadFile(const QString &fileName);
+
     ~MainWindow();
+
+private slots:
+    void on_actionSobre_triggered();
+
+    void on_actionSobre_o_QT_triggered();
 
 private:
     Ui::MainWindow *ui;

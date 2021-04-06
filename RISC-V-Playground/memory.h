@@ -28,8 +28,7 @@ private:
      * @brief um vetor de inteiros, onde cada indice representa uma célula de memória
      * e o conteúdo de cada elemento representa o valor daquela célula de memória
      */
-    int vector[MEMORY_SIZE];
-
+    int vectorData[MEMORY_SIZE];
 public:
     Memory();
 

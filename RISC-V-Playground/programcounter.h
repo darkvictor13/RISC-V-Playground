@@ -9,6 +9,9 @@
 #define PROGRAMCOUNTER_H
 
 #include <iostream>
+#include "instruction.h"
+#include "instructiontypei.h"
+#include "instructiontyper.h"
 
 using namespace std;
 
@@ -18,6 +21,10 @@ using namespace std;
  */
 class ProgramCounter
 {
+private:
+    int qnt_instructions;
+    int actual_instruction;
+    Instruction *vectorProgram;
 public:
     ProgramCounter();
     ~ProgramCounter();

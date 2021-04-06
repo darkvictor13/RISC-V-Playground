@@ -36,6 +36,7 @@ InstructionTypeR::InstructionTypeR(int op, int rd, int f3, int rs1, int rs2, int
     this->funct_7   = f7;
     this->reg_src_2 = rs2;
 }
+
 /**
  * @brief Cria um vetor contendo o valor binário da instrução
  *

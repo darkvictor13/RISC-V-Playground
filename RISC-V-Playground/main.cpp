@@ -8,9 +8,10 @@
 #include "mainwindow.h"
 #include "instruction.h"
 #include "instructiontyper.h"
+#include "instructiontypei.h"
+#include "arithmeticlogicunit.h"
 
 #include <QApplication>
-#include <QFile>
 
 /**
   @mainpage Algorítimo para Simulador RISC-V
@@ -57,24 +58,38 @@
  */
 int main(int argc, char **argv)
 {
-    InstructionTypeR t(51, 5, 0, 0, 0, 0);
-    t.printInfo();
-    QApplication a(argc, argv);
+    Instruction *vet[2];
+    bool *aux;
+    vet[0] = new InstructionTypeI (ADDI_OPCODE, 3, ADDI_FUNCT_3, 3, 10);
+    vet[1] = new InstructionTypeR (OR_OPCODE, 5, OR_FUNCT_3, 3, 2, OR_FUNCT_7);
+
+    for (int i = 0; i < 2; i++) {
+        vet[i]->printInfo();
+        aux = vet[i]->instructionToBin();
+        Instruction::printBin(cout, aux);
+    }
+    //ArithmeticLogicUnit ar;
+    //ar.operate(vet + 1);
+    QApplication app(argc, argv);
+    QCoreApplication::setOrganizationName("Unioeste");
+    QCoreApplication::setApplicationName("RISC-V-Playground");
 
     MainWindow w;
 
     // Abrindo o tema
-    //QFile file("/home/victor/Repos/Trab_2_OAC/RISC-V-Playground/theme.qss");
-
+    /*
     // o executavel esta dentro de Trab_2_OAC/build
     QFile file("../RISC-V-Playground/theme.qss");
     file.open(QFile::ReadOnly);
 
     QString styleSheet = QLatin1String(file.readAll());
 
-    a.setStyleSheet(styleSheet);
-
+    app.setStyleSheet(styleSheet);
+*/
     w.show();
 
-    return a.exec();
+    delete vet[0];
+    delete vet[1];
+
+    return app.exec();
 }

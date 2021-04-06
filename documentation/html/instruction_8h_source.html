@@ -80,48 +80,58 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define OP_SIZE  7</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define RD_SIZE  5</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define F3_SIZE  3</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define RS1_SIZE 5</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="instruction_8h.html#a5af70f06649aa4e73869068470455a88">   25</a></span>&#160;<span class="preprocessor">#define OP_BEGIN  0</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="instruction_8h.html#afd272f27fab91a1d2b7eff81dcbadaf1">   31</a></span>&#160;<span class="preprocessor">#define RD_BEGIN  7</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="instruction_8h.html#ad45f21325ed96cf161584b0221776a73">   37</a></span>&#160;<span class="preprocessor">#define F3_BEGIN  12</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="instruction_8h.html#a95d4872234b8a408279ad6868d9d82e3">   43</a></span>&#160;<span class="preprocessor">#define RS1_BEGIN 15</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="instruction_8h.html#af6ca297e66f1914309c97f36a8fc6e30">   48</a></span>&#160;<span class="preprocessor">#define INSTRUCTION_SIZE 32</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classInstruction.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classInstruction.html">Instruction</a></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> opcode;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> reg_dest;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> funct_3;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> reg_src_1;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classInstruction.html">Instruction</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classInstruction.html">Instruction</a>(<span class="keywordtype">int</span> op, <span class="keywordtype">int</span> rd, <span class="keywordtype">int</span> f3, <span class="keywordtype">int</span> rs1);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> getOpcode();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> getRegDest();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> getFunc3();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> getRegSrc1();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> dafaultPrintInfo();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classInstruction.html#a01fae104bc1781792d583761b2a0d7c5">   76</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classInstruction.html#a01fae104bc1781792d583761b2a0d7c5">printInfo</a>() = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//tipo B</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define BNE_OPCODE  99</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define BEQ_OPCODE  99</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define BNE_FUNCT_3  1</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define BEQ_FUNCT_3  0</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define OP_SIZE  7</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define RD_SIZE  5</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define F3_SIZE  3</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define RS1_SIZE 5</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="instruction_8h.html#a5af70f06649aa4e73869068470455a88">   33</a></span>&#160;<span class="preprocessor">#define OP_BEGIN  0</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="instruction_8h.html#afd272f27fab91a1d2b7eff81dcbadaf1">   39</a></span>&#160;<span class="preprocessor">#define RD_BEGIN  7</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="instruction_8h.html#ad45f21325ed96cf161584b0221776a73">   45</a></span>&#160;<span class="preprocessor">#define F3_BEGIN  12</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="instruction_8h.html#a95d4872234b8a408279ad6868d9d82e3">   51</a></span>&#160;<span class="preprocessor">#define RS1_BEGIN 15</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="instruction_8h.html#af6ca297e66f1914309c97f36a8fc6e30">   56</a></span>&#160;<span class="preprocessor">#define INSTRUCTION_SIZE 32</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classInstruction.html">   62</a></span>&#160;<span class="keyword">class </span><a class="code" href="classInstruction.html">Instruction</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> opcode;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> reg_dest;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> funct_3;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> reg_src_1;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classInstruction.html">Instruction</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classInstruction.html">Instruction</a>(<span class="keywordtype">int</span> op, <span class="keywordtype">int</span> rd, <span class="keywordtype">int</span> f3, <span class="keywordtype">int</span> rs1);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> getOpcode();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> getRegDest();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> getFunc3();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> getRegSrc1();</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885">   83</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> * <a class="code" href="classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885">instructionToBin</a>() = 0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classInstruction.html">Instruction</a>();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// INSTRUCTION_H</span></div>
-<div class="ttc" id="aclassInstruction_html"><div class="ttname"><a href="classInstruction.html">Instruction</a></div><div class="ttdoc">A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00054">instruction.h:55</a></div></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> dafaultPrintInfo();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classInstruction.html#a01fae104bc1781792d583761b2a0d7c5">   84</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classInstruction.html#a01fae104bc1781792d583761b2a0d7c5">printInfo</a>() = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885">   91</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> * <a class="code" href="classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885">instructionToBin</a>() = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> printBin(ostream &amp;output, <span class="keywordtype">bool</span> *v);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classInstruction.html">Instruction</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// INSTRUCTION_H</span></div>
+<div class="ttc" id="aclassInstruction_html"><div class="ttname"><a href="classInstruction.html">Instruction</a></div><div class="ttdoc">A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00062">instruction.h:63</a></div></div>
 <div class="ttc" id="aclassInstruction_html_a01fae104bc1781792d583761b2a0d7c5"><div class="ttname"><a href="classInstruction.html#a01fae104bc1781792d583761b2a0d7c5">Instruction::printInfo</a></div><div class="ttdeci">virtual void printInfo()=0</div><div class="ttdoc">printInfo: uma função virtual pura que permite que essa classe seja abstrata</div></div>
 <div class="ttc" id="aclassInstruction_html_ac2dcbcdebf7a0351b20befaf3a202885"><div class="ttname"><a href="classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885">Instruction::instructionToBin</a></div><div class="ttdeci">virtual bool * instructionToBin()=0</div><div class="ttdoc">instructionToBin: uma função virtual pura</div></div>
 </div><!-- fragment --></div><!-- contents -->
