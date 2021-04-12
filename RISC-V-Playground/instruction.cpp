@@ -9,7 +9,7 @@
 
 Instruction::Instruction()
 {
-
+    cout << "Criei uma intrução" << endl;
 }
 
 void Instruction::setOpcode(DATA value)

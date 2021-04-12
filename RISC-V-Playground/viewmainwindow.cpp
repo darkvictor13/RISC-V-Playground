@@ -30,7 +30,7 @@ void ViewMainWindow::on_actionNew_triggered()
 
 void ViewMainWindow::on_actionOpen_triggered()
 {
-    thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../files/", "");
+    thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../tests/", "");
 
     QFile file(thisFile);
     file.open(QFile::ReadOnly | QFile::Text);
