@@ -23,14 +23,14 @@ ViewMainWindow::~ViewMainWindow()
 
 void ViewMainWindow::on_actionNew_triggered()
 {
-    thisFile = "new";
+    this->thisFile = "new";
 
     ui->plainTextEdit->setPlainText("");
 }
 
 void ViewMainWindow::on_actionOpen_triggered()
 {
-    thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../tests/", "");
+    this->thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../tests/", "");
 
     QFile file(thisFile);
     file.open(QFile::ReadOnly | QFile::Text);
@@ -42,7 +42,7 @@ void ViewMainWindow::on_actionOpen_triggered()
 
 void ViewMainWindow::on_actionSave_triggered()
 {
-    QFile file(thisFile);
+    QFile file(this->thisFile);
     file.open(QFile::WriteOnly | QFile::Text);
 
     QTextStream outputFile(&file);
@@ -53,9 +53,10 @@ void ViewMainWindow::on_actionSave_triggered()
 
 void ViewMainWindow::on_actionSave_as_triggered()
 {
-    thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../files/", "");
+    //thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../tests/", "");
+    this->thisFile = QFileDialog::getSaveFileName(this, "Create new file", "../tests/", "");
 
-    QFile file(thisFile);
+    QFile file(this->thisFile);
     file.open(QFile::WriteOnly | QFile::Text);
 
     QTextStream outputFile(&file);

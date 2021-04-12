@@ -17,6 +17,9 @@ private:
 
 public:
     Simulator();
+    void run();
+    void step();
+    void restart();
 };
 
 #endif // SIMULATOR_H

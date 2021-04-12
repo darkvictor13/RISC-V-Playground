@@ -12,17 +12,17 @@ Simulator::Simulator()
 
 }
 
-void run()
+void Simulator::run()
 {
 
 }
 
-void step()
+void Simulator::step()
 {
 
 }
 
-void restart()
+void Simulator::restart()
 {
 
 }
