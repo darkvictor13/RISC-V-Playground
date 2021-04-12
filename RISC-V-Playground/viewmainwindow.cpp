@@ -1,6 +1,6 @@
 /**
  * @file viewmainwindow.cpp
- * @brief
+ * @brief Arquivo que tem como objetivo criar o menu principal da aplicação
  * @author mGuerra
  * @version 0.1
 */

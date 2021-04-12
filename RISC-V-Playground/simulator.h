@@ -8,6 +8,9 @@
 #ifndef SIMULATOR_H
 #define SIMULATOR_H
 
+/**
+ * @brief A classe Simulator:
+ */
 class Simulator
 {
 private:

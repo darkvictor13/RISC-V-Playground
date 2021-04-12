@@ -19,6 +19,9 @@
 #define RS1_FIRST 15
 #define RS1_LAST 19
 
+/**
+ * @brief A classe Instruction:
+ */
 class Instruction : public Word
 {
 public:

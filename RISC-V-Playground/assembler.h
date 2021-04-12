@@ -16,6 +16,9 @@
 
 using namespace std;
 
+/**
+ * @brief A classe Assembler:
+ */
 class Assembler
 {
 public:

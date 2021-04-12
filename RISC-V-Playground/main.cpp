@@ -1,6 +1,6 @@
 /**
  * @file main.cpp
- * @brief
+ * @brief Arquivo principal
  * @author mGuerra
  * @version 0.1
 */

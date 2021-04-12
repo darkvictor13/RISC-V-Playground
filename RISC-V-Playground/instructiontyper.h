@@ -19,6 +19,9 @@
 #define FUNCT7_FIRST 25
 #define FUNCT7_LAST 31
 
+/**
+ * @brief A classe InstructionTypeR:
+ */
 class InstructionTypeR : public Instruction
 {
 public:

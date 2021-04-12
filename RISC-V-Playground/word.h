@@ -15,6 +15,9 @@
 
 using namespace std;
 
+/**
+ * @brief A classe Word:
+ */
 class Word
 {
 private:

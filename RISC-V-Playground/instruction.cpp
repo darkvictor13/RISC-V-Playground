@@ -1,6 +1,6 @@
 /**
  * @file instruction.cpp
- * @brief
+ * @brief Arquivo que implementa os métodos da classe Instruction
  * @author mGuerra
  * @version 0.1
 */

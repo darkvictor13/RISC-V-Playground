@@ -1,6 +1,6 @@
 /**
  * @file word.cpp
- * @brief
+ * @brief Arquivo que implementa os métodos da classe Word
  * @author mGuerra
  * @version 0.1
 */

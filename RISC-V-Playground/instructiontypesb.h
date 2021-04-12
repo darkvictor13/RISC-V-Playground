@@ -22,6 +22,9 @@
 
 #define IMMEDIATE_D 31
 
+/**
+ * @brief A classe InstructionTypeSB:
+ */
 class InstructionTypeSB : public Instruction
 {
 public:

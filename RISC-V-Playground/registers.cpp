@@ -1,6 +1,6 @@
 /**
  * @file registers.cpp
- * @brief
+ * @brief Arquivo que implementa os métodos da classe Registers
  * @author mGuerra
  * @version 0.1
 */

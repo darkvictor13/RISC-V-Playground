@@ -1,6 +1,6 @@
 /**
  * @file memory.cpp
- * @brief
+ * @brief Arquivo que implementa os métodos da classe Memory
  * @author mGuerra
  * @version 0.1
 */

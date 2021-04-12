@@ -12,6 +12,9 @@
 
 #include "word.h"
 
+/**
+ * @brief A classe Memory:
+ */
 class Memory
 {
 private:

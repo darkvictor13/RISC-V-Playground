@@ -1,6 +1,6 @@
 /**
  * @file instructiontypesb.cpp
- * @brief
+ * @brief Arquivo que implementa os métodos da classe InstructionTypeSB
  * @author mGuerra
  * @version 0.1
 */

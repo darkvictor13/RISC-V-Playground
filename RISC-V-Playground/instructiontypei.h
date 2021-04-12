@@ -16,6 +16,9 @@
 #define IMMEDIATE_FIRST 20
 #define IMMEDIATE_LAST 31
 
+/**
+ * @brief A classe InstructionTypeI:
+ */
 class InstructionTypeI : public Instruction
 {
 public:
