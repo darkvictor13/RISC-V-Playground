@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>791</width>
+    <width>739</width>
     <height>633</height>
    </rect>
   </property>
@@ -14,214 +14,183 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>121</width>
-      <height>546</height>
-     </rect>
-    </property>
-    <property name="autoScrollMargin">
-     <number>16</number>
-    </property>
-    <property name="sortingEnabled">
-     <bool>false</bool>
-    </property>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>100</number>
-    </attribute>
-    <attribute name="verticalHeaderMinimumSectionSize">
-     <number>18</number>
-    </attribute>
-    <attribute name="verticalHeaderDefaultSectionSize">
-     <number>18</number>
-    </attribute>
-    <row>
-     <property name="text">
-      <string>x0</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x1</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x2</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x3</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x4</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x6</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x7</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x8</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x9</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x10</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x12</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x13</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x14</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x15</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x16</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x17</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x18</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x19</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x20</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x22</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x23</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x24</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x25</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x26</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x27</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x28</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x29</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>x31</string>
-     </property>
-    </row>
-    <column>
-     <property name="text">
-      <string>Value</string>
-     </property>
-    </column>
-   </widget>
-   <widget class="QListWidget" name="listWidget">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>10</y>
-      <width>641</width>
-      <height>281</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="listWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>310</y>
-      <width>641</width>
-      <height>256</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>10</y>
-      <width>641</width>
-      <height>281</height>
-     </rect>
-    </property>
-   </widget>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="autoScrollMargin">
+       <number>16</number>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>18</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>18</number>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>x0</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x1</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x2</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x3</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x4</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x6</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x7</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x8</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x9</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x10</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x12</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x13</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x14</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x15</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x16</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x17</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x18</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x19</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x20</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x22</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x23</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x24</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x25</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x26</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x27</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x28</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x29</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>x31</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Value</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPlainTextEdit" name="plainTextEdit"/>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>791</width>
-     <height>20</height>
+     <width>739</width>
+     <height>18</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuRisc_V_Playground">
@@ -295,11 +264,6 @@
    </property>
   </action>
  </widget>
- <tabstops>
-  <tabstop>tableWidget</tabstop>
-  <tabstop>listWidget</tabstop>
-  <tabstop>listWidget_2</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -48,7 +48,6 @@ int Instruction::getOpcode()
 }
 
 /**
- * @brief
  * @brief Obtêm o valor do registrador destino para alguém fora da classe
  * @return o valor do registrador de destino
  */
@@ -58,7 +57,6 @@ int Instruction::getRegDest()
 }
 
 /**
- * @brief
  * @brief Obtêm o valor do Funct 3 para alguém fora da classe
  * @return o valor do funct3
  */
@@ -93,10 +91,10 @@ void Instruction::dafaultPrintInfo()
 
 void Instruction::printBin(ostream &output, bool *v)
 {
-        for (int i = 0; i < INSTRUCTION_SIZE; i++) {
-            output << v[i] << " ";
-        }
-        output  << endl << endl;
+    for (int i = 0; i < INSTRUCTION_SIZE; i++) {
+        output << v[i] << " ";
+    }
+    output  << v[INSTRUCTION_SIZE] << endl;
 }
 
 /**

@@ -7,11 +7,14 @@
 
 #include "mainwindow.h"
 #include "instruction.h"
-#include "instructiontyper.h"
-#include "instructiontypei.h"
-#include "arithmeticlogicunit.h"
+#include "simulator.h"
 
 #include <QApplication>
+#include <QDebug>
+#include <QCoreApplication>
+#include <QDebug>
+#include <QFileInfo>
+#include <QDir>
 
 /**
   @mainpage Algorítimo para Simulador RISC-V
@@ -58,6 +61,8 @@
  */
 int main(int argc, char **argv)
 {
+
+    qDebug() << "Vamos ver se aparece" << Qt::endl;
     Instruction *vet[2];
     bool *aux;
     vet[0] = new InstructionTypeI (ADDI_OPCODE, 3, ADDI_FUNCT_3, 3, 10);
@@ -68,6 +73,9 @@ int main(int argc, char **argv)
         aux = vet[i]->instructionToBin();
         Instruction::printBin(cout, aux);
     }
+
+    Simulator s;
+    s.assembly("teste.txt");
     //ArithmeticLogicUnit ar;
     //ar.operate(vet + 1);
     QApplication app(argc, argv);

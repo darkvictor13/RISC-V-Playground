@@ -8,6 +8,11 @@
 #ifndef SIMULATOR_H
 #define SIMULATOR_H
 
+#include <QFile>
+#include <QString>
+#include <QTextStream>
+#include <istream>
+
 #include "arithmeticlogicunit.h"
 #include "instruction.h"
 #include "instructiontyper.h"
@@ -28,6 +33,8 @@ private:
 public:
     Simulator();
 
+    void writeFileClear(QString filename);
+    Instruction * readAssemblyFile();
     void assembly(string filename);
 
     ~Simulator();

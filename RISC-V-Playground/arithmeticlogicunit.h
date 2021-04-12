@@ -16,6 +16,7 @@
 
 using namespace std;
 
+
 /**
  * @brief A classe ArithmeticLogicUnit: Classe que tem como objetivo
  * simular o comportamento de uma unidade lógica e aritimética
@@ -24,8 +25,12 @@ class ArithmeticLogicUnit
 {
 private:
     Registers registers;
+    int op;
+    int src1;
+    int src2;
 public:
     int operate(Instruction * instruction);
+    int operate();
 
     ArithmeticLogicUnit();
     ~ArithmeticLogicUnit();

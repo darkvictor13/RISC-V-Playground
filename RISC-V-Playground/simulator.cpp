@@ -15,6 +15,24 @@ Simulator::Simulator()
     cout << "Criando classe simulador" << endl;
 }
 
+
+void Simulator::writeFileClear(QString filename)
+{
+    QFile read(filename);
+    if (read.open(QFile::ReadOnly | QFile::Text)) {
+        cout << "Falha ao abrir arquivo assembly .s";
+    }
+    QTextStream in(&read);
+    QString linha;
+    QStringRef name(&filename, 0, filename.lastIndexOf("."));
+    QFile write(name + ".clear");
+    QTextStream out(&write);
+    write.open(QFile::WriteOnly | QFile::Text);
+    while(!in.atEnd()) {
+        linha = in.readLine();
+    }
+}
+
 void Simulator::assembly(string filename)
 {
     string name;
@@ -26,6 +44,11 @@ void Simulator::assembly(string filename)
     name = filename.substr(0, separator);
     extension = filename.substr(separator + 1);
     output_filename = name + ".bin";
+
+    cout << filename << endl;
+    cout << name << endl;
+    cout << extension << endl;
+    cout << output_filename << endl;
 
 }
 

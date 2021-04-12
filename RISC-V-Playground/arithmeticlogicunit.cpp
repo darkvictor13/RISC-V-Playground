@@ -23,6 +23,10 @@ ArithmeticLogicUnit::~ArithmeticLogicUnit()
     cout << "Destruindo a classe ALU" << endl;
 }
 
+int ArithmeticLogicUnit::operate()
+{
+
+}
 
 int ArithmeticLogicUnit::operate(Instruction * instruction)
 {

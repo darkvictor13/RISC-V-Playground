@@ -71,7 +71,19 @@ void MainWindow::on_actionSobre_o_QT_triggered()
 
 void MainWindow::on_actionAbrir_codigo_assembly_triggered()
 {
-    QFile file("../files/test.s");
+    QString filename = QFileDialog::getOpenFileName(this,
+        "Open assembly file", "../files/", "");
+    QFile file(filename);
     file.open(QFile::ReadOnly | QFile::Text);
     ui->plainTextEdit->setPlainText(file.readAll());
+    file.close();
+}
+
+void MainWindow::on_actionSalvar_triggered()
+{
+    QFile file("../files/test.s");
+    file.open(QFile::WriteOnly | QFile::Text);
+    QTextStream out(&file);
+    out << ui->plainTextEdit->toPlainText();
+    file.close();
 }
