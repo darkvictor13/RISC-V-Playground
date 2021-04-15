@@ -14,6 +14,7 @@
 #include <iostream>
 #include <QString>
 
+
 using namespace std;
 
 class Word
@@ -74,6 +75,7 @@ public:
     DATA getInteger(DATA first, DATA last);
 
     int to_int(char value);
+    int to_int(QChar value);
     char to_char(DATA value);
 
     QString getString(DATA base = 2);

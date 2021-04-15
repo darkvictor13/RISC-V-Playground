@@ -6,6 +6,7 @@
 */
 
 #include "view/viewmainwindow.h"
+#include "assembler/assembler.h"
 
 #include <QApplication>
 #include <QFile>

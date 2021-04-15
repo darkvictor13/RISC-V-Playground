@@ -259,6 +259,12 @@ int Word::to_int(char value)
     }
 }
 
+int Word::to_int(QChar value)
+{
+    return value.digitValue();
+}
+
+
 char Word::to_char(DATA value)
 {
     if(value < 10) {

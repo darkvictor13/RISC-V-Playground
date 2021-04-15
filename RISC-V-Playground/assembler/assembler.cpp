@@ -191,6 +191,14 @@ Word Assembler::mountADD(QStringList line)
 {
     InstructionTypeR instruction;
 
+    instruction.setOpcode(51);
+    //instruction.setRD(instruction.to_int(line[1][1]));
+    instruction.setRD(line[1][1].digitValue());
+    instruction.setFunct3(0);
+    instruction.setRS1(line[2][1].digitValue());
+    instruction.setRS2(line[3][1].digitValue());
+    instruction.setFunct7(0);
+
     console->addItem(instruction.getString());
 
     return instruction;
@@ -199,6 +207,13 @@ Word Assembler::mountADD(QStringList line)
 Word Assembler::mountSUB(QStringList line)
 {
     InstructionTypeR instruction;
+
+    instruction.setOpcode(51);
+    //instruction.setRD(line[1]);
+    instruction.setFunct3(0);
+    //instruction.setRS1();
+    //instruction.setRS2();
+    instruction.setFunct7(32);
 
     console->addItem(instruction.getString());
 
@@ -209,6 +224,9 @@ Word Assembler::mountAND(QStringList line)
 {
     InstructionTypeR instruction;
 
+    instruction.setOpcode(51);
+    //instruction.setRD(line[1]);
+
     console->addItem(instruction.getString());
 
     return instruction;
@@ -217,6 +235,9 @@ Word Assembler::mountAND(QStringList line)
 Word Assembler::mountOR(QStringList line)
 {
     InstructionTypeR instruction;
+
+    instruction.setOpcode(51);
+    //instruction.setRD(line[1]);
 
     console->addItem(instruction.getString());
 
