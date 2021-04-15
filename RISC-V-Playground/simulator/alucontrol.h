@@ -12,18 +12,18 @@ class AddBranch;
 class ALUControl
 {
 private:
-    AddBranch *addBranch = NULL;
+    ALU *alu = NULL;
 
-    Word instruction = 0;
+    Word aluOp = 0;
 
-    bool hasInstruction = false;
+    bool hasALUOp = false;
 
 public:
     ALUControl();
 
-    void connect(AddBranch *addBranch);
+    void connect(ALU *alu);
 
-    void setInstruction(Word instruction);
+    void setALUOp(Word instruction);
 
     void tryExecute();
     void execute();

@@ -5,32 +5,39 @@ ALUControl::ALUControl()
 
 }
 
-void ALUControl::connect(AddBranch *addBranch)
+void ALUControl::connect(ALU *alu)
 {
-    this->addBranch = addBranch;
+    this->alu = alu;
 }
 
-
-void ALUControl::setInstruction(Word instruction)
+void ALUControl::setALUOp(Word instruction)
 {
-    this->instruction = instruction;
-    hasInstruction = true;
+    this->aluOp = instruction;
+    hasALUOp = true;
 
     tryExecute();
 }
 
 void ALUControl::tryExecute()
 {
-    if(hasInstruction) {
+    if(hasALUOp) {
         execute();
 
-        hasInstruction = false;
+        hasALUOp = false;
     }
 }
 
 void ALUControl::execute()
 {
-    //addBranch->setValueB();
+    if(aluOp == 0) {
+        alu->setControl(2);
+    }
+
+    if(aluOp.test(0)) {
+        alu->setControl(6);
+    }
+
+    ///////////////////////////
 }
 
 ALUControl::~ALUControl()

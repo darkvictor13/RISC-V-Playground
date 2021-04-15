@@ -34,7 +34,7 @@ void InstructionMemory::execute()
 {
     Word value = getValue(address).getInteger();
 
-    control->setInstruction(value.getInteger(0, 6));
+    control->setOpcode(value.getInteger(0, 6));
     registers->setReadRegister1(value.getInteger(15, 19));
     registers->setReadRegister2(value.getInteger(20, 24));
     registers->setWriteRegister(value.getInteger(7, 11));
@@ -42,7 +42,7 @@ void InstructionMemory::execute()
 
     Word control = (value.test(30) << 3) | value.getInteger(12, 14);
 
-    aluControl->setInstruction(control);
+    aluControl->setALUOp(control);
 }
 
 InstructionMemory::~InstructionMemory()

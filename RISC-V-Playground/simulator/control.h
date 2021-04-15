@@ -27,16 +27,16 @@ private:
     ALUControl *aluControl = NULL;
     Registers *registers = NULL;
 
-    Word instruction = 0;
+    Word opcode = 0;
 
-    bool hasInstruction = false;
+    bool hasOpcode = false;
 
 public:
     Control();
 
     void connect(AndGate *andGate, DataMemory *dataMemory, MuxTypeB *muxB, MuxTypeC *muxC, ALUControl *aluControl, Registers *registers);
 
-    void setInstruction(Word instruction);
+    void setOpcode(Word opcode);
 
     void tryExecute();
     void execute();

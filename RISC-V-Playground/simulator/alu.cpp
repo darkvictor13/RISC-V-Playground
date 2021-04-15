@@ -49,9 +49,22 @@ void ALU::tryExecute()
 
 void ALU::execute()
 {
-    //andGate->setValueB();
-    //instructionMemory->setAddress();
-    //muxC->setValueA();
+    Word result;
+
+    switch (control.getInteger()) {
+        case 0: result = valueA & valueB;
+            break;
+        case 1: result = valueA | valueB;
+            break;
+        case 2: result = valueA + valueB;
+            break;
+        case 6: result = valueA - valueB;
+            break;
+    }
+
+    andGate->setValueB(result);
+    instructionMemory->setAddress(result);
+    muxC->setValueA(result);
 }
 
 ALU::~ALU()

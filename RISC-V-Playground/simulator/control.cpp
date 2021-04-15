@@ -15,20 +15,20 @@ void Control::connect(AndGate *andGate, DataMemory *dataMemory, MuxTypeB *muxB, 
     this->registers = registers;
 }
 
-void Control::setInstruction(Word instruction)
+void Control::setOpcode(Word opcode)
 {
-    this->instruction = instruction;
-    hasInstruction = true;
+    this->opcode = opcode;
+    hasOpcode = true;
 
     tryExecute();
 }
 
 void Control::tryExecute()
 {
-    if(hasInstruction) {
+    if(hasOpcode) {
         execute();
 
-        hasInstruction = false;
+        hasOpcode = false;
     }
 }
 
@@ -37,7 +37,7 @@ void Control::execute()
     //andGate->setValueA();
     //dataMemory->setMemRead();
     //muxC->setSelection();
-    //aluControl->setInstruction();
+    //aluControl->setALUOp();
     //dataMemory->setMemWrite();
     //muxB->selection();
     //registers->setRegWrite();

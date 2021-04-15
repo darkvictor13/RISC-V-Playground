@@ -11,7 +11,7 @@ Simulator::Simulator()
 {
     pc.connect(&instructionMemory, &addBranch, &addNext);
 
-    aluControl.connect(&addBranch);
+    aluControl.connect(&alu);
     control.connect(&andGate, &dataMemory, &muxB, &muxC, &aluControl, &registers);
 
     registers.connect(&alu, &muxB, &dataMemory);

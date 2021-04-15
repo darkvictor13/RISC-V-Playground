@@ -19,7 +19,7 @@ using namespace std;
 class Word
 {
 private:
-    DATA data; //vector<bool>
+    DATA data;
 
 public:
     Word(DATA value);
