@@ -54,6 +54,8 @@ public:
     bool any();
     bool all();
 
+    Word operator=(const int value);
+
     Word operator+(const Word &word);
     Word operator-(const Word &word);
 
@@ -70,6 +72,7 @@ public:
     Word operator!();
 
     bool operator==(const Word &word);
+    bool operator==(const int &value);
 
     DATA getInteger();
     DATA getInteger(DATA first, DATA last);

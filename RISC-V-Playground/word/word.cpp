@@ -165,6 +165,13 @@ bool Word::all()
     return false;
 }
 
+Word Word::operator=(const int value)
+{
+    this->data = value;
+
+    return this;
+}
+
 Word Word::operator+(const Word &word)
 {
     Word newWord = this->data + word.data;
@@ -235,6 +242,11 @@ Word Word::operator!()
     return newWord;
 }
 
+bool Word::operator==(const int &value)
+{
+    return this->data == value;
+}
+
 bool Word::operator==(const Word &word)
 {
     return this->data == word.data;
@@ -298,6 +310,8 @@ QString Word::getString(DATA first, DATA last, DATA base)
     if(j != last) {
         binary += to_char(getInteger(j + 1, last));
     }
+
+    reverse(binary.begin(), binary.end());
 
     return binary;
 }

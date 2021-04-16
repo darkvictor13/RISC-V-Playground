@@ -23,6 +23,9 @@
 
 #define SB_IMMEDIATE_D 31
 
+#define SIZE_IMMEDIATE_A (SB_IMMEDIATE_A_LAST - SB_IMMEDIATE_A_FIRST + 1)
+#define SIZE_IMMEDIATE_B (SB_IMMEDIATE_B_LAST - SB_IMMEDIATE_B_FIRST + 1)
+
 class InstructionTypeSB : public Instruction
 {
 public:

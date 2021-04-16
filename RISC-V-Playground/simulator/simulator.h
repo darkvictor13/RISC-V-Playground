@@ -53,6 +53,8 @@ public:
     void step();
     void restart();
 
+    void loadMemory(QString fileName);
+
     ~Simulator();
 };
 

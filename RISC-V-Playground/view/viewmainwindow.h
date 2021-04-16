@@ -49,5 +49,7 @@ private:
 
     Simulator simulator;
     Assembler assembler;
+
+    QString generateFileName(QString fileName);
 };
 #endif // VIEWMAINWINDOW_H

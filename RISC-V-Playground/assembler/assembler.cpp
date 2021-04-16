@@ -28,17 +28,15 @@ void Assembler::setConsole(QListWidget *console)
  * @brief Assembler::assemble
  * @param fileName
  */
-void Assembler::assemble(QString fileName)
+void Assembler::assemble(QString inputFileName, QString outputFileName)
 {
-    QStringList lines = getLines(fileName);
+    QStringList lines = getLines(inputFileName);
     vector<QStringList> words = splitLines(lines);
 
     vector<Label> labelsTable = mountLabelsTable(words);
     vector<Word> instructions = mountInstructions(words, labelsTable);
 
-    fileName = generateFileName(fileName);
-
-    generateFile(instructions, fileName);
+    generateFile(instructions, outputFileName);
 }
 
 QStringList Assembler::getLines(QString fileName)
@@ -187,16 +185,25 @@ Word Assembler::mountInstruction(QStringList line, vector<Label> labelsTable, in
     return 0;
 }
 
+int Assembler::getRegister(QString word)
+{
+    return word.midRef(1).toInt();
+}
+
+int Assembler::getImmediate(QString word)
+{
+    return word.toInt();
+}
+
 Word Assembler::mountADD(QStringList line)
 {
     InstructionTypeR instruction;
 
     instruction.setOpcode(51);
-    //instruction.setRD(instruction.to_int(line[1][1]));
-    instruction.setRD(line[1][1].digitValue());
+    instruction.setRD(getRegister(line[1]));
     instruction.setFunct3(0);
-    instruction.setRS1(line[2][1].digitValue());
-    instruction.setRS2(line[3][1].digitValue());
+    instruction.setRS1(getRegister(line[2]));
+    instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(0);
 
     console->addItem(instruction.getString());
@@ -209,10 +216,10 @@ Word Assembler::mountSUB(QStringList line)
     InstructionTypeR instruction;
 
     instruction.setOpcode(51);
-    //instruction.setRD(line[1]);
+    instruction.setRD(getRegister(line[1]));
     instruction.setFunct3(0);
-    //instruction.setRS1();
-    //instruction.setRS2();
+    instruction.setRS1(getRegister(line[2]));
+    instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(32);
 
     console->addItem(instruction.getString());
@@ -225,7 +232,11 @@ Word Assembler::mountAND(QStringList line)
     InstructionTypeR instruction;
 
     instruction.setOpcode(51);
-    //instruction.setRD(line[1]);
+    instruction.setRD(getRegister(line[1]));
+    instruction.setFunct3(7);
+    instruction.setRS1(getRegister(line[2]));
+    instruction.setRS2(getRegister(line[3]));
+    instruction.setFunct7(0);
 
     console->addItem(instruction.getString());
 
@@ -237,7 +248,11 @@ Word Assembler::mountOR(QStringList line)
     InstructionTypeR instruction;
 
     instruction.setOpcode(51);
-    //instruction.setRD(line[1]);
+    instruction.setRD(getRegister(line[1]));
+    instruction.setFunct3(6);
+    instruction.setRS1(getRegister(line[2]));
+    instruction.setRS2(getRegister(line[3]));
+    instruction.setFunct7(0);
 
     console->addItem(instruction.getString());
 
@@ -248,6 +263,12 @@ Word Assembler::mountADDI(QStringList line)
 {
     InstructionTypeI instruction;
 
+    instruction.setOpcode(19);
+    instruction.setRD(getRegister(line[1]));
+    instruction.setFunct3(0);
+    instruction.setRS1(getRegister(line[2]));
+    instruction.setImmediate(getImmediate(line[3]));
+
     console->addItem(instruction.getString());
 
     return instruction;
@@ -256,6 +277,12 @@ Word Assembler::mountADDI(QStringList line)
 Word Assembler::mountLW(QStringList line)
 {
     InstructionTypeI instruction;
+
+    instruction.setOpcode(3);
+    instruction.setRD(getRegister(line[1]));
+    instruction.setFunct3(2);
+    instruction.setRS1(getRegister(line[3]));
+    instruction.setImmediate(getImmediate(line[2]));
 
     console->addItem(instruction.getString());
 
@@ -266,6 +293,12 @@ Word Assembler::mountSW(QStringList line)
 {
     InstructionTypeS instruction;
 
+    instruction.setOpcode(35);
+    instruction.setFunct3(2);
+    instruction.setRS1(getRegister(line[3]));
+    instruction.setRS2(getRegister(line[1]));
+    instruction.setImmediate(getImmediate(line[2]));
+
     console->addItem(instruction.getString());
 
     return instruction;
@@ -274,6 +307,12 @@ Word Assembler::mountSW(QStringList line)
 Word Assembler::mountBEQ(QStringList line, vector<Label> labelsTable, int position)
 {
     InstructionTypeSB instruction;
+
+    instruction.setOpcode(99);
+    instruction.setFunct3(0);
+    instruction.setRS1(getRegister(line[1]));
+    instruction.setRS2(getRegister(line[2]));
+    instruction.setImmediate(getImmediate(line[3]));
 
     console->addItem(instruction.getString());
 
@@ -284,14 +323,15 @@ Word Assembler::mountBNE(QStringList line, vector<Label> labelsTable, int positi
 {
     InstructionTypeSB instruction;
 
+    instruction.setOpcode(99);
+    instruction.setFunct3(1);
+    instruction.setRS1(getRegister(line[1]));
+    instruction.setRS2(getRegister(line[2]));
+    instruction.setImmediate(getImmediate(line[3]));
+
     console->addItem(instruction.getString());
 
     return instruction;
-}
-
-QString Assembler::generateFileName(QString fileName)
-{
-    return fileName.split('.')[0] + ".b";
 }
 
 void Assembler::generateFile(vector<Word> instructions, QString fileName)
@@ -312,7 +352,6 @@ void Assembler::generateFile(vector<Word> instructions, QString fileName)
         line = instructions[i].getString();
 
         outputFile << line << '\n';
-        console->addItem(line);
     }
 
     file.close();

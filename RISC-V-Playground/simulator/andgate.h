@@ -12,19 +12,19 @@ class AndGate
 private:
     MuxTypeA *muxA = NULL;
 
-    Word valueA = 0;
-    Word valueB = 0;
+    Word branch = 0;
+    Word zero = 0;
 
-    bool hasValueA = false;
-    bool hasValueB = false;
+    bool hasBranch = false;
+    bool hasZero = false;
 
 public:
     AndGate();
 
     void connect(MuxTypeA *muxA);
 
-    void setValueA(Word valueA);
-    void setValueB(Word valueB);
+    void setBranch(Word branch);
+    void setZero(Word zero);
 
     void tryExecute();
     void execute();

@@ -62,7 +62,7 @@ void ALU::execute()
             break;
     }
 
-    andGate->setValueB(result);
+    andGate->setZero(result);
     instructionMemory->setAddress(result);
     muxC->setValueA(result);
 }

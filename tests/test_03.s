@@ -1,36 +1,12 @@
-	.file	"test_01.c"
-	.option nopic
-	.attribute arch, "rv64i2p0_m2p0_a2p0_f2p0_d2p0_c2p0"
-	.attribute unaligned_access, 0
-	.attribute stack_align, 16
-	.text
-	.align	1
-	.globl	main
-	.type	main, @function
-main:
-	addi	sp,sp,-32
-	sd	s0,24(sp)
-	addi	s0,sp,32
-	sw	zero,-20(s0)
-	sw	zero,-24(s0)
-	j	.L2
-.L3:
-	lw	a4,-24(s0)
-	lw	a5,-20(s0)
-	addw	a5,a4,a5
-	sw	a5,-24(s0)
-	lw	a5,-20(s0)
-	addiw	a5,a5,1
-	sw	a5,-20(s0)
-.L2:
-	lw	a5,-20(s0)
-	sext.w	a4,a5
-	li	a5,9
-	ble	a4,a5,.L3
-	li	a5,0
-	mv	a0,a5
-	ld	s0,24(sp)
-	addi	sp,sp,32
-	jr	ra
-	.size	main, .-main
-	.ident	"GCC: (Arch Linux Repositories) 10.2.0"
+addi x5,x0,3
+addi x6,x0,10
+addi x10,x0,20
+sw x5,0(x10)
+sw x6,4(x10)
+lw x11, 0(x10)
+lw x12,4(x10)
+add x14, x11, x12
+sub x15, x12, x11
+sub x16, x11, x12
+and x17, x12, x11
+or x18, x11, x12

@@ -10,35 +10,35 @@ void AndGate::connect(MuxTypeA *muxA)
     this->muxA = muxA;
 }
 
-void AndGate::setValueA(Word valueA)
+void AndGate::setBranch(Word branch)
 {
-    this->valueA = valueA;
-    hasValueA = true;
+    this->branch = branch;
+    hasBranch = true;
 
     tryExecute();
 }
 
-void AndGate::setValueB(Word valueB)
+void AndGate::setZero(Word zero)
 {
-    this->valueB = valueB;
-    hasValueB = true;
+    this->zero = zero;
+    hasZero = true;
 
     tryExecute();
 }
 
 void AndGate::tryExecute()
 {
-    if(hasValueA && hasValueB) {
+    if(branch && zero) {
         execute();
 
-        hasValueA = false;
-        hasValueB = false;
+        branch = false;
+        zero = false;
     }
 }
 
 void AndGate::execute()
 {
-    Word result = valueA & valueB;
+    Word result = branch & zero;
 
     muxA->setSelection(result);
 }

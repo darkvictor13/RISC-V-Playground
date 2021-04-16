@@ -32,7 +32,7 @@ void ViewMainWindow::on_actionNew_triggered()
 
 void ViewMainWindow::on_actionOpen_triggered()
 {
-    thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../files/", "");
+    thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../tests/", "");
 
     QFile file(thisFile);
     file.open(QFile::ReadOnly | QFile::Text);
@@ -40,6 +40,8 @@ void ViewMainWindow::on_actionOpen_triggered()
     ui->plainTextEdit->setPlainText(file.readAll());
 
     file.close();
+
+    thisFile = generateFileName(thisFile);
 }
 
 void ViewMainWindow::on_actionSave_triggered()
@@ -88,16 +90,16 @@ void ViewMainWindow::on_actionDocumentation_triggered()
 
 void ViewMainWindow::on_actionLoad_triggered()
 {
-    assembler.assemble(thisFile);
+    assembler.assemble(thisFile + ".s", thisFile + ".b");
 
-    /*thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../files/", "");
-
-    QFile file(thisFile);
+    QFile file(thisFile + ".b");
     file.open(QFile::ReadOnly | QFile::Text);
 
-    ui->plainTextEdit->setPlainText(file.readAll());
+    ui->instructionListWidget->addItem(file.readAll());
 
-    file.close();*/
+    file.close();
+
+    simulator.loadMemory(thisFile);
 }
 
 void ViewMainWindow::on_actionRun_triggered()
@@ -114,3 +116,9 @@ void ViewMainWindow::on_actionRestart_triggered()
 {
 
 }
+
+QString ViewMainWindow::generateFileName(QString fileName)
+{
+    return fileName.mid(0, fileName.lastIndexOf("."));
+}
+

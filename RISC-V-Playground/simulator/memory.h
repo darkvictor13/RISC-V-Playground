@@ -12,6 +12,9 @@
 
 #include "word/word.h"
 
+#include <QTextStream>
+#include <QFile>
+
 class Memory
 {
 public:
@@ -20,9 +23,10 @@ public:
     Memory();
 
     void initMemory();
-    void loadMemory();
+    void loadMemory(QString fileName);
 
     void setValue(Word value, Word address);
+    void setValue(QString binary, int address);
     Word getValue(Word address);
 
     ~Memory();

@@ -46,6 +46,11 @@ void Simulator::restart()
 
 }
 
+void Simulator::loadMemory(QString fileName)
+{
+    instructionMemory.loadMemory(fileName);
+}
+
 Simulator::~Simulator()
 {
 

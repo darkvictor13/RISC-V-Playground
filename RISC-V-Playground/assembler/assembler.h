@@ -36,7 +36,7 @@ public:
 
     void setConsole(QListWidget *console);
 
-    void assemble(QString fileName);
+    void assemble(QString inputFileName, QString outputFileName);
 
     QStringList getLines(QString fileName);
     QStringList splitLine(QString line);
@@ -52,6 +52,9 @@ public:
 
     QStringList instructionsList = {"add", "sub", "and", "or", "addi", "lw", "sw", "beq", "bne"};
 
+    int getRegister(QString word);
+    int getImmediate(QString word);
+
     Word mountADD(QStringList line);
     Word mountSUB(QStringList line);
     Word mountAND(QStringList line);
@@ -62,7 +65,6 @@ public:
     Word mountBEQ(QStringList line, vector<Label> labelsTable, int position);
     Word mountBNE(QStringList line, vector<Label> labelsTable, int position);
 
-    QString generateFileName(QString fileName);
     void generateFile(vector<Word> instructions, QString fileName);
 };
 

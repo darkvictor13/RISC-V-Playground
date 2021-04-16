@@ -56,7 +56,15 @@ void DataMemory::tryExecute()
 
 void DataMemory::execute()
 {
-    //muxC->setValueB();
+    if(memRead == 1) {
+        muxC->setValueB(getValue(address));
+    }else{
+        muxC->setValueB(getValue(0));
+    }
+
+    if(memWrite == 1) {
+        setValue(writeData, address);
+    }
 }
 
 DataMemory::~DataMemory()
