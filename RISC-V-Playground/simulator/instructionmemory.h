@@ -15,6 +15,8 @@ class ALUControl;
 
 class InstructionMemory : public Memory
 {
+    Q_OBJECT
+
 private:
     Control *control = NULL;
     Registers *registers = NULL;
@@ -36,6 +38,12 @@ public:
     void execute();
 
     ~InstructionMemory();
+
+signals:
+    void receivedAddress(Word address);
+
+    void executed();
+
 };
 
 #endif // INSTRUCTIONMEMORY_H

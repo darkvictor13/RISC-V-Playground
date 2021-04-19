@@ -10,6 +10,8 @@ void Mux::setValueA(Word valueA)
     this->valueA = valueA;
     hasValueA = true;
 
+    emit receivedValueA(valueA);
+
     tryExecute();
 }
 
@@ -17,6 +19,8 @@ void Mux::setValueB(Word valueB)
 {
     this->valueB = valueB;
     hasValueB = true;
+
+    emit receivedValueB(valueB);
 
     tryExecute();
 }
@@ -33,6 +37,8 @@ void Mux::tryExecute()
 {
     if(hasValueA && hasValueB && hasSelection) {
         execute();
+
+        emit executed();
 
         hasValueA = false;
         hasValueB = false;

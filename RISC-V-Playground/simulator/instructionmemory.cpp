@@ -18,6 +18,8 @@ void InstructionMemory::setAddress(Word address)
     this->address = address;
     hasAddress = true;
 
+    emit receivedAddress(address);
+
     tryExecute();
 }
 
@@ -25,6 +27,8 @@ void InstructionMemory::tryExecute()
 {
     if(hasAddress) {
         execute();
+
+        emit executed();
 
         hasAddress = false;
     }

@@ -16,15 +16,6 @@ Assembler::Assembler()
 }
 
 /**
- * @brief Assembler::setConsole
- * @param console
- */
-void Assembler::setConsole(QListWidget *console)
-{
-    this->console = console;
-}
-
-/**
  * @brief Assembler::assemble
  * @param fileName
  */
@@ -41,6 +32,8 @@ void Assembler::assemble(QString inputFileName, QString outputFileName)
 
 QStringList Assembler::getLines(QString fileName)
 {
+    emit consoleLog("Loading file to assemble ...\n");
+
     QFile file(fileName);
 
     if(!file.open(QIODevice::ReadOnly)) {
@@ -54,7 +47,6 @@ QStringList Assembler::getLines(QString fileName)
     while(!inputFile.atEnd()) {
         QString line = inputFile.readLine();
         lines.append(line);
-        console->addItem(line);
     }
 
     file.close();
@@ -109,6 +101,8 @@ bool Assembler::isInstruction(QStringList line) {
 
 vector<Label> Assembler::mountLabelsTable(vector<QStringList> words)
 {
+    emit consoleLog("Creating table of labels ...\n");
+
     vector<Label> labelsTable;
 
     int position = 0;
@@ -137,6 +131,8 @@ vector<Label> Assembler::mountLabelsTable(vector<QStringList> words)
 
 vector<Word> Assembler::mountInstructions(vector<QStringList> words, vector<Label> labelsTable)
 {
+    emit consoleLog("Assembling instructions ...\n");
+
     vector<Word> instructions;
 
     int position = 0;
@@ -206,7 +202,7 @@ Word Assembler::mountADD(QStringList line)
     instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(0);
 
-    console->addItem(instruction.getString());
+    emit consoleLog("add -> " + instruction.getString());
 
     return instruction;
 }
@@ -222,7 +218,7 @@ Word Assembler::mountSUB(QStringList line)
     instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(32);
 
-    console->addItem(instruction.getString());
+    emit consoleLog("sub -> " + instruction.getString());
 
     return instruction;
 }
@@ -238,7 +234,7 @@ Word Assembler::mountAND(QStringList line)
     instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(0);
 
-    console->addItem(instruction.getString());
+    emit consoleLog("and -> " + instruction.getString());
 
     return instruction;
 }
@@ -254,7 +250,7 @@ Word Assembler::mountOR(QStringList line)
     instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(0);
 
-    console->addItem(instruction.getString());
+    emit consoleLog("or -> " + instruction.getString());
 
     return instruction;
 }
@@ -269,7 +265,7 @@ Word Assembler::mountADDI(QStringList line)
     instruction.setRS1(getRegister(line[2]));
     instruction.setImmediate(getImmediate(line[3]));
 
-    console->addItem(instruction.getString());
+    emit consoleLog("addi -> " + instruction.getString());
 
     return instruction;
 }
@@ -284,7 +280,7 @@ Word Assembler::mountLW(QStringList line)
     instruction.setRS1(getRegister(line[3]));
     instruction.setImmediate(getImmediate(line[2]));
 
-    console->addItem(instruction.getString());
+    emit consoleLog("lw -> " + instruction.getString());
 
     return instruction;
 }
@@ -299,7 +295,7 @@ Word Assembler::mountSW(QStringList line)
     instruction.setRS2(getRegister(line[1]));
     instruction.setImmediate(getImmediate(line[2]));
 
-    console->addItem(instruction.getString());
+    emit consoleLog("sw -> " + instruction.getString());
 
     return instruction;
 }
@@ -312,9 +308,9 @@ Word Assembler::mountBEQ(QStringList line, vector<Label> labelsTable, int positi
     instruction.setFunct3(0);
     instruction.setRS1(getRegister(line[1]));
     instruction.setRS2(getRegister(line[2]));
-    instruction.setImmediate(getImmediate(line[3]));
+    instruction.setImmediate(getImmediate(line[3])); /////////////////////
 
-    console->addItem(instruction.getString());
+    emit consoleLog("beq -> " + instruction.getString());
 
     return instruction;
 }
@@ -327,9 +323,9 @@ Word Assembler::mountBNE(QStringList line, vector<Label> labelsTable, int positi
     instruction.setFunct3(1);
     instruction.setRS1(getRegister(line[1]));
     instruction.setRS2(getRegister(line[2]));
-    instruction.setImmediate(getImmediate(line[3]));
+    instruction.setImmediate(getImmediate(line[3])); /////////////////////
 
-    console->addItem(instruction.getString());
+    emit consoleLog("bne -> " + instruction.getString());
 
     return instruction;
 }

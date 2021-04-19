@@ -10,6 +10,8 @@
 
 #define REGISTERS_SPACE 32
 
+#include <QObject>
+
 #include "word/word.h"
 
 #include "alu.h"
@@ -20,8 +22,10 @@ class ALU;
 class MuxTypeB;
 class DataMemory;
 
-class Registers
+class Registers : public QObject
 {
+    Q_OBJECT
+
 private:
     Word registers[REGISTERS_SPACE];
 
@@ -44,10 +48,10 @@ private:
 public:
     Registers();
 
-    void initRegisters();
-
+    void init();
     void setValue(Word value, Word registerIndex);
     Word getValue(Word registerIndex);
+    void restart();
 
     void connect(ALU *alu, MuxTypeB *muxB, DataMemory *dataMemory);
 
@@ -61,6 +65,20 @@ public:
     void execute();
 
     ~Registers();
+
+signals:
+    void receivedReadRegister1(Word readRegister1);
+    void receivedReadRegister2(Word readRegister2);
+    void receivedWriteRegister(Word writeRegister);
+    void receivedWriteData(Word writeData);
+    void receivedRegWrite(Word regWrite);
+
+    void initRegisters(int size);
+    void updateRegister(Word value, Word address);
+    void restartRegisters();
+
+    void executed();
+
 };
 
 #endif // REGISTERS_H

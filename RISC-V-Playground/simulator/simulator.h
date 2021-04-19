@@ -8,6 +8,8 @@
 #ifndef SIMULATOR_H
 #define SIMULATOR_H
 
+#include <QObject>
+
 #include "pc.h"
 #include "alucontrol.h"
 #include "control.h"
@@ -22,40 +24,46 @@
 #include "muxtypeb.h"
 #include "muxtypec.h"
 
-class Simulator
+class Simulator : public QObject
 {
-private:
-    PC pc;
-
-    ALUControl aluControl;
-    Control control;
-
-    Registers registers;
-    InstructionMemory instructionMemory;
-    DataMemory dataMemory;
-
-    ALU alu;
-    AddNext addNext;
-    AddBranch addBranch;
-
-    ImmGen immGen;
-
-    MuxTypeA muxA;
-    MuxTypeB muxB;
-    MuxTypeC muxC;
-
-    AndGate andGate;
+    Q_OBJECT
 
 public:
+    PC *pc = new PC();
+
+    ALUControl *aluControl = new ALUControl();
+    Control *control = new Control;
+
+    Registers *registers = new Registers();
+    InstructionMemory *instructionMemory = new InstructionMemory();
+    DataMemory *dataMemory = new DataMemory();
+
+    ALU *alu = new ALU();
+    AddNext *addNext = new AddNext();
+    AddBranch *addBranch = new AddBranch();
+
+    ImmGen *immGen = new ImmGen();
+
+    MuxTypeA *muxA = new MuxTypeA();
+    MuxTypeB *muxB = new MuxTypeB();
+    MuxTypeC *muxC = new MuxTypeC();
+
+    AndGate *andGate = new AndGate();
+
+    int steps;
+
     Simulator();
 
+    ~Simulator();
+
+public slots:
+    void init();
     void run();
     void step();
     void restart();
 
-    void loadMemory(QString fileName);
+    void loadMemory(QString file);
 
-    ~Simulator();
 };
 
 #endif // SIMULATOR_H

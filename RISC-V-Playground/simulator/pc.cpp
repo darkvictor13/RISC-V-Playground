@@ -15,6 +15,19 @@ void PC::connect(InstructionMemory *instructionMemory, AddBranch *addBranch, Add
 void PC::run()
 {
     canRun = true;
+
+    tryExecute();
+}
+
+void PC::restart()
+{
+    address = 0;
+    hasAddress = true;
+}
+
+Word PC::getAddress()
+{
+    return address;
 }
 
 void PC::setAddress(Word address)
@@ -22,13 +35,15 @@ void PC::setAddress(Word address)
     this->address = address;
     hasAddress = true;
 
-    tryExecute();
+    emit receivedAddress(address);
 }
 
 void PC::tryExecute()
 {
     if(hasAddress && canRun) {
         execute();
+
+        emit executed();
 
         hasAddress = false;
         canRun = false;

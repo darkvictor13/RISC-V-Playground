@@ -1,10 +1,14 @@
 #ifndef MUX_H
 #define MUX_H
 
+#include <QObject>
+
 #include "word/word.h"
 
-class Mux
+class Mux : public QObject
 {
+    Q_OBJECT
+
 public:
     Word valueA = 0;
     Word valueB = 0;
@@ -24,6 +28,14 @@ public:
     void execute() {};
 
     ~Mux();
+
+signals:
+    void receivedValueA(Word valueA);
+    void receivedValueB(Word valueB);
+    void receivedSelection(Word control);
+
+    void executed();
+
 };
 
 #endif // MUX_H

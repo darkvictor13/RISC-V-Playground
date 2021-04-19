@@ -15,11 +15,11 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    QFile file("../themes/Combinear/Combinear.qss");
-    file.open(QFile::ReadOnly);
+    //QFile file("../themes/Combinear/Combinear.qss");
+    //file.open(QFile::ReadOnly);
 
-    QString styleSheet = QLatin1String(file.readAll());
-    app.setStyleSheet(styleSheet);
+    //QString styleSheet = QLatin1String(file.readAll());
+    //app.setStyleSheet(styleSheet);
 
     ViewMainWindow mainWindow;
 

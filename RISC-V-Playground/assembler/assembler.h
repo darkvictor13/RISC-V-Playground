@@ -8,10 +8,10 @@
 #ifndef ASSEMBLER_H
 #define ASSEMBLER_H
 
-#include <QMessageBox>
 #include <QTextStream>
-#include <QMainWindow>
 #include <QListWidget>
+#include <QMessageBox>
+#include <QObject>
 #include <QFile>
 
 #include "instructions/instructiontyper.h"
@@ -26,18 +26,11 @@ struct Label{
 
 using namespace std;
 
-class Assembler
+class Assembler : public QObject
 {
+    Q_OBJECT
+
 private:
-    QListWidget *console;
-
-public:
-    Assembler();
-
-    void setConsole(QListWidget *console);
-
-    void assemble(QString inputFileName, QString outputFileName);
-
     QStringList getLines(QString fileName);
     QStringList splitLine(QString line);
     vector<QStringList> splitLines(QStringList lines);
@@ -66,6 +59,16 @@ public:
     Word mountBNE(QStringList line, vector<Label> labelsTable, int position);
 
     void generateFile(vector<Word> instructions, QString fileName);
+
+public:
+    Assembler();
+
+public slots:
+    void assemble(QString inputFileName, QString outputFileName);
+
+signals:
+    void consoleLog(QString message);
+
 };
 
 #endif // ASSEMBLER_H

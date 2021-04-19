@@ -17,6 +17,8 @@ void ALU::setValueA(Word valueA)
     this->valueA = valueA;
     hasValueA = true;
 
+    emit receivedValueA(valueA);
+
     tryExecute();
 }
 
@@ -24,6 +26,8 @@ void ALU::setValueB(Word valueB)
 {
     this->valueB = valueB;
     hasValueB = true;
+
+    emit receivedValueB(valueB);
 
     tryExecute();
 }
@@ -33,6 +37,8 @@ void ALU::setControl(Word control)
     this->control = control;
     hasControl = true;
 
+    emit receivedControl(control);
+
     tryExecute();
 }
 
@@ -40,6 +46,8 @@ void ALU::tryExecute()
 {
     if(hasValueA && hasValueB && hasControl) {
         execute();
+
+        emit executed();
 
         hasValueA = false;
         hasValueB = false;

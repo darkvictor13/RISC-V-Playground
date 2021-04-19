@@ -1,6 +1,8 @@
 #ifndef IMMGEN_H
 #define IMMGEN_H
 
+#include <QObject>
+
 #include "word/word.h"
 
 #include "muxtypeb.h"
@@ -9,8 +11,10 @@
 class AddBranch;
 class MuxTypeB;
 
-class ImmGen
+class ImmGen : public QObject
 {
+    Q_OBJECT
+
 private:
     AddBranch *addBranch = NULL;
     MuxTypeB *muxB = NULL;
@@ -30,6 +34,12 @@ public:
     void execute();
 
     ~ImmGen();
+
+signals:
+    void receivedInstruction(Word instruction);
+
+    void executed();
+
 };
 
 #endif // IMMGEN_H

@@ -1,6 +1,8 @@
 #ifndef CONTROL_H
 #define CONTROL_H
 
+#include <QObject>
+
 #include "word/word.h"
 
 #include "andgate.h"
@@ -17,8 +19,10 @@ class MuxTypeC;
 class ALUControl;
 class Registers;
 
-class Control
+class Control : public QObject
 {
+    Q_OBJECT
+
 private:
     AndGate *andGate = NULL;
     DataMemory *dataMemory = NULL;
@@ -42,6 +46,12 @@ public:
     void execute();
 
     ~Control();
+
+signals:
+    void receivedOpcode(Word opcode);
+
+    void executed();
+
 };
 
 #endif // CONTROL_H

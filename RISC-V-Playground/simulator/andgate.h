@@ -1,14 +1,18 @@
 #ifndef ANDGATE_H
 #define ANDGATE_H
 
+#include <QObject>
+
 #include "word/word.h"
 
 #include "muxtypea.h"
 
 class MuxTypeA;
 
-class AndGate
+class AndGate : public QObject
 {
+    Q_OBJECT
+
 private:
     MuxTypeA *muxA = NULL;
 
@@ -30,6 +34,13 @@ public:
     void execute();
 
     ~AndGate();
+
+signals:
+    void receivedBransh(Word branch);
+    void receivedZero(Word zero);
+
+    void executed();
+
 };
 
 #endif // ANDGATE_H

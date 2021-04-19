@@ -15,6 +15,8 @@ void ALUControl::setInstruction(Word instruction)
     this->instruction = instruction;
     hasInstruction = true;
 
+    emit receivedInstruction(instruction);
+
     tryExecute();
 }
 
@@ -23,6 +25,8 @@ void ALUControl::setALUOp(Word aluOp)
     this->aluOp = aluOp;
     hasALUOp = true;
 
+    emit receivedALUOp(aluOp);
+
     tryExecute();
 }
 
@@ -30,6 +34,8 @@ void ALUControl::tryExecute()
 {
     if(hasALUOp) {
         execute();
+
+        emit executed();
 
         hasALUOp = false;
     }

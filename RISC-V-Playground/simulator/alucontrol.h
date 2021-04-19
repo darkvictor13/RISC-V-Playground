@@ -1,6 +1,8 @@
 #ifndef ALUCONTROL_H
 #define ALUCONTROL_H
 
+#include <QObject>
+
 #include "word/word.h"
 
 #include "alu.h"
@@ -9,8 +11,10 @@
 class ALU;
 class AddBranch;
 
-class ALUControl
+class ALUControl : public QObject
 {
+    Q_OBJECT
+
 private:
     ALU *alu = NULL;
 
@@ -32,6 +36,13 @@ public:
     void execute();
 
     ~ALUControl();
+
+signals:
+    void receivedInstruction(Word instruction);
+    void receivedALUOp(Word aluOp);
+
+    void executed();
+
 };
 
 #endif // ALUCONTROL_H

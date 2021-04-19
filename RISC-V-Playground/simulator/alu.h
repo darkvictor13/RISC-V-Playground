@@ -1,6 +1,8 @@
 #ifndef ALU_H
 #define ALU_H
 
+#include <QObject>
+
 #include "word/word.h"
 
 #include "instructionmemory.h"
@@ -11,8 +13,10 @@ class InstructionMemory;
 class AndGate;
 class MuxTypeC;
 
-class ALU
+class ALU : public QObject
 {
+    Q_OBJECT
+
 private:
     InstructionMemory *instructionMemory = NULL;
     AndGate *andGate = NULL;
@@ -39,6 +43,14 @@ public:
     void execute();
 
     ~ALU();
+
+signals:
+    void receivedValueA(Word valueA);
+    void receivedValueB(Word valueB);
+    void receivedControl(Word control);
+
+    void executed();
+
 };
 
 #endif // ALU_H

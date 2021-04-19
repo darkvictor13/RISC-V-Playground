@@ -20,6 +20,8 @@ void Control::setOpcode(Word opcode)
     this->opcode = opcode;
     hasOpcode = true;
 
+    emit receivedOpcode(opcode);
+
     tryExecute();
 }
 
@@ -27,6 +29,8 @@ void Control::tryExecute()
 {
     if(hasOpcode) {
         execute();
+
+        emit executed();
 
         hasOpcode = false;
     }

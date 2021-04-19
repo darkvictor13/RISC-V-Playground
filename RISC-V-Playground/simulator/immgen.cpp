@@ -16,6 +16,8 @@ void ImmGen::setInstruction(Word instruction)
     this->instruction = instruction;
     hasInstruction = false;
 
+    emit receivedInstruction(instruction);
+
     tryExecute();
 }
 
@@ -23,6 +25,8 @@ void ImmGen::tryExecute()
 {
     if(hasInstruction) {
         execute();
+
+        emit executed();
 
         hasInstruction = false;
     }

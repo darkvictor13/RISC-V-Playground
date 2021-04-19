@@ -9,6 +9,8 @@ class MuxTypeC;
 
 class DataMemory : public Memory
 {
+    Q_OBJECT
+
 private:
     MuxTypeC *muxC = NULL;
 
@@ -36,6 +38,15 @@ public:
     void execute();
 
     ~DataMemory();
+
+signals:
+    void receivedAddress(Word address);
+    void receivedWriteData(Word writeData);
+    void receivedMemWrite(Word memWrite);
+    void receivedMemRead(Word memRead);
+
+    void executed();
+
 };
 
 #endif // DATAMEMORY_H

@@ -1,6 +1,8 @@
 #ifndef PC_H
 #define PC_H
 
+#include <QObject>
+
 #include "word/word.h"
 
 #include "instructionmemory.h"
@@ -11,8 +13,10 @@ class InstructionMemory;
 class AddBranch;
 class AddNext;
 
-class PC
+class PC : public QObject
 {
+    Q_OBJECT
+
 private:
     InstructionMemory *instructionMemory = NULL;
     AddBranch *addBranch = NULL;
@@ -21,7 +25,7 @@ private:
     Word address = 0;
 
     bool canRun = false;
-    bool hasAddress = false;
+    bool hasAddress = true;
 
 public:
     PC();
@@ -29,12 +33,21 @@ public:
     void connect(InstructionMemory *instructionMemory, AddBranch *addBranch, AddNext *addNext);
 
     void run();
+    void restart();
+    Word getAddress();
+
     void setAddress(Word address);
 
     void tryExecute();
     void execute();
 
     ~PC();
+
+signals:
+    void receivedAddress(Word address);
+
+    void executed();
+
 };
 
 #endif // PC_H
