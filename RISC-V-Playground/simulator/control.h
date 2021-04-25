@@ -5,14 +5,14 @@
 
 #include "word/word.h"
 
-#include "andgate.h"
+#include "makebranch.h"
 #include "datamemory.h"
 #include "muxtypeb.h"
 #include "muxtypec.h"
 #include "alucontrol.h"
 #include "registers.h"
 
-class AndGate;
+class MakeBranch;
 class DataMemory;
 class MuxTypeB;
 class MuxTypeC;
@@ -24,7 +24,7 @@ class Control : public QObject
     Q_OBJECT
 
 private:
-    AndGate *andGate = NULL;
+    MakeBranch *makeBranch = NULL;
     DataMemory *dataMemory = NULL;
     MuxTypeB *muxB = NULL;
     MuxTypeC *muxC = NULL;
@@ -38,7 +38,7 @@ private:
 public:
     Control();
 
-    void connect(AndGate *andGate, DataMemory *dataMemory, MuxTypeB *muxB, MuxTypeC *muxC, ALUControl *aluControl, Registers *registers);
+    void connect(MakeBranch *makeBranch, DataMemory *dataMemory, MuxTypeB *muxB, MuxTypeC *muxC, ALUControl *aluControl, Registers *registers);
 
     void setOpcode(Word opcode);
 

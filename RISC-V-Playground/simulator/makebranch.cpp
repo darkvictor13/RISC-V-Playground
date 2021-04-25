@@ -1,16 +1,16 @@
-#include "andgate.h"
+#include "makebranch.h"
 
-AndGate::AndGate()
+MakeBranch::MakeBranch()
 {
 
 }
 
-void AndGate::connect(MuxTypeA *muxA)
+void MakeBranch::connect(MuxTypeA *muxA)
 {
     this->muxA = muxA;
 }
 
-void AndGate::setBranch(Word branch)
+void MakeBranch::setBranch(Word branch)
 {
     this->branch = branch;
     hasBranch = true;
@@ -20,7 +20,7 @@ void AndGate::setBranch(Word branch)
     tryExecute();
 }
 
-void AndGate::setZero(Word zero)
+void MakeBranch::setZero(Word zero)
 {
     this->zero = zero;
     hasZero = true;
@@ -30,7 +30,7 @@ void AndGate::setZero(Word zero)
     tryExecute();
 }
 
-void AndGate::tryExecute()
+void MakeBranch::tryExecute()
 {
     if(hasBranch && hasZero) {
         emit executed();
@@ -45,7 +45,7 @@ void AndGate::tryExecute()
     }
 }
 
-void AndGate::execute()
+void MakeBranch::execute()
 {
     if(branch == 1 && zero == 1) {
         muxA->setSelection(1);
@@ -54,7 +54,7 @@ void AndGate::execute()
     }
 }
 
-AndGate::~AndGate()
+MakeBranch::~MakeBranch()
 {
 
 }

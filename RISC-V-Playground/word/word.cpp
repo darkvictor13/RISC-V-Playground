@@ -261,6 +261,11 @@ bool Word::operator==(const Word &word)
     return this->data == word.data;
 }
 
+bool Word::operator!=(const int &value)
+{
+    return !(this->data == value);
+}
+
 void Word::extendInt(int position)
 {
     if(this->test(position)) {

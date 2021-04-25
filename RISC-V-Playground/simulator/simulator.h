@@ -48,7 +48,7 @@ public:
     MuxTypeB *muxB = new MuxTypeB();
     MuxTypeC *muxC = new MuxTypeC();
 
-    AndGate *andGate = new AndGate();
+    MakeBranch *makeBranch = new MakeBranch();
 
     int steps;
 

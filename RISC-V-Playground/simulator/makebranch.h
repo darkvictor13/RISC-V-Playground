@@ -1,5 +1,5 @@
-#ifndef ANDGATE_H
-#define ANDGATE_H
+#ifndef MAKEBRANCH_H
+#define MAKEBRANCH_H
 
 #include <QObject>
 
@@ -9,7 +9,7 @@
 
 class MuxTypeA;
 
-class AndGate : public QObject
+class MakeBranch : public QObject
 {
     Q_OBJECT
 
@@ -23,7 +23,7 @@ private:
     bool hasZero = false;
 
 public:
-    AndGate();
+    MakeBranch();
 
     void connect(MuxTypeA *muxA);
 
@@ -33,7 +33,7 @@ public:
     void tryExecute();
     void execute();
 
-    ~AndGate();
+    ~MakeBranch();
 
 signals:
     void receivedBransh(Word branch);
@@ -43,4 +43,4 @@ signals:
 
 };
 
-#endif // ANDGATE_H
+#endif // MAKEBRANCH_H

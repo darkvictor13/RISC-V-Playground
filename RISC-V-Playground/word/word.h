@@ -74,6 +74,7 @@ public:
 
     bool operator==(const Word &word);
     bool operator==(const int &value);
+    bool operator!=(const int &value);
 
     void extendInt(int position);
 

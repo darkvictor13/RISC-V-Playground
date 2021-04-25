@@ -6,11 +6,11 @@
 #include "word/word.h"
 
 #include "instructionmemory.h"
-#include "andgate.h"
+#include "makebranch.h"
 #include "muxtypec.h"
 
 class DataMemory;
-class AndGate;
+class MakeBranch;
 class MuxTypeC;
 
 class ALU : public QObject
@@ -19,25 +19,28 @@ class ALU : public QObject
 
 private:
     DataMemory *dataMemory = NULL;
-    AndGate *andGate = NULL;
+    MakeBranch *makeBranch = NULL;
     MuxTypeC *muxC = NULL;
 
     Word valueA = 0;
     Word valueB = 0;
     Word control = 0;
+    Word reverse = 0;
 
     bool hasValueA = false;
     bool hasValueB = false;
     bool hasControl = false;
+    bool hasReverse = false;
 
 public:
     ALU();
 
-    void connect(DataMemory *dataMemory, AndGate *andGate, MuxTypeC *muxC);
+    void connect(DataMemory *dataMemory, MakeBranch *makeBranch, MuxTypeC *muxC);
 
     void setValueA(Word valueA);
     void setValueB(Word valueB);
     void setControl(Word control);
+    void setReverse(Word reverse);
 
     void tryExecute();
     void execute();
@@ -48,6 +51,7 @@ signals:
     void receivedValueA(Word valueA);
     void receivedValueB(Word valueB);
     void receivedControl(Word control);
+    void receivedReverse(Word reverse);
 
     void executed();
 

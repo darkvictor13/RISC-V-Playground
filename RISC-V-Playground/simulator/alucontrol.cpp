@@ -47,6 +47,8 @@ void ALUControl::tryExecute()
 
 void ALUControl::execute()
 {
+    alu->setReverse(instruction.getInteger(0, 0));
+
     if(aluOp == 0) {
         alu->setControl(2);
         return;

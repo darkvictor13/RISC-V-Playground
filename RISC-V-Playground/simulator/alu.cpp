@@ -5,10 +5,10 @@ ALU::ALU()
 
 }
 
-void ALU::connect(DataMemory *dataMemory, AndGate *andGate, MuxTypeC *muxC)
+void ALU::connect(DataMemory *dataMemory, MakeBranch *makeBranch, MuxTypeC *muxC)
 {
     this->dataMemory = dataMemory;
-    this->andGate = andGate;
+    this->makeBranch = makeBranch;
     this->muxC = muxC;
 }
 
@@ -42,6 +42,16 @@ void ALU::setControl(Word control)
     tryExecute();
 }
 
+void ALU::setReverse(Word reverse)
+{
+    this->reverse = reverse;
+    hasReverse = true;
+
+    emit receivedReverse(reverse);
+
+    tryExecute();
+}
+
 void ALU::tryExecute()
 {
     if(hasValueA && hasValueB && hasControl) {
@@ -50,12 +60,14 @@ void ALU::tryExecute()
         hasValueA = false;
         hasValueB = false;
         hasControl = false;
+        hasReverse = false;
 
         execute();
 
         valueA = 0;
         valueB = 0;
         control = 0;
+        reverse = 0;
     }
 }
 
@@ -74,11 +86,12 @@ void ALU::execute()
             break;
     }
 
-    if(result == 0) {
-        andGate->setZero(1);
+    if((result == 0 && reverse == 0) || (result != 0 && reverse == 1)) {
+        makeBranch->setZero(1);
     }else{
-        andGate->setZero(0);
+        makeBranch->setZero(0);
     }
+
     dataMemory->setAddress(result);
     muxC->setValueA(result);
 }

@@ -12,13 +12,13 @@ Simulator::Simulator()
     pc->connect(instructionMemory, addBranch, addNext);
 
     aluControl->connect(alu);
-    control->connect(andGate, dataMemory, muxB, muxC, aluControl, registers);
+    control->connect(makeBranch, dataMemory, muxB, muxC, aluControl, registers);
 
     registers->connect(alu, muxB, dataMemory);
     instructionMemory->connect(control, registers, immGen, aluControl);
     dataMemory->connect(muxC);
 
-    alu->connect(dataMemory, andGate, muxC);
+    alu->connect(dataMemory, makeBranch, muxC);
     addNext->connect(muxA);
     addBranch->connect(muxA);
 
@@ -28,7 +28,7 @@ Simulator::Simulator()
     muxB->connect(alu);
     muxC->connect(registers);
 
-    andGate->connect(muxA);
+    makeBranch->connect(muxA);
 }
 
 void Simulator::init()

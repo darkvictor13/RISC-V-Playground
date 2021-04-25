@@ -69,15 +69,16 @@ public slots:
     void receivedALUValueA(Word valueA);
     void receivedALUValueB(Word valueB);
     void receivedALUControl(Word control);
+    void receivedALUReverse(Word reverse);
     void executedALU();
 
     void receivedALUControlInstruction(Word instruction);
     void receivedALUControlALUOp(Word aluOp);
     void executedALUControl();
 
-    void receivedAndGateBransh(Word branch);
-    void receivedAndGateZero(Word zero);
-    void executedAndGate();
+    void receivedMakeBranchBransh(Word branch);
+    void receivedMakeBranchZero(Word zero);
+    void executedMakeBranch();
 
     void receivedControlOpcode(Word opcode);
     void executedControl();
@@ -175,6 +176,7 @@ private:
     QTreeWidgetItem *aluValueAItem;
     QTreeWidgetItem *aluValueBItem;
     QTreeWidgetItem *aluControlValueItem;
+    QTreeWidgetItem *aluReverseItem;
 
     QTreeWidgetItem *aluControlItem;
     QTreeWidgetItem *aluControlInstructionItem;
@@ -191,9 +193,9 @@ private:
     QTreeWidgetItem *addBranchValueAItem;
     QTreeWidgetItem *addBranchValueBItem;
 
-    QTreeWidgetItem *andGateItem;
-    QTreeWidgetItem *andGateBranchItem;
-    QTreeWidgetItem *andGateZeroItem;
+    QTreeWidgetItem *makeBranchItem;
+    QTreeWidgetItem *makeBranchBranchItem;
+    QTreeWidgetItem *makeBranchZeroItem;
 
     QTreeWidgetItem *muxAItem;
     QTreeWidgetItem *muxAValueAItem;

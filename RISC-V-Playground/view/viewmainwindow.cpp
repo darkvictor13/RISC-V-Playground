@@ -37,15 +37,16 @@ ViewMainWindow::ViewMainWindow(QWidget *parent)
     QObject::connect(simulator->alu, &ALU::receivedValueA, this, &ViewMainWindow::receivedALUValueA);
     QObject::connect(simulator->alu, &ALU::receivedValueB, this, &ViewMainWindow::receivedALUValueB);
     QObject::connect(simulator->alu, &ALU::receivedControl, this, &ViewMainWindow::receivedALUControl);
+    QObject::connect(simulator->alu, &ALU::receivedReverse, this, &ViewMainWindow::receivedALUReverse);
     QObject::connect(simulator->alu, &ALU::executed, this, &ViewMainWindow::executedALU);
 
     QObject::connect(simulator->aluControl, &ALUControl::receivedInstruction, this, &ViewMainWindow::receivedALUControlInstruction);
     QObject::connect(simulator->aluControl, &ALUControl::receivedALUOp, this, &ViewMainWindow::receivedALUControlALUOp);
     QObject::connect(simulator->aluControl, &ALUControl::executed, this, &ViewMainWindow::executedALUControl);
 
-    QObject::connect(simulator->andGate, &AndGate::receivedBransh, this, &ViewMainWindow::receivedAndGateBransh);
-    QObject::connect(simulator->andGate, &AndGate::receivedZero, this, &ViewMainWindow::receivedAndGateZero);
-    QObject::connect(simulator->andGate, &AndGate::executed, this, &ViewMainWindow::executedAndGate);
+    QObject::connect(simulator->makeBranch, &MakeBranch::receivedBransh, this, &ViewMainWindow::receivedMakeBranchBransh);
+    QObject::connect(simulator->makeBranch, &MakeBranch::receivedZero, this, &ViewMainWindow::receivedMakeBranchZero);
+    QObject::connect(simulator->makeBranch, &MakeBranch::executed, this, &ViewMainWindow::executedMakeBranch);
 
     QObject::connect(simulator->control, &Control::receivedOpcode, this, &ViewMainWindow::receivedControlOpcode);
     QObject::connect(simulator->control, &Control::executed, this, &ViewMainWindow::executedControl);
@@ -267,6 +268,12 @@ void ViewMainWindow::receivedALUControl(Word control)
     aluControlValueItem->setData(1, 0, control.getDecimal());
 }
 
+void ViewMainWindow::receivedALUReverse(Word reverse)
+{
+    //consoleLog("ALU received reverse equal to: " + reverse.getDecimal() + ".");
+    aluReverseItem->setData(1, 0, reverse.getDecimal());
+}
+
 void ViewMainWindow::executedALU()
 {
     //consoleLog("ALU executed.");
@@ -291,22 +298,22 @@ void ViewMainWindow::executedALUControl()
     aluControlItem->setData(1, 0, "executed");
 }
 
-void ViewMainWindow::receivedAndGateBransh(Word branch)
+void ViewMainWindow::receivedMakeBranchBransh(Word branch)
 {
-    //consoleLog("AndGate received branch equal to: " + branch.getDecimal() + ".");
-    andGateBranchItem->setData(1, 0, branch.getDecimal());
+    //consoleLog("MakeBranch received branch equal to: " + branch.getDecimal() + ".");
+    makeBranchBranchItem->setData(1, 0, branch.getDecimal());
 }
 
-void ViewMainWindow::receivedAndGateZero(Word zero)
+void ViewMainWindow::receivedMakeBranchZero(Word zero)
 {
-    //consoleLog("AndGate received zero equal to: " + zero.getDecimal() + ".");
-    andGateZeroItem->setData(1, 0, zero.getDecimal());
+    //consoleLog("MakeBranch received zero equal to: " + zero.getDecimal() + ".");
+    makeBranchZeroItem->setData(1, 0, zero.getDecimal());
 }
 
-void ViewMainWindow::executedAndGate()
+void ViewMainWindow::executedMakeBranch()
 {
-    //consoleLog("AndGate executed.");
-    andGateItem->setData(1, 0, "executed");
+    //consoleLog("MakeBranch executed.");
+    makeBranchItem->setData(1, 0, "executed");
 }
 
 void ViewMainWindow::receivedControlOpcode(Word opcode)
@@ -665,6 +672,7 @@ void ViewMainWindow::treeWidgetInit()
     aluValueAItem = treeWidgetAddChild(aluItem, "valueA", "- - -");
     aluValueBItem = treeWidgetAddChild(aluItem, "valueB", "- - -");
     aluControlValueItem = treeWidgetAddChild(aluItem, "control", "- - -");
+    aluReverseItem = treeWidgetAddChild(aluItem, "reverse", "- - -");
 
     aluControlItem = treeWidgetAddRoot("ALUControl", "- - -");
     aluControlInstructionItem = treeWidgetAddChild(aluControlItem, "instruction", "- - -");
@@ -681,9 +689,9 @@ void ViewMainWindow::treeWidgetInit()
     addBranchValueAItem = treeWidgetAddChild(addBranchItem, "valueA", "- - -");
     addBranchValueBItem = treeWidgetAddChild(addBranchItem, "valueB", "- - -");
 
-    andGateItem = treeWidgetAddRoot("AndGate", "- - -");
-    andGateBranchItem = treeWidgetAddChild(andGateItem, "branch", "- - -");
-    andGateZeroItem = treeWidgetAddChild(andGateItem, "zero", "- - -");
+    makeBranchItem = treeWidgetAddRoot("MakeBranch", "- - -");
+    makeBranchBranchItem = treeWidgetAddChild(makeBranchItem, "branch", "- - -");
+    makeBranchZeroItem = treeWidgetAddChild(makeBranchItem, "zero", "- - -");
 
     muxAItem = treeWidgetAddRoot("MuxA", "- - -");
     muxAValueAItem = treeWidgetAddChild(muxAItem, "valueA", "- - -");
@@ -756,6 +764,7 @@ void ViewMainWindow::treeWidgetClear()
     aluValueAItem->setData(1, 0, "- - -");
     aluValueBItem->setData(1, 0, "- - -");
     aluControlValueItem->setData(1, 0, "- - -");
+    aluReverseItem->setData(1, 0, "- - -");
 
     aluControlItem->setData(1, 0, "- - -");
     aluControlInstructionItem->setData(1, 0, "- - -");
@@ -772,9 +781,9 @@ void ViewMainWindow::treeWidgetClear()
     addBranchValueAItem->setData(1, 0, "- - -");
     addBranchValueBItem->setData(1, 0, "- - -");
 
-    andGateItem->setData(1, 0, "- - -");
-    andGateBranchItem->setData(1, 0, "- - -");
-    andGateZeroItem->setData(1, 0, "- - -");
+    makeBranchItem->setData(1, 0, "- - -");
+    makeBranchBranchItem->setData(1, 0, "- - -");
+    makeBranchZeroItem->setData(1, 0, "- - -");
 
     muxAItem->setData(1, 0, "- - -");
     muxAValueAItem->setData(1, 0, "- - -");

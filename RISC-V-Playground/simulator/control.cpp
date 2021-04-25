@@ -5,9 +5,9 @@ Control::Control()
 
 }
 
-void Control::connect(AndGate *andGate, DataMemory *dataMemory, MuxTypeB *muxB, MuxTypeC *muxC, ALUControl *aluControl, Registers *registers)
+void Control::connect(MakeBranch *makeBranch, DataMemory *dataMemory, MuxTypeB *muxB, MuxTypeC *muxC, ALUControl *aluControl, Registers *registers)
 {
-    this->andGate = andGate;
+    this->makeBranch = makeBranch;
     this->dataMemory = dataMemory;
     this->muxB = muxB;
     this->muxC = muxC;
@@ -42,7 +42,7 @@ void Control::execute()
 {
     if(opcode == 3) { // lw
 
-        andGate->setBranch(0);
+        makeBranch->setBranch(0);
         dataMemory->setMemRead(1);
         muxC->setSelection(1);
         aluControl->setALUOp(0);
@@ -55,7 +55,7 @@ void Control::execute()
 
     if(opcode == 19) { // addi
 
-        andGate->setBranch(0);
+        makeBranch->setBranch(0);
         dataMemory->setMemRead(0);
         muxC->setSelection(0);
         aluControl->setALUOp(2);
@@ -68,7 +68,7 @@ void Control::execute()
 
     if(opcode == 35) { // sw
 
-        andGate->setBranch(0);
+        makeBranch->setBranch(0);
         dataMemory->setMemRead(0);
         muxC->setSelection(0);
         aluControl->setALUOp(0);
@@ -81,7 +81,7 @@ void Control::execute()
 
     if(opcode == 51) { // type-R
 
-        andGate->setBranch(0); //  Branch
+        makeBranch->setBranch(0); //  Branch
         dataMemory->setMemRead(0); // MemRead
         muxC->setSelection(0); // MemToReg
         aluControl->setALUOp(2); // ALUOp
@@ -94,7 +94,7 @@ void Control::execute()
 
     if(opcode == 99) { // beq, bne
 
-        andGate->setBranch(1);
+        makeBranch->setBranch(1);
         dataMemory->setMemRead(0);
         muxC->setSelection(0);
         aluControl->setALUOp(1);

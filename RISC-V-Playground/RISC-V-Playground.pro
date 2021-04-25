@@ -21,7 +21,7 @@ SOURCES += \
     simulator/addnext.cpp \
     simulator/alu.cpp \
     simulator/alucontrol.cpp \
-    simulator/andgate.cpp \
+    simulator/makebranch.cpp \
     simulator/control.cpp \
     simulator/datamemory.cpp \
     simulator/immgen.cpp \
@@ -49,7 +49,7 @@ HEADERS += \
     simulator/addnext.h \
     simulator/alu.h \
     simulator/alucontrol.h \
-    simulator/andgate.h \
+    simulator/makebranch.h \
     simulator/control.h \
     simulator/datamemory.h \
     simulator/immgen.h \
