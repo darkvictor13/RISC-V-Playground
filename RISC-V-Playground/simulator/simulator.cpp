@@ -18,7 +18,7 @@ Simulator::Simulator()
     instructionMemory->connect(control, registers, immGen, aluControl);
     dataMemory->connect(muxC);
 
-    alu->connect(instructionMemory, andGate, muxC);
+    alu->connect(dataMemory, andGate, muxC);
     addNext->connect(muxA);
     addBranch->connect(muxA);
 

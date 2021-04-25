@@ -14,7 +14,7 @@ void ImmGen::connect(AddBranch *addBranch, MuxTypeB *muxB)
 void ImmGen::setInstruction(Word instruction)
 {
     this->instruction = instruction;
-    hasInstruction = false;
+    hasInstruction = true;
 
     emit receivedInstruction(instruction);
 
@@ -24,17 +24,41 @@ void ImmGen::setInstruction(Word instruction)
 void ImmGen::tryExecute()
 {
     if(hasInstruction) {
-        execute();
-
         emit executed();
 
         hasInstruction = false;
+
+        execute();
+
+        instruction = 0;
     }
 }
 
 void ImmGen::execute()
 {
-    //muxB->setValueB();
+    Instruction instructionFormat(&instruction);
+
+    Word value;
+    int opcode = instructionFormat.getIntegerOpcode();
+
+    if(opcode == 19 || opcode == 3) {
+        InstructionTypeI instructionTypeI(&instruction);
+        value = instructionTypeI.getIntegerImmediate();
+        value.extendInt(11);
+    }else if(opcode == 35) {
+        InstructionTypeS instructionTypeS(&instruction);
+        value = instructionTypeS.getIntegerImmediate();
+        value.extendInt(11);
+    }else if(opcode == 99) {
+        InstructionTypeSB instructionTypeSB(&instruction);
+        value = instructionTypeSB.getIntegerImmediate();
+        value.extendInt(12);
+    }else{
+        value = 0;
+    }
+
+    muxB->setValueB(value);
+    addBranch->setValueB(value);
 }
 
 ImmGen::~ImmGen()

@@ -27,6 +27,7 @@ public:
 
     void init();
     void takeMemoryData(QString fileName);
+    void loadValue(Word value, Word address);
     void setValue(Word value, Word address);
     void setValue(QString binary, int address);
     Word getValue(Word address);

@@ -23,6 +23,7 @@ class InstructionTypeS : public Instruction
 {
 public:
     InstructionTypeS();
+    InstructionTypeS(Word *word) : Instruction(word) {};
 
     void setImmediate(DATA value);
     void setImmediate(QString binary);

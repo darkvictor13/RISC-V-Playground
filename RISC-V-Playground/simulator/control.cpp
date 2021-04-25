@@ -28,11 +28,13 @@ void Control::setOpcode(Word opcode)
 void Control::tryExecute()
 {
     if(hasOpcode) {
-        execute();
-
         emit executed();
 
         hasOpcode = false;
+
+        execute();
+
+        opcode = 0;
     }
 }
 
@@ -68,6 +70,7 @@ void Control::execute()
 
         andGate->setBranch(0);
         dataMemory->setMemRead(0);
+        muxC->setSelection(0);
         aluControl->setALUOp(0);
         dataMemory->setMemWrite(1);
         muxB->setSelection(1);
@@ -93,6 +96,7 @@ void Control::execute()
 
         andGate->setBranch(1);
         dataMemory->setMemRead(0);
+        muxC->setSelection(0);
         aluControl->setALUOp(1);
         dataMemory->setMemWrite(0);
         muxB->setSelection(0);

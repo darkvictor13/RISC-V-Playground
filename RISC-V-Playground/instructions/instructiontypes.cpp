@@ -26,7 +26,7 @@ void InstructionTypeS::setImmediate(QString binary)
 
 DATA InstructionTypeS::getIntegerImmediate()
 {
-    return (getInteger(S_IMMEDIATE_B_FIRST, S_IMMEDIATE_B_LAST) << (S_IMMEDIATE_A_LAST - S_IMMEDIATE_A_FIRST)) & getInteger(S_IMMEDIATE_A_FIRST, S_IMMEDIATE_A_LAST);
+    return (getInteger(S_IMMEDIATE_B_FIRST, S_IMMEDIATE_B_LAST) << (S_IMMEDIATE_A_LAST - S_IMMEDIATE_A_FIRST)) | getInteger(S_IMMEDIATE_A_FIRST, S_IMMEDIATE_A_LAST);
 }
 
 QString InstructionTypeS::getStringImmediate()

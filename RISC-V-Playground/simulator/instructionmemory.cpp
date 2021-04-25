@@ -26,17 +26,19 @@ void InstructionMemory::setAddress(Word address)
 void InstructionMemory::tryExecute()
 {
     if(hasAddress) {
-        execute();
-
         emit executed();
 
         hasAddress = false;
+
+        execute();
+
+        address = 0;
     }
 }
 
 void InstructionMemory::execute()
 {
-    Word value = getValue(address).getInteger();
+    Word value = getValue(address);
 
     control->setOpcode(value.getInteger(0, 6));
     registers->setReadRegister1(value.getInteger(15, 19));
@@ -44,9 +46,9 @@ void InstructionMemory::execute()
     registers->setWriteRegister(value.getInteger(7, 11));
     immGen->setInstruction(value);
 
-    Word instruction = (value.test(30) << 3) | value.getInteger(12, 14);
+    Word instruction = (value.getInteger(30, 30) << 3) | value.getInteger(12, 14);
 
-    aluControl->setALUOp(instruction);
+    aluControl->setInstruction(instruction);
 }
 
 InstructionMemory::~InstructionMemory()

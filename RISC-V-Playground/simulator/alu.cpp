@@ -5,9 +5,9 @@ ALU::ALU()
 
 }
 
-void ALU::connect(InstructionMemory *instructionMemory, AndGate *andGate, MuxTypeC *muxC)
+void ALU::connect(DataMemory *dataMemory, AndGate *andGate, MuxTypeC *muxC)
 {
-    this->instructionMemory =instructionMemory;
+    this->dataMemory = dataMemory;
     this->andGate = andGate;
     this->muxC = muxC;
 }
@@ -45,13 +45,17 @@ void ALU::setControl(Word control)
 void ALU::tryExecute()
 {
     if(hasValueA && hasValueB && hasControl) {
-        execute();
-
         emit executed();
 
         hasValueA = false;
         hasValueB = false;
         hasControl = false;
+
+        execute();
+
+        valueA = 0;
+        valueB = 0;
+        control = 0;
     }
 }
 
@@ -70,8 +74,12 @@ void ALU::execute()
             break;
     }
 
-    andGate->setZero(result);
-    instructionMemory->setAddress(result);
+    if(result == 0) {
+        andGate->setZero(1);
+    }else{
+        andGate->setZero(0);
+    }
+    dataMemory->setAddress(result);
     muxC->setValueA(result);
 }
 

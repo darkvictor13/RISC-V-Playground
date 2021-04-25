@@ -23,6 +23,7 @@ class InstructionTypeR : public Instruction
 {
 public:
     InstructionTypeR();
+    InstructionTypeR(Word *word) : Instruction(word) {};
 
     void setRD(DATA value);
     void setRD(QString binary);

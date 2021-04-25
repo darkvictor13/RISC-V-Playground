@@ -53,14 +53,19 @@ void DataMemory::setMemRead(Word memRead)
 void DataMemory::tryExecute()
 {
     if(hasAddress && hasWriteData && hasMemWrite && hasMemRead) {
-        execute();
-
         emit executed();
 
         hasAddress = false;
         hasWriteData = false;
         hasMemWrite = false;
         hasMemRead = false;
+
+        execute();
+
+        address = 0;
+        writeData = 0;
+        memWrite = 0;
+        memRead = 0;
     }
 }
 

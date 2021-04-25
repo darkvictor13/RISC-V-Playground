@@ -61,6 +61,7 @@ public:
 
     Word operator*(const Word &word);
     Word operator/(const Word &word);
+    Word operator/(const int &word);
 
     Word operator&(const Word &word);
     Word operator|(const Word &word);
@@ -74,6 +75,8 @@ public:
     bool operator==(const Word &word);
     bool operator==(const int &value);
 
+    void extendInt(int position);
+
     DATA getInteger();
     DATA getInteger(DATA first, DATA last);
 
@@ -83,6 +86,8 @@ public:
 
     QString getString(DATA base = 2);
     QString getString(DATA first, DATA last, DATA base = 2);
+
+    QString getDecimal();
 
     ~Word();
 };

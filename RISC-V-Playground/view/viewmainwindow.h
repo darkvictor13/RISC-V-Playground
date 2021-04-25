@@ -11,6 +11,7 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include <QTextStream>
+#include <QTreeWidgetItem>
 
 #include "simulator/simulator.h"
 #include "assembler/assembler.h"
@@ -127,7 +128,13 @@ public slots:
     void initRegisters(int size);
     void updateRegister(Word value, Word address);
     void restartRegisters();
-    void executedRegisters();
+    void executedReadRegisters();
+    void executedWriteRegisters();
+
+    void treeWidgetInit();
+    QTreeWidgetItem* treeWidgetAddRoot(QString name, QString value);
+    QTreeWidgetItem* treeWidgetAddChild(QTreeWidgetItem *parent,  QString name, QString value);
+    void treeWidgetClear();
 
     void consoleLog(QString message);
 
@@ -141,5 +148,66 @@ signals:
 
     void loadMemory(QString thisFile);
 
+private:
+    QTreeWidgetItem *pcItem;
+    QTreeWidgetItem *pcAddressItem;
+
+    QTreeWidgetItem *registerItem;
+    QTreeWidgetItem *registerReadRegister1Item;
+    QTreeWidgetItem *registerReadRegister2Item;
+    QTreeWidgetItem *registerWriteRegItem;
+    QTreeWidgetItem *registerWriteDataItem;
+    QTreeWidgetItem *registerRegWriteItem;
+
+    QTreeWidgetItem *instructionMemoryItem;
+    QTreeWidgetItem *instructionMemoryAddressItem;
+
+    QTreeWidgetItem *dataMemoryItem;
+    QTreeWidgetItem *dataMemoryAddressItem;
+    QTreeWidgetItem *dataMemoryWriteDataItem;
+    QTreeWidgetItem *dataMemoryMemWriteItem;
+    QTreeWidgetItem *dataMemoryMemReadItem;
+
+    QTreeWidgetItem *controlItem;
+    QTreeWidgetItem *controlOpcodeItem;
+
+    QTreeWidgetItem *aluItem;
+    QTreeWidgetItem *aluValueAItem;
+    QTreeWidgetItem *aluValueBItem;
+    QTreeWidgetItem *aluControlValueItem;
+
+    QTreeWidgetItem *aluControlItem;
+    QTreeWidgetItem *aluControlInstructionItem;
+    QTreeWidgetItem *aluControlOpItem;
+
+    QTreeWidgetItem *immGenItem;
+    QTreeWidgetItem *immGenInstructionItem;
+
+    QTreeWidgetItem *addNextItem;
+    QTreeWidgetItem *addNextValueAItem;
+    QTreeWidgetItem *addNextValueBItem;
+
+    QTreeWidgetItem *addBranchItem;
+    QTreeWidgetItem *addBranchValueAItem;
+    QTreeWidgetItem *addBranchValueBItem;
+
+    QTreeWidgetItem *andGateItem;
+    QTreeWidgetItem *andGateBranchItem;
+    QTreeWidgetItem *andGateZeroItem;
+
+    QTreeWidgetItem *muxAItem;
+    QTreeWidgetItem *muxAValueAItem;
+    QTreeWidgetItem *muxAValueBItem;
+    QTreeWidgetItem *muxASelectionItem;
+
+    QTreeWidgetItem *muxBItem;
+    QTreeWidgetItem *muxBValueAItem;
+    QTreeWidgetItem *muxBValueBItem;
+    QTreeWidgetItem *muxBSelectionItem;
+
+    QTreeWidgetItem *muxCItem;
+    QTreeWidgetItem *muxCValueAItem;
+    QTreeWidgetItem *muxCValueBItem;
+    QTreeWidgetItem *muxCSelectionItem;
 };
 #endif // VIEWMAINWINDOW_H

@@ -32,21 +32,26 @@ void AndGate::setZero(Word zero)
 
 void AndGate::tryExecute()
 {
-    if(branch && zero) {
-        execute();
-
+    if(hasBranch && hasZero) {
         emit executed();
 
-        branch = false;
-        zero = false;
+        hasBranch = false;
+        hasZero = false;
+
+        execute();
+
+        branch = 0;
+        zero = 0;
     }
 }
 
 void AndGate::execute()
 {
-    Word result = branch & zero;
-
-    muxA->setSelection(result);
+    if(branch == 1 && zero == 1) {
+        muxA->setSelection(1);
+    }else{
+        muxA->setSelection(0);
+    }
 }
 
 AndGate::~AndGate()

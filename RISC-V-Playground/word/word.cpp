@@ -75,6 +75,8 @@ void Word::set(QString binary, DATA first, DATA last, DATA base)
 {
     base = length_of_base(base);
 
+    reverse(binary.begin(), binary.end());
+
     if((DATA) binary.length() * base > last - first) {
         // error
     }
@@ -193,9 +195,16 @@ Word Word::operator*(const Word &word)
     return newWord;
 }
 
+Word Word::operator/(const int &word)
+{
+    Word newWord = (this->data / word);
+
+    return newWord;
+}
+
 Word Word::operator/(const Word &word)
 {
-    Word newWord = this->data / word.data;
+    Word newWord = (this->data / word.data);
 
     return newWord;
 }
@@ -250,6 +259,13 @@ bool Word::operator==(const int &value)
 bool Word::operator==(const Word &word)
 {
     return this->data == word.data;
+}
+
+void Word::extendInt(int position)
+{
+    if(this->test(position)) {
+        this->set(-1, position, DATA_BITS - 1);
+    }
 }
 
 DATA Word::getInteger()
@@ -314,6 +330,12 @@ QString Word::getString(DATA first, DATA last, DATA base)
     reverse(binary.begin(), binary.end());
 
     return binary;
+}
+
+
+QString Word::getDecimal()
+{
+    return QString::number(this->getInteger());
 }
 
 Word::~Word()

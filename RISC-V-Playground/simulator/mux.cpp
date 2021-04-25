@@ -30,19 +30,25 @@ void Mux::setSelection(Word selection)
     this->selection = selection;
     hasSelection = true;
 
+    emit receivedSelection(selection);
+
     tryExecute();
 }
 
 void Mux::tryExecute()
 {
     if(hasValueA && hasValueB && hasSelection) {
-        execute();
-
         emit executed();
 
         hasValueA = false;
         hasValueB = false;
         hasSelection = false;
+
+        execute();
+
+        valueA = 0;
+        valueB = 0;
+        selection = 0;
     }
 }
 

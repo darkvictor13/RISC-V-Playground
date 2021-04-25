@@ -5,6 +5,11 @@
 
 #include "word/word.h"
 
+#include "instructions/instructiontyper.h"
+#include "instructions/instructiontypei.h"
+#include "instructions/instructiontypes.h"
+#include "instructions/instructiontypesb.h"
+
 #include "muxtypeb.h"
 #include "addbranch.h"
 

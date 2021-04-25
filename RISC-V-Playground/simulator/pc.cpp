@@ -35,18 +35,18 @@ void PC::setAddress(Word address)
     this->address = address;
     hasAddress = true;
 
-    emit receivedAddress(address);
+    emit receivedAddress(address.getInteger());
 }
 
 void PC::tryExecute()
 {
     if(hasAddress && canRun) {
-        execute();
-
         emit executed();
 
         hasAddress = false;
         canRun = false;
+
+        execute();
     }
 }
 

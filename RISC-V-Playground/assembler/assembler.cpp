@@ -111,7 +111,10 @@ vector<Label> Assembler::mountLabelsTable(vector<QStringList> words)
         if(isLabel(words[i])) {
             Label label;
 
-            label.identifier = words[i][0];
+            QString identifier = words[i][0];
+            identifier.remove(':');
+
+            label.identifier = identifier;
             label.position = position;
 
             labelsTable.push_back(label);
@@ -202,7 +205,7 @@ Word Assembler::mountADD(QStringList line)
     instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(0);
 
-    emit consoleLog("add -> " + instruction.getString());
+    //emit consoleLog("add -> " + instruction.getString());
 
     return instruction;
 }
@@ -218,7 +221,7 @@ Word Assembler::mountSUB(QStringList line)
     instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(32);
 
-    emit consoleLog("sub -> " + instruction.getString());
+    //emit consoleLog("sub -> " + instruction.getString());
 
     return instruction;
 }
@@ -234,7 +237,7 @@ Word Assembler::mountAND(QStringList line)
     instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(0);
 
-    emit consoleLog("and -> " + instruction.getString());
+    //emit consoleLog("and -> " + instruction.getString());
 
     return instruction;
 }
@@ -250,7 +253,7 @@ Word Assembler::mountOR(QStringList line)
     instruction.setRS2(getRegister(line[3]));
     instruction.setFunct7(0);
 
-    emit consoleLog("or -> " + instruction.getString());
+    //emit consoleLog("or -> " + instruction.getString());
 
     return instruction;
 }
@@ -265,7 +268,7 @@ Word Assembler::mountADDI(QStringList line)
     instruction.setRS1(getRegister(line[2]));
     instruction.setImmediate(getImmediate(line[3]));
 
-    emit consoleLog("addi -> " + instruction.getString());
+    //emit consoleLog("addi -> " + instruction.getString());
 
     return instruction;
 }
@@ -280,7 +283,7 @@ Word Assembler::mountLW(QStringList line)
     instruction.setRS1(getRegister(line[3]));
     instruction.setImmediate(getImmediate(line[2]));
 
-    emit consoleLog("lw -> " + instruction.getString());
+    //emit consoleLog("lw -> " + instruction.getString());
 
     return instruction;
 }
@@ -295,7 +298,7 @@ Word Assembler::mountSW(QStringList line)
     instruction.setRS2(getRegister(line[1]));
     instruction.setImmediate(getImmediate(line[2]));
 
-    emit consoleLog("sw -> " + instruction.getString());
+    //emit consoleLog("sw -> " + instruction.getString());
 
     return instruction;
 }
@@ -308,9 +311,9 @@ Word Assembler::mountBEQ(QStringList line, vector<Label> labelsTable, int positi
     instruction.setFunct3(0);
     instruction.setRS1(getRegister(line[1]));
     instruction.setRS2(getRegister(line[2]));
-    instruction.setImmediate(getImmediate(line[3])); /////////////////////
+    instruction.setImmediate(generateOffset(line[3], labelsTable, position));
 
-    emit consoleLog("beq -> " + instruction.getString());
+    //emit consoleLog("beq -> " + instruction.getString());
 
     return instruction;
 }
@@ -323,11 +326,23 @@ Word Assembler::mountBNE(QStringList line, vector<Label> labelsTable, int positi
     instruction.setFunct3(1);
     instruction.setRS1(getRegister(line[1]));
     instruction.setRS2(getRegister(line[2]));
-    instruction.setImmediate(getImmediate(line[3])); /////////////////////
+    instruction.setImmediate(generateOffset(line[3], labelsTable, position));
 
-    emit consoleLog("bne -> " + instruction.getString());
+    //emit consoleLog("bne -> " + instruction.getString());
 
     return instruction;
+}
+
+int Assembler::generateOffset(QString label, vector<Label> labelsTable, int position)
+{
+    int size = labelsTable.size();
+    for(int i = 0; i < size; i++) {
+        if(!label.compare(labelsTable[i].identifier)) {
+            return (labelsTable[i].position - position) * 4;
+        }
+    }
+
+    return label.toInt();
 }
 
 void Assembler::generateFile(vector<Word> instructions, QString fileName)

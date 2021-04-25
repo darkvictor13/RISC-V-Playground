@@ -25,14 +25,14 @@ public:
     void setSelection(Word selection);
 
     void tryExecute();
-    void execute() {};
+    void virtual execute() = 0;
 
     ~Mux();
 
 signals:
     void receivedValueA(Word valueA);
     void receivedValueB(Word valueB);
-    void receivedSelection(Word control);
+    void receivedSelection(Word selection);
 
     void executed();
 

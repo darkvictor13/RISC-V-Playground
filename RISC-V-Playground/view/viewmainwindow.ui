@@ -128,7 +128,24 @@
                <number>2</number>
               </property>
               <item row="0" column="0">
-               <widget class="QTableWidget" name="flagsTableWidget"/>
+               <widget class="QTreeWidget" name="treeWidget">
+                <column>
+                 <property name="text">
+                  <string>Elements</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Values</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </column>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -139,7 +156,7 @@
         <item>
          <widget class="QTabWidget" name="topTabWidget">
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="editorTab">
            <attribute name="title">
@@ -181,7 +198,11 @@
              <number>2</number>
             </property>
             <item row="0" column="0">
-             <widget class="QListWidget" name="instructionListWidget"/>
+             <widget class="QListWidget" name="instructionListWidget">
+              <property name="spacing">
+               <number>2</number>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -193,7 +214,7 @@
            <enum>QTabWidget::East</enum>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="instructionMemoryTab">
            <attribute name="title">
@@ -309,7 +330,11 @@
            <number>6</number>
           </property>
           <item row="0" column="0">
-           <widget class="QListWidget" name="consoleListWidget"/>
+           <widget class="QListWidget" name="consoleListWidget">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -331,7 +356,11 @@
            <number>2</number>
           </property>
           <item row="0" column="0">
-           <widget class="QListWidget" name="aboutListWidget"/>
+           <widget class="QListWidget" name="aboutListWidget">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>

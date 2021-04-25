@@ -105,30 +105,40 @@ void Registers::setRegWrite(Word regWrite)
 
 void Registers::tryExecute()
 {
-    if(hasReadRegister1 && hasReadRegister2 && hasWriteRegister && hasRegWrite) {
-        execute();
-
-        emit executed();
+    if(hasReadRegister1 && hasReadRegister2 && hasWriteRegister) {
+        emit executedRead();
 
         hasReadRegister1 = false;
         hasReadRegister2 = false;
         hasWriteRegister = false;
-        hasRegWrite = false;
+
+        executeRead();
     }
 
-    if(hasWriteData && regWrite == 1) {
-        dataMemory->setWriteData(getValue(readRegister2));
+    if(hasWriteData && hasRegWrite) {
+        emit executedWrite();
+
         hasWriteData = false;
+        hasRegWrite = false;
+
+        executeWrite();
+
+        writeData = 0;
+        regWrite = 0;
     }
 }
 
-void Registers::execute()
+void Registers::executeRead()
 {
     alu->setValueA(getValue(readRegister1));
     muxB->setValueA(getValue(readRegister2));
+    dataMemory->setWriteData(getValue(readRegister2));
+}
 
+void Registers::executeWrite()
+{
     if(regWrite == 1) {
-        dataMemory->setWriteData(getValue(readRegister2));
+        setValue(writeData, writeRegister);
     }
 }
 

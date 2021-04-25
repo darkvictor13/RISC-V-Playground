@@ -28,12 +28,15 @@ void Add::setValueB(Word valueB)
 void Add::tryExecute()
 {
     if(hasValueA && hasValueB) {
-        execute();
-
         emit executed();
 
         hasValueA = false;
         hasValueB = false;
+
+        execute();
+
+        valueA = 0;
+        valueB = 0;
     }
 }
 

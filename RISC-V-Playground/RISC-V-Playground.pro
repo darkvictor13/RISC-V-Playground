@@ -75,3 +75,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 FORMS += \
     view/viewmainwindow.ui
+
+RESOURCES +=

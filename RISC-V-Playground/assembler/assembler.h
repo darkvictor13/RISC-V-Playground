@@ -58,6 +58,8 @@ private:
     Word mountBEQ(QStringList line, vector<Label> labelsTable, int position);
     Word mountBNE(QStringList line, vector<Label> labelsTable, int position);
 
+    int generateOffset(QString label, vector<Label> labelsTable, int position);
+
     void generateFile(vector<Word> instructions, QString fileName);
 
 public:

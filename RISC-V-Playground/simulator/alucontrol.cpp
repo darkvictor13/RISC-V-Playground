@@ -32,35 +32,51 @@ void ALUControl::setALUOp(Word aluOp)
 
 void ALUControl::tryExecute()
 {
-    if(hasALUOp) {
-        execute();
-
+    if(hasALUOp && hasInstruction) {
         emit executed();
 
+        hasInstruction = false;
         hasALUOp = false;
+
+        execute();
+
+        instruction = 0;
+        aluOp = 0;
     }
 }
 
 void ALUControl::execute()
 {
-    if(aluOp.test(1) && instruction == 7) {
-        alu->setControl(0);
-        return;
-    }
-
-    if(aluOp.test(1) && instruction == 6) {
-        alu->setControl(1);
-        return;
-    }
-
-    if(aluOp == 0 || (aluOp.test(1) && instruction == 0)) {
+    if(aluOp == 0) {
         alu->setControl(2);
         return;
     }
 
-    if(aluOp.test(0) || (aluOp.test(1) && instruction == 8)) {
+    if(aluOp == 1) {
         alu->setControl(6);
         return;
+    }
+
+    if(aluOp == 2) {
+        if(instruction == 0) {
+            alu->setControl(2);
+            return;
+        }
+
+        if(instruction == 6) {
+            alu->setControl(1);
+            return;
+        }
+
+        if(instruction == 7) {
+            alu->setControl(0);
+            return;
+        }
+
+        if(instruction == 8) {
+            alu->setControl(6);
+            return;
+        }
     }
 }
 

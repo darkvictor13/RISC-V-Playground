@@ -9,7 +9,7 @@
 #include "andgate.h"
 #include "muxtypec.h"
 
-class InstructionMemory;
+class DataMemory;
 class AndGate;
 class MuxTypeC;
 
@@ -18,7 +18,7 @@ class ALU : public QObject
     Q_OBJECT
 
 private:
-    InstructionMemory *instructionMemory = NULL;
+    DataMemory *dataMemory = NULL;
     AndGate *andGate = NULL;
     MuxTypeC *muxC = NULL;
 
@@ -33,7 +33,7 @@ private:
 public:
     ALU();
 
-    void connect(InstructionMemory *instructionMemory, AndGate *andGate, MuxTypeC *muxC);
+    void connect(DataMemory *dataMemory, AndGate *andGate, MuxTypeC *muxC);
 
     void setValueA(Word valueA);
     void setValueB(Word valueB);

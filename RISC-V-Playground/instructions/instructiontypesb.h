@@ -30,6 +30,7 @@ class InstructionTypeSB : public Instruction
 {
 public:
     InstructionTypeSB();
+    InstructionTypeSB(Word *word) : Instruction(word) {};
 
     void setImmediate(DATA value);
     void setImmediate(QString binary);

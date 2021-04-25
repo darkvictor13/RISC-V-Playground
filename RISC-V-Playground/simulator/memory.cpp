@@ -34,7 +34,7 @@ void Memory::takeMemoryData(QString fileName)
     while(!streamInput.atEnd()) {
         Word word(streamInput.readLine());
 
-        setValue(word, position);
+        loadValue(word, position);
 
         instructions.push_back(word);
 
@@ -46,23 +46,36 @@ void Memory::takeMemoryData(QString fileName)
     emit loadMemory(instructions);
 }
 
-void Memory::setValue(Word value, Word address)
+void Memory::loadValue(Word value, Word address)
 {
     memory[address.getInteger()].set(value);
 
     emit updateMemory(value, address);
 }
 
+void Memory::setValue(Word value, Word address)
+{
+    int position = address.getInteger() / 4;
+
+    memory[position].set(value);
+
+    emit updateMemory(value, Word(position));
+}
+
 void Memory::setValue(QString binary, int address)
 {
     Word word(binary);
 
-    memory[address].set(word);
+    int position = address / 4;
+
+    memory[position].set(word);
 }
 
 Word Memory::getValue(Word address)
 {
-    return memory[address.getInteger()];
+    int position = address.getInteger() / 4;
+
+    return memory[position];
 }
 
 void Memory::restart()
@@ -76,7 +89,9 @@ void Memory::restart()
 
 bool Memory::testInstruction(Word address)
 {
-    if(getValue(address).any()) {
+    Word position(address.getInteger() / 4);
+
+    if(getValue(position).any()) {
         return true;
     }
 

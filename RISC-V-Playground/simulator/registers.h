@@ -62,7 +62,8 @@ public:
     void setRegWrite(Word regWrite);
 
     void tryExecute();
-    void execute();
+    void executeRead();
+    void executeWrite();
 
     ~Registers();
 
@@ -77,7 +78,8 @@ signals:
     void updateRegister(Word value, Word address);
     void restartRegisters();
 
-    void executed();
+    void executedRead();
+    void executedWrite();
 
 };
 

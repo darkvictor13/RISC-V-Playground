@@ -29,7 +29,7 @@ public:
     void setValueB(Word valueB);
 
     void tryExecute();
-    void execute() {};
+    void virtual execute() = 0;
 
     ~Add();
 

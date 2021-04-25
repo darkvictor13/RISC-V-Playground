@@ -20,6 +20,7 @@ class InstructionTypeI : public Instruction
 {
 public:
     InstructionTypeI();
+    InstructionTypeI(Word *word) : Instruction(word) {};
 
     void setRD(DATA value);
     void setRD(QString binary);
