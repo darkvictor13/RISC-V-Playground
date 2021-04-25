@@ -1,3 +1,10 @@
+/**
+ * @file add.h
+ * @brief Arquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef ADDNEXT_H
 #define ADDNEXT_H
 
@@ -7,6 +14,9 @@
 
 class MuxTypeA;
 
+/**
+ * @brief A classe AddNext:
+ */
 class AddNext : public Add
 {
 private:

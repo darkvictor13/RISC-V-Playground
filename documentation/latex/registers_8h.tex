@@ -2,28 +2,36 @@
 \label{registers_8h}\index{registers.h@{registers.h}}
 
 
-Arquivo que define a classe \mbox{\hyperlink{classRegisters}{Registers}}.  
+Arquivo responsável por definir a classe.  
 
 
-{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$QObject$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}word/word.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}alu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}muxtypeb.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}datamemory.\+h\char`\"{}}\newline
 \doxysubsection*{Componentes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classRegisters}{Registers}}
-\begin{DoxyCompactList}\small\item\em A classe \mbox{\hyperlink{classRegisters}{Registers}}\+: Classe que tem como objetivo simular o comportamento dos registradores, bem como armazenar seus valores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A classe \mbox{\hyperlink{classRegisters}{Registers}}\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Definições e Macros}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{registers_8h_a8cbc120eedf34962974e96c4830af2e7}\label{registers_8h_a8cbc120eedf34962974e96c4830af2e7}} 
-\#define \mbox{\hyperlink{registers_8h_a8cbc120eedf34962974e96c4830af2e7}{QUANTITY\+\_\+\+REGISTERS}}~32
-\begin{DoxyCompactList}\small\item\em O Tamanho total do vetor que representa os registradores,. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{registers_8h_af062f2062f56c45e2b14b39516f4a475}\label{registers_8h_af062f2062f56c45e2b14b39516f4a475}} 
+\#define \mbox{\hyperlink{registers_8h_af062f2062f56c45e2b14b39516f4a475}{REGISTERS\+\_\+\+SPACE}}~32
+\begin{DoxyCompactList}\small\item\em Indica a quantidade total de registradores, visíveis ao programador. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{registers_8h_af062f2062f56c45e2b14b39516f4a475}\label{registers_8h_af062f2062f56c45e2b14b39516f4a475}} 
+\#define \mbox{\hyperlink{registers_8h_af062f2062f56c45e2b14b39516f4a475}{REGISTERS\+\_\+\+SPACE}}~32
+\begin{DoxyCompactList}\small\item\em Indica a quantidade total de registradores, visíveis ao programador. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-Arquivo que define a classe \mbox{\hyperlink{classRegisters}{Registers}}. 
+Arquivo responsável por definir a classe. 
 
 \begin{DoxyAuthor}{Autor}
-Victor Emanuel Almeida 
+m\+Guerra 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Versão}
 0.\+1 

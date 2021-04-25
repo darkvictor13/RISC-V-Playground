@@ -1,3 +1,10 @@
+/**
+ * @file add.h
+ * @brief Arquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef CONTROL_H
 #define CONTROL_H
 
@@ -19,6 +26,9 @@ class MuxTypeC;
 class ALUControl;
 class Registers;
 
+/**
+ * @brief A classe Control:
+ */
 class Control : public QObject
 {
     Q_OBJECT

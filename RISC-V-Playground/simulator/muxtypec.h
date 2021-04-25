@@ -1,3 +1,10 @@
+/**
+ * @file memory.h
+ * @briefArquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef MUXTYPEC_H
 #define MUXTYPEC_H
 
@@ -7,6 +14,9 @@
 
 class Registers;
 
+/**
+ * @brief A classe MuxTypeC:
+ */
 class MuxTypeC : public Mux
 {
 private:

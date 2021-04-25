@@ -1,3 +1,10 @@
+/**
+ * @file memory.h
+ * @briefArquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef MUX_H
 #define MUX_H
 
@@ -5,6 +12,9 @@
 
 #include "word/word.h"
 
+/**
+ * @brief A classe Mux:
+ */
 class Mux : public QObject
 {
     Q_OBJECT

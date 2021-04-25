@@ -1,3 +1,10 @@
+/**
+ * @file add.h
+ * @brief Arquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef DATAMEMORY_H
 #define DATAMEMORY_H
 
@@ -7,6 +14,9 @@
 
 class MuxTypeC;
 
+/**
+ * @brief A classe DataMemory:
+ */
 class DataMemory : public Memory
 {
     Q_OBJECT

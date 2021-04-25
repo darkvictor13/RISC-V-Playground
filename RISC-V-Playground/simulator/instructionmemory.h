@@ -1,3 +1,10 @@
+/**
+ * @file add.h
+ * @brief Arquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef INSTRUCTIONMEMORY_H
 #define INSTRUCTIONMEMORY_H
 
@@ -13,6 +20,9 @@ class Registers;
 class ImmGen;
 class ALUControl;
 
+/**
+ * @brief A classe InstructionMemory:
+ */
 class InstructionMemory : public Memory
 {
     Q_OBJECT

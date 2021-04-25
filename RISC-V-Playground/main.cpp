@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
- * @brief
- * @author mGuerra
+ * @brief Arquivo principal do programa
+ * @author mGuerra, Victor
  * @version 0.1
 */
 
@@ -11,6 +11,50 @@
 #include <QApplication>
 #include <QFile>
 
+/**
+  @mainpage Algorítimo para Simulador RISC-V
+
+  @section Objetivo Objetivo
+
+  Aplicativo tem como objetivo simular o comportamento
+  de uma máquina RISC-V.
+
+  Considerando um conjunto limitado de instruções:
+
+  - ADDI
+  - ADD
+  - SUB
+  - AND
+  - OR
+  - LW
+  - SW
+  - BEQ
+  - BNE
+
+  @section D Descrevendo a experiência
+
+  Escrever algo aqui
+
+  @subsection positivos Pontos positivos
+
+  - Alguma coisa
+
+  @subsection negativos Pontos negativos
+
+  - Alguma coisa
+
+  @section trabalho Descrição da dinâmica de trabalho do grupo
+  Dentro da documentação de cada método e classe possui o nome do author
+
+*/
+
+/**
+ * @brief main
+ * @param argc quantidade de argumentos passados pelo usuário
+ * @param argv  matriz de char, com argc linhas, contendo cada um dos argumentos
+ * passados pelo usuário
+ * @return O código lançado pela QApplication, 0 se ocorreu tudo certo
+ */
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);

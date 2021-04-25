@@ -2,31 +2,91 @@
 \label{classSimulator}\index{Simulator@{Simulator}}
 
 
-A classe \mbox{\hyperlink{classSimulator}{Simulator}}\+: Classe que tem como objetivo juntar todos os componentes do simulador.  
+A classe \mbox{\hyperlink{classSimulator}{Simulator}}\+:  
 
 
 
 
 {\ttfamily \#include $<$simulator.\+h$>$}
 
-\doxysubsection*{Membros Públicos}
+Diagrama de hierarquia para Simulator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSimulator}
+\end{center}
+\end{figure}
+\doxysubsection*{Slots Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSimulator_a031573bfcfe2e0f5c9539bcc1c7fc5d9}\label{classSimulator_a031573bfcfe2e0f5c9539bcc1c7fc5d9}} 
-\mbox{\hyperlink{classSimulator_a031573bfcfe2e0f5c9539bcc1c7fc5d9}{Simulator}} ()
-\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classSimulator}{Simulator}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSimulator_a3c59edc2e621f28dc179a4162a7ed4e9}\label{classSimulator_a3c59edc2e621f28dc179a4162a7ed4e9}} 
-void {\bfseries assembly} (string filename)
+\mbox{\Hypertarget{classSimulator_a630ca1f9cba087798058d6b0d5c8564d}\label{classSimulator_a630ca1f9cba087798058d6b0d5c8564d}} 
+void {\bfseries init} ()
 \item 
-\mbox{\Hypertarget{classSimulator_a0f49aa04f42060a785adf77346b9de9f}\label{classSimulator_a0f49aa04f42060a785adf77346b9de9f}} 
-\mbox{\hyperlink{classSimulator_a0f49aa04f42060a785adf77346b9de9f}{$\sim$\+Simulator}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classSimulator}{Simulator}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classSimulator_aa2de7e32b04cc3e8fc60aec23997621b}\label{classSimulator_aa2de7e32b04cc3e8fc60aec23997621b}} 
+void {\bfseries run} ()
+\item 
+\mbox{\Hypertarget{classSimulator_ac11a8e1119c88c075853f11a23518d0d}\label{classSimulator_ac11a8e1119c88c075853f11a23518d0d}} 
+void {\bfseries step} ()
+\item 
+\mbox{\Hypertarget{classSimulator_a6554f29192af1ef8f735da97a79cdf06}\label{classSimulator_a6554f29192af1ef8f735da97a79cdf06}} 
+void {\bfseries restart} ()
+\item 
+\mbox{\Hypertarget{classSimulator_a2e5648e4bec42b934b0ef5ca14eb7f96}\label{classSimulator_a2e5648e4bec42b934b0ef5ca14eb7f96}} 
+void {\bfseries load\+Memory} (QString file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimulator_accd7bcee2168bfe28ae2cf2b7ffaa27d}\label{classSimulator_accd7bcee2168bfe28ae2cf2b7ffaa27d}} 
+\mbox{\hyperlink{classPC}{PC}} $\ast$ {\bfseries pc} = new \mbox{\hyperlink{classPC}{PC}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a6097ce7b5058ba0e9f5e0c2a5a044c55}\label{classSimulator_a6097ce7b5058ba0e9f5e0c2a5a044c55}} 
+\mbox{\hyperlink{classALUControl}{ALUControl}} $\ast$ {\bfseries alu\+Control} = new \mbox{\hyperlink{classALUControl}{ALUControl}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a2640d94526cc81db652ff04ee92945f5}\label{classSimulator_a2640d94526cc81db652ff04ee92945f5}} 
+\mbox{\hyperlink{classControl}{Control}} $\ast$ {\bfseries control} = new \mbox{\hyperlink{classControl}{Control}}
+\item 
+\mbox{\Hypertarget{classSimulator_a9a2d8329f46dd4cf4388740cd10c27fa}\label{classSimulator_a9a2d8329f46dd4cf4388740cd10c27fa}} 
+\mbox{\hyperlink{classRegisters}{Registers}} $\ast$ {\bfseries registers} = new \mbox{\hyperlink{classRegisters}{Registers}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a5de31cf2849dfcb3295b892c220e102c}\label{classSimulator_a5de31cf2849dfcb3295b892c220e102c}} 
+\mbox{\hyperlink{classInstructionMemory}{Instruction\+Memory}} $\ast$ {\bfseries instruction\+Memory} = new \mbox{\hyperlink{classInstructionMemory}{Instruction\+Memory}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a59526479909382d1fcba99a57355047d}\label{classSimulator_a59526479909382d1fcba99a57355047d}} 
+\mbox{\hyperlink{classDataMemory}{Data\+Memory}} $\ast$ {\bfseries data\+Memory} = new \mbox{\hyperlink{classDataMemory}{Data\+Memory}}()
+\item 
+\mbox{\Hypertarget{classSimulator_abdaf2d7f089780f813e9735e28d97608}\label{classSimulator_abdaf2d7f089780f813e9735e28d97608}} 
+\mbox{\hyperlink{classALU}{ALU}} $\ast$ {\bfseries alu} = new \mbox{\hyperlink{classALU}{ALU}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a227669b3d726adc0f67501a7d2c9c71c}\label{classSimulator_a227669b3d726adc0f67501a7d2c9c71c}} 
+\mbox{\hyperlink{classAddNext}{Add\+Next}} $\ast$ {\bfseries add\+Next} = new \mbox{\hyperlink{classAddNext}{Add\+Next}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a1f56e086a9e6e8f1cda51d863be142dd}\label{classSimulator_a1f56e086a9e6e8f1cda51d863be142dd}} 
+\mbox{\hyperlink{classAddBranch}{Add\+Branch}} $\ast$ {\bfseries add\+Branch} = new \mbox{\hyperlink{classAddBranch}{Add\+Branch}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a88d5c6d1dab07a3f26939279dc627a69}\label{classSimulator_a88d5c6d1dab07a3f26939279dc627a69}} 
+\mbox{\hyperlink{classImmGen}{Imm\+Gen}} $\ast$ {\bfseries imm\+Gen} = new \mbox{\hyperlink{classImmGen}{Imm\+Gen}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a9b2e4553b6665542ba8c2da46dcc1c3c}\label{classSimulator_a9b2e4553b6665542ba8c2da46dcc1c3c}} 
+\mbox{\hyperlink{classMuxTypeA}{Mux\+TypeA}} $\ast$ {\bfseries muxA} = new \mbox{\hyperlink{classMuxTypeA}{Mux\+TypeA}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a97a372e516c88a168e961248ce132373}\label{classSimulator_a97a372e516c88a168e961248ce132373}} 
+\mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}} $\ast$ {\bfseries muxB} = new \mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a7cd16076b346d931ece2fedc6ecd266c}\label{classSimulator_a7cd16076b346d931ece2fedc6ecd266c}} 
+\mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}} $\ast$ {\bfseries muxC} = new \mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}}()
+\item 
+\mbox{\Hypertarget{classSimulator_a2e62021852093bf64a9d7917c8c678a0}\label{classSimulator_a2e62021852093bf64a9d7917c8c678a0}} 
+\mbox{\hyperlink{classAndGate}{And\+Gate}} $\ast$ {\bfseries and\+Gate} = new \mbox{\hyperlink{classAndGate}{And\+Gate}}()
+\item 
+\mbox{\Hypertarget{classSimulator_abb7329bee359638b4aacda69b3df59f6}\label{classSimulator_abb7329bee359638b4aacda69b3df59f6}} 
+int {\bfseries steps}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-A classe \mbox{\hyperlink{classSimulator}{Simulator}}\+: Classe que tem como objetivo juntar todos os componentes do simulador. 
+A classe \mbox{\hyperlink{classSimulator}{Simulator}}\+: 
 
-Definição na linha 22 do arquivo simulator.\+h.
+Definição na linha 30 do arquivo simulator.\+h.
 
 
 

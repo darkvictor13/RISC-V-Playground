@@ -1,0 +1,57 @@
+\hypertarget{instructiontypesb_8h}{}\doxysection{Referência do Arquivo instructiontypesb.\+h}
+\label{instructiontypesb_8h}\index{instructiontypesb.h@{instructiontypesb.h}}
+
+
+Arquivo responsável por definir a classe.  
+
+
+{\ttfamily \#include \char`\"{}instruction.\+h\char`\"{}}\newline
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classInstructionTypeSB}{Instruction\+Type\+SB}}
+\begin{DoxyCompactList}\small\item\em A classe \mbox{\hyperlink{classInstructionTypeSB}{Instruction\+Type\+SB}}\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{instructiontypesb_8h_ad224ba218367cc754c24808e4e66bd3c}\label{instructiontypesb_8h_ad224ba218367cc754c24808e4e66bd3c}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_ad224ba218367cc754c24808e4e66bd3c}{SB\+\_\+\+IMMEDIATE\+\_\+C}}~7
+\begin{DoxyCompactList}\small\item\em Indica o índice do bit que representa 2$^\wedge$11. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructiontypesb_8h_a90dd457e2a12e92ca81503dcdef0660e}\label{instructiontypesb_8h_a90dd457e2a12e92ca81503dcdef0660e}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_a90dd457e2a12e92ca81503dcdef0660e}{SB\+\_\+\+IMMEDIATE\+\_\+\+A\+\_\+\+FIRST}}~8
+\begin{DoxyCompactList}\small\item\em Indica o início da primeira parte do imediato. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructiontypesb_8h_a8eb65fd8025db4a4dd23301b3f33a48a}\label{instructiontypesb_8h_a8eb65fd8025db4a4dd23301b3f33a48a}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_a8eb65fd8025db4a4dd23301b3f33a48a}{SB\+\_\+\+IMMEDIATE\+\_\+\+A\+\_\+\+LAST}}~11
+\begin{DoxyCompactList}\small\item\em Indica o fim da primeira parte do imediato. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructiontypesb_8h_af44e3a7e012a1ccdf0110f92599d13c8}\label{instructiontypesb_8h_af44e3a7e012a1ccdf0110f92599d13c8}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_af44e3a7e012a1ccdf0110f92599d13c8}{RS2\+\_\+\+FIRST}}~20
+\begin{DoxyCompactList}\small\item\em Indica o início do Registrador Source 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructiontypesb_8h_a825564353018d67a3f597a531d9e0918}\label{instructiontypesb_8h_a825564353018d67a3f597a531d9e0918}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_a825564353018d67a3f597a531d9e0918}{RS2\+\_\+\+LAST}}~24
+\begin{DoxyCompactList}\small\item\em Indica o fun do Registrador Source 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructiontypesb_8h_a43b88112d54e64db98b7f03c02653c3b}\label{instructiontypesb_8h_a43b88112d54e64db98b7f03c02653c3b}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_a43b88112d54e64db98b7f03c02653c3b}{SB\+\_\+\+IMMEDIATE\+\_\+\+B\+\_\+\+FIRST}}~25
+\begin{DoxyCompactList}\small\item\em Indica o início da segunda parte do imediato. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructiontypesb_8h_a6921691f1c8f3e92a54f7b215259a56b}\label{instructiontypesb_8h_a6921691f1c8f3e92a54f7b215259a56b}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_a6921691f1c8f3e92a54f7b215259a56b}{SB\+\_\+\+IMMEDIATE\+\_\+\+B\+\_\+\+LAST}}~30
+\begin{DoxyCompactList}\small\item\em Indica o fim da segunda parte do imediato. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructiontypesb_8h_a9980837360230b198ba81ee503af9f2d}\label{instructiontypesb_8h_a9980837360230b198ba81ee503af9f2d}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_a9980837360230b198ba81ee503af9f2d}{SB\+\_\+\+IMMEDIATE\+\_\+D}}~31
+\begin{DoxyCompactList}\small\item\em Indica o índice do bit que representa 2$^\wedge$12. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructiontypesb_8h_a3c4f6d5d47214ce61cf7f98c9b9393d1}\label{instructiontypesb_8h_a3c4f6d5d47214ce61cf7f98c9b9393d1}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_a3c4f6d5d47214ce61cf7f98c9b9393d1}{SIZE\+\_\+\+IMMEDIATE\+\_\+A}}~(\mbox{\hyperlink{instructiontypesb_8h_a8eb65fd8025db4a4dd23301b3f33a48a}{SB\+\_\+\+IMMEDIATE\+\_\+\+A\+\_\+\+LAST}} -\/ \mbox{\hyperlink{instructiontypesb_8h_a90dd457e2a12e92ca81503dcdef0660e}{SB\+\_\+\+IMMEDIATE\+\_\+\+A\+\_\+\+FIRST}} + 1)
+\begin{DoxyCompactList}\small\item\em Indica o tamanho total da primeira parte do imediato. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{instructiontypesb_8h_a9ef560aa4d0806f10c9f4a19ce2113d3}\label{instructiontypesb_8h_a9ef560aa4d0806f10c9f4a19ce2113d3}} 
+\#define \mbox{\hyperlink{instructiontypesb_8h_a9ef560aa4d0806f10c9f4a19ce2113d3}{SIZE\+\_\+\+IMMEDIATE\+\_\+B}}~(\mbox{\hyperlink{instructiontypesb_8h_a6921691f1c8f3e92a54f7b215259a56b}{SB\+\_\+\+IMMEDIATE\+\_\+\+B\+\_\+\+LAST}} -\/ \mbox{\hyperlink{instructiontypesb_8h_a43b88112d54e64db98b7f03c02653c3b}{SB\+\_\+\+IMMEDIATE\+\_\+\+B\+\_\+\+FIRST}} + 1)
+\begin{DoxyCompactList}\small\item\em Indica o tamanho total da segunda parte do imediato. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Arquivo responsável por definir a classe. 
+
+\begin{DoxyAuthor}{Autor}
+m\+Guerra 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+0.\+1 
+\end{DoxyVersion}

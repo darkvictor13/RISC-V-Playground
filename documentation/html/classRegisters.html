@@ -64,6 +64,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#signals">Sinais</a> &#124;
 <a href="#pub-methods">Membros Públicos</a> &#124;
 <a href="classRegisters-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle">
@@ -71,102 +72,97 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A classe <a class="el" href="classRegisters.html" title="A classe Registers: Classe que tem como objetivo simular o comportamento dos registradores,...">Registers</a>: Classe que tem como objetivo simular o comportamento dos registradores, bem como armazenar seus valores.  
+<p>A classe <a class="el" href="classRegisters.html" title="A classe Registers:">Registers</a>:  
  <a href="classRegisters.html#details">Mais...</a></p>
 
 <p><code>#include &lt;<a class="el" href="registers_8h_source.html">registers.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de hierarquia para Registers:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classRegisters.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Sinais</h2></td></tr>
+<tr class="memitem:a89c46609f7f9828f57c45aa55aa1ed07"><td class="memItemLeft" align="right" valign="top"><a id="a89c46609f7f9828f57c45aa55aa1ed07"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>receivedReadRegister1</b> (<a class="el" href="classWord.html">Word</a> readRegister1)</td></tr>
+<tr class="separator:a89c46609f7f9828f57c45aa55aa1ed07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd783f516c0c05e272c799fe9e3fada5"><td class="memItemLeft" align="right" valign="top"><a id="abd783f516c0c05e272c799fe9e3fada5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>receivedReadRegister2</b> (<a class="el" href="classWord.html">Word</a> readRegister2)</td></tr>
+<tr class="separator:abd783f516c0c05e272c799fe9e3fada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc171ae53089f4591f5c44c5c46f871"><td class="memItemLeft" align="right" valign="top"><a id="a7bc171ae53089f4591f5c44c5c46f871"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>receivedWriteRegister</b> (<a class="el" href="classWord.html">Word</a> writeRegister)</td></tr>
+<tr class="separator:a7bc171ae53089f4591f5c44c5c46f871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868ac451e2d7477c2a7f5bbe10d9855b"><td class="memItemLeft" align="right" valign="top"><a id="a868ac451e2d7477c2a7f5bbe10d9855b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>receivedWriteData</b> (<a class="el" href="classWord.html">Word</a> writeData)</td></tr>
+<tr class="separator:a868ac451e2d7477c2a7f5bbe10d9855b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1951e9f30c3dc4f15240e7c53a16d332"><td class="memItemLeft" align="right" valign="top"><a id="a1951e9f30c3dc4f15240e7c53a16d332"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>receivedRegWrite</b> (<a class="el" href="classWord.html">Word</a> regWrite)</td></tr>
+<tr class="separator:a1951e9f30c3dc4f15240e7c53a16d332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122281260bbf5854ae1fbe0405345f14"><td class="memItemLeft" align="right" valign="top"><a id="a122281260bbf5854ae1fbe0405345f14"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initRegisters</b> (int size)</td></tr>
+<tr class="separator:a122281260bbf5854ae1fbe0405345f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664e6c3b1c8846184236187a5db9f419"><td class="memItemLeft" align="right" valign="top"><a id="a664e6c3b1c8846184236187a5db9f419"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateRegister</b> (<a class="el" href="classWord.html">Word</a> value, <a class="el" href="classWord.html">Word</a> address)</td></tr>
+<tr class="separator:a664e6c3b1c8846184236187a5db9f419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe4b7250799ade679fe337a245c2312"><td class="memItemLeft" align="right" valign="top"><a id="a1fe4b7250799ade679fe337a245c2312"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>restartRegisters</b> ()</td></tr>
+<tr class="separator:a1fe4b7250799ade679fe337a245c2312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de4c2e4bc95a4e038938bb262cb479d"><td class="memItemLeft" align="right" valign="top"><a id="a6de4c2e4bc95a4e038938bb262cb479d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>executedRead</b> ()</td></tr>
+<tr class="separator:a6de4c2e4bc95a4e038938bb262cb479d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e5f4cbc16a371d6b1aad627ce27160f"><td class="memItemLeft" align="right" valign="top"><a id="a1e5f4cbc16a371d6b1aad627ce27160f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>executedWrite</b> ()</td></tr>
+<tr class="separator:a1e5f4cbc16a371d6b1aad627ce27160f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a3b172e33c0ee567e8d5f6a0e6729f5f3"><td class="memItemLeft" align="right" valign="top"><a id="a3b172e33c0ee567e8d5f6a0e6729f5f3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegisters.html#a3b172e33c0ee567e8d5f6a0e6729f5f3">Registers</a> ()</td></tr>
-<tr class="memdesc:a3b172e33c0ee567e8d5f6a0e6729f5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa todos os registradores com zero. <br /></td></tr>
-<tr class="separator:a3b172e33c0ee567e8d5f6a0e6729f5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1feb9d7c536b44cb0e014a706c3e0e99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegisters.html#a1feb9d7c536b44cb0e014a706c3e0e99">get</a> (int position)</td></tr>
-<tr class="memdesc:a1feb9d7c536b44cb0e014a706c3e0e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê o valor contido em um registrador.  <a href="classRegisters.html#a1feb9d7c536b44cb0e014a706c3e0e99">Mais...</a><br /></td></tr>
-<tr class="separator:a1feb9d7c536b44cb0e014a706c3e0e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe9a436b3dff64bc197582421ba4ed96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegisters.html#abe9a436b3dff64bc197582421ba4ed96">set</a> (int position, int value)</td></tr>
-<tr class="memdesc:abe9a436b3dff64bc197582421ba4ed96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve o valor passado por referência em um registrador.  <a href="classRegisters.html#abe9a436b3dff64bc197582421ba4ed96">Mais...</a><br /></td></tr>
-<tr class="separator:abe9a436b3dff64bc197582421ba4ed96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d0f1d2adc4d03b33be699db0ae11761"><td class="memItemLeft" align="right" valign="top"><a id="a0d0f1d2adc4d03b33be699db0ae11761"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegisters.html#a0d0f1d2adc4d03b33be699db0ae11761">~Registers</a> ()</td></tr>
-<tr class="memdesc:a0d0f1d2adc4d03b33be699db0ae11761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="classRegisters.html" title="A classe Registers: Classe que tem como objetivo simular o comportamento dos registradores,...">Registers</a>. <br /></td></tr>
-<tr class="separator:a0d0f1d2adc4d03b33be699db0ae11761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533552e32599a390587212086b4e7d83"><td class="memItemLeft" align="right" valign="top"><a id="a533552e32599a390587212086b4e7d83"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="separator:a533552e32599a390587212086b4e7d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10b873b7246d5edd65c2b31c4c3bd26e"><td class="memItemLeft" align="right" valign="top"><a id="a10b873b7246d5edd65c2b31c4c3bd26e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setValue</b> (<a class="el" href="classWord.html">Word</a> value, <a class="el" href="classWord.html">Word</a> registerIndex)</td></tr>
+<tr class="separator:a10b873b7246d5edd65c2b31c4c3bd26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c7406babae365bf14177d38371a3d3"><td class="memItemLeft" align="right" valign="top"><a id="a34c7406babae365bf14177d38371a3d3"></a>
+<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getValue</b> (<a class="el" href="classWord.html">Word</a> registerIndex)</td></tr>
+<tr class="separator:a34c7406babae365bf14177d38371a3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b347222faeabfb96230a2b135e09ea"><td class="memItemLeft" align="right" valign="top"><a id="a04b347222faeabfb96230a2b135e09ea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>restart</b> ()</td></tr>
+<tr class="separator:a04b347222faeabfb96230a2b135e09ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049d6b90bd23fb9924c8b8002c3315d8"><td class="memItemLeft" align="right" valign="top"><a id="a049d6b90bd23fb9924c8b8002c3315d8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>connect</b> (<a class="el" href="classALU.html">ALU</a> *alu, <a class="el" href="classMuxTypeB.html">MuxTypeB</a> *muxB, <a class="el" href="classDataMemory.html">DataMemory</a> *dataMemory)</td></tr>
+<tr class="separator:a049d6b90bd23fb9924c8b8002c3315d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfcedd92a05dc6fadf1392467db002e6"><td class="memItemLeft" align="right" valign="top"><a id="acfcedd92a05dc6fadf1392467db002e6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setReadRegister1</b> (<a class="el" href="classWord.html">Word</a> readRegister1)</td></tr>
+<tr class="separator:acfcedd92a05dc6fadf1392467db002e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29d335f4280c9230379a14dc0edd909"><td class="memItemLeft" align="right" valign="top"><a id="aa29d335f4280c9230379a14dc0edd909"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setReadRegister2</b> (<a class="el" href="classWord.html">Word</a> readRegister2)</td></tr>
+<tr class="separator:aa29d335f4280c9230379a14dc0edd909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8259f1facc4dc6b02aa6dc8b34168e07"><td class="memItemLeft" align="right" valign="top"><a id="a8259f1facc4dc6b02aa6dc8b34168e07"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWriteRegister</b> (<a class="el" href="classWord.html">Word</a> writeRegister)</td></tr>
+<tr class="separator:a8259f1facc4dc6b02aa6dc8b34168e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d21255a3f3c7cb76a7a427807013bf2"><td class="memItemLeft" align="right" valign="top"><a id="a2d21255a3f3c7cb76a7a427807013bf2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWriteData</b> (<a class="el" href="classWord.html">Word</a> writeData)</td></tr>
+<tr class="separator:a2d21255a3f3c7cb76a7a427807013bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f65c2b4e2bb59380b71ef13e58751c3"><td class="memItemLeft" align="right" valign="top"><a id="a7f65c2b4e2bb59380b71ef13e58751c3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setRegWrite</b> (<a class="el" href="classWord.html">Word</a> regWrite)</td></tr>
+<tr class="separator:a7f65c2b4e2bb59380b71ef13e58751c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17bac2d928c69c0f55e7f2f99503cfd"><td class="memItemLeft" align="right" valign="top"><a id="ac17bac2d928c69c0f55e7f2f99503cfd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>tryExecute</b> ()</td></tr>
+<tr class="separator:ac17bac2d928c69c0f55e7f2f99503cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86952fe2d9e88fd906ed589caf14b6f4"><td class="memItemLeft" align="right" valign="top"><a id="a86952fe2d9e88fd906ed589caf14b6f4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>executeRead</b> ()</td></tr>
+<tr class="separator:a86952fe2d9e88fd906ed589caf14b6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8375b9946b796cc622a9b8f6b2d1c71"><td class="memItemLeft" align="right" valign="top"><a id="ae8375b9946b796cc622a9b8f6b2d1c71"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>executeWrite</b> ()</td></tr>
+<tr class="separator:ae8375b9946b796cc622a9b8f6b2d1c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p>A classe <a class="el" href="classRegisters.html" title="A classe Registers: Classe que tem como objetivo simular o comportamento dos registradores,...">Registers</a>: Classe que tem como objetivo simular o comportamento dos registradores, bem como armazenar seus valores. </p>
+<div class="textblock"><p>A classe <a class="el" href="classRegisters.html" title="A classe Registers:">Registers</a>: </p>
 
-<p class="definition">Definição na linha <a class="el" href="registers_8h_source.html#l00024">24</a> do arquivo <a class="el" href="registers_8h_source.html">registers.h</a>.</p>
-</div><h2 class="groupheader">Funções membros</h2>
-<a id="a1feb9d7c536b44cb0e014a706c3e0e99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1feb9d7c536b44cb0e014a706c3e0e99">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Registers::get </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>position</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Lê o valor contido em um registrador. </p>
-<dl class="params"><dt>Parâmetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">position</td><td>indica o registrador a ser lido </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Retorna</dt><dd>o valor contido no registrador x[position] </dd></dl>
-
-<p class="definition">Definição na linha <a class="el" href="registers_8cpp_source.html#l00026">26</a> do arquivo <a class="el" href="registers_8cpp_source.html">registers.cpp</a>.</p>
-
-</div>
-</div>
-<a id="abe9a436b3dff64bc197582421ba4ed96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe9a436b3dff64bc197582421ba4ed96">&#9670;&nbsp;</a></span>set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Registers::set </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Escreve o valor passado por referência em um registrador. </p>
-<dl class="params"><dt>Parâmetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">position</td><td>indica o registrador a ser lido </td></tr>
-    <tr><td class="paramname">value</td><td>valor a ser escrito </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definição na linha <a class="el" href="registers_8cpp_source.html#l00036">36</a> do arquivo <a class="el" href="registers_8cpp_source.html">registers.cpp</a>.</p>
-
-</div>
-</div>
-<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<p class="definition">Definição na linha <a class="el" href="registers_8h_source.html#l00035">35</a> do arquivo <a class="el" href="registers_8h_source.html">registers.h</a>.</p>
+</div><hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
 <li><a class="el" href="registers_8h_source.html">registers.h</a></li>
 <li><a class="el" href="registers_8cpp_source.html">registers.cpp</a></li>
 </ul>

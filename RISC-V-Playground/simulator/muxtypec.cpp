@@ -1,3 +1,10 @@
+/**
+ * @file memory.cpp
+ * @brief Arquivo responsável por implementar a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #include "muxtypec.h"
 
 MuxTypeC::MuxTypeC()

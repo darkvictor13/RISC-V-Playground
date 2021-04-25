@@ -1,12 +1,22 @@
 var searchData=
 [
-  ['instruction_12',['Instruction',['../classInstruction.html',1,'Instruction'],['../classInstruction.html#ac0e83542378590a70df7da99dc6d276b',1,'Instruction::Instruction(int op, int rd, int f3, int rs1)'],['../classInstruction.html#aebd15229c1651af49dcb203707e7a2d5',1,'Instruction::Instruction()']]],
-  ['instruction_2ecpp_13',['instruction.cpp',['../instruction_8cpp.html',1,'']]],
-  ['instruction_2eh_14',['instruction.h',['../instruction_8h.html',1,'']]],
-  ['instruction_5fsize_15',['INSTRUCTION_SIZE',['../instruction_8h.html#af6ca297e66f1914309c97f36a8fc6e30',1,'instruction.h']]],
-  ['instructiontobin_16',['instructionToBin',['../classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885',1,'Instruction::instructionToBin()'],['../classInstructionTypeI.html#a9fb2ee032bdea259e517c5ce9d7836bf',1,'InstructionTypeI::instructionToBin()'],['../classInstructionTypeR.html#a95115f1b924af7e429fe54b47bd681b6',1,'InstructionTypeR::instructionToBin()']]],
-  ['instructiontypei_17',['InstructionTypeI',['../classInstructionTypeI.html#a57529723613dacb76af6008cb2883339',1,'InstructionTypeI::InstructionTypeI()'],['../classInstructionTypeI.html#a72b49884f4aaa4c4bc58fbdbff382018',1,'InstructionTypeI::InstructionTypeI(int op, int rd, int f3, int rs1, int imm)'],['../classInstructionTypeI.html',1,'InstructionTypeI']]],
-  ['instructiontyper_18',['InstructionTypeR',['../classInstructionTypeR.html',1,'InstructionTypeR'],['../classInstructionTypeR.html#afaad9b91de47bd226ab3f031e1c01c03',1,'InstructionTypeR::InstructionTypeR()'],['../classInstructionTypeR.html#a8efba5e439c5d26a24d08ca7d1310473',1,'InstructionTypeR::InstructionTypeR(int op, int rd, int f3, int rs1, int rs2, int f7)']]],
-  ['instructiontyper_2ecpp_19',['instructiontyper.cpp',['../instructiontyper_8cpp.html',1,'']]],
-  ['instructiontyper_2eh_20',['instructiontyper.h',['../instructiontyper_8h.html',1,'']]]
+  ['immediate_5ffirst_21',['IMMEDIATE_FIRST',['../instructiontypei_8h.html#ae645c42bcebaf51171c15d837d54a2e3',1,'instructiontypei.h']]],
+  ['immediate_5flast_22',['IMMEDIATE_LAST',['../instructiontypei_8h.html#aa08707953cc2d1fa995d220cdb1024e1',1,'instructiontypei.h']]],
+  ['immgen_23',['ImmGen',['../classImmGen.html',1,'']]],
+  ['instruction_24',['Instruction',['../classInstruction.html',1,'']]],
+  ['instruction_2ecpp_25',['instruction.cpp',['../instruction_8cpp.html',1,'']]],
+  ['instruction_2eh_26',['instruction.h',['../instruction_8h.html',1,'']]],
+  ['instruction_5faddress_27',['INSTRUCTION_ADDRESS',['../viewmainwindow_8h.html#af6b05df4b9a89d885c105cde8fa2032a',1,'viewmainwindow.h']]],
+  ['instructionmemory_28',['InstructionMemory',['../classInstructionMemory.html',1,'']]],
+  ['instructiontypei_29',['InstructionTypeI',['../classInstructionTypeI.html',1,'']]],
+  ['instructiontypei_2eh_30',['instructiontypei.h',['../instructiontypei_8h.html',1,'']]],
+  ['instructiontyper_31',['InstructionTypeR',['../classInstructionTypeR.html',1,'']]],
+  ['instructiontyper_2ecpp_32',['instructiontyper.cpp',['../instructiontyper_8cpp.html',1,'']]],
+  ['instructiontyper_2eh_33',['instructiontyper.h',['../instructiontyper_8h.html',1,'']]],
+  ['instructiontypes_34',['InstructionTypeS',['../classInstructionTypeS.html',1,'']]],
+  ['instructiontypes_2ecpp_35',['instructiontypes.cpp',['../instructiontypes_8cpp.html',1,'']]],
+  ['instructiontypes_2eh_36',['instructiontypes.h',['../instructiontypes_8h.html',1,'']]],
+  ['instructiontypesb_37',['InstructionTypeSB',['../classInstructionTypeSB.html',1,'']]],
+  ['instructiontypesb_2ecpp_38',['instructiontypesb.cpp',['../instructiontypesb_8cpp.html',1,'']]],
+  ['instructiontypesb_2eh_39',['instructiontypesb.h',['../instructiontypesb_8h.html',1,'']]]
 ];

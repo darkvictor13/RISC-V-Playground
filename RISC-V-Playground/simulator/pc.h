@@ -1,3 +1,10 @@
+/**
+ * @file memory.h
+ * @briefArquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef PC_H
 #define PC_H
 
@@ -13,6 +20,9 @@ class InstructionMemory;
 class AddBranch;
 class AddNext;
 
+/**
+ * @brief A classe PC:
+ */
 class PC : public QObject
 {
     Q_OBJECT

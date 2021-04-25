@@ -1,9 +1,10 @@
 /**
  * @file assembler.cpp
- * @brief
+ * @brief Arquivo responsável por implementar a classe Assembler
  * @author mGuerra
  * @version 0.1
 */
+
 
 #include "assembler.h"
 

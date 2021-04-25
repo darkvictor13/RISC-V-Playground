@@ -1,15 +1,11 @@
 /**
  * @file registers.cpp
- * @brief
+ * @brief Arquivo responsável por implementar a classe
  * @author mGuerra
  * @version 0.1
 */
 
 #include "registers.h"
-
-#include <stdint.h>
-
-#define REGISTERS_SPACE 32
 
 Registers::Registers()
 {

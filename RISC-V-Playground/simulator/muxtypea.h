@@ -1,3 +1,10 @@
+/**
+ * @file memory.h
+ * @briefArquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef MUXTYPEA_H
 #define MUXTYPEA_H
 
@@ -7,6 +14,9 @@
 
 class PC;
 
+/**
+ * @brief A classe MuxTypeA:
+ */
 class MuxTypeA : public Mux
 {
 private:

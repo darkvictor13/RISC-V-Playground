@@ -1,6 +1,6 @@
 /**
  * @file assembler.h
- * @brief
+ * @brief Arquivo responsável por definir a classe Assembler
  * @author mGuerra
  * @version 0.1
 */
@@ -26,6 +26,9 @@ struct Label{
 
 using namespace std;
 
+/**
+ * @brief A classe Assembler:
+ */
 class Assembler : public QObject
 {
     Q_OBJECT

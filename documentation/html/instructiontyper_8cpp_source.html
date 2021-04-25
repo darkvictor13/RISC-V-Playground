@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_9d1dc38608b2ee64552d244d42c0b7aa.html">RISC-V-Playground</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9d1dc38608b2ee64552d244d42c0b7aa.html">RISC-V-Playground</a></li><li class="navelem"><a class="el" href="dir_df710f5decb34c8dea3057a08f0a0ec9.html">instructions</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,90 +74,83 @@ $(function() {
 <a href="instructiontyper_8cpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="instructiontyper_8h.html">instructiontyper.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classInstructionTypeR.html#afaad9b91de47bd226ab3f031e1c01c03">   15</a></span>&#160;<a class="code" href="classInstructionTypeR.html#afaad9b91de47bd226ab3f031e1c01c03">InstructionTypeR::InstructionTypeR</a>() : <a class="code" href="classInstruction.html">Instruction</a>()</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;InstructionTypeR::InstructionTypeR()</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> InstructionTypeR::setRD(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Inicializando uma instrução do TIPO R, com zeros&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    this-&gt;funct_7   = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    this-&gt;reg_src_2 = 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classInstructionTypeR.html#a8efba5e439c5d26a24d08ca7d1310473">   32</a></span>&#160;<a class="code" href="classInstructionTypeR.html#afaad9b91de47bd226ab3f031e1c01c03">InstructionTypeR::InstructionTypeR</a>(<span class="keywordtype">int</span> op, <span class="keywordtype">int</span> rd, <span class="keywordtype">int</span> f3, <span class="keywordtype">int</span> rs1, <span class="keywordtype">int</span> rs2, <span class="keywordtype">int</span> f7)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    : <a class="code" href="classInstruction.html">Instruction</a>(op, rd, f3, rs1)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Inicializando uma instrução do TIPO R, com parâmetros&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    this-&gt;funct_7   = f7;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    this-&gt;reg_src_2 = rs2;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    set(value, <a class="code" href="instructiontypei_8h.html#a2661b2038ab9556f33083b1164692037">RD_FIRST</a>, <a class="code" href="instructiontypei_8h.html#a9139e41e87ca7af0ff8e90539343804d">RD_LAST</a>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> InstructionTypeR::setRD(QString binary)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    set(binary, <a class="code" href="instructiontypei_8h.html#a2661b2038ab9556f33083b1164692037">RD_FIRST</a>, <a class="code" href="instructiontypei_8h.html#a9139e41e87ca7af0ff8e90539343804d">RD_LAST</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> InstructionTypeR::getIntegerRD()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> getInteger(<a class="code" href="instructiontypei_8h.html#a2661b2038ab9556f33083b1164692037">RD_FIRST</a>, <a class="code" href="instructiontypei_8h.html#a9139e41e87ca7af0ff8e90539343804d">RD_LAST</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QString InstructionTypeR::getStringRD()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> getString(<a class="code" href="instructiontypei_8h.html#a2661b2038ab9556f33083b1164692037">RD_FIRST</a>, <a class="code" href="instructiontypei_8h.html#a9139e41e87ca7af0ff8e90539343804d">RD_LAST</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> InstructionTypeR::setRS2(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    set(value, <a class="code" href="instructiontyper_8h.html#af44e3a7e012a1ccdf0110f92599d13c8">RS2_FIRST</a>, <a class="code" href="instructiontyper_8h.html#a825564353018d67a3f597a531d9e0918">RS2_LAST</a>);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classInstructionTypeR.html#a95115f1b924af7e429fe54b47bd681b6">   49</a></span>&#160;<span class="keywordtype">bool</span> * <a class="code" href="classInstructionTypeR.html#a95115f1b924af7e429fe54b47bd681b6">InstructionTypeR::instructionToBin</a>()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   <span class="keywordtype">bool</span> *resp = (<span class="keywordtype">bool</span>*)malloc(<a class="code" href="instruction_8h.html#af6ca297e66f1914309c97f36a8fc6e30">INSTRUCTION_SIZE</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>));</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   *resp = {0};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keywordtype">int</span> casa_atual;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <span class="keywordtype">int</span> num = this-&gt;<a class="code" href="classInstruction.html#a6dd0d4d2200076de35aeb461b4cf03fe">getOpcode</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keywordflow">for</span>(casa_atual = <a class="code" href="instruction_8h.html#a5af70f06649aa4e73869068470455a88">OP_BEGIN</a>; casa_atual &lt; <a class="code" href="instruction_8h.html#afd272f27fab91a1d2b7eff81dcbadaf1">RD_BEGIN</a>; casa_atual++) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;       resp[casa_atual] = num % 2;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;       num /= 2;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keywordflow">for</span>(num = this-&gt;<a class="code" href="classInstruction.html#a3e50bba68037cb4b461eb461e20922b1">getRegDest</a>(); casa_atual &lt; <a class="code" href="instruction_8h.html#ad45f21325ed96cf161584b0221776a73">F3_BEGIN</a>; casa_atual++) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;       resp[casa_atual] = num % 2;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;       num /= 2;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keywordflow">for</span>(num = this-&gt;<a class="code" href="classInstruction.html#a31f04f67ed6c88cf04f7f95dad436bb6">getFunc3</a>(); casa_atual &lt; <a class="code" href="instruction_8h.html#a95d4872234b8a408279ad6868d9d82e3">RS1_BEGIN</a>; casa_atual++) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;       resp[casa_atual] = num % 2;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;       num /= 2;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keywordflow">for</span>(num = this-&gt;<a class="code" href="classInstruction.html#ad8692d500e0a921097f1fa6c920bafe0">getRegSrc1</a>(); casa_atual &lt; <a class="code" href="instructiontyper_8h.html#a7081f76f6ce8e5579ac07b01a2b23eee">RS2_BEGIN</a>; casa_atual++) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;       resp[casa_atual] = num % 2;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;       num /= 2;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   <span class="keywordflow">for</span>(num = this-&gt;reg_src_2; casa_atual &lt; <a class="code" href="instructiontyper_8h.html#a7ed96daba077fbd015302e21f5f6e3ff">F7_BEGIN</a>; casa_atual++) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;       resp[casa_atual] = num % 2;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;       num /= 2;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;   }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   <span class="keywordflow">for</span>(num = this-&gt;funct_7; casa_atual &lt; <a class="code" href="instruction_8h.html#af6ca297e66f1914309c97f36a8fc6e30">INSTRUCTION_SIZE</a>; casa_atual++) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;       resp[casa_atual] = num % 2;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;       num /= 2;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;   }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;   <span class="keywordflow">return</span> resp;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classInstructionTypeR.html#a69775ded8ced1a8a3ee89118e25746e6">   94</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstructionTypeR.html#a69775ded8ced1a8a3ee89118e25746e6">InstructionTypeR::printInfo</a>()</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    this-&gt;<a class="code" href="classInstruction.html#a482023c73280fb7a6caef11f63bccb70">dafaultPrintInfo</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Registrador sorce 2 = x&quot;</span> &lt;&lt; this-&gt;reg_src_2 &lt;&lt; endl;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Funct 7             = &quot;</span> &lt;&lt; this-&gt;funct_7    &lt;&lt; endl;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classInstructionTypeR.html#aa4cbc97cc8b03b7aa47252489482fdc3">  104</a></span>&#160;<a class="code" href="classInstructionTypeR.html#aa4cbc97cc8b03b7aa47252489482fdc3">InstructionTypeR::~InstructionTypeR</a>()</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Destruindo uma instrução do TIPO R&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="ttc" id="aclassInstructionTypeR_html_a69775ded8ced1a8a3ee89118e25746e6"><div class="ttname"><a href="classInstructionTypeR.html#a69775ded8ced1a8a3ee89118e25746e6">InstructionTypeR::printInfo</a></div><div class="ttdeci">void printInfo()</div><div class="ttdoc">Imprime na tela todas as informações dos membros da classe.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8cpp_source.html#l00094">instructiontyper.cpp:94</a></div></div>
-<div class="ttc" id="aclassInstructionTypeR_html_a95115f1b924af7e429fe54b47bd681b6"><div class="ttname"><a href="classInstructionTypeR.html#a95115f1b924af7e429fe54b47bd681b6">InstructionTypeR::instructionToBin</a></div><div class="ttdeci">bool * instructionToBin()</div><div class="ttdoc">Cria um vetor contendo o valor binário da instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8cpp_source.html#l00049">instructiontyper.cpp:49</a></div></div>
-<div class="ttc" id="aclassInstructionTypeR_html_aa4cbc97cc8b03b7aa47252489482fdc3"><div class="ttname"><a href="classInstructionTypeR.html#aa4cbc97cc8b03b7aa47252489482fdc3">InstructionTypeR::~InstructionTypeR</a></div><div class="ttdeci">~InstructionTypeR()</div><div class="ttdoc">Destrutor da classe InstructionTypeR.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8cpp_source.html#l00104">instructiontyper.cpp:104</a></div></div>
-<div class="ttc" id="aclassInstructionTypeR_html_afaad9b91de47bd226ab3f031e1c01c03"><div class="ttname"><a href="classInstructionTypeR.html#afaad9b91de47bd226ab3f031e1c01c03">InstructionTypeR::InstructionTypeR</a></div><div class="ttdeci">InstructionTypeR()</div><div class="ttdoc">Construtor da classe InstructionTypeR.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8cpp_source.html#l00015">instructiontyper.cpp:15</a></div></div>
-<div class="ttc" id="aclassInstruction_html"><div class="ttname"><a href="classInstruction.html">Instruction</a></div><div class="ttdoc">A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00062">instruction.h:63</a></div></div>
-<div class="ttc" id="aclassInstruction_html_a31f04f67ed6c88cf04f7f95dad436bb6"><div class="ttname"><a href="classInstruction.html#a31f04f67ed6c88cf04f7f95dad436bb6">Instruction::getFunc3</a></div><div class="ttdeci">int getFunc3()</div><div class="ttdoc">Obtêm o valor do Funct 3 para alguém fora da classe.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00065">instruction.cpp:65</a></div></div>
-<div class="ttc" id="aclassInstruction_html_a3e50bba68037cb4b461eb461e20922b1"><div class="ttname"><a href="classInstruction.html#a3e50bba68037cb4b461eb461e20922b1">Instruction::getRegDest</a></div><div class="ttdeci">int getRegDest()</div><div class="ttdoc">Obtêm o valor do registrador destino para alguém fora da classe.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00055">instruction.cpp:55</a></div></div>
-<div class="ttc" id="aclassInstruction_html_a482023c73280fb7a6caef11f63bccb70"><div class="ttname"><a href="classInstruction.html#a482023c73280fb7a6caef11f63bccb70">Instruction::dafaultPrintInfo</a></div><div class="ttdeci">void dafaultPrintInfo()</div><div class="ttdoc">Imprime todas as informações contidas na classe base.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00085">instruction.cpp:85</a></div></div>
-<div class="ttc" id="aclassInstruction_html_a6dd0d4d2200076de35aeb461b4cf03fe"><div class="ttname"><a href="classInstruction.html#a6dd0d4d2200076de35aeb461b4cf03fe">Instruction::getOpcode</a></div><div class="ttdeci">int getOpcode()</div><div class="ttdoc">Obtêm o valor do opcode para alguém fora da classe.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00045">instruction.cpp:45</a></div></div>
-<div class="ttc" id="aclassInstruction_html_ad8692d500e0a921097f1fa6c920bafe0"><div class="ttname"><a href="classInstruction.html#ad8692d500e0a921097f1fa6c920bafe0">Instruction::getRegSrc1</a></div><div class="ttdeci">int getRegSrc1()</div><div class="ttdoc">Obtêm o valor do registrador sorce 1 para alguém fora da classe.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00074">instruction.cpp:74</a></div></div>
-<div class="ttc" id="ainstruction_8h_html_a5af70f06649aa4e73869068470455a88"><div class="ttname"><a href="instruction_8h.html#a5af70f06649aa4e73869068470455a88">OP_BEGIN</a></div><div class="ttdeci">#define OP_BEGIN</div><div class="ttdoc">Indica o indice do vetor binário em que inicia o a informação de qual é o opcode.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00033">instruction.h:33</a></div></div>
-<div class="ttc" id="ainstruction_8h_html_a95d4872234b8a408279ad6868d9d82e3"><div class="ttname"><a href="instruction_8h.html#a95d4872234b8a408279ad6868d9d82e3">RS1_BEGIN</a></div><div class="ttdeci">#define RS1_BEGIN</div><div class="ttdoc">Indica o indice do vetor binário em que inicia o a informação de qual é o registrador sorce 1.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00051">instruction.h:51</a></div></div>
-<div class="ttc" id="ainstruction_8h_html_ad45f21325ed96cf161584b0221776a73"><div class="ttname"><a href="instruction_8h.html#ad45f21325ed96cf161584b0221776a73">F3_BEGIN</a></div><div class="ttdeci">#define F3_BEGIN</div><div class="ttdoc">Indica o indice do vetor binário em que inicia o a informação de qual é o funct 3.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00045">instruction.h:45</a></div></div>
-<div class="ttc" id="ainstruction_8h_html_af6ca297e66f1914309c97f36a8fc6e30"><div class="ttname"><a href="instruction_8h.html#af6ca297e66f1914309c97f36a8fc6e30">INSTRUCTION_SIZE</a></div><div class="ttdeci">#define INSTRUCTION_SIZE</div><div class="ttdoc">Indica o tamanho total da instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00056">instruction.h:56</a></div></div>
-<div class="ttc" id="ainstruction_8h_html_afd272f27fab91a1d2b7eff81dcbadaf1"><div class="ttname"><a href="instruction_8h.html#afd272f27fab91a1d2b7eff81dcbadaf1">RD_BEGIN</a></div><div class="ttdeci">#define RD_BEGIN</div><div class="ttdoc">Indica o indice do vetor binário em que inicia o a informação de qual é o registrador destino.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00039">instruction.h:39</a></div></div>
-<div class="ttc" id="ainstructiontyper_8h_html"><div class="ttname"><a href="instructiontyper_8h.html">instructiontyper.h</a></div><div class="ttdoc">Arquivo que define a classe InstructionTypeR.</div></div>
-<div class="ttc" id="ainstructiontyper_8h_html_a7081f76f6ce8e5579ac07b01a2b23eee"><div class="ttname"><a href="instructiontyper_8h.html#a7081f76f6ce8e5579ac07b01a2b23eee">RS2_BEGIN</a></div><div class="ttdeci">#define RS2_BEGIN</div><div class="ttdoc">Indica o indice do vetor binário em que inicia o a informação de qual é o registrador sorce 2.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8h_source.html#l00033">instructiontyper.h:33</a></div></div>
-<div class="ttc" id="ainstructiontyper_8h_html_a7ed96daba077fbd015302e21f5f6e3ff"><div class="ttname"><a href="instructiontyper_8h.html#a7ed96daba077fbd015302e21f5f6e3ff">F7_BEGIN</a></div><div class="ttdeci">#define F7_BEGIN</div><div class="ttdoc">Indica o indice do vetor binário em que inicia o a informação de qual é o funct 7 da instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8h_source.html#l00039">instructiontyper.h:39</a></div></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> InstructionTypeR::setRS2(QString binary)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    set(binary, <a class="code" href="instructiontyper_8h.html#af44e3a7e012a1ccdf0110f92599d13c8">RS2_FIRST</a>, <a class="code" href="instructiontyper_8h.html#a825564353018d67a3f597a531d9e0918">RS2_LAST</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> InstructionTypeR::getIntegerRS2()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> getInteger(<a class="code" href="instructiontyper_8h.html#af44e3a7e012a1ccdf0110f92599d13c8">RS2_FIRST</a>, <a class="code" href="instructiontyper_8h.html#a825564353018d67a3f597a531d9e0918">RS2_LAST</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;QString InstructionTypeR::getStringRS2()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> getString(<a class="code" href="instructiontyper_8h.html#af44e3a7e012a1ccdf0110f92599d13c8">RS2_FIRST</a>, <a class="code" href="instructiontyper_8h.html#a825564353018d67a3f597a531d9e0918">RS2_LAST</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> InstructionTypeR::setFunct7(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    set(value, <a class="code" href="instructiontyper_8h.html#a6b6634f9d2ae64e6455ee6a232686d36">FUNCT7_FIRST</a>, <a class="code" href="instructiontyper_8h.html#a20467df3c47011da040d63c647bef63b">FUNCT7_LAST</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> InstructionTypeR::setFunct7(QString binary)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    set(binary, <a class="code" href="instructiontyper_8h.html#a6b6634f9d2ae64e6455ee6a232686d36">FUNCT7_FIRST</a>, <a class="code" href="instructiontyper_8h.html#a20467df3c47011da040d63c647bef63b">FUNCT7_LAST</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> InstructionTypeR::getIntegerFunct7()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> getInteger(<a class="code" href="instructiontyper_8h.html#a6b6634f9d2ae64e6455ee6a232686d36">FUNCT7_FIRST</a>, <a class="code" href="instructiontyper_8h.html#a20467df3c47011da040d63c647bef63b">FUNCT7_LAST</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;QString InstructionTypeR::getStringFunct7()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> getString(<a class="code" href="instructiontyper_8h.html#a6b6634f9d2ae64e6455ee6a232686d36">FUNCT7_FIRST</a>, <a class="code" href="instructiontyper_8h.html#a20467df3c47011da040d63c647bef63b">FUNCT7_LAST</a>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;InstructionTypeR::~InstructionTypeR()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="ttc" id="ainstructiontypei_8h_html_a2661b2038ab9556f33083b1164692037"><div class="ttname"><a href="instructiontypei_8h.html#a2661b2038ab9556f33083b1164692037">RD_FIRST</a></div><div class="ttdeci">#define RD_FIRST</div><div class="ttdoc">Indica o início do Registrador Destino.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontypei_8h_source.html#l00016">instructiontypei.h:16</a></div></div>
+<div class="ttc" id="ainstructiontypei_8h_html_a9139e41e87ca7af0ff8e90539343804d"><div class="ttname"><a href="instructiontypei_8h.html#a9139e41e87ca7af0ff8e90539343804d">RD_LAST</a></div><div class="ttdeci">#define RD_LAST</div><div class="ttdoc">Indica o fim do Registrador Destino.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontypei_8h_source.html#l00021">instructiontypei.h:21</a></div></div>
+<div class="ttc" id="ainstructiontyper_8h_html"><div class="ttname"><a href="instructiontyper_8h.html">instructiontyper.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
+<div class="ttc" id="ainstructiontyper_8h_html_a20467df3c47011da040d63c647bef63b"><div class="ttname"><a href="instructiontyper_8h.html#a20467df3c47011da040d63c647bef63b">FUNCT7_LAST</a></div><div class="ttdeci">#define FUNCT7_LAST</div><div class="ttdoc">Indica o fim do Funct 7.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8h_source.html#l00041">instructiontyper.h:41</a></div></div>
+<div class="ttc" id="ainstructiontyper_8h_html_a6b6634f9d2ae64e6455ee6a232686d36"><div class="ttname"><a href="instructiontyper_8h.html#a6b6634f9d2ae64e6455ee6a232686d36">FUNCT7_FIRST</a></div><div class="ttdeci">#define FUNCT7_FIRST</div><div class="ttdoc">Indica o início do Funct 7.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8h_source.html#l00036">instructiontyper.h:36</a></div></div>
+<div class="ttc" id="ainstructiontyper_8h_html_a825564353018d67a3f597a531d9e0918"><div class="ttname"><a href="instructiontyper_8h.html#a825564353018d67a3f597a531d9e0918">RS2_LAST</a></div><div class="ttdeci">#define RS2_LAST</div><div class="ttdoc">Indica o fim do Registrador Source 2.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8h_source.html#l00031">instructiontyper.h:31</a></div></div>
+<div class="ttc" id="ainstructiontyper_8h_html_af44e3a7e012a1ccdf0110f92599d13c8"><div class="ttname"><a href="instructiontyper_8h.html#af44e3a7e012a1ccdf0110f92599d13c8">RS2_FIRST</a></div><div class="ttdeci">#define RS2_FIRST</div><div class="ttdoc">Indica o início do Registrador Source 2.</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8h_source.html#l00026">instructiontyper.h:26</a></div></div>
+<div class="ttc" id="aword_8h_html_aad9ae913bdfab20dd94ad04ee2d5b045"><div class="ttname"><a href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a></div><div class="ttdeci">#define DATA</div><div class="ttdoc">Indica a quantidade de bits da instrução.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00014">word.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

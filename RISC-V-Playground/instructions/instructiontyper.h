@@ -1,6 +1,6 @@
 /**
  * @file instructiontyper.h
- * @brief
+ * @brief Arquivo responsável por definir a classe
  * @author mGuerra
  * @version 0.1
 */
@@ -10,15 +10,39 @@
 
 #include "instruction.h"
 
+/**
+  * @brief Indica o início do Registrador Destino
+  */
 #define RD_FIRST 7
+
+/**
+  * @brief Indica o fim do Registrador Destino
+  */
 #define RD_LAST 11
 
+/**
+  * @brief Indica o início do Registrador Source 2
+  */
 #define RS2_FIRST 20
+
+/**
+  * @brief Indica o fim do Registrador Source 2
+  */
 #define RS2_LAST 24
 
+/**
+  * @brief Indica o início do Funct 7
+  */
 #define FUNCT7_FIRST 25
+
+/**
+  * @brief Indica o fim do Funct 7
+  */
 #define FUNCT7_LAST 31
 
+/**
+ * @brief A classe InstructionTypeR:
+ */
 class InstructionTypeR : public Instruction
 {
 public:

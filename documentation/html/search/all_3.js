@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['get_7',['get',['../classMemory.html#a3a4927a2f4811c4dadb2c0abef9a936a',1,'Memory::get()'],['../classRegisters.html#a1feb9d7c536b44cb0e014a706c3e0e99',1,'Registers::get()']]],
-  ['getfunc3_8',['getFunc3',['../classInstruction.html#a31f04f67ed6c88cf04f7f95dad436bb6',1,'Instruction']]],
-  ['getopcode_9',['getOpcode',['../classInstruction.html#a6dd0d4d2200076de35aeb461b4cf03fe',1,'Instruction']]],
-  ['getregdest_10',['getRegDest',['../classInstruction.html#a3e50bba68037cb4b461eb461e20922b1',1,'Instruction']]],
-  ['getregsrc1_11',['getRegSrc1',['../classInstruction.html#ad8692d500e0a921097f1fa6c920bafe0',1,'Instruction']]]
+  ['funct3_5ffirst_17',['FUNCT3_FIRST',['../instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad',1,'instruction.h']]],
+  ['funct3_5flast_18',['FUNCT3_LAST',['../instruction_8h.html#a4c4c54f2edf4aff22b92e2907670829e',1,'instruction.h']]],
+  ['funct7_5ffirst_19',['FUNCT7_FIRST',['../instructiontyper_8h.html#a6b6634f9d2ae64e6455ee6a232686d36',1,'instructiontyper.h']]],
+  ['funct7_5flast_20',['FUNCT7_LAST',['../instructiontyper_8h.html#a20467df3c47011da040d63c647bef63b',1,'instructiontyper.h']]]
 ];

@@ -1,6 +1,6 @@
 /**
  * @file registers.h
- * @brief
+ * @brief Arquivo responsável por definir a classe
  * @author mGuerra
  * @version 0.1
 */
@@ -11,6 +11,7 @@
 #define REGISTERS_SPACE 32
 
 #include <QObject>
+#include <stdint.h>
 
 #include "word/word.h"
 
@@ -18,10 +19,19 @@
 #include "muxtypeb.h"
 #include "datamemory.h"
 
+/**
+  * @brief Indica a quantidade total de registradores,
+  * visíveis ao programador
+  */
+#define REGISTERS_SPACE 32
+
 class ALU;
 class MuxTypeB;
 class DataMemory;
 
+/**
+ * @brief A classe Registers:
+ */
 class Registers : public QObject
 {
     Q_OBJECT

@@ -29,29 +29,25 @@ var menudata={children:[
 {text:"Índice dos Componentes",url:"classes.html"},
 {text:"Hierarquia de Classes",url:"hierarchy.html"},
 {text:"Membros de classe",url:"functions.html",children:[
-{text:"Todos",url:"functions.html",children:[
-{text:"a",url:"functions.html#index_a"},
-{text:"d",url:"functions.html#index_d"},
-{text:"g",url:"functions.html#index_g"},
-{text:"i",url:"functions.html#index_i"},
-{text:"m",url:"functions.html#index_m"},
-{text:"p",url:"functions.html#index_p"},
-{text:"r",url:"functions.html#index_r"},
-{text:"s",url:"functions.html#index_s"},
-{text:"~",url:"functions.html#index__7E"}]},
-{text:"Funções",url:"functions_func.html",children:[
-{text:"a",url:"functions_func.html#index_a"},
-{text:"d",url:"functions_func.html#index_d"},
-{text:"g",url:"functions_func.html#index_g"},
-{text:"i",url:"functions_func.html#index_i"},
-{text:"m",url:"functions_func.html#index_m"},
-{text:"p",url:"functions_func.html#index_p"},
-{text:"r",url:"functions_func.html#index_r"},
-{text:"s",url:"functions_func.html#index_s"},
-{text:"~",url:"functions_func.html#index__7E"}]}]}]},
+{text:"Todos",url:"functions.html"},
+{text:"Funções",url:"functions_func.html"}]}]},
 {text:"Arquivos",url:"files.html",children:[
 {text:"Lista de Arquivos",url:"files.html"},
 {text:"Membros dos Arquivos",url:"globals.html",children:[
-{text:"Todos",url:"globals.html"},
+{text:"Todos",url:"globals.html",children:[
+{text:"d",url:"globals.html#index_d"},
+{text:"f",url:"globals.html#index_f"},
+{text:"i",url:"globals.html#index_i"},
+{text:"m",url:"globals.html#index_m"},
+{text:"o",url:"globals.html#index_o"},
+{text:"r",url:"globals.html#index_r"},
+{text:"s",url:"globals.html#index_s"}]},
 {text:"Funções",url:"globals_func.html"},
-{text:"Definições e Macros",url:"globals_defs.html"}]}]}]}
+{text:"Definições e Macros",url:"globals_defs.html",children:[
+{text:"d",url:"globals_defs.html#index_d"},
+{text:"f",url:"globals_defs.html#index_f"},
+{text:"i",url:"globals_defs.html#index_i"},
+{text:"m",url:"globals_defs.html#index_m"},
+{text:"o",url:"globals_defs.html#index_o"},
+{text:"r",url:"globals_defs.html#index_r"},
+{text:"s",url:"globals_defs.html#index_s"}]}]}]}]}

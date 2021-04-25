@@ -2,78 +2,100 @@
 \label{classRegisters}\index{Registers@{Registers}}
 
 
-A classe \mbox{\hyperlink{classRegisters}{Registers}}\+: Classe que tem como objetivo simular o comportamento dos registradores, bem como armazenar seus valores.  
+A classe \mbox{\hyperlink{classRegisters}{Registers}}\+:  
 
 
 
 
 {\ttfamily \#include $<$registers.\+h$>$}
 
+Diagrama de hierarquia para Registers\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRegisters}
+\end{center}
+\end{figure}
+\doxysubsection*{Sinais}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRegisters_a89c46609f7f9828f57c45aa55aa1ed07}\label{classRegisters_a89c46609f7f9828f57c45aa55aa1ed07}} 
+void {\bfseries received\+Read\+Register1} (\mbox{\hyperlink{classWord}{Word}} read\+Register1)
+\item 
+\mbox{\Hypertarget{classRegisters_abd783f516c0c05e272c799fe9e3fada5}\label{classRegisters_abd783f516c0c05e272c799fe9e3fada5}} 
+void {\bfseries received\+Read\+Register2} (\mbox{\hyperlink{classWord}{Word}} read\+Register2)
+\item 
+\mbox{\Hypertarget{classRegisters_a7bc171ae53089f4591f5c44c5c46f871}\label{classRegisters_a7bc171ae53089f4591f5c44c5c46f871}} 
+void {\bfseries received\+Write\+Register} (\mbox{\hyperlink{classWord}{Word}} write\+Register)
+\item 
+\mbox{\Hypertarget{classRegisters_a868ac451e2d7477c2a7f5bbe10d9855b}\label{classRegisters_a868ac451e2d7477c2a7f5bbe10d9855b}} 
+void {\bfseries received\+Write\+Data} (\mbox{\hyperlink{classWord}{Word}} write\+Data)
+\item 
+\mbox{\Hypertarget{classRegisters_a1951e9f30c3dc4f15240e7c53a16d332}\label{classRegisters_a1951e9f30c3dc4f15240e7c53a16d332}} 
+void {\bfseries received\+Reg\+Write} (\mbox{\hyperlink{classWord}{Word}} reg\+Write)
+\item 
+\mbox{\Hypertarget{classRegisters_a122281260bbf5854ae1fbe0405345f14}\label{classRegisters_a122281260bbf5854ae1fbe0405345f14}} 
+void {\bfseries init\+Registers} (int size)
+\item 
+\mbox{\Hypertarget{classRegisters_a664e6c3b1c8846184236187a5db9f419}\label{classRegisters_a664e6c3b1c8846184236187a5db9f419}} 
+void {\bfseries update\+Register} (\mbox{\hyperlink{classWord}{Word}} value, \mbox{\hyperlink{classWord}{Word}} address)
+\item 
+\mbox{\Hypertarget{classRegisters_a1fe4b7250799ade679fe337a245c2312}\label{classRegisters_a1fe4b7250799ade679fe337a245c2312}} 
+void {\bfseries restart\+Registers} ()
+\item 
+\mbox{\Hypertarget{classRegisters_a6de4c2e4bc95a4e038938bb262cb479d}\label{classRegisters_a6de4c2e4bc95a4e038938bb262cb479d}} 
+void {\bfseries executed\+Read} ()
+\item 
+\mbox{\Hypertarget{classRegisters_a1e5f4cbc16a371d6b1aad627ce27160f}\label{classRegisters_a1e5f4cbc16a371d6b1aad627ce27160f}} 
+void {\bfseries executed\+Write} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}\label{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}} 
-\mbox{\hyperlink{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}{Registers}} ()
-\begin{DoxyCompactList}\small\item\em Inicializa todos os registradores com zero. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classRegisters_a1feb9d7c536b44cb0e014a706c3e0e99}{get}} (int position)
-\begin{DoxyCompactList}\small\item\em Lê o valor contido em um registrador. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classRegisters_abe9a436b3dff64bc197582421ba4ed96}{set}} (int position, int value)
-\begin{DoxyCompactList}\small\item\em Escreve o valor passado por referência em um registrador. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRegisters_a0d0f1d2adc4d03b33be699db0ae11761}\label{classRegisters_a0d0f1d2adc4d03b33be699db0ae11761}} 
-\mbox{\hyperlink{classRegisters_a0d0f1d2adc4d03b33be699db0ae11761}{$\sim$\+Registers}} ()
-\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classRegisters}{Registers}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classRegisters_a533552e32599a390587212086b4e7d83}\label{classRegisters_a533552e32599a390587212086b4e7d83}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classRegisters_a10b873b7246d5edd65c2b31c4c3bd26e}\label{classRegisters_a10b873b7246d5edd65c2b31c4c3bd26e}} 
+void {\bfseries set\+Value} (\mbox{\hyperlink{classWord}{Word}} value, \mbox{\hyperlink{classWord}{Word}} register\+Index)
+\item 
+\mbox{\Hypertarget{classRegisters_a34c7406babae365bf14177d38371a3d3}\label{classRegisters_a34c7406babae365bf14177d38371a3d3}} 
+\mbox{\hyperlink{classWord}{Word}} {\bfseries get\+Value} (\mbox{\hyperlink{classWord}{Word}} register\+Index)
+\item 
+\mbox{\Hypertarget{classRegisters_a04b347222faeabfb96230a2b135e09ea}\label{classRegisters_a04b347222faeabfb96230a2b135e09ea}} 
+void {\bfseries restart} ()
+\item 
+\mbox{\Hypertarget{classRegisters_a049d6b90bd23fb9924c8b8002c3315d8}\label{classRegisters_a049d6b90bd23fb9924c8b8002c3315d8}} 
+void {\bfseries connect} (\mbox{\hyperlink{classALU}{ALU}} $\ast$alu, \mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}} $\ast$muxB, \mbox{\hyperlink{classDataMemory}{Data\+Memory}} $\ast$data\+Memory)
+\item 
+\mbox{\Hypertarget{classRegisters_acfcedd92a05dc6fadf1392467db002e6}\label{classRegisters_acfcedd92a05dc6fadf1392467db002e6}} 
+void {\bfseries set\+Read\+Register1} (\mbox{\hyperlink{classWord}{Word}} read\+Register1)
+\item 
+\mbox{\Hypertarget{classRegisters_aa29d335f4280c9230379a14dc0edd909}\label{classRegisters_aa29d335f4280c9230379a14dc0edd909}} 
+void {\bfseries set\+Read\+Register2} (\mbox{\hyperlink{classWord}{Word}} read\+Register2)
+\item 
+\mbox{\Hypertarget{classRegisters_a8259f1facc4dc6b02aa6dc8b34168e07}\label{classRegisters_a8259f1facc4dc6b02aa6dc8b34168e07}} 
+void {\bfseries set\+Write\+Register} (\mbox{\hyperlink{classWord}{Word}} write\+Register)
+\item 
+\mbox{\Hypertarget{classRegisters_a2d21255a3f3c7cb76a7a427807013bf2}\label{classRegisters_a2d21255a3f3c7cb76a7a427807013bf2}} 
+void {\bfseries set\+Write\+Data} (\mbox{\hyperlink{classWord}{Word}} write\+Data)
+\item 
+\mbox{\Hypertarget{classRegisters_a7f65c2b4e2bb59380b71ef13e58751c3}\label{classRegisters_a7f65c2b4e2bb59380b71ef13e58751c3}} 
+void {\bfseries set\+Reg\+Write} (\mbox{\hyperlink{classWord}{Word}} reg\+Write)
+\item 
+\mbox{\Hypertarget{classRegisters_ac17bac2d928c69c0f55e7f2f99503cfd}\label{classRegisters_ac17bac2d928c69c0f55e7f2f99503cfd}} 
+void {\bfseries try\+Execute} ()
+\item 
+\mbox{\Hypertarget{classRegisters_a86952fe2d9e88fd906ed589caf14b6f4}\label{classRegisters_a86952fe2d9e88fd906ed589caf14b6f4}} 
+void {\bfseries execute\+Read} ()
+\item 
+\mbox{\Hypertarget{classRegisters_ae8375b9946b796cc622a9b8f6b2d1c71}\label{classRegisters_ae8375b9946b796cc622a9b8f6b2d1c71}} 
+void {\bfseries execute\+Write} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-A classe \mbox{\hyperlink{classRegisters}{Registers}}\+: Classe que tem como objetivo simular o comportamento dos registradores, bem como armazenar seus valores. 
+A classe \mbox{\hyperlink{classRegisters}{Registers}}\+: 
 
-Definição na linha 24 do arquivo registers.\+h.
-
-
-
-\doxysubsection{Funções membros}
-\mbox{\Hypertarget{classRegisters_a1feb9d7c536b44cb0e014a706c3e0e99}\label{classRegisters_a1feb9d7c536b44cb0e014a706c3e0e99}} 
-\index{Registers@{Registers}!get@{get}}
-\index{get@{get}!Registers@{Registers}}
-\doxysubsubsection{\texorpdfstring{get()}{get()}}
-{\footnotesize\ttfamily int Registers\+::get (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
-
-
-
-Lê o valor contido em um registrador. 
-
-
-\begin{DoxyParams}{Parâmetros}
-{\em position} & indica o registrador a ser lido \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Retorna}
-o valor contido no registrador x\mbox{[}position\mbox{]} 
-\end{DoxyReturn}
-
-
-Definição na linha 26 do arquivo registers.\+cpp.
-
-\mbox{\Hypertarget{classRegisters_abe9a436b3dff64bc197582421ba4ed96}\label{classRegisters_abe9a436b3dff64bc197582421ba4ed96}} 
-\index{Registers@{Registers}!set@{set}}
-\index{set@{set}!Registers@{Registers}}
-\doxysubsubsection{\texorpdfstring{set()}{set()}}
-{\footnotesize\ttfamily void Registers\+::set (\begin{DoxyParamCaption}\item[{int}]{position,  }\item[{int}]{value }\end{DoxyParamCaption})}
-
-
-
-Escreve o valor passado por referência em um registrador. 
-
-
-\begin{DoxyParams}{Parâmetros}
-{\em position} & indica o registrador a ser lido \\
-\hline
-{\em value} & valor a ser escrito \\
-\hline
-\end{DoxyParams}
-
-
-Definição na linha 36 do arquivo registers.\+cpp.
+Definição na linha 35 do arquivo registers.\+h.
 
 
 

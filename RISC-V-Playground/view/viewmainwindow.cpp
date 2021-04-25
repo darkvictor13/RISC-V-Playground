@@ -1,15 +1,12 @@
 /**
  * @file viewmainwindow.cpp
- * @brief
+ * @brief Arquivo responsável por implementar a parte gráfica do projeto
  * @author mGuerra
  * @version 0.1
 */
 
 #include "viewmainwindow.h"
 #include "ui_viewmainwindow.h"
-
-#define INSTRUCTION_ADDRESS 1000
-#define DATA_ADDRESS 2000
 
 ViewMainWindow::ViewMainWindow(QWidget *parent)
     : QMainWindow(parent)

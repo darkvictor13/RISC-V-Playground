@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RISC-V-Playground: Código-Fonte de instructiontypesb.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RISC-V-Playground
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Simulador de máquina RISC-V</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_9d1dc38608b2ee64552d244d42c0b7aa.html">RISC-V-Playground</a></li><li class="navelem"><a class="el" href="dir_df710f5decb34c8dea3057a08f0a0ec9.html">instructions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">instructiontypesb.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="instructiontypesb_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef INSTRUCTIONTYPESB_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define INSTRUCTIONTYPESB_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="instruction_8h.html">instruction.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#ad224ba218367cc754c24808e4e66bd3c">   16</a></span>&#160;<span class="preprocessor">#define SB_IMMEDIATE_C 7</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#a90dd457e2a12e92ca81503dcdef0660e">   21</a></span>&#160;<span class="preprocessor">#define SB_IMMEDIATE_A_FIRST 8</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#a8eb65fd8025db4a4dd23301b3f33a48a">   26</a></span>&#160;<span class="preprocessor">#define SB_IMMEDIATE_A_LAST 11</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#af44e3a7e012a1ccdf0110f92599d13c8">   31</a></span>&#160;<span class="preprocessor">#define RS2_FIRST 20</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#a825564353018d67a3f597a531d9e0918">   36</a></span>&#160;<span class="preprocessor">#define RS2_LAST 24</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#a43b88112d54e64db98b7f03c02653c3b">   41</a></span>&#160;<span class="preprocessor">#define SB_IMMEDIATE_B_FIRST 25</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#a6921691f1c8f3e92a54f7b215259a56b">   46</a></span>&#160;<span class="preprocessor">#define SB_IMMEDIATE_B_LAST 30</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#a9980837360230b198ba81ee503af9f2d">   51</a></span>&#160;<span class="preprocessor">#define SB_IMMEDIATE_D 31</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#a3c4f6d5d47214ce61cf7f98c9b9393d1">   56</a></span>&#160;<span class="preprocessor">#define SIZE_IMMEDIATE_A (SB_IMMEDIATE_A_LAST - SB_IMMEDIATE_A_FIRST + 1)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="instructiontypesb_8h.html#a9ef560aa4d0806f10c9f4a19ce2113d3">   61</a></span>&#160;<span class="preprocessor">#define SIZE_IMMEDIATE_B (SB_IMMEDIATE_B_LAST - SB_IMMEDIATE_B_FIRST + 1)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classInstructionTypeSB.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="classInstructionTypeSB.html">InstructionTypeSB</a> : <span class="keyword">public</span> <a class="code" href="classInstruction.html">Instruction</a></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classInstructionTypeSB.html">InstructionTypeSB</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classInstructionTypeSB.html">InstructionTypeSB</a>(<a class="code" href="classWord.html">Word</a> *word) : <a class="code" href="classInstruction.html">Instruction</a>(word) {};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setImmediate(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setImmediate(QString binary);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> getIntegerImmediate();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    QString getStringImmediate();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> setRS2(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setRS2(QString binary);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> getIntegerRS2();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QString getStringRS2();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    ~<a class="code" href="classInstructionTypeSB.html">InstructionTypeSB</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// INSTRUCTIONTYPESB_H</span></div>
+<div class="ttc" id="aclassInstructionTypeSB_html"><div class="ttname"><a href="classInstructionTypeSB.html">InstructionTypeSB</a></div><div class="ttdoc">A classe InstructionTypeSB:</div><div class="ttdef"><b>Definition:</b> <a href="instructiontypesb_8h_source.html#l00066">instructiontypesb.h:67</a></div></div>
+<div class="ttc" id="aclassInstruction_html"><div class="ttname"><a href="classInstruction.html">Instruction</a></div><div class="ttdoc">A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00047">instruction.h:48</a></div></div>
+<div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word:</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00029">word.h:30</a></div></div>
+<div class="ttc" id="ainstruction_8h_html"><div class="ttname"><a href="instruction_8h.html">instruction.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
+<div class="ttc" id="aword_8h_html_aad9ae913bdfab20dd94ad04ee2d5b045"><div class="ttname"><a href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a></div><div class="ttdeci">#define DATA</div><div class="ttdoc">Indica a quantidade de bits da instrução.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00014">word.h:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

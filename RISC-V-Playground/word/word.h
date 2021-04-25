@@ -1,6 +1,6 @@
 /**
  * @file word.h
- * @brief
+ * @brief Arquivo responsável por definir a classe
  * @author mGuerra
  * @version 0.1
 */
@@ -8,15 +8,24 @@
 #ifndef WORD_H
 #define WORD_H
 
+/**
+  * @brief Indica a quantidade de bits da instrução
+  */
 #define DATA int32_t
+
+/**
+  * @brief Indica a quantidade de bits da instrução
+  */
 #define DATA_BITS 32
 
 #include <iostream>
 #include <QString>
 
-
 using namespace std;
 
+/**
+ * @brief A classe Word:
+ */
 class Word
 {
 private:

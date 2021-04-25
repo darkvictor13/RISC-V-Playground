@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['printinfo_31',['printInfo',['../classInstruction.html#a01fae104bc1781792d583761b2a0d7c5',1,'Instruction::printInfo()'],['../classInstructionTypeI.html#a1257dbd6696245e62808de0d612b6e55',1,'InstructionTypeI::printInfo()'],['../classInstructionTypeR.html#a69775ded8ced1a8a3ee89118e25746e6',1,'InstructionTypeR::printInfo()']]],
-  ['programcounter_32',['ProgramCounter',['../classProgramCounter.html',1,'ProgramCounter'],['../classProgramCounter.html#a63c70e470925203e4c15c861a7afca3a',1,'ProgramCounter::ProgramCounter()']]],
-  ['programcounter_2ecpp_33',['programcounter.cpp',['../programcounter_8cpp.html',1,'']]],
-  ['programcounter_2eh_34',['programcounter.h',['../programcounter_8h.html',1,'']]]
+  ['opcode_5ffirst_51',['OPCODE_FIRST',['../instruction_8h.html#a794b71dd9e66ff37100f472cac441b8e',1,'instruction.h']]],
+  ['opcode_5flast_52',['OPCODE_LAST',['../instruction_8h.html#a642b200e72fb22f16f738e0a2a11b0fa',1,'instruction.h']]]
 ];

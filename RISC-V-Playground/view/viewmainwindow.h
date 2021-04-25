@@ -1,6 +1,6 @@
 /**
  * @file viewmainwindow.h
- * @brief
+ * @brief Arquivo responsável por definir a classe
  * @author mGuerra
  * @version 0.1
 */
@@ -20,6 +20,20 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class ViewMainWindow; }
 QT_END_NAMESPACE
 
+/**
+  * @brief Indica o local de memória da primeira instrução
+  */
+#define INSTRUCTION_ADDRESS 1000
+
+/**
+  * @brief Indica o local de memória do primeiro dado
+  */
+#define DATA_ADDRESS 2000
+
+
+/**
+ * @brief A classe ViewMainWindow:
+ */
 class ViewMainWindow : public QMainWindow
 {
     Q_OBJECT

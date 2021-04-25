@@ -1,3 +1,10 @@
+/**
+ * @file add.h
+ * @brief Arquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef ALUCONTROL_H
 #define ALUCONTROL_H
 
@@ -11,6 +18,9 @@
 class ALU;
 class AddBranch;
 
+/**
+ * @brief A classe ALUControl:
+ */
 class ALUControl : public QObject
 {
     Q_OBJECT

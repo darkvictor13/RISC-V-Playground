@@ -1,3 +1,10 @@
+/**
+ * @file add.h
+ * @brief Arquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef ADDBRANCH_H
 #define ADDBRANCH_H
 
@@ -7,6 +14,9 @@
 
 class MuxTypeA;
 
+/**
+ * @brief A classe AddBranch:
+ */
 class AddBranch : public Add
 {
 private:

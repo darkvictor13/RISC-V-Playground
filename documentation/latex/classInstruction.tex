@@ -12,188 +12,63 @@ A classe \mbox{\hyperlink{classInstruction}{Instruction}}\+: Classe abstrata a q
 Diagrama de hierarquia para Instruction\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classInstruction}
+\includegraphics[height=4.000000cm]{classInstruction}
 \end{center}
 \end{figure}
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classInstruction_aebd15229c1651af49dcb203707e7a2d5}{Instruction}} ()
-\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classInstruction}{Instruction}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classInstruction_ac0e83542378590a70df7da99dc6d276b}{Instruction}} (int op, int rd, int f3, int rs1)
+\mbox{\Hypertarget{classInstruction_a6c92486e32d9cc14d46e6ddf155372be}\label{classInstruction_a6c92486e32d9cc14d46e6ddf155372be}} 
+{\bfseries Instruction} (\mbox{\hyperlink{classWord}{Word}} $\ast$word)
 \item 
-int \mbox{\hyperlink{classInstruction_a6dd0d4d2200076de35aeb461b4cf03fe}{get\+Opcode}} ()
-\begin{DoxyCompactList}\small\item\em Obtêm o valor do opcode para alguém fora da classe. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classInstruction_a3e50bba68037cb4b461eb461e20922b1}{get\+Reg\+Dest}} ()
-\begin{DoxyCompactList}\small\item\em Obtêm o valor do registrador destino para alguém fora da classe. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classInstruction_a31f04f67ed6c88cf04f7f95dad436bb6}{get\+Func3}} ()
-\begin{DoxyCompactList}\small\item\em Obtêm o valor do Funct 3 para alguém fora da classe. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classInstruction_ad8692d500e0a921097f1fa6c920bafe0}{get\+Reg\+Src1}} ()
-\begin{DoxyCompactList}\small\item\em Obtêm o valor do registrador sorce 1 para alguém fora da classe. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classInstruction_a482023c73280fb7a6caef11f63bccb70}{dafault\+Print\+Info}} ()
-\begin{DoxyCompactList}\small\item\em Imprime todas as informações contidas na classe base. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classInstruction_a01fae104bc1781792d583761b2a0d7c5}\label{classInstruction_a01fae104bc1781792d583761b2a0d7c5}} 
-virtual void \mbox{\hyperlink{classInstruction_a01fae104bc1781792d583761b2a0d7c5}{print\+Info}} ()=0
-\begin{DoxyCompactList}\small\item\em print\+Info\+: uma função virtual pura que permite que essa classe seja abstrata \end{DoxyCompactList}\item 
-virtual bool $\ast$ \mbox{\hyperlink{classInstruction_ac2dcbcdebf7a0351b20befaf3a202885}{instruction\+To\+Bin}} ()=0
-\begin{DoxyCompactList}\small\item\em instruction\+To\+Bin\+: uma função virtual pura \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classInstruction_a26eb634480beff1ad7a20235c11f521d}\label{classInstruction_a26eb634480beff1ad7a20235c11f521d}} 
-virtual \mbox{\hyperlink{classInstruction_a26eb634480beff1ad7a20235c11f521d}{$\sim$\+Instruction}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classInstruction}{Instruction}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membros Públicos Estáticos}
-\begin{DoxyCompactItemize}
+\mbox{\Hypertarget{classInstruction_a26ea0a46f0e57fd0fb9681c25e5bcba9}\label{classInstruction_a26ea0a46f0e57fd0fb9681c25e5bcba9}} 
+{\bfseries Instruction} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
 \item 
-\mbox{\Hypertarget{classInstruction_ad4592d0bd7a9d85ac8abf5b5b408df60}\label{classInstruction_ad4592d0bd7a9d85ac8abf5b5b408df60}} 
-static void {\bfseries print\+Bin} (ostream \&output, bool $\ast$v)
+\mbox{\Hypertarget{classInstruction_add309a1365ffb591b64fd6f669f840a3}\label{classInstruction_add309a1365ffb591b64fd6f669f840a3}} 
+{\bfseries Instruction} (QString binary)
+\item 
+\mbox{\Hypertarget{classInstruction_a6f4dd11dbb83c2b859cffd25dac3f199}\label{classInstruction_a6f4dd11dbb83c2b859cffd25dac3f199}} 
+void {\bfseries set\+Opcode} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
+\item 
+\mbox{\Hypertarget{classInstruction_a0ecc00d0c757328b979cb3049347b25f}\label{classInstruction_a0ecc00d0c757328b979cb3049347b25f}} 
+void {\bfseries set\+Opcode} (QString binary)
+\item 
+\mbox{\Hypertarget{classInstruction_a73db2dc4a67bb66e8fe1eadb495a59d3}\label{classInstruction_a73db2dc4a67bb66e8fe1eadb495a59d3}} 
+\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} {\bfseries get\+Integer\+Opcode} ()
+\item 
+\mbox{\Hypertarget{classInstruction_a5ea0607443c2314c5ccbd61b85885e65}\label{classInstruction_a5ea0607443c2314c5ccbd61b85885e65}} 
+QString {\bfseries get\+String\+Opcode} ()
+\item 
+\mbox{\Hypertarget{classInstruction_a750cfe5946191d432414a20d2759c9a8}\label{classInstruction_a750cfe5946191d432414a20d2759c9a8}} 
+void {\bfseries set\+Funct3} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
+\item 
+\mbox{\Hypertarget{classInstruction_a0fd2fee0ec0b9e320caee6eb00f4ec05}\label{classInstruction_a0fd2fee0ec0b9e320caee6eb00f4ec05}} 
+void {\bfseries set\+Funct3} (QString binary)
+\item 
+\mbox{\Hypertarget{classInstruction_a6f820a6c406162cd4da5c9580c5e41e4}\label{classInstruction_a6f820a6c406162cd4da5c9580c5e41e4}} 
+\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} {\bfseries get\+Integer\+Funct3} ()
+\item 
+\mbox{\Hypertarget{classInstruction_aef65fc2520c19d611c70eebc63cd1bd4}\label{classInstruction_aef65fc2520c19d611c70eebc63cd1bd4}} 
+QString {\bfseries get\+String\+Funct3} ()
+\item 
+\mbox{\Hypertarget{classInstruction_a68dc63515d33b824b48a10fb405b2372}\label{classInstruction_a68dc63515d33b824b48a10fb405b2372}} 
+void {\bfseries set\+RS1} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
+\item 
+\mbox{\Hypertarget{classInstruction_aace27fff315e6a81fae97da3bb096c82}\label{classInstruction_aace27fff315e6a81fae97da3bb096c82}} 
+void {\bfseries set\+RS1} (QString binary)
+\item 
+\mbox{\Hypertarget{classInstruction_a0269f8dcd4da75de4e363049a73cea17}\label{classInstruction_a0269f8dcd4da75de4e363049a73cea17}} 
+\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} {\bfseries get\+Integer\+RS1} ()
+\item 
+\mbox{\Hypertarget{classInstruction_a3cd4bbcd1176fbd9209e974519669c24}\label{classInstruction_a3cd4bbcd1176fbd9209e974519669c24}} 
+QString {\bfseries get\+String\+RS1} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 A classe \mbox{\hyperlink{classInstruction}{Instruction}}\+: Classe abstrata a qual é base para todos os modos de instrução. 
 
-Definição na linha 62 do arquivo instruction.\+h.
-
-
-
-\doxysubsection{Construtores e Destrutores}
-\mbox{\Hypertarget{classInstruction_aebd15229c1651af49dcb203707e7a2d5}\label{classInstruction_aebd15229c1651af49dcb203707e7a2d5}} 
-\index{Instruction@{Instruction}!Instruction@{Instruction}}
-\index{Instruction@{Instruction}!Instruction@{Instruction}}
-\doxysubsubsection{\texorpdfstring{Instruction()}{Instruction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Instruction\+::\+Instruction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Construtor da classe \mbox{\hyperlink{classInstruction}{Instruction}}. 
-
-Inicializa todos os campos com zero 
-
-Definição na linha 15 do arquivo instruction.\+cpp.
-
-\mbox{\Hypertarget{classInstruction_ac0e83542378590a70df7da99dc6d276b}\label{classInstruction_ac0e83542378590a70df7da99dc6d276b}} 
-\index{Instruction@{Instruction}!Instruction@{Instruction}}
-\index{Instruction@{Instruction}!Instruction@{Instruction}}
-\doxysubsubsection{\texorpdfstring{Instruction()}{Instruction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Instruction\+::\+Instruction (\begin{DoxyParamCaption}\item[{int}]{op,  }\item[{int}]{rd,  }\item[{int}]{f3,  }\item[{int}]{rs1 }\end{DoxyParamCaption})}
-
-Esse é um método provido por conveniência. Ele difere do método acima apenas na lista de argumentos que devem ser utilizados.
-
-
-\begin{DoxyParams}{Parâmetros}
-{\em op} & valor do opcode \\
-\hline
-{\em rd} & valor do registrador destino \\
-\hline
-{\em f3} & valor do funct 3 \\
-\hline
-{\em rs1} & valor do registrador fonte 1 \\
-\hline
-\end{DoxyParams}
-
-
-Definição na linha 32 do arquivo instruction.\+cpp.
-
-
-
-\doxysubsection{Funções membros}
-\mbox{\Hypertarget{classInstruction_a482023c73280fb7a6caef11f63bccb70}\label{classInstruction_a482023c73280fb7a6caef11f63bccb70}} 
-\index{Instruction@{Instruction}!dafaultPrintInfo@{dafaultPrintInfo}}
-\index{dafaultPrintInfo@{dafaultPrintInfo}!Instruction@{Instruction}}
-\doxysubsubsection{\texorpdfstring{dafaultPrintInfo()}{dafaultPrintInfo()}}
-{\footnotesize\ttfamily void Instruction\+::dafault\+Print\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Imprime todas as informações contidas na classe base. 
-
-Essas informações devem ser usadas para imprimir dentro das classes derivadas adicionando as informações dos memvros específicos de cada classe 
-
-Definição na linha 85 do arquivo instruction.\+cpp.
-
-\mbox{\Hypertarget{classInstruction_a31f04f67ed6c88cf04f7f95dad436bb6}\label{classInstruction_a31f04f67ed6c88cf04f7f95dad436bb6}} 
-\index{Instruction@{Instruction}!getFunc3@{getFunc3}}
-\index{getFunc3@{getFunc3}!Instruction@{Instruction}}
-\doxysubsubsection{\texorpdfstring{getFunc3()}{getFunc3()}}
-{\footnotesize\ttfamily int Instruction\+::get\+Func3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Obtêm o valor do Funct 3 para alguém fora da classe. 
-
-\begin{DoxyReturn}{Retorna}
-o valor do funct3 
-\end{DoxyReturn}
-
-
-Definição na linha 65 do arquivo instruction.\+cpp.
-
-\mbox{\Hypertarget{classInstruction_a6dd0d4d2200076de35aeb461b4cf03fe}\label{classInstruction_a6dd0d4d2200076de35aeb461b4cf03fe}} 
-\index{Instruction@{Instruction}!getOpcode@{getOpcode}}
-\index{getOpcode@{getOpcode}!Instruction@{Instruction}}
-\doxysubsubsection{\texorpdfstring{getOpcode()}{getOpcode()}}
-{\footnotesize\ttfamily int Instruction\+::get\+Opcode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Obtêm o valor do opcode para alguém fora da classe. 
-
-\begin{DoxyReturn}{Retorna}
-o valor do opcode 
-\end{DoxyReturn}
-
-
-Definição na linha 45 do arquivo instruction.\+cpp.
-
-\mbox{\Hypertarget{classInstruction_a3e50bba68037cb4b461eb461e20922b1}\label{classInstruction_a3e50bba68037cb4b461eb461e20922b1}} 
-\index{Instruction@{Instruction}!getRegDest@{getRegDest}}
-\index{getRegDest@{getRegDest}!Instruction@{Instruction}}
-\doxysubsubsection{\texorpdfstring{getRegDest()}{getRegDest()}}
-{\footnotesize\ttfamily int Instruction\+::get\+Reg\+Dest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Obtêm o valor do registrador destino para alguém fora da classe. 
-
-\begin{DoxyReturn}{Retorna}
-o valor do registrador de destino 
-\end{DoxyReturn}
-
-
-Definição na linha 55 do arquivo instruction.\+cpp.
-
-\mbox{\Hypertarget{classInstruction_ad8692d500e0a921097f1fa6c920bafe0}\label{classInstruction_ad8692d500e0a921097f1fa6c920bafe0}} 
-\index{Instruction@{Instruction}!getRegSrc1@{getRegSrc1}}
-\index{getRegSrc1@{getRegSrc1}!Instruction@{Instruction}}
-\doxysubsubsection{\texorpdfstring{getRegSrc1()}{getRegSrc1()}}
-{\footnotesize\ttfamily int Instruction\+::get\+Reg\+Src1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Obtêm o valor do registrador sorce 1 para alguém fora da classe. 
-
-\begin{DoxyReturn}{Retorna}
-valor do registrador fonte 1 
-\end{DoxyReturn}
-
-
-Definição na linha 74 do arquivo instruction.\+cpp.
-
-\mbox{\Hypertarget{classInstruction_ac2dcbcdebf7a0351b20befaf3a202885}\label{classInstruction_ac2dcbcdebf7a0351b20befaf3a202885}} 
-\index{Instruction@{Instruction}!instructionToBin@{instructionToBin}}
-\index{instructionToBin@{instructionToBin}!Instruction@{Instruction}}
-\doxysubsubsection{\texorpdfstring{instructionToBin()}{instructionToBin()}}
-{\footnotesize\ttfamily virtual bool$\ast$ Instruction\+::instruction\+To\+Bin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-instruction\+To\+Bin\+: uma função virtual pura 
-
-\begin{DoxyReturn}{Retorna}
-nas classes derivadas deve ser um vetor de booleanos que representa o valor da instrução em binário 
-\end{DoxyReturn}
-
-
-Implementado por \mbox{\hyperlink{classInstructionTypeR_a95115f1b924af7e429fe54b47bd681b6}{Instruction\+TypeR}} e \mbox{\hyperlink{classInstructionTypeI_a9fb2ee032bdea259e517c5ce9d7836bf}{Instruction\+TypeI}}.
+Definição na linha 47 do arquivo instruction.\+h.
 
 
 

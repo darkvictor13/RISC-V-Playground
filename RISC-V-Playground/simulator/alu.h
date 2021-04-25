@@ -1,3 +1,10 @@
+/**
+ * @file add.h
+ * @brief Arquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef ALU_H
 #define ALU_H
 
@@ -13,6 +20,9 @@ class DataMemory;
 class MakeBranch;
 class MuxTypeC;
 
+/**
+ * @brief A classe ALU:
+ */
 class ALU : public QObject
 {
     Q_OBJECT

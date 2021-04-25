@@ -2,27 +2,25 @@
 \label{main_8cpp}\index{main.cpp@{main.cpp}}
 
 
-Arquivo principal.  
+Arquivo principal do programa.  
 
 
-{\ttfamily \#include \char`\"{}mainwindow.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}instruction.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}instructiontyper.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}instructiontypei.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}arithmeticlogicunit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}view/viewmainwindow.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}assembler/assembler.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$QApplication$>$}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
 \doxysubsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
-\begin{DoxyCompactList}\small\item\em Função principal do programa, aquela que chama todas as demais. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-Arquivo principal. 
+Arquivo principal do programa. 
 
 \begin{DoxyAuthor}{Autor}
-Victor Emanuel Almeida 
+m\+Guerra, Victor 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Versão}
 0.\+1 
@@ -30,15 +28,15 @@ Victor Emanuel Almeida
 
 
 \doxysubsection{Funções}
-\mbox{\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
 \index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 
 
-Função principal do programa, aquela que chama todas as demais. 
+main 
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -52,5 +50,5 @@ O código lançado pela QApplication, 0 se ocorreu tudo certo
 \end{DoxyReturn}
 
 
-Definição na linha 59 do arquivo main.\+cpp.
+Definição na linha 58 do arquivo main.\+cpp.
 

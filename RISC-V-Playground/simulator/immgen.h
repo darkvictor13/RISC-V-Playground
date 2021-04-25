@@ -1,3 +1,10 @@
+/**
+ * @file add.h
+ * @brief Arquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef IMMGEN_H
 #define IMMGEN_H
 
@@ -16,6 +23,9 @@
 class AddBranch;
 class MuxTypeB;
 
+/**
+ * @brief A classe ImmGen:
+ */
 class ImmGen : public QObject
 {
     Q_OBJECT

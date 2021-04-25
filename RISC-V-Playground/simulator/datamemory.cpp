@@ -1,3 +1,10 @@
+/**
+ * @file instructiontypesb.cpp
+ * @brief Arquivo responsável por implementar a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #include "datamemory.h"
 
 DataMemory::DataMemory()

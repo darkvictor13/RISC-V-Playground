@@ -1,3 +1,10 @@
+/**
+ * @file makebranch.h
+ * @brief Arquivo responsável por definir a classe
+ * @author mGuerra
+ * @version 0.1
+*/
+
 #ifndef MAKEBRANCH_H
 #define MAKEBRANCH_H
 
@@ -9,6 +16,9 @@
 
 class MuxTypeA;
 
+/**
+ * @brief A classe MakeBranch:
+ */
 class MakeBranch : public QObject
 {
     Q_OBJECT

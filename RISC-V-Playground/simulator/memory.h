@@ -1,6 +1,6 @@
 /**
  * @file memory.h
- * @brief
+ * @brief Arquivo responsável por definir a classe
  * @author mGuerra
  * @version 0.1
 */
@@ -8,6 +8,9 @@
 #ifndef MEMORY_H
 #define MEMORY_H
 
+/**
+  * @brief Indica o tamanho total da memória
+  */
 #define MEMORY_SPACE 64
 
 #include <QTextStream>
@@ -16,6 +19,9 @@
 
 #include "word/word.h"
 
+/**
+ * @brief A classe Memory:
+ */
 class Memory : public QObject
 {
     Q_OBJECT

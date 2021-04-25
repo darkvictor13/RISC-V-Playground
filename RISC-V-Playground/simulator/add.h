@@ -1,6 +1,6 @@
 /**
  * @file add.h
- * @brief
+ * @brief Arquivo responsável por definir a classe
  * @author mGuerra
  * @version 0.1
 */
@@ -12,6 +12,9 @@
 
 #include "word/word.h"
 
+/**
+ * @brief A classe Add:
+ */
 class Add : public QObject
 {
     Q_OBJECT

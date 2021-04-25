@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_9d1dc38608b2ee64552d244d42c0b7aa.html">RISC-V-Playground</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9d1dc38608b2ee64552d244d42c0b7aa.html">RISC-V-Playground</a></li><li class="navelem"><a class="el" href="dir_df710f5decb34c8dea3057a08f0a0ec9.html">instructions</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Arquivo que define a classe <a class="el" href="classInstructionTypeR.html" title="A classe InstructionTypeR: Classe que tem como objetivo guardar e operar sobre os valores de uma inst...">InstructionTypeR</a>.  
+<p>Arquivo responsável por definir a classe.  
 <a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="instruction_8h_source.html">instruction.h</a>&quot;</code><br />
 </div>
@@ -84,59 +84,39 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Componentes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInstructionTypeR.html">InstructionTypeR</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A classe <a class="el" href="classInstructionTypeR.html" title="A classe InstructionTypeR: Classe que tem como objetivo guardar e operar sobre os valores de uma inst...">InstructionTypeR</a>: Classe que tem como objetivo guardar e operar sobre os valores de uma instrução do tipo R.  <a href="classInstructionTypeR.html#details">Mais...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A classe <a class="el" href="classInstructionTypeR.html" title="A classe InstructionTypeR:">InstructionTypeR</a>:  <a href="classInstructionTypeR.html#details">Mais...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Definições e Macros</h2></td></tr>
-<tr class="memitem:add4c16728343b51f3bd26b8ca640fa4b"><td class="memItemLeft" align="right" valign="top"><a id="add4c16728343b51f3bd26b8ca640fa4b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADD_OPCODE</b>&#160;&#160;&#160;51</td></tr>
-<tr class="separator:add4c16728343b51f3bd26b8ca640fa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88fd84b94539538d3f0d3604f7ebfd04"><td class="memItemLeft" align="right" valign="top"><a id="a88fd84b94539538d3f0d3604f7ebfd04"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SUB_OPCODE</b>&#160;&#160;&#160;51</td></tr>
-<tr class="separator:a88fd84b94539538d3f0d3604f7ebfd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af900938c29d892f586f67b5f648bd379"><td class="memItemLeft" align="right" valign="top"><a id="af900938c29d892f586f67b5f648bd379"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>AND_OPCODE</b>&#160;&#160;&#160;51</td></tr>
-<tr class="separator:af900938c29d892f586f67b5f648bd379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65db56a330b36f4216176a36fea024df"><td class="memItemLeft" align="right" valign="top"><a id="a65db56a330b36f4216176a36fea024df"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OR_OPCODE</b>&#160;&#160;&#160;51</td></tr>
-<tr class="separator:a65db56a330b36f4216176a36fea024df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a321490f8c9b0ece4d93555dfcfa8b25f"><td class="memItemLeft" align="right" valign="top"><a id="a321490f8c9b0ece4d93555dfcfa8b25f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADD_FUNCT_3</b>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:a321490f8c9b0ece4d93555dfcfa8b25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75bcfd747ef841cf810605a3ee2e2494"><td class="memItemLeft" align="right" valign="top"><a id="a75bcfd747ef841cf810605a3ee2e2494"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SUB_FUNCT_3</b>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:a75bcfd747ef841cf810605a3ee2e2494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06ca972e6c234166fa91c11abfa32e61"><td class="memItemLeft" align="right" valign="top"><a id="a06ca972e6c234166fa91c11abfa32e61"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>AND_FUNCT_3</b>&#160;&#160;&#160;7</td></tr>
-<tr class="separator:a06ca972e6c234166fa91c11abfa32e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48682fa98d5b77da5aa5c90d2ee268e4"><td class="memItemLeft" align="right" valign="top"><a id="a48682fa98d5b77da5aa5c90d2ee268e4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OR_FUNCT_3</b>&#160;&#160;&#160;6</td></tr>
-<tr class="separator:a48682fa98d5b77da5aa5c90d2ee268e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1f22768ab63f6ea7e3b99a056018195"><td class="memItemLeft" align="right" valign="top"><a id="aa1f22768ab63f6ea7e3b99a056018195"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ADD_FUNCT_7</b>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:aa1f22768ab63f6ea7e3b99a056018195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62474e792c93d81e5bf64853e3d29bfb"><td class="memItemLeft" align="right" valign="top"><a id="a62474e792c93d81e5bf64853e3d29bfb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SUB_FUNCT_7</b>&#160;&#160;&#160;32</td></tr>
-<tr class="separator:a62474e792c93d81e5bf64853e3d29bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09174a03612eaa954b778b738227a039"><td class="memItemLeft" align="right" valign="top"><a id="a09174a03612eaa954b778b738227a039"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>AND_FUNCT_7</b>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:a09174a03612eaa954b778b738227a039"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91862eecd5cb9bca0fa6368387e08719"><td class="memItemLeft" align="right" valign="top"><a id="a91862eecd5cb9bca0fa6368387e08719"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OR_FUNCT_7</b>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:a91862eecd5cb9bca0fa6368387e08719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7081f76f6ce8e5579ac07b01a2b23eee"><td class="memItemLeft" align="right" valign="top"><a id="a7081f76f6ce8e5579ac07b01a2b23eee"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instructiontyper_8h.html#a7081f76f6ce8e5579ac07b01a2b23eee">RS2_BEGIN</a>&#160;&#160;&#160;20</td></tr>
-<tr class="memdesc:a7081f76f6ce8e5579ac07b01a2b23eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica o indice do vetor binário em que inicia o a informação de qual é o registrador sorce 2. <br /></td></tr>
-<tr class="separator:a7081f76f6ce8e5579ac07b01a2b23eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ed96daba077fbd015302e21f5f6e3ff"><td class="memItemLeft" align="right" valign="top"><a id="a7ed96daba077fbd015302e21f5f6e3ff"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instructiontyper_8h.html#a7ed96daba077fbd015302e21f5f6e3ff">F7_BEGIN</a>&#160;&#160;&#160;25</td></tr>
-<tr class="memdesc:a7ed96daba077fbd015302e21f5f6e3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica o indice do vetor binário em que inicia o a informação de qual é o funct 7 da instrução. <br /></td></tr>
-<tr class="separator:a7ed96daba077fbd015302e21f5f6e3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2661b2038ab9556f33083b1164692037"><td class="memItemLeft" align="right" valign="top"><a id="a2661b2038ab9556f33083b1164692037"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instructiontyper_8h.html#a2661b2038ab9556f33083b1164692037">RD_FIRST</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:a2661b2038ab9556f33083b1164692037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica o início do Registrador Destino. <br /></td></tr>
+<tr class="separator:a2661b2038ab9556f33083b1164692037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9139e41e87ca7af0ff8e90539343804d"><td class="memItemLeft" align="right" valign="top"><a id="a9139e41e87ca7af0ff8e90539343804d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instructiontyper_8h.html#a9139e41e87ca7af0ff8e90539343804d">RD_LAST</a>&#160;&#160;&#160;11</td></tr>
+<tr class="memdesc:a9139e41e87ca7af0ff8e90539343804d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica o fim do Registrador Destino. <br /></td></tr>
+<tr class="separator:a9139e41e87ca7af0ff8e90539343804d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44e3a7e012a1ccdf0110f92599d13c8"><td class="memItemLeft" align="right" valign="top"><a id="af44e3a7e012a1ccdf0110f92599d13c8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instructiontyper_8h.html#af44e3a7e012a1ccdf0110f92599d13c8">RS2_FIRST</a>&#160;&#160;&#160;20</td></tr>
+<tr class="memdesc:af44e3a7e012a1ccdf0110f92599d13c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica o início do Registrador Source 2. <br /></td></tr>
+<tr class="separator:af44e3a7e012a1ccdf0110f92599d13c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825564353018d67a3f597a531d9e0918"><td class="memItemLeft" align="right" valign="top"><a id="a825564353018d67a3f597a531d9e0918"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instructiontyper_8h.html#a825564353018d67a3f597a531d9e0918">RS2_LAST</a>&#160;&#160;&#160;24</td></tr>
+<tr class="memdesc:a825564353018d67a3f597a531d9e0918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica o fim do Registrador Source 2. <br /></td></tr>
+<tr class="separator:a825564353018d67a3f597a531d9e0918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6634f9d2ae64e6455ee6a232686d36"><td class="memItemLeft" align="right" valign="top"><a id="a6b6634f9d2ae64e6455ee6a232686d36"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instructiontyper_8h.html#a6b6634f9d2ae64e6455ee6a232686d36">FUNCT7_FIRST</a>&#160;&#160;&#160;25</td></tr>
+<tr class="memdesc:a6b6634f9d2ae64e6455ee6a232686d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica o início do Funct 7. <br /></td></tr>
+<tr class="separator:a6b6634f9d2ae64e6455ee6a232686d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20467df3c47011da040d63c647bef63b"><td class="memItemLeft" align="right" valign="top"><a id="a20467df3c47011da040d63c647bef63b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="instructiontyper_8h.html#a20467df3c47011da040d63c647bef63b">FUNCT7_LAST</a>&#160;&#160;&#160;31</td></tr>
+<tr class="memdesc:a20467df3c47011da040d63c647bef63b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica o fim do Funct 7. <br /></td></tr>
+<tr class="separator:a20467df3c47011da040d63c647bef63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p>Arquivo que define a classe <a class="el" href="classInstructionTypeR.html" title="A classe InstructionTypeR: Classe que tem como objetivo guardar e operar sobre os valores de uma inst...">InstructionTypeR</a>. </p>
-<dl class="section author"><dt>Autor</dt><dd>Victor Emanuel Almeida </dd></dl>
+<div class="textblock"><p>Arquivo responsável por definir a classe. </p>
+<dl class="section author"><dt>Autor</dt><dd>mGuerra </dd></dl>
 <dl class="section version"><dt>Versão</dt><dd>0.1 </dd></dl>
 
 <p class="definition">Definição no arquivo <a class="el" href="instructiontyper_8h_source.html">instructiontyper.h</a>.</p>

@@ -1,6 +1,6 @@
 /**
  * @file instructiontypei.h
- * @brief
+ * @brief Arquivo responsável por definir a classe
  * @author mGuerra
  * @version 0.1
 */
@@ -10,12 +10,29 @@
 
 #include "instruction.h"
 
+/**
+  * @brief Indica o início do Registrador Destino
+  */
 #define RD_FIRST 7
+
+/**
+  * @brief Indica o fim do Registrador Destino
+  */
 #define RD_LAST 11
 
+/**
+  * @brief Indica o início do Imediato
+  */
 #define IMMEDIATE_FIRST 20
+
+/**
+  * @brief Indica o fim do Imediato
+  */
 #define IMMEDIATE_LAST 31
 
+/**
+ * @brief A classe InstructionTypeI:
+ */
 class InstructionTypeI : public Instruction
 {
 public:

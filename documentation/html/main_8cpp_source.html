@@ -72,62 +72,32 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="main_8cpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mainwindow_8h.html">mainwindow.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="instruction_8h.html">instruction.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="instructiontyper_8h.html">instructiontyper.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;instructiontypei.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="arithmeticlogicunit_8h.html">arithmeticlogicunit.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="viewmainwindow_8h.html">view/viewmainwindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="assembler_8h.html">assembler/assembler.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QFile&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   59</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classInstruction.html">Instruction</a> *vet[2];</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">bool</span> *aux;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    vet[0] = <span class="keyword">new</span> <a class="code" href="classInstructionTypeI.html">InstructionTypeI</a> (ADDI_OPCODE, 3, ADDI_FUNCT_3, 3, 10);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    vet[1] = <span class="keyword">new</span> <a class="code" href="classInstructionTypeR.html">InstructionTypeR</a> (OR_OPCODE, 5, OR_FUNCT_3, 3, 2, OR_FUNCT_7);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        vet[i]-&gt;<a class="code" href="classInstruction.html#a01fae104bc1781792d583761b2a0d7c5">printInfo</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        aux = vet[i]-&gt;<a class="code" href="classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885">instructionToBin</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        Instruction::printBin(cout, aux);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//ArithmeticLogicUnit ar;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//ar.operate(vet + 1);</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    QApplication app(argc, argv);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    QCoreApplication::setOrganizationName(<span class="stringliteral">&quot;Unioeste&quot;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    QCoreApplication::setApplicationName(<span class="stringliteral">&quot;RISC-V-Playground&quot;</span>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classMainWindow.html">MainWindow</a> w;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// Abrindo o tema</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    // o executavel esta dentro de Trab_2_OAC/build</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">    QFile file(&quot;../RISC-V-Playground/theme.qss&quot;);</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">    file.open(QFile::ReadOnly);</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">    QString styleSheet = QLatin1String(file.readAll());</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    app.setStyleSheet(styleSheet);</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    w.show();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">delete</span> vet[0];</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">delete</span> vet[1];</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> app.exec();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="ttc" id="aarithmeticlogicunit_8h_html"><div class="ttname"><a href="arithmeticlogicunit_8h.html">arithmeticlogicunit.h</a></div><div class="ttdoc">Arquivo que define a classe ArithmeticLogicUnit.</div></div>
-<div class="ttc" id="aclassInstructionTypeI_html"><div class="ttname"><a href="classInstructionTypeI.html">InstructionTypeI</a></div><div class="ttdef"><b>Definition:</b> <a href="instructiontypei_8h_source.html#l00015">instructiontypei.h:16</a></div></div>
-<div class="ttc" id="aclassInstructionTypeR_html"><div class="ttname"><a href="classInstructionTypeR.html">InstructionTypeR</a></div><div class="ttdoc">A classe InstructionTypeR: Classe que tem como objetivo guardar e operar sobre os valores de uma inst...</div><div class="ttdef"><b>Definition:</b> <a href="instructiontyper_8h_source.html#l00045">instructiontyper.h:46</a></div></div>
-<div class="ttc" id="aclassInstruction_html"><div class="ttname"><a href="classInstruction.html">Instruction</a></div><div class="ttdoc">A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00062">instruction.h:63</a></div></div>
-<div class="ttc" id="aclassInstruction_html_a01fae104bc1781792d583761b2a0d7c5"><div class="ttname"><a href="classInstruction.html#a01fae104bc1781792d583761b2a0d7c5">Instruction::printInfo</a></div><div class="ttdeci">virtual void printInfo()=0</div><div class="ttdoc">printInfo: uma função virtual pura que permite que essa classe seja abstrata</div></div>
-<div class="ttc" id="aclassInstruction_html_ac2dcbcdebf7a0351b20befaf3a202885"><div class="ttname"><a href="classInstruction.html#ac2dcbcdebf7a0351b20befaf3a202885">Instruction::instructionToBin</a></div><div class="ttdeci">virtual bool * instructionToBin()=0</div><div class="ttdoc">instructionToBin: uma função virtual pura</div></div>
-<div class="ttc" id="aclassMainWindow_html"><div class="ttname"><a href="classMainWindow.html">MainWindow</a></div><div class="ttdoc">A classe MainWindow: classe gerada pelo qt, com o objetivo de criar menus.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00023">mainwindow.h:24</a></div></div>
-<div class="ttc" id="ainstruction_8h_html"><div class="ttname"><a href="instruction_8h.html">instruction.h</a></div><div class="ttdoc">Arquivo que define a classe Instruction.</div></div>
-<div class="ttc" id="ainstructiontyper_8h_html"><div class="ttname"><a href="instructiontyper_8h.html">instructiontyper.h</a></div><div class="ttdoc">Arquivo que define a classe InstructionTypeR.</div></div>
-<div class="ttc" id="amain_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdoc">Função principal do programa, aquela que chama todas as demais.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00059">main.cpp:59</a></div></div>
-<div class="ttc" id="amainwindow_8h_html"><div class="ttname"><a href="mainwindow_8h.html">mainwindow.h</a></div><div class="ttdoc">Arquivo gerado automaticamente pelo qt, tem o objetivo de definir o que terá no menu principal da apl...</div></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   58</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    QApplication app(argc, argv);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//QFile file(&quot;../themes/Combinear/Combinear.qss&quot;);</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//file.open(QFile::ReadOnly);</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">//QString styleSheet = QLatin1String(file.readAll());</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//app.setStyleSheet(styleSheet);</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classViewMainWindow.html">ViewMainWindow</a> mainWindow;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    mainWindow.show();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> app.exec();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="ttc" id="aassembler_8h_html"><div class="ttname"><a href="assembler_8h.html">assembler.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe Assembler.</div></div>
+<div class="ttc" id="aclassViewMainWindow_html"><div class="ttname"><a href="classViewMainWindow.html">ViewMainWindow</a></div><div class="ttdoc">A classe ViewMainWindow:</div><div class="ttdef"><b>Definition:</b> <a href="viewmainwindow_8h_source.html#l00037">viewmainwindow.h:38</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">main</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00058">main.cpp:58</a></div></div>
+<div class="ttc" id="aviewmainwindow_8h_html"><div class="ttname"><a href="viewmainwindow_8h.html">viewmainwindow.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
