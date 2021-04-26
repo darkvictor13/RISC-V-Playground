@@ -26,7 +26,7 @@ void Instruction::setOpcode(DATA value)
 
 /**
  * @brief Instruction::setOpcode: função que coloca o Opcode de uma função
- * @param QString binary:
+ * @param QString binary: string contendo o valor a ser colocado no campo do Opcode
  */
 void Instruction::setOpcode(QString binary)
 {
@@ -52,8 +52,8 @@ QString Instruction::getStringOpcode()
 }
 
 /**
- * @brief Instruction::setFunct3
- * @param value
+ * @brief Instruction::setFunct3: função que permite colocar um valor no campor do Funct 3
+ * @param DATA value: valor a ser colocado no campo do Funct3
  */
 void Instruction::setFunct3(DATA value)
 {
@@ -61,8 +61,8 @@ void Instruction::setFunct3(DATA value)
 }
 
 /**
- * @brief Instruction::setFunct3
- * @param QString binary
+ * @brief Instruction::setFunct3: função que permite colocar um valor no campor do Funct3
+ * @param QString binary: string contendo o valor a ser colocado no campo do Funct3
  */
 void Instruction::setFunct3(QString binary)
 {
@@ -88,8 +88,8 @@ QString Instruction::getStringFunct3()
 }
 
 /**
- * @brief Instruction::setRS1
- * @param value
+ * @brief Instruction::setRS1: função que permite colocar um valor no campor do RS1
+ * @param DATA value: valor a ser colocado no campo do RS1
  */
 void Instruction::setRS1(DATA value)
 {
@@ -97,8 +97,8 @@ void Instruction::setRS1(DATA value)
 }
 
 /**
- * @brief Instruction::setRS1
- * @param QString binary
+ * @brief Instruction::setRS1: função que permite colocar um valor no campor do RS1
+ * @param QString binary: string contendo o valor a ser colocado no campo do RS1
  */
 void Instruction::setRS1(QString binary)
 {

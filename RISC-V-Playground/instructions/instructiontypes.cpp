@@ -16,8 +16,8 @@ InstructionTypeS::InstructionTypeS()
 }
 
 /**
- * @brief InstructionTypeS::setImmediate
- * @param value
+ * @brief InstructionTypeS::setImmediate: função que permite colocar um valor no campor do Immediate
+ * @param DATA value: valor a ser colocado no campo do Immediate
  */
 void InstructionTypeS::setImmediate(DATA value)
 {
@@ -26,8 +26,8 @@ void InstructionTypeS::setImmediate(DATA value)
 }
 
 /**
- * @brief InstructionTypeS::setImmediate
- * @param QString binary
+ * @brief InstructionTypeS::setImmediate: função que permite colocar um valor no campor do Immediate
+ * @param QString binary: string contendo o valor a ser colocado no campo do Immediate
  */
 void InstructionTypeS::setImmediate(QString binary)
 {
@@ -36,7 +36,7 @@ void InstructionTypeS::setImmediate(QString binary)
 }
 
 /**
- * @brief InstructionTypeS::getIntegerImmediate: função que permite extrair o valor do Immediate de uma instrução
+ * @brief InstructionTypeS::getIntegerImmediate: função que permite extrair o valor do Immediate de uma instrução do tipo S
  * @return DATA: valor inteiro contido em Immediate
  */
 DATA InstructionTypeS::getIntegerImmediate()
@@ -45,7 +45,7 @@ DATA InstructionTypeS::getIntegerImmediate()
 }
 
 /**
- * @brief InstructionTypeS::getStringImmediate: função que permite extrair o valor do Immediate de uma instrução
+ * @brief InstructionTypeS::getStringImmediate: função que permite extrair o valor do Immediate de uma instrução do tipo S
  * @return QString: string dos bits que conformam o Immediate
  */
 QString InstructionTypeS::getStringImmediate()
@@ -54,8 +54,8 @@ QString InstructionTypeS::getStringImmediate()
 }
 
 /**
- * @brief InstructionTypeS::setRS2
- * @param value
+ * @brief InstructionTypeS::setRS2: função que permite colocar um valor no campor do RS2
+ * @param DATA value: valor a ser colocado no campo do RS2
  */
 void InstructionTypeS::setRS2(DATA value)
 {
@@ -63,8 +63,8 @@ void InstructionTypeS::setRS2(DATA value)
 }
 
 /**
- * @brief InstructionTypeS::setRS2
- * @param QString binary
+ * @brief InstructionTypeS::setRS2: função que permite colocar um valor no campor do RS2
+ * @param QString binary: string contendo o valor a ser colocado no campo do RS2
  */
 void InstructionTypeS::setRS2(QString binary)
 {
@@ -72,7 +72,7 @@ void InstructionTypeS::setRS2(QString binary)
 }
 
 /**
- * @brief InstructionTypeS::getIntegerRS2: função que permite extrair o valor do RS2 de uma instrução
+ * @brief InstructionTypeS::getIntegerRS2: função que permite extrair o valor do RS2 de uma instrução do tipo S
  * @return DATA: valor inteiro contido em RS2
  */
 DATA InstructionTypeS::getIntegerRS2()
@@ -81,7 +81,7 @@ DATA InstructionTypeS::getIntegerRS2()
 }
 
 /**
- * @brief InstructionTypeS::getStringRS2: função que permite extrair o valor do RS2 de uma instrução
+ * @brief InstructionTypeS::getStringRS2: função que permite extrair o valor do RS2 de uma instrução do tipo S
  * @return QString: string dos bits que conformam o RS2
  */
 QString InstructionTypeS::getStringRS2()

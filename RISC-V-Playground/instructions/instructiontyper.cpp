@@ -16,8 +16,8 @@ InstructionTypeR::InstructionTypeR()
 }
 
 /**
- * @brief InstructionTypeR::setRD
- * @param value
+ * @brief InstructionTypeR::setRD: função que permite colocar um valor no campor do RD
+ * @param DATA value: valor a ser colocado no campo do RD
  */
 void InstructionTypeR::setRD(DATA value)
 {
@@ -25,8 +25,8 @@ void InstructionTypeR::setRD(DATA value)
 }
 
 /**
- * @brief InstructionTypeR::setRD
- * @param QString binary
+ * @brief InstructionTypeR::setRD: função que permite colocar um valor no campor do RD
+ * @param QString binary: string contendo o valor a ser colocado no campo do RD
  */
 void InstructionTypeR::setRD(QString binary)
 {
@@ -34,7 +34,7 @@ void InstructionTypeR::setRD(QString binary)
 }
 
 /**
- * @brief InstructionTypeR::getIntegerRD: função que permite extrair o valor do RD de uma instrução
+ * @brief InstructionTypeR::getIntegerRD: função que permite extrair o valor do RD de uma instrução do tipo R
  * @return DATA: valor inteiro contido em RD
  */
 DATA InstructionTypeR::getIntegerRD()
@@ -43,7 +43,7 @@ DATA InstructionTypeR::getIntegerRD()
 }
 
 /**
- * @brief InstructionTypeR::getStringRD: função que permite extrair o valor do RD de uma instrução
+ * @brief InstructionTypeR::getStringRD: função que permite extrair o valor do RD de uma instrução do tipo R
  * @return QString: string dos bits que conformam o RD
  */
 QString InstructionTypeR::getStringRD()
@@ -52,8 +52,8 @@ QString InstructionTypeR::getStringRD()
 }
 
 /**
- * @brief InstructionTypeR::setRS2
- * @param value
+ * @brief InstructionTypeR::setRS2: função que permite colocar um valor no campor do RS2
+ * @param DATA value: valor a ser colocado no campo do RS2
  */
 void InstructionTypeR::setRS2(DATA value)
 {
@@ -61,8 +61,8 @@ void InstructionTypeR::setRS2(DATA value)
 }
 
 /**
- * @brief InstructionTypeR::setRS2
- * @param QString binary
+ * @brief InstructionTypeR::setRS2: função que permite colocar um valor no campor do RS2
+ * @param QString binary: string contendo o valor a ser colocado no campo do RS2
  */
 void InstructionTypeR::setRS2(QString binary)
 {
@@ -70,7 +70,7 @@ void InstructionTypeR::setRS2(QString binary)
 }
 
 /**
- * @brief InstructionTypeR::getIntegerRS2: função que permite extrair o valor do RS2 de uma instrução
+ * @brief InstructionTypeR::getIntegerRS2: função que permite extrair o valor do RS2 de uma instrução do tipo R
  * @return DATA: valor inteiro contido em RS2
  */
 DATA InstructionTypeR::getIntegerRS2()
@@ -79,7 +79,7 @@ DATA InstructionTypeR::getIntegerRS2()
 }
 
 /**
- * @brief InstructionTypeR::getStringRS2: função que permite extrair o valor do RS2 de uma instrução
+ * @brief InstructionTypeR::getStringRS2: função que permite extrair o valor do RS2 de uma instrução do tipo R
  * @return QString: string dos bits que conformam o RS2
  */
 QString InstructionTypeR::getStringRS2()
@@ -88,8 +88,8 @@ QString InstructionTypeR::getStringRS2()
 }
 
 /**
- * @brief InstructionTypeR::setFunct7
- * @param value
+ * @brief InstructionTypeR::setFunct7: função que permite colocar um valor no campor do Funct7
+ * @param DATA value: valor a ser colocado no campo do Funct7
  */
 void InstructionTypeR::setFunct7(DATA value)
 {
@@ -97,8 +97,8 @@ void InstructionTypeR::setFunct7(DATA value)
 }
 
 /**
- * @brief InstructionTypeR::setFunct7
- * @param QString binary
+ * @brief InstructionTypeR::setFunct7: função que permite colocar um valor no campor do Funct7
+ * @param QString binary string contendo o valor a ser colocado no campo do Funct7
  */
 void InstructionTypeR::setFunct7(QString binary)
 {
@@ -106,7 +106,7 @@ void InstructionTypeR::setFunct7(QString binary)
 }
 
 /**
- * @brief InstructionTypeR::getIntegerFunct7: função que permite extrair o valor do Funct7 de uma instrução
+ * @brief InstructionTypeR::getIntegerFunct7: função que permite extrair o valor do Funct7 de uma instrução do tipo R
  * @return DATA: valor inteiro contido em Funct7
  */
 DATA InstructionTypeR::getIntegerFunct7()
@@ -115,7 +115,7 @@ DATA InstructionTypeR::getIntegerFunct7()
 }
 
 /**
- * @brief InstructionTypeR::getStringFunct7: função que permite extrair o valor do Funct7 de uma instrução
+ * @brief InstructionTypeR::getStringFunct7: função que permite extrair o valor do Funct7 de uma instrução do tipo R
  * @return QString: string dos bits que conformam o Funct7
  */
 QString InstructionTypeR::getStringFunct7()

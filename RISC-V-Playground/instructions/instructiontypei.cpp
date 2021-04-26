@@ -16,8 +16,8 @@ InstructionTypeI::InstructionTypeI()
 }
 
 /**
- * @brief InstructionTypeI::setRD
- * @param value
+ * @brief InstructionTypeI::setRD: função que permite colocar um valor no campor do RD
+ * @param DATA value: valor a ser colocado no campo do RD
  */
 void InstructionTypeI::setRD(DATA value)
 {
@@ -25,8 +25,8 @@ void InstructionTypeI::setRD(DATA value)
 }
 
 /**
- * @brief InstructionTypeI::setRD
- * @param QString binary
+ * @brief InstructionTypeI::setRD: função que permite colocar um valor no campor do RD
+ * @param QString binary: string contendo o valor a ser colocado no campo do RD
  */
 void InstructionTypeI::setRD(QString binary)
 {
@@ -34,7 +34,7 @@ void InstructionTypeI::setRD(QString binary)
 }
 
 /**
- * @brief InstructionTypeI::getIntegerRD: função que permite extrair o valor do RD de uma instrução do tipo i
+ * @brief InstructionTypeI::getIntegerRD: função que permite extrair o valor do RD de uma instrução do tipo I
  * @return DATA: valor inteiro contido em RD
  */
 DATA InstructionTypeI::getIntegerRD()
@@ -43,7 +43,7 @@ DATA InstructionTypeI::getIntegerRD()
 }
 
 /**
- * @brief InstructionTypeI::getStringRD: função que permite extrair o valor do RD de uma instrução
+ * @brief InstructionTypeI::getStringRD: função que permite extrair o valor do RD de uma instrução do tipo I
  * @return QString: string dos bits que conformam o RD
  */
 QString InstructionTypeI::getStringRD()
@@ -52,8 +52,8 @@ QString InstructionTypeI::getStringRD()
 }
 
 /**
- * @brief InstructionTypeI::setImmediate
- * @param value
+ * @brief InstructionTypeI::setImmediate: função que permite colocar um valor no campor do Immediate
+ * @param DATA value: valor a ser colocado no campo do Immediate
  */
 void InstructionTypeI::setImmediate(DATA value)
 {
@@ -61,8 +61,8 @@ void InstructionTypeI::setImmediate(DATA value)
 }
 
 /**
- * @brief InstructionTypeI::setImmediate
- * @param QString binary
+ * @brief InstructionTypeI::setImmediate: função que permite colocar um valor no campor do Immediate
+ * @param QString binary: string contendo o valor a ser colocado no campo do Immediate
  */
 void InstructionTypeI::setImmediate(QString binary)
 {
@@ -70,7 +70,7 @@ void InstructionTypeI::setImmediate(QString binary)
 }
 
 /**
- * @brief InstructionTypeI::getIntegerImmediate: função que permite extrair o valor do Immediate de uma instrução
+ * @brief InstructionTypeI::getIntegerImmediate: função que permite extrair o valor do Immediate de uma instrução do tipo I
  * @return DATA: valor inteiro contido em Immediate
  */
 DATA InstructionTypeI::getIntegerImmediate()
@@ -79,7 +79,7 @@ DATA InstructionTypeI::getIntegerImmediate()
 }
 
 /**
- * @brief InstructionTypeI::getStringImmediate: : função que permite extrair o valor do Immediate de uma instrução
+ * @brief InstructionTypeI::getStringImmediate: : função que permite extrair o valor do Immediate de uma instrução do tipo I
  * @return QString: string dos bits que conformam o Immediate
  */
 QString InstructionTypeI::getStringImmediate()
