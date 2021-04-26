@@ -1,6 +1,6 @@
 /**
  * @file instructiontypesb.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe InstructionTypeSB
  * @author mGuerra
  * @version 0.1
 */

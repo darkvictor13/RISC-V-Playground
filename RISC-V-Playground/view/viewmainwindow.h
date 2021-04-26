@@ -1,6 +1,6 @@
 /**
  * @file viewmainwindow.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a interface gráfica do projeto
  * @author mGuerra
  * @version 0.1
 */

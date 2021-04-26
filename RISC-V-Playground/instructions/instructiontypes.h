@@ -1,6 +1,6 @@
 /**
  * @file instructiontypes.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe InstructionTypeS
  * @author mGuerra
  * @version 0.1
 */

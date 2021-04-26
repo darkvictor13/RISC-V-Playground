@@ -1,6 +1,6 @@
 /**
  * @file instructiontyper.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe InstructionTypeR
  * @author mGuerra
  * @version 0.1
 */

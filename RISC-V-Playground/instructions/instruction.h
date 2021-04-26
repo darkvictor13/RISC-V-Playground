@@ -1,6 +1,6 @@
 /**
  * @file instruction.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe Instruction
  * @author mGuerra
  * @version 0.1
 */
