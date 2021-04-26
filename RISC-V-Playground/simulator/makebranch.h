@@ -1,6 +1,6 @@
 /**
  * @file makebranch.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe MakeBranch
  * @author mGuerra
  * @version 0.1
 */
@@ -17,7 +17,8 @@
 class MuxTypeA;
 
 /**
- * @brief A classe MakeBranch:
+ * @brief A classe MakeBranch: Verifica se há condições de
+ * realizar o breanch
  */
 class MakeBranch : public QObject
 {

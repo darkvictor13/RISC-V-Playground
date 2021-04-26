@@ -1,6 +1,6 @@
 /**
- * @file add.h
- * @brief Arquivo responsável por definir a classe
+ * @file control.h
+ * @brief Arquivo responsável por definir a classe Control
  * @author mGuerra
  * @version 0.1
 */
@@ -27,7 +27,8 @@ class ALUControl;
 class Registers;
 
 /**
- * @brief A classe Control:
+ * @brief A classe Control: Ativa as flags específicas para
+ * cada instrução
  */
 class Control : public QObject
 {

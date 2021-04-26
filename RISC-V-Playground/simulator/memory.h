@@ -1,6 +1,6 @@
 /**
  * @file memory.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe Memory
  * @author mGuerra
  * @version 0.1
 */
@@ -20,7 +20,8 @@
 #include "word/word.h"
 
 /**
- * @brief A classe Memory:
+ * @brief A classe Memory: Classe abstrata base para os
+ * diferentes tipos de memória
  */
 class Memory : public QObject
 {

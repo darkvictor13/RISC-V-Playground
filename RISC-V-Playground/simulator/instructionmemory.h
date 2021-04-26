@@ -1,6 +1,6 @@
 /**
- * @file add.h
- * @brief Arquivo responsável por definir a classe
+ * @file instructionmemory.h
+ * @brief Arquivo responsável por definir a classe InstructionMemory
  * @author mGuerra
  * @version 0.1
 */
@@ -21,7 +21,7 @@ class ImmGen;
 class ALUControl;
 
 /**
- * @brief A classe InstructionMemory:
+ * @brief A classe InstructionMemory: Representa a memória de instruções
  */
 class InstructionMemory : public Memory
 {

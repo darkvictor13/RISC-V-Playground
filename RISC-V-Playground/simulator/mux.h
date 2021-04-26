@@ -1,6 +1,6 @@
 /**
- * @file memory.h
- * @briefArquivo responsável por definir a classe
+ * @file mux.h
+ * @brief Arquivo responsável por definir a classe Mux
  * @author mGuerra
  * @version 0.1
 */
@@ -13,7 +13,8 @@
 #include "word/word.h"
 
 /**
- * @brief A classe Mux:
+ * @brief A classe Mux: Classe abstrata base para os
+ * diferentes tipos de multiplexador
  */
 class Mux : public QObject
 {

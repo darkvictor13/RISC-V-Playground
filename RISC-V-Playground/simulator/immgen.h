@@ -1,6 +1,6 @@
 /**
- * @file add.h
- * @brief Arquivo responsável por definir a classe
+ * @file immgen.h
+ * @brief Arquivo responsável por definir a classe ImmGen
  * @author mGuerra
  * @version 0.1
 */
@@ -24,7 +24,7 @@ class AddBranch;
 class MuxTypeB;
 
 /**
- * @brief A classe ImmGen:
+ * @brief A classe ImmGen: Gera o imediato para as instruções
  */
 class ImmGen : public QObject
 {

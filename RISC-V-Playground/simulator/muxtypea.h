@@ -1,6 +1,6 @@
 /**
- * @file memory.h
- * @briefArquivo responsável por definir a classe
+ * @file muxtypea.h
+ * @brief Arquivo responsável por definir a classe MuxTypeA
  * @author mGuerra
  * @version 0.1
 */
@@ -15,7 +15,8 @@
 class PC;
 
 /**
- * @brief A classe MuxTypeA:
+ * @brief A classe MuxTypeA: Multiplexador para selecionar
+ * o valor que será colocado do program counter
  */
 class MuxTypeA : public Mux
 {

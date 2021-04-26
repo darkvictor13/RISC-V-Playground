@@ -1,6 +1,6 @@
 /**
  * @file simulator.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe Simulator
  * @author mGuerra
  * @version 0.1
 */
@@ -25,7 +25,8 @@
 #include "muxtypec.h"
 
 /**
- * @brief A classe Simulator:
+ * @brief A classe Simulator: Agrupa todos os
+ * componentes necessários para a simulação
  */
 class Simulator : public QObject
 {

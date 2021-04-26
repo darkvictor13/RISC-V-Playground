@@ -83,37 +83,37 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="word_8h.html">word/word.h</a>&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classMemory.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMemory.html">Memory</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classWord.html">Word</a> memory[<a class="code" href="memory_8h.html#acfc70599c9b365f22b6fdcb609adb393">MEMORY_SPACE</a>];</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99">Memory</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> init();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> takeMemoryData(QString fileName);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> loadValue(<a class="code" href="classWord.html">Word</a> value, <a class="code" href="classWord.html">Word</a> address);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> setValue(<a class="code" href="classWord.html">Word</a> value, <a class="code" href="classWord.html">Word</a> address);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> setValue(QString binary, <span class="keywordtype">int</span> address);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classWord.html">Word</a> getValue(<a class="code" href="classWord.html">Word</a> address);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> restart();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> testInstruction(<a class="code" href="classWord.html">Word</a> address);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classMemory.html#a0ffa9759ebbf103f11132a505b93bdc0">~Memory</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;signals:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> initMemory(<span class="keywordtype">int</span> size);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> loadMemory(vector&lt;Word&gt; memoryData);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> updateMemory(<a class="code" href="classWord.html">Word</a> value, <a class="code" href="classWord.html">Word</a> address);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> restartMemory();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MEMORY_H</span></div>
-<div class="ttc" id="aclassMemory_html"><div class="ttname"><a href="classMemory.html">Memory</a></div><div class="ttdoc">A classe Memory:</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00025">memory.h:26</a></div></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classMemory.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMemory.html">Memory</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classWord.html">Word</a> memory[<a class="code" href="memory_8h.html#acfc70599c9b365f22b6fdcb609adb393">MEMORY_SPACE</a>];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99">Memory</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> init();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> takeMemoryData(QString fileName);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> loadValue(<a class="code" href="classWord.html">Word</a> value, <a class="code" href="classWord.html">Word</a> address);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> setValue(<a class="code" href="classWord.html">Word</a> value, <a class="code" href="classWord.html">Word</a> address);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> setValue(QString binary, <span class="keywordtype">int</span> address);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classWord.html">Word</a> getValue(<a class="code" href="classWord.html">Word</a> address);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> restart();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> testInstruction(<a class="code" href="classWord.html">Word</a> address);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classMemory.html#a0ffa9759ebbf103f11132a505b93bdc0">~Memory</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;signals:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> initMemory(<span class="keywordtype">int</span> size);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> loadMemory(vector&lt;Word&gt; memoryData);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> updateMemory(<a class="code" href="classWord.html">Word</a> value, <a class="code" href="classWord.html">Word</a> address);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> restartMemory();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MEMORY_H</span></div>
+<div class="ttc" id="aclassMemory_html"><div class="ttname"><a href="classMemory.html">Memory</a></div><div class="ttdoc">A classe Memory: Classe abstrata base para os diferentes tipos de memória.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00026">memory.h:27</a></div></div>
 <div class="ttc" id="aclassMemory_html_a0ffa9759ebbf103f11132a505b93bdc0"><div class="ttname"><a href="classMemory.html#a0ffa9759ebbf103f11132a505b93bdc0">Memory::~Memory</a></div><div class="ttdeci">~Memory()</div><div class="ttdoc">Memory::~Memory: Destrutor da classe.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00107">memory.cpp:107</a></div></div>
 <div class="ttc" id="aclassMemory_html_a585d7bb6fc6f2237bcebf94a86b7dd99"><div class="ttname"><a href="classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99">Memory::Memory</a></div><div class="ttdeci">Memory()</div><div class="ttdoc">Memory::Memory: Construtor da classe.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00013">memory.cpp:13</a></div></div>
 <div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word: Representação de uma palavra de 32 bits e suas operações.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00030">word.h:31</a></div></div>

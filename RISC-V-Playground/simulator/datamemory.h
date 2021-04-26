@@ -1,6 +1,6 @@
 /**
- * @file add.h
- * @brief Arquivo responsável por definir a classe
+ * @file datamemory.h
+ * @brief Arquivo responsável por definir a classe DataMemory
  * @author mGuerra
  * @version 0.1
 */
@@ -15,7 +15,7 @@
 class MuxTypeC;
 
 /**
- * @brief A classe DataMemory:
+ * @brief A classe DataMemory: Representa a memória de Dados
  */
 class DataMemory : public Memory
 {

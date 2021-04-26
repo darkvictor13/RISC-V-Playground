@@ -1,6 +1,6 @@
 /**
  * @file registers.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe Registers
  * @author mGuerra
  * @version 0.1
 */
@@ -30,7 +30,8 @@ class MuxTypeB;
 class DataMemory;
 
 /**
- * @brief A classe Registers:
+ * @brief A classe Registers: Representa os registradores
+ * visíveis ao programador
  */
 class Registers : public QObject
 {

@@ -39,17 +39,17 @@ void \mbox{\hyperlink{classInstruction_a0ecc00d0c757328b979cb3049347b25f}{set\+O
 QString \mbox{\hyperlink{classInstruction_a5ea0607443c2314c5ccbd61b85885e65}{get\+String\+Opcode}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a5ea0607443c2314c5ccbd61b85885e65}{Instruction\+::get\+String\+Opcode}}\+: função que permite extrair o valor do Opcode de uma instrução. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInstruction_a750cfe5946191d432414a20d2759c9a8}{set\+Funct3}} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a750cfe5946191d432414a20d2759c9a8}{Instruction\+::set\+Funct3}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a750cfe5946191d432414a20d2759c9a8}{Instruction\+::set\+Funct3}}\+: função que permite colocar um valor no campor do Funct 3. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInstruction_a0fd2fee0ec0b9e320caee6eb00f4ec05}{set\+Funct3}} (QString binary)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a750cfe5946191d432414a20d2759c9a8}{Instruction\+::set\+Funct3}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a750cfe5946191d432414a20d2759c9a8}{Instruction\+::set\+Funct3}}\+: função que permite colocar um valor no campor do Funct3. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} \mbox{\hyperlink{classInstruction_a6f820a6c406162cd4da5c9580c5e41e4}{get\+Integer\+Funct3}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a6f820a6c406162cd4da5c9580c5e41e4}{Instruction\+::get\+Integer\+Funct3}}\+: função que permite extrair o valor do Funct3 de uma instrução. \end{DoxyCompactList}\item 
 QString \mbox{\hyperlink{classInstruction_aef65fc2520c19d611c70eebc63cd1bd4}{get\+String\+Funct3}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_aef65fc2520c19d611c70eebc63cd1bd4}{Instruction\+::get\+String\+Funct3}}\+: função que permite extrair o valor do Funct3 de uma instrução. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInstruction_a68dc63515d33b824b48a10fb405b2372}{set\+RS1}} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a68dc63515d33b824b48a10fb405b2372}{Instruction\+::set\+RS1}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a68dc63515d33b824b48a10fb405b2372}{Instruction\+::set\+RS1}}\+: função que permite colocar um valor no campor do RS1. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInstruction_aace27fff315e6a81fae97da3bb096c82}{set\+RS1}} (QString binary)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a68dc63515d33b824b48a10fb405b2372}{Instruction\+::set\+RS1}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a68dc63515d33b824b48a10fb405b2372}{Instruction\+::set\+RS1}}\+: função que permite colocar um valor no campor do RS1. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} \mbox{\hyperlink{classInstruction_a0269f8dcd4da75de4e363049a73cea17}{get\+Integer\+RS1}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstruction_a0269f8dcd4da75de4e363049a73cea17}{Instruction\+::get\+Integer\+RS1}}\+: função que permite extrair o valor do RS1 de uma instrução. \end{DoxyCompactList}\item 
 QString \mbox{\hyperlink{classInstruction_a3cd4bbcd1176fbd9209e974519669c24}{get\+String\+RS1}} ()
@@ -177,11 +177,11 @@ Definição na linha 121 do arquivo instruction.\+cpp.
 
 
 
-\mbox{\hyperlink{classInstruction_a750cfe5946191d432414a20d2759c9a8}{Instruction\+::set\+Funct3}}. 
+\mbox{\hyperlink{classInstruction_a750cfe5946191d432414a20d2759c9a8}{Instruction\+::set\+Funct3}}\+: função que permite colocar um valor no campor do Funct 3. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em value} & \\
+{\em DATA} & value\+: valor a ser colocado no campo do Funct3 \\
 \hline
 \end{DoxyParams}
 
@@ -196,11 +196,11 @@ Definição na linha 58 do arquivo instruction.\+cpp.
 
 
 
-\mbox{\hyperlink{classInstruction_a750cfe5946191d432414a20d2759c9a8}{Instruction\+::set\+Funct3}}. 
+\mbox{\hyperlink{classInstruction_a750cfe5946191d432414a20d2759c9a8}{Instruction\+::set\+Funct3}}\+: função que permite colocar um valor no campor do Funct3. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em QString} & binary \\
+{\em QString} & binary\+: string contendo o valor a ser colocado no campo do Funct3 \\
 \hline
 \end{DoxyParams}
 
@@ -238,7 +238,7 @@ Definição na linha 22 do arquivo instruction.\+cpp.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em QString} & binary\+: \\
+{\em QString} & binary\+: string contendo o valor a ser colocado no campo do Opcode \\
 \hline
 \end{DoxyParams}
 
@@ -253,11 +253,11 @@ Definição na linha 31 do arquivo instruction.\+cpp.
 
 
 
-\mbox{\hyperlink{classInstruction_a68dc63515d33b824b48a10fb405b2372}{Instruction\+::set\+RS1}}. 
+\mbox{\hyperlink{classInstruction_a68dc63515d33b824b48a10fb405b2372}{Instruction\+::set\+RS1}}\+: função que permite colocar um valor no campor do RS1. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em value} & \\
+{\em DATA} & value\+: valor a ser colocado no campo do RS1 \\
 \hline
 \end{DoxyParams}
 
@@ -272,11 +272,11 @@ Definição na linha 94 do arquivo instruction.\+cpp.
 
 
 
-\mbox{\hyperlink{classInstruction_a68dc63515d33b824b48a10fb405b2372}{Instruction\+::set\+RS1}}. 
+\mbox{\hyperlink{classInstruction_a68dc63515d33b824b48a10fb405b2372}{Instruction\+::set\+RS1}}\+: função que permite colocar um valor no campor do RS1. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em QString} & binary \\
+{\em QString} & binary\+: string contendo o valor a ser colocado no campo do RS1 \\
 \hline
 \end{DoxyParams}
 

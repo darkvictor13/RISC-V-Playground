@@ -1,6 +1,6 @@
 /**
- * @file memory.h
- * @briefArquivo responsável por definir a classe
+ * @file muxtypeb.h
+ * @brief Arquivo responsável por definir a classe MuxTypeB
  * @author mGuerra
  * @version 0.1
 */
@@ -15,8 +15,9 @@
 class ALU;
 
 /**
- * @brief A classe MuxTypeB:
- */
+ * @brief A classe MuxTypeB: Multiplexador para selecionar
+ * o valor que será colocado na segunda entrada da ALU
+*/
 class MuxTypeB : public Mux
 {
 private:

@@ -1,6 +1,6 @@
 /**
- * @file add.h
- * @brief Arquivo responsável por definir a classe
+ * @file alucontrol.h
+ * @brief Arquivo responsável por definir a classe ALUControl
  * @author mGuerra
  * @version 0.1
 */
@@ -19,7 +19,8 @@ class ALU;
 class AddBranch;
 
 /**
- * @brief A classe ALUControl:
+ * @brief A classe ALUControl: Responsável por indicar que operação
+ * a ALU deve executar
  */
 class ALUControl : public QObject
 {

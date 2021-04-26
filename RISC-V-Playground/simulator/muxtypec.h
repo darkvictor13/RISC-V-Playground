@@ -1,6 +1,6 @@
 /**
- * @file memory.h
- * @briefArquivo responsável por definir a classe
+ * @file muxtypec.h
+ * @brief Arquivo responsável por definir a classe MuxTypeC
  * @author mGuerra
  * @version 0.1
 */
@@ -15,7 +15,8 @@
 class Registers;
 
 /**
- * @brief A classe MuxTypeC:
+ * @brief A classe MuxTypeC: Multiplexador para selecionar
+ * o valor que será colocado no Registrador
  */
 class MuxTypeC : public Mux
 {

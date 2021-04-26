@@ -1,6 +1,6 @@
 /**
- * @file memory.h
- * @briefArquivo responsável por definir a classe
+ * @file pc.h
+ * @brief Arquivo responsável por definir a classe PC
  * @author mGuerra
  * @version 0.1
 */
@@ -21,7 +21,7 @@ class AddBranch;
 class AddNext;
 
 /**
- * @brief A classe PC:
+ * @brief A classe PC: Indica qual a instrução atual
  */
 class PC : public QObject
 {
