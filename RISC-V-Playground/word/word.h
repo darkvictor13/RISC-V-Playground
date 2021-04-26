@@ -24,7 +24,8 @@
 using namespace std;
 
 /**
- * @brief A classe Word:
+ * @brief A classe Word: Representação de uma palavra de 32 bits
+ * e suas operações
  */
 class Word
 {

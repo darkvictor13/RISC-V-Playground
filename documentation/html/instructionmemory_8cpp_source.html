@@ -114,13 +114,13 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classWord.html">Word</a> value = getValue(address);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    control-&gt;setOpcode(value.getInteger(0, 6));</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    registers-&gt;setReadRegister1(value.getInteger(15, 19));</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    registers-&gt;setReadRegister2(value.getInteger(20, 24));</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    registers-&gt;setWriteRegister(value.getInteger(7, 11));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    control-&gt;setOpcode(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(0, 6));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    registers-&gt;setReadRegister1(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(15, 19));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    registers-&gt;setReadRegister2(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(20, 24));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    registers-&gt;setWriteRegister(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(7, 11));</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    immGen-&gt;setInstruction(value);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classWord.html">Word</a> instruction = (value.getInteger(30, 30) &lt;&lt; 3) | value.getInteger(12, 14);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classWord.html">Word</a> instruction = (value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(30, 30) &lt;&lt; 3) | value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(12, 14);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    aluControl-&gt;setInstruction(instruction);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
@@ -133,7 +133,8 @@ $(function() {
 <div class="ttc" id="aclassControl_html"><div class="ttname"><a href="classControl.html">Control</a></div><div class="ttdoc">A classe Control:</div><div class="ttdef"><b>Definition:</b> <a href="control_8h_source.html#l00032">control.h:33</a></div></div>
 <div class="ttc" id="aclassImmGen_html"><div class="ttname"><a href="classImmGen.html">ImmGen</a></div><div class="ttdoc">A classe ImmGen:</div><div class="ttdef"><b>Definition:</b> <a href="immgen_8h_source.html#l00029">immgen.h:30</a></div></div>
 <div class="ttc" id="aclassRegisters_html"><div class="ttname"><a href="classRegisters.html">Registers</a></div><div class="ttdoc">A classe Registers:</div><div class="ttdef"><b>Definition:</b> <a href="registers_8h_source.html#l00035">registers.h:36</a></div></div>
-<div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word:</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00029">word.h:30</a></div></div>
+<div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word: Representação de uma palavra de 32 bits e suas operações.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00030">word.h:31</a></div></div>
+<div class="ttc" id="aclassWord_html_a2fa49c6651bf133d453996867a30fb9c"><div class="ttname"><a href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">Word::getInteger</a></div><div class="ttdeci">DATA getInteger()</div><div class="ttdoc">Word::getInteger: Indica o valor decimal da palavra.</div><div class="ttdef"><b>Definition:</b> <a href="word_8cpp_source.html#l00533">word.cpp:533</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

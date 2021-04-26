@@ -79,15 +79,15 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    pc-&gt;connect(instructionMemory, addBranch, addNext);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    aluControl-&gt;connect(alu);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    control-&gt;connect(andGate, dataMemory, muxB, muxC, aluControl, registers);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    control-&gt;connect(makeBranch, dataMemory, muxB, muxC, aluControl, registers);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    registers-&gt;connect(alu, muxB, dataMemory);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    instructionMemory-&gt;connect(control, registers, immGen, aluControl);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    dataMemory-&gt;connect(muxC);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    alu-&gt;connect(dataMemory, andGate, muxC);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    addNext-&gt;connect(muxA);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    addBranch-&gt;connect(muxA);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    alu-&gt;connect(dataMemory, makeBranch, muxC);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    addNext-&gt;<a class="code" href="classAddNext.html#afff8640a1a555e60f27c8ababb0a1b33">connect</a>(muxA);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    addBranch-&gt;<a class="code" href="classAddBranch.html#a851af78f35b02bb783d2caff42032f83">connect</a>(muxA);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    immGen-&gt;connect(addBranch, muxB);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    muxB-&gt;connect(alu);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    muxC-&gt;connect(registers);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    andGate-&gt;connect(muxA);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    makeBranch-&gt;connect(muxA);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> Simulator::init()</div>
@@ -135,6 +135,8 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="ttc" id="aclassAddBranch_html_a851af78f35b02bb783d2caff42032f83"><div class="ttname"><a href="classAddBranch.html#a851af78f35b02bb783d2caff42032f83">AddBranch::connect</a></div><div class="ttdeci">void connect(MuxTypeA *muxA)</div><div class="ttdoc">AddBranch::connect: Conecta o Multiplexador ao somador.</div><div class="ttdef"><b>Definition:</b> <a href="addbranch_8cpp_source.html#l00023">addbranch.cpp:23</a></div></div>
+<div class="ttc" id="aclassAddNext_html_afff8640a1a555e60f27c8ababb0a1b33"><div class="ttname"><a href="classAddNext.html#afff8640a1a555e60f27c8ababb0a1b33">AddNext::connect</a></div><div class="ttdeci">void connect(MuxTypeA *muxA)</div><div class="ttdoc">AddNext::connect: Conecta o Multiplexador ao somador.</div><div class="ttdef"><b>Definition:</b> <a href="addnext_8cpp_source.html#l00023">addnext.cpp:23</a></div></div>
 <div class="ttc" id="asimulator_8h_html"><div class="ttname"><a href="simulator_8h.html">simulator.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

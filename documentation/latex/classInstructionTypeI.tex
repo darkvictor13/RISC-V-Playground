@@ -2,7 +2,7 @@
 \label{classInstructionTypeI}\index{InstructionTypeI@{InstructionTypeI}}
 
 
-A classe \mbox{\hyperlink{classInstructionTypeI}{Instruction\+TypeI}}\+:  
+A classe \mbox{\hyperlink{classInstructionTypeI}{Instruction\+TypeI}}\+: representa uma instrução do tipo I.  
 
 
 
@@ -12,45 +12,190 @@ A classe \mbox{\hyperlink{classInstructionTypeI}{Instruction\+TypeI}}\+:
 Diagrama de hierarquia para Instruction\+TypeI\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=4.000000cm]{classInstructionTypeI}
+\includegraphics[height=3.000000cm]{classInstructionTypeI}
 \end{center}
 \end{figure}
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classInstructionTypeI_a57529723613dacb76af6008cb2883339}\label{classInstructionTypeI_a57529723613dacb76af6008cb2883339}} 
+\mbox{\hyperlink{classInstructionTypeI_a57529723613dacb76af6008cb2883339}{Instruction\+TypeI}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_a57529723613dacb76af6008cb2883339}{Instruction\+Type\+I\+::\+Instruction\+TypeI}}\+: contrutor da classe InstructionI. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classInstructionTypeI_a2c8dc59cc9832dd56077523e2bcb43e4}\label{classInstructionTypeI_a2c8dc59cc9832dd56077523e2bcb43e4}} 
 {\bfseries Instruction\+TypeI} (\mbox{\hyperlink{classWord}{Word}} $\ast$word)
 \item 
-\mbox{\Hypertarget{classInstructionTypeI_ab41a0118a5361b6b005bb9a8ddb35582}\label{classInstructionTypeI_ab41a0118a5361b6b005bb9a8ddb35582}} 
-void {\bfseries set\+RD} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
-\item 
-\mbox{\Hypertarget{classInstructionTypeI_adacb2f750f121e85fa55a79abb1838b5}\label{classInstructionTypeI_adacb2f750f121e85fa55a79abb1838b5}} 
-void {\bfseries set\+RD} (QString binary)
-\item 
-\mbox{\Hypertarget{classInstructionTypeI_ac52876a217ed77cdda5503de63b58490}\label{classInstructionTypeI_ac52876a217ed77cdda5503de63b58490}} 
-\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} {\bfseries get\+Integer\+RD} ()
-\item 
-\mbox{\Hypertarget{classInstructionTypeI_aad5ed35ecf704d3c10c17681df925cf4}\label{classInstructionTypeI_aad5ed35ecf704d3c10c17681df925cf4}} 
-QString {\bfseries get\+String\+RD} ()
-\item 
-\mbox{\Hypertarget{classInstructionTypeI_aba892c69d280eb7ec92bd6a0bf904bf1}\label{classInstructionTypeI_aba892c69d280eb7ec92bd6a0bf904bf1}} 
-void {\bfseries set\+Immediate} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
-\item 
-\mbox{\Hypertarget{classInstructionTypeI_ac7b69c068fa80e532052b714f31de337}\label{classInstructionTypeI_ac7b69c068fa80e532052b714f31de337}} 
-void {\bfseries set\+Immediate} (QString binary)
-\item 
-\mbox{\Hypertarget{classInstructionTypeI_a6095db6b575bc89bfda34de439aa0e32}\label{classInstructionTypeI_a6095db6b575bc89bfda34de439aa0e32}} 
-\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} {\bfseries get\+Integer\+Immediate} ()
-\item 
-\mbox{\Hypertarget{classInstructionTypeI_af0465850cd3698a352323f9ea5507d76}\label{classInstructionTypeI_af0465850cd3698a352323f9ea5507d76}} 
-QString {\bfseries get\+String\+Immediate} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classInstructionTypeI_ab41a0118a5361b6b005bb9a8ddb35582}{set\+RD}} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_ab41a0118a5361b6b005bb9a8ddb35582}{Instruction\+Type\+I\+::set\+RD}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInstructionTypeI_adacb2f750f121e85fa55a79abb1838b5}{set\+RD}} (QString binary)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_ab41a0118a5361b6b005bb9a8ddb35582}{Instruction\+Type\+I\+::set\+RD}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} \mbox{\hyperlink{classInstructionTypeI_ac52876a217ed77cdda5503de63b58490}{get\+Integer\+RD}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_ac52876a217ed77cdda5503de63b58490}{Instruction\+Type\+I\+::get\+Integer\+RD}}\+: função que permite extrair o valor do RD de uma instrução do tipo i. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInstructionTypeI_aad5ed35ecf704d3c10c17681df925cf4}{get\+String\+RD}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_aad5ed35ecf704d3c10c17681df925cf4}{Instruction\+Type\+I\+::get\+String\+RD}}\+: função que permite extrair o valor do RD de uma instrução. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInstructionTypeI_aba892c69d280eb7ec92bd6a0bf904bf1}{set\+Immediate}} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_aba892c69d280eb7ec92bd6a0bf904bf1}{Instruction\+Type\+I\+::set\+Immediate}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInstructionTypeI_ac7b69c068fa80e532052b714f31de337}{set\+Immediate}} (QString binary)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_aba892c69d280eb7ec92bd6a0bf904bf1}{Instruction\+Type\+I\+::set\+Immediate}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} \mbox{\hyperlink{classInstructionTypeI_a6095db6b575bc89bfda34de439aa0e32}{get\+Integer\+Immediate}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_a6095db6b575bc89bfda34de439aa0e32}{Instruction\+Type\+I\+::get\+Integer\+Immediate}}\+: função que permite extrair o valor do Immediate de uma instrução. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInstructionTypeI_af0465850cd3698a352323f9ea5507d76}{get\+String\+Immediate}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_af0465850cd3698a352323f9ea5507d76}{Instruction\+Type\+I\+::get\+String\+Immediate}}\+: \+: função que permite extrair o valor do Immediate de uma instrução. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInstructionTypeI_aadf032f02f47d38140ba365f12079d54}\label{classInstructionTypeI_aadf032f02f47d38140ba365f12079d54}} 
+\mbox{\hyperlink{classInstructionTypeI_aadf032f02f47d38140ba365f12079d54}{$\sim$\+Instruction\+TypeI}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeI_aadf032f02f47d38140ba365f12079d54}{Instruction\+Type\+I\+::$\sim$\+Instruction\+TypeI}}\+: destrutor da classe InstructionI. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-A classe \mbox{\hyperlink{classInstructionTypeI}{Instruction\+TypeI}}\+: 
+A classe \mbox{\hyperlink{classInstructionTypeI}{Instruction\+TypeI}}\+: representa uma instrução do tipo I. 
 
 Definição na linha 36 do arquivo instructiontypei.\+h.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classInstructionTypeI_a6095db6b575bc89bfda34de439aa0e32}\label{classInstructionTypeI_a6095db6b575bc89bfda34de439aa0e32}} 
+\index{InstructionTypeI@{InstructionTypeI}!getIntegerImmediate@{getIntegerImmediate}}
+\index{getIntegerImmediate@{getIntegerImmediate}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{getIntegerImmediate()}{getIntegerImmediate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} Instruction\+Type\+I\+::get\+Integer\+Immediate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeI_a6095db6b575bc89bfda34de439aa0e32}{Instruction\+Type\+I\+::get\+Integer\+Immediate}}\+: função que permite extrair o valor do Immediate de uma instrução. 
+
+\begin{DoxyReturn}{Retorna}
+DATA\+: valor inteiro contido em Immediate 
+\end{DoxyReturn}
+
+
+Definição na linha 76 do arquivo instructiontypei.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeI_ac52876a217ed77cdda5503de63b58490}\label{classInstructionTypeI_ac52876a217ed77cdda5503de63b58490}} 
+\index{InstructionTypeI@{InstructionTypeI}!getIntegerRD@{getIntegerRD}}
+\index{getIntegerRD@{getIntegerRD}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{getIntegerRD()}{getIntegerRD()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} Instruction\+Type\+I\+::get\+Integer\+RD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeI_ac52876a217ed77cdda5503de63b58490}{Instruction\+Type\+I\+::get\+Integer\+RD}}\+: função que permite extrair o valor do RD de uma instrução do tipo i. 
+
+\begin{DoxyReturn}{Retorna}
+DATA\+: valor inteiro contido em RD 
+\end{DoxyReturn}
+
+
+Definição na linha 40 do arquivo instructiontypei.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeI_af0465850cd3698a352323f9ea5507d76}\label{classInstructionTypeI_af0465850cd3698a352323f9ea5507d76}} 
+\index{InstructionTypeI@{InstructionTypeI}!getStringImmediate@{getStringImmediate}}
+\index{getStringImmediate@{getStringImmediate}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{getStringImmediate()}{getStringImmediate()}}
+{\footnotesize\ttfamily QString Instruction\+Type\+I\+::get\+String\+Immediate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeI_af0465850cd3698a352323f9ea5507d76}{Instruction\+Type\+I\+::get\+String\+Immediate}}\+: \+: função que permite extrair o valor do Immediate de uma instrução. 
+
+\begin{DoxyReturn}{Retorna}
+QString\+: string dos bits que conformam o Immediate 
+\end{DoxyReturn}
+
+
+Definição na linha 85 do arquivo instructiontypei.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeI_aad5ed35ecf704d3c10c17681df925cf4}\label{classInstructionTypeI_aad5ed35ecf704d3c10c17681df925cf4}} 
+\index{InstructionTypeI@{InstructionTypeI}!getStringRD@{getStringRD}}
+\index{getStringRD@{getStringRD}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{getStringRD()}{getStringRD()}}
+{\footnotesize\ttfamily QString Instruction\+Type\+I\+::get\+String\+RD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeI_aad5ed35ecf704d3c10c17681df925cf4}{Instruction\+Type\+I\+::get\+String\+RD}}\+: função que permite extrair o valor do RD de uma instrução. 
+
+\begin{DoxyReturn}{Retorna}
+QString\+: string dos bits que conformam o RD 
+\end{DoxyReturn}
+
+
+Definição na linha 49 do arquivo instructiontypei.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeI_aba892c69d280eb7ec92bd6a0bf904bf1}\label{classInstructionTypeI_aba892c69d280eb7ec92bd6a0bf904bf1}} 
+\index{InstructionTypeI@{InstructionTypeI}!setImmediate@{setImmediate}}
+\index{setImmediate@{setImmediate}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{setImmediate()}{setImmediate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Instruction\+Type\+I\+::set\+Immediate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}}}]{value }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeI_aba892c69d280eb7ec92bd6a0bf904bf1}{Instruction\+Type\+I\+::set\+Immediate}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 58 do arquivo instructiontypei.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeI_ac7b69c068fa80e532052b714f31de337}\label{classInstructionTypeI_ac7b69c068fa80e532052b714f31de337}} 
+\index{InstructionTypeI@{InstructionTypeI}!setImmediate@{setImmediate}}
+\index{setImmediate@{setImmediate}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{setImmediate()}{setImmediate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Instruction\+Type\+I\+::set\+Immediate (\begin{DoxyParamCaption}\item[{QString}]{binary }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeI_aba892c69d280eb7ec92bd6a0bf904bf1}{Instruction\+Type\+I\+::set\+Immediate}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em QString} & binary \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 67 do arquivo instructiontypei.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeI_ab41a0118a5361b6b005bb9a8ddb35582}\label{classInstructionTypeI_ab41a0118a5361b6b005bb9a8ddb35582}} 
+\index{InstructionTypeI@{InstructionTypeI}!setRD@{setRD}}
+\index{setRD@{setRD}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{setRD()}{setRD()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Instruction\+Type\+I\+::set\+RD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}}}]{value }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeI_ab41a0118a5361b6b005bb9a8ddb35582}{Instruction\+Type\+I\+::set\+RD}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 22 do arquivo instructiontypei.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeI_adacb2f750f121e85fa55a79abb1838b5}\label{classInstructionTypeI_adacb2f750f121e85fa55a79abb1838b5}} 
+\index{InstructionTypeI@{InstructionTypeI}!setRD@{setRD}}
+\index{setRD@{setRD}!InstructionTypeI@{InstructionTypeI}}
+\doxysubsubsection{\texorpdfstring{setRD()}{setRD()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Instruction\+Type\+I\+::set\+RD (\begin{DoxyParamCaption}\item[{QString}]{binary }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeI_ab41a0118a5361b6b005bb9a8ddb35582}{Instruction\+Type\+I\+::set\+RD}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em QString} & binary \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 31 do arquivo instructiontypei.\+cpp.
 
 
 

@@ -1,6 +1,6 @@
 /**
  * @file add.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe Add
  * @author mGuerra
  * @version 0.1
 */
@@ -13,7 +13,8 @@
 #include "word/word.h"
 
 /**
- * @brief A classe Add:
+ * @brief A classe Add: Classe base para todos os subcircuitos que
+ * realizam a soma de 2 valores
  */
 class Add : public QObject
 {

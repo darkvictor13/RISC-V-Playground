@@ -2,7 +2,7 @@
 \label{classAdd}\index{Add@{Add}}
 
 
-A classe \mbox{\hyperlink{classAdd}{Add}}\+:  
+A classe \mbox{\hyperlink{classAdd}{Add}}\+: Classe base para todos os subcircuitos que realizam a soma de 2 valores.  
 
 
 
@@ -30,18 +30,21 @@ void {\bfseries executed} ()
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAdd_a3eacbca110b1a6a39cbef72fdd831826}\label{classAdd_a3eacbca110b1a6a39cbef72fdd831826}} 
-void {\bfseries set\+ValueA} (\mbox{\hyperlink{classWord}{Word}} valueA)
-\item 
-\mbox{\Hypertarget{classAdd_ad2648365eec73af5250fd863a13210b3}\label{classAdd_ad2648365eec73af5250fd863a13210b3}} 
-void {\bfseries set\+ValueB} (\mbox{\hyperlink{classWord}{Word}} valueB)
-\item 
-\mbox{\Hypertarget{classAdd_af4b55943ce65846384e5cfd085524828}\label{classAdd_af4b55943ce65846384e5cfd085524828}} 
-void {\bfseries try\+Execute} ()
-\item 
+\mbox{\Hypertarget{classAdd_a44b62ab4a0b9a4fb3e77427d35e411b9}\label{classAdd_a44b62ab4a0b9a4fb3e77427d35e411b9}} 
+\mbox{\hyperlink{classAdd_a44b62ab4a0b9a4fb3e77427d35e411b9}{Add}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAdd_a44b62ab4a0b9a4fb3e77427d35e411b9}{Add\+::\+Add}}\+: Construtor da classe \mbox{\hyperlink{classAdd}{Add}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAdd_a3eacbca110b1a6a39cbef72fdd831826}{set\+ValueA}} (\mbox{\hyperlink{classWord}{Word}} valueA)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAdd_a3eacbca110b1a6a39cbef72fdd831826}{Add\+::set\+ValueA}}\+: Altera o valor da primeira entrada do circuito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAdd_ad2648365eec73af5250fd863a13210b3}{set\+ValueB}} (\mbox{\hyperlink{classWord}{Word}} valueB)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAdd_ad2648365eec73af5250fd863a13210b3}{Add\+::set\+ValueB}}\+: Altera o valor da segunda entrada do circuito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAdd_af4b55943ce65846384e5cfd085524828}{try\+Execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAdd_af4b55943ce65846384e5cfd085524828}{Add\+::try\+Execute}}\+: Tenta Executar o subcircuito. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAdd_aa0cad22b739780842e1fe2a2c9453d97}\label{classAdd_aa0cad22b739780842e1fe2a2c9453d97}} 
 virtual void {\bfseries execute} ()=0
-\end{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAdd_a960ca471ede083983766bce089f9af64}\label{classAdd_a960ca471ede083983766bce089f9af64}} 
+\mbox{\hyperlink{classAdd_a960ca471ede083983766bce089f9af64}{$\sim$\+Add}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAdd_a960ca471ede083983766bce089f9af64}{Add\+::$\sim$\+Add}}\+: Destrutor da classe \mbox{\hyperlink{classAdd}{Add}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -60,13 +63,71 @@ bool {\bfseries has\+ValueB} = false
 
 
 \doxysubsection{Descrição detalhada}
-A classe \mbox{\hyperlink{classAdd}{Add}}\+: 
+A classe \mbox{\hyperlink{classAdd}{Add}}\+: Classe base para todos os subcircuitos que realizam a soma de 2 valores. 
 
-Definição na linha 18 do arquivo add.\+h.
+Definição na linha 19 do arquivo add.\+h.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classAdd_a3eacbca110b1a6a39cbef72fdd831826}\label{classAdd_a3eacbca110b1a6a39cbef72fdd831826}} 
+\index{Add@{Add}!setValueA@{setValueA}}
+\index{setValueA@{setValueA}!Add@{Add}}
+\doxysubsubsection{\texorpdfstring{setValueA()}{setValueA()}}
+{\footnotesize\ttfamily void Add\+::set\+ValueA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWord}{Word}}}]{valueA }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classAdd_a3eacbca110b1a6a39cbef72fdd831826}{Add\+::set\+ValueA}}\+: Altera o valor da primeira entrada do circuito. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valueA} & \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 22 do arquivo add.\+cpp.
+
+\mbox{\Hypertarget{classAdd_ad2648365eec73af5250fd863a13210b3}\label{classAdd_ad2648365eec73af5250fd863a13210b3}} 
+\index{Add@{Add}!setValueB@{setValueB}}
+\index{setValueB@{setValueB}!Add@{Add}}
+\doxysubsubsection{\texorpdfstring{setValueB()}{setValueB()}}
+{\footnotesize\ttfamily void Add\+::set\+ValueB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWord}{Word}}}]{valueB }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classAdd_ad2648365eec73af5250fd863a13210b3}{Add\+::set\+ValueB}}\+: Altera o valor da segunda entrada do circuito. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valueB} & \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 36 do arquivo add.\+cpp.
+
+\mbox{\Hypertarget{classAdd_af4b55943ce65846384e5cfd085524828}\label{classAdd_af4b55943ce65846384e5cfd085524828}} 
+\index{Add@{Add}!tryExecute@{tryExecute}}
+\index{tryExecute@{tryExecute}!Add@{Add}}
+\doxysubsubsection{\texorpdfstring{tryExecute()}{tryExecute()}}
+{\footnotesize\ttfamily void Add\+::try\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classAdd_af4b55943ce65846384e5cfd085524828}{Add\+::try\+Execute}}\+: Tenta Executar o subcircuito. 
+
+\begin{DoxyWarning}{Aviso}
+Executa apenas quando Possui todos os valores 
+\end{DoxyWarning}
+
+
+Definição na linha 51 do arquivo add.\+cpp.
 
 
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{add_8h}{add.\+h}}\item 
-add.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{add_8cpp}{add.\+cpp}}\end{DoxyCompactItemize}

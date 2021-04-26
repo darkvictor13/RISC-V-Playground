@@ -2,7 +2,7 @@
 \label{classAddBranch}\index{AddBranch@{AddBranch}}
 
 
-A classe \mbox{\hyperlink{classAddBranch}{Add\+Branch}}\+:  
+A classe \mbox{\hyperlink{classAddBranch}{Add\+Branch}}\+: Circuito somador que soma ao program counter o offset.  
 
 
 
@@ -18,23 +18,50 @@ Diagrama de hierarquia para Add\+Branch\+:\begin{figure}[H]
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAddBranch_a851af78f35b02bb783d2caff42032f83}\label{classAddBranch_a851af78f35b02bb783d2caff42032f83}} 
-void {\bfseries connect} (\mbox{\hyperlink{classMuxTypeA}{Mux\+TypeA}} $\ast$muxA)
-\item 
+\mbox{\Hypertarget{classAddBranch_a0dc16629be1e97148a00dc9bc660e3ce}\label{classAddBranch_a0dc16629be1e97148a00dc9bc660e3ce}} 
+\mbox{\hyperlink{classAddBranch_a0dc16629be1e97148a00dc9bc660e3ce}{Add\+Branch}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAddBranch_a0dc16629be1e97148a00dc9bc660e3ce}{Add\+Branch\+::\+Add\+Branch}}\+: Construtor da classe \mbox{\hyperlink{classAddBranch}{Add\+Branch}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAddBranch_a851af78f35b02bb783d2caff42032f83}{connect}} (\mbox{\hyperlink{classMuxTypeA}{Mux\+TypeA}} $\ast$muxA)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAddBranch_a851af78f35b02bb783d2caff42032f83}{Add\+Branch\+::connect}}\+: Conecta o Multiplexador ao somador. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAddBranch_aaf14c2d505a80fa2962bbb716c33859e}\label{classAddBranch_aaf14c2d505a80fa2962bbb716c33859e}} 
-void {\bfseries execute} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classAddBranch_aaf14c2d505a80fa2962bbb716c33859e}{execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAddBranch_aaf14c2d505a80fa2962bbb716c33859e}{Add\+Branch\+::execute}}\+: Executa o somador com os valores inseridos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAddBranch_a984ea6224a7e9c8b19679824c1730f18}\label{classAddBranch_a984ea6224a7e9c8b19679824c1730f18}} 
+\mbox{\hyperlink{classAddBranch_a984ea6224a7e9c8b19679824c1730f18}{$\sim$\+Add\+Branch}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAddBranch_a984ea6224a7e9c8b19679824c1730f18}{Add\+Branch\+::$\sim$\+Add\+Branch}}\+: Destrutor da classe \mbox{\hyperlink{classAddBranch}{Add\+Branch}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Outros membros herdados}
 
 
 \doxysubsection{Descrição detalhada}
-A classe \mbox{\hyperlink{classAddBranch}{Add\+Branch}}\+: 
+A classe \mbox{\hyperlink{classAddBranch}{Add\+Branch}}\+: Circuito somador que soma ao program counter o offset. 
 
-Definição na linha 20 do arquivo addbranch.\+h.
+Definição na linha 21 do arquivo addbranch.\+h.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classAddBranch_a851af78f35b02bb783d2caff42032f83}\label{classAddBranch_a851af78f35b02bb783d2caff42032f83}} 
+\index{AddBranch@{AddBranch}!connect@{connect}}
+\index{connect@{connect}!AddBranch@{AddBranch}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void Add\+Branch\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMuxTypeA}{Mux\+TypeA}} $\ast$}]{muxA }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classAddBranch_a851af78f35b02bb783d2caff42032f83}{Add\+Branch\+::connect}}\+: Conecta o Multiplexador ao somador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em muxA} & Multiplexador que seleciona entre o valor 4 ou o offset \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 23 do arquivo addbranch.\+cpp.
 
 
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-addbranch.\+h\item 
-addbranch.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{addbranch_8h}{addbranch.\+h}}\item 
+\mbox{\hyperlink{addbranch_8cpp}{addbranch.\+cpp}}\end{DoxyCompactItemize}

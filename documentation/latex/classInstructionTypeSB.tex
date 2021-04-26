@@ -2,7 +2,7 @@
 \label{classInstructionTypeSB}\index{InstructionTypeSB@{InstructionTypeSB}}
 
 
-A classe \mbox{\hyperlink{classInstructionTypeSB}{Instruction\+Type\+SB}}\+:  
+A classe \mbox{\hyperlink{classInstructionTypeSB}{Instruction\+Type\+SB}}\+: representa uma instrução do tipo SB.  
 
 
 
@@ -12,45 +12,190 @@ A classe \mbox{\hyperlink{classInstructionTypeSB}{Instruction\+Type\+SB}}\+:
 Diagrama de hierarquia para Instruction\+Type\+SB\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=4.000000cm]{classInstructionTypeSB}
+\includegraphics[height=3.000000cm]{classInstructionTypeSB}
 \end{center}
 \end{figure}
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classInstructionTypeSB_a559a6a2a09c0932da126da4f05f29330}\label{classInstructionTypeSB_a559a6a2a09c0932da126da4f05f29330}} 
+\mbox{\hyperlink{classInstructionTypeSB_a559a6a2a09c0932da126da4f05f29330}{Instruction\+Type\+SB}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_a559a6a2a09c0932da126da4f05f29330}{Instruction\+Type\+SB\+::\+Instruction\+Type\+SB}}\+: contrutor da classe Instruction\+SB. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classInstructionTypeSB_ac09d58bd7eab84bb11cd06dade0ed53f}\label{classInstructionTypeSB_ac09d58bd7eab84bb11cd06dade0ed53f}} 
 {\bfseries Instruction\+Type\+SB} (\mbox{\hyperlink{classWord}{Word}} $\ast$word)
 \item 
-\mbox{\Hypertarget{classInstructionTypeSB_a1f0fc4ed8e0cdd4bf4746f11549ef307}\label{classInstructionTypeSB_a1f0fc4ed8e0cdd4bf4746f11549ef307}} 
-void {\bfseries set\+Immediate} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
-\item 
-\mbox{\Hypertarget{classInstructionTypeSB_a2cf5fd446b5f584e6a88107c1584cacf}\label{classInstructionTypeSB_a2cf5fd446b5f584e6a88107c1584cacf}} 
-void {\bfseries set\+Immediate} (QString binary)
-\item 
-\mbox{\Hypertarget{classInstructionTypeSB_a003ab1183e2c1c89b372c94d43ca94f6}\label{classInstructionTypeSB_a003ab1183e2c1c89b372c94d43ca94f6}} 
-\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} {\bfseries get\+Integer\+Immediate} ()
-\item 
-\mbox{\Hypertarget{classInstructionTypeSB_aed41dd439241a100c507e065998c4ab1}\label{classInstructionTypeSB_aed41dd439241a100c507e065998c4ab1}} 
-QString {\bfseries get\+String\+Immediate} ()
-\item 
-\mbox{\Hypertarget{classInstructionTypeSB_a056c436aee008229289caa61f2363171}\label{classInstructionTypeSB_a056c436aee008229289caa61f2363171}} 
-void {\bfseries set\+RS2} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
-\item 
-\mbox{\Hypertarget{classInstructionTypeSB_a54bb9dbf5c0509a92eefa0ca0e03cee0}\label{classInstructionTypeSB_a54bb9dbf5c0509a92eefa0ca0e03cee0}} 
-void {\bfseries set\+RS2} (QString binary)
-\item 
-\mbox{\Hypertarget{classInstructionTypeSB_a5c6e51d49191f8b416474aaeffcc2134}\label{classInstructionTypeSB_a5c6e51d49191f8b416474aaeffcc2134}} 
-\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} {\bfseries get\+Integer\+RS2} ()
-\item 
-\mbox{\Hypertarget{classInstructionTypeSB_a6b1c5114b5458e71f4ccac2d4e8d914b}\label{classInstructionTypeSB_a6b1c5114b5458e71f4ccac2d4e8d914b}} 
-QString {\bfseries get\+String\+RS2} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classInstructionTypeSB_a1f0fc4ed8e0cdd4bf4746f11549ef307}{set\+Immediate}} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_a1f0fc4ed8e0cdd4bf4746f11549ef307}{Instruction\+Type\+SB\+::set\+Immediate}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInstructionTypeSB_a2cf5fd446b5f584e6a88107c1584cacf}{set\+Immediate}} (QString binary)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_a1f0fc4ed8e0cdd4bf4746f11549ef307}{Instruction\+Type\+SB\+::set\+Immediate}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} \mbox{\hyperlink{classInstructionTypeSB_a003ab1183e2c1c89b372c94d43ca94f6}{get\+Integer\+Immediate}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_a003ab1183e2c1c89b372c94d43ca94f6}{Instruction\+Type\+SB\+::get\+Integer\+Immediate}}\+: função que permite extrair o valor do Immediate de uma instrução. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInstructionTypeSB_aed41dd439241a100c507e065998c4ab1}{get\+String\+Immediate}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_aed41dd439241a100c507e065998c4ab1}{Instruction\+Type\+SB\+::get\+String\+Immediate}}\+: função que permite extrair o valor do Immediate de uma instrução. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInstructionTypeSB_a056c436aee008229289caa61f2363171}{set\+RS2}} (\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} value)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_a056c436aee008229289caa61f2363171}{Instruction\+Type\+SB\+::set\+RS2}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInstructionTypeSB_a54bb9dbf5c0509a92eefa0ca0e03cee0}{set\+RS2}} (QString binary)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_a056c436aee008229289caa61f2363171}{Instruction\+Type\+SB\+::set\+RS2}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} \mbox{\hyperlink{classInstructionTypeSB_a5c6e51d49191f8b416474aaeffcc2134}{get\+Integer\+RS2}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_a5c6e51d49191f8b416474aaeffcc2134}{Instruction\+Type\+SB\+::get\+Integer\+RS2}}\+: função que permite extrair o valor do RS2 de uma instrução. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classInstructionTypeSB_a6b1c5114b5458e71f4ccac2d4e8d914b}{get\+String\+RS2}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_a6b1c5114b5458e71f4ccac2d4e8d914b}{Instruction\+Type\+SB\+::get\+String\+RS2}}\+: função que permite extrair o valor do RS2 de uma instrução. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInstructionTypeSB_a87136323be84dee83b84c1036362ecd1}\label{classInstructionTypeSB_a87136323be84dee83b84c1036362ecd1}} 
+\mbox{\hyperlink{classInstructionTypeSB_a87136323be84dee83b84c1036362ecd1}{$\sim$\+Instruction\+Type\+SB}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classInstructionTypeSB_a87136323be84dee83b84c1036362ecd1}{Instruction\+Type\+SB\+::$\sim$\+Instruction\+Type\+SB}}\+: destrutor da classe Instruction\+SB. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-A classe \mbox{\hyperlink{classInstructionTypeSB}{Instruction\+Type\+SB}}\+: 
+A classe \mbox{\hyperlink{classInstructionTypeSB}{Instruction\+Type\+SB}}\+: representa uma instrução do tipo SB. 
 
 Definição na linha 66 do arquivo instructiontypesb.\+h.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classInstructionTypeSB_a003ab1183e2c1c89b372c94d43ca94f6}\label{classInstructionTypeSB_a003ab1183e2c1c89b372c94d43ca94f6}} 
+\index{InstructionTypeSB@{InstructionTypeSB}!getIntegerImmediate@{getIntegerImmediate}}
+\index{getIntegerImmediate@{getIntegerImmediate}!InstructionTypeSB@{InstructionTypeSB}}
+\doxysubsubsection{\texorpdfstring{getIntegerImmediate()}{getIntegerImmediate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} Instruction\+Type\+SB\+::get\+Integer\+Immediate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeSB_a003ab1183e2c1c89b372c94d43ca94f6}{Instruction\+Type\+SB\+::get\+Integer\+Immediate}}\+: função que permite extrair o valor do Immediate de uma instrução. 
+
+\begin{DoxyReturn}{Retorna}
+DATA\+: valor inteiro contido em Immediate 
+\end{DoxyReturn}
+
+
+Definição na linha 67 do arquivo instructiontypesb.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeSB_a5c6e51d49191f8b416474aaeffcc2134}\label{classInstructionTypeSB_a5c6e51d49191f8b416474aaeffcc2134}} 
+\index{InstructionTypeSB@{InstructionTypeSB}!getIntegerRS2@{getIntegerRS2}}
+\index{getIntegerRS2@{getIntegerRS2}!InstructionTypeSB@{InstructionTypeSB}}
+\doxysubsubsection{\texorpdfstring{getIntegerRS2()}{getIntegerRS2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}} Instruction\+Type\+SB\+::get\+Integer\+RS2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeSB_a5c6e51d49191f8b416474aaeffcc2134}{Instruction\+Type\+SB\+::get\+Integer\+RS2}}\+: função que permite extrair o valor do RS2 de uma instrução. 
+
+\begin{DoxyReturn}{Retorna}
+DATA\+: valor inteiro contido em RS2 
+\end{DoxyReturn}
+
+
+Definição na linha 106 do arquivo instructiontypesb.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeSB_aed41dd439241a100c507e065998c4ab1}\label{classInstructionTypeSB_aed41dd439241a100c507e065998c4ab1}} 
+\index{InstructionTypeSB@{InstructionTypeSB}!getStringImmediate@{getStringImmediate}}
+\index{getStringImmediate@{getStringImmediate}!InstructionTypeSB@{InstructionTypeSB}}
+\doxysubsubsection{\texorpdfstring{getStringImmediate()}{getStringImmediate()}}
+{\footnotesize\ttfamily QString Instruction\+Type\+SB\+::get\+String\+Immediate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeSB_aed41dd439241a100c507e065998c4ab1}{Instruction\+Type\+SB\+::get\+String\+Immediate}}\+: função que permite extrair o valor do Immediate de uma instrução. 
+
+\begin{DoxyReturn}{Retorna}
+QString\+: string dos bits que conformam o Immediate 
+\end{DoxyReturn}
+
+
+Definição na linha 79 do arquivo instructiontypesb.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeSB_a6b1c5114b5458e71f4ccac2d4e8d914b}\label{classInstructionTypeSB_a6b1c5114b5458e71f4ccac2d4e8d914b}} 
+\index{InstructionTypeSB@{InstructionTypeSB}!getStringRS2@{getStringRS2}}
+\index{getStringRS2@{getStringRS2}!InstructionTypeSB@{InstructionTypeSB}}
+\doxysubsubsection{\texorpdfstring{getStringRS2()}{getStringRS2()}}
+{\footnotesize\ttfamily QString Instruction\+Type\+SB\+::get\+String\+RS2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeSB_a6b1c5114b5458e71f4ccac2d4e8d914b}{Instruction\+Type\+SB\+::get\+String\+RS2}}\+: função que permite extrair o valor do RS2 de uma instrução. 
+
+\begin{DoxyReturn}{Retorna}
+QString\+: string dos bits que conformam o RS2 
+\end{DoxyReturn}
+
+
+Definição na linha 115 do arquivo instructiontypesb.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeSB_a1f0fc4ed8e0cdd4bf4746f11549ef307}\label{classInstructionTypeSB_a1f0fc4ed8e0cdd4bf4746f11549ef307}} 
+\index{InstructionTypeSB@{InstructionTypeSB}!setImmediate@{setImmediate}}
+\index{setImmediate@{setImmediate}!InstructionTypeSB@{InstructionTypeSB}}
+\doxysubsubsection{\texorpdfstring{setImmediate()}{setImmediate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Instruction\+Type\+SB\+::set\+Immediate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}}}]{value }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeSB_a1f0fc4ed8e0cdd4bf4746f11549ef307}{Instruction\+Type\+SB\+::set\+Immediate}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 22 do arquivo instructiontypesb.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeSB_a2cf5fd446b5f584e6a88107c1584cacf}\label{classInstructionTypeSB_a2cf5fd446b5f584e6a88107c1584cacf}} 
+\index{InstructionTypeSB@{InstructionTypeSB}!setImmediate@{setImmediate}}
+\index{setImmediate@{setImmediate}!InstructionTypeSB@{InstructionTypeSB}}
+\doxysubsubsection{\texorpdfstring{setImmediate()}{setImmediate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Instruction\+Type\+SB\+::set\+Immediate (\begin{DoxyParamCaption}\item[{QString}]{binary }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeSB_a1f0fc4ed8e0cdd4bf4746f11549ef307}{Instruction\+Type\+SB\+::set\+Immediate}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em QString} & binary \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 53 do arquivo instructiontypesb.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeSB_a056c436aee008229289caa61f2363171}\label{classInstructionTypeSB_a056c436aee008229289caa61f2363171}} 
+\index{InstructionTypeSB@{InstructionTypeSB}!setRS2@{setRS2}}
+\index{setRS2@{setRS2}!InstructionTypeSB@{InstructionTypeSB}}
+\doxysubsubsection{\texorpdfstring{setRS2()}{setRS2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Instruction\+Type\+SB\+::set\+RS2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{word_8h_aad9ae913bdfab20dd94ad04ee2d5b045}{DATA}}}]{value }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeSB_a056c436aee008229289caa61f2363171}{Instruction\+Type\+SB\+::set\+RS2}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 88 do arquivo instructiontypesb.\+cpp.
+
+\mbox{\Hypertarget{classInstructionTypeSB_a54bb9dbf5c0509a92eefa0ca0e03cee0}\label{classInstructionTypeSB_a54bb9dbf5c0509a92eefa0ca0e03cee0}} 
+\index{InstructionTypeSB@{InstructionTypeSB}!setRS2@{setRS2}}
+\index{setRS2@{setRS2}!InstructionTypeSB@{InstructionTypeSB}}
+\doxysubsubsection{\texorpdfstring{setRS2()}{setRS2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Instruction\+Type\+SB\+::set\+RS2 (\begin{DoxyParamCaption}\item[{QString}]{binary }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classInstructionTypeSB_a056c436aee008229289caa61f2363171}{Instruction\+Type\+SB\+::set\+RS2}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em QString} & binary \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 97 do arquivo instructiontypesb.\+cpp.
 
 
 

@@ -32,7 +32,7 @@ QT_END_NAMESPACE
 
 
 /**
- * @brief A classe ViewMainWindow:
+ * @brief A classe ViewMainWindow: responsável pela representação dos dados de estado do simulador en tela, alem de permitir a interação do usuário com o simulador e o assembler
  */
 class ViewMainWindow : public QMainWindow
 {

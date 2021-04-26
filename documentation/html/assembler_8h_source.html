@@ -86,68 +86,68 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="instructiontypes_8h.html">instructions/instructiontypes.h</a>&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="instructiontypesb_8h.html">instructions/instructiontypesb.h</a>&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structLabel.html">   22</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structLabel.html">Label</a>{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    QString identifier;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> position;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classAssembler.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAssembler.html">Assembler</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    QStringList getLines(QString fileName);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    QStringList splitLine(QString line);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    vector&lt;QStringList&gt; splitLines(QStringList lines);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> isLabel(QStringList word);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> isData(QStringList word);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> isInstruction(QStringList word);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    vector&lt;Label&gt; mountLabelsTable(vector&lt;QStringList&gt; words);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    vector&lt;Word&gt; mountInstructions(vector&lt;QStringList&gt; words, vector&lt;Label&gt; labelsTable);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classWord.html">Word</a> mountInstruction(QStringList line, vector&lt;Label&gt; labelsTable, <span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    QStringList instructionsList = {<span class="stringliteral">&quot;add&quot;</span>, <span class="stringliteral">&quot;sub&quot;</span>, <span class="stringliteral">&quot;and&quot;</span>, <span class="stringliteral">&quot;or&quot;</span>, <span class="stringliteral">&quot;addi&quot;</span>, <span class="stringliteral">&quot;lw&quot;</span>, <span class="stringliteral">&quot;sw&quot;</span>, <span class="stringliteral">&quot;beq&quot;</span>, <span class="stringliteral">&quot;bne&quot;</span>};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> getRegister(QString word);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> getImmediate(QString word);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structLabel.html">   27</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structLabel.html">Label</a>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    QString identifier;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> position;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classAssembler.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAssembler.html">Assembler</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    QStringList getLines(QString fileName);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    QStringList splitLine(QString line);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    vector&lt;QStringList&gt; splitLines(QStringList lines);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> isLabel(QStringList word);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">bool</span> isData(QStringList word);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> isInstruction(QStringList word);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    vector&lt;Label&gt; mountLabelsTable(vector&lt;QStringList&gt; words);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    vector&lt;Word&gt; mountInstructions(vector&lt;QStringList&gt; words, vector&lt;Label&gt; labelsTable);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classWord.html">Word</a> mountInstruction(QStringList line, vector&lt;Label&gt; labelsTable, <span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QStringList instructionsList = {<span class="stringliteral">&quot;add&quot;</span>, <span class="stringliteral">&quot;sub&quot;</span>, <span class="stringliteral">&quot;and&quot;</span>, <span class="stringliteral">&quot;or&quot;</span>, <span class="stringliteral">&quot;addi&quot;</span>, <span class="stringliteral">&quot;lw&quot;</span>, <span class="stringliteral">&quot;sw&quot;</span>, <span class="stringliteral">&quot;beq&quot;</span>, <span class="stringliteral">&quot;bne&quot;</span>};</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classWord.html">Word</a> mountADD(QStringList line);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classWord.html">Word</a> mountSUB(QStringList line);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classWord.html">Word</a> mountAND(QStringList line);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classWord.html">Word</a> mountOR(QStringList line);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classWord.html">Word</a> mountADDI(QStringList line);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classWord.html">Word</a> mountLW(QStringList line);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classWord.html">Word</a> mountSW(QStringList line);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classWord.html">Word</a> mountBEQ(QStringList line, vector&lt;Label&gt; labelsTable, <span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classWord.html">Word</a> mountBNE(QStringList line, vector&lt;Label&gt; labelsTable, <span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> generateOffset(QString label, vector&lt;Label&gt; labelsTable, <span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> generateFile(vector&lt;Word&gt; instructions, QString fileName);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classAssembler.html">Assembler</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> getRegister(QString word);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> getImmediate(QString word);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classWord.html">Word</a> mountADD(QStringList line);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classWord.html">Word</a> mountSUB(QStringList line);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classWord.html">Word</a> mountAND(QStringList line);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classWord.html">Word</a> mountOR(QStringList line);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classWord.html">Word</a> mountADDI(QStringList line);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classWord.html">Word</a> mountLW(QStringList line);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classWord.html">Word</a> mountSW(QStringList line);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classWord.html">Word</a> mountBEQ(QStringList line, vector&lt;Label&gt; labelsTable, <span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classWord.html">Word</a> mountBNE(QStringList line, vector&lt;Label&gt; labelsTable, <span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> generateOffset(QString label, vector&lt;Label&gt; labelsTable, <span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> generateFile(vector&lt;Word&gt; instructions, QString fileName);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> assemble(QString inputFileName, QString outputFileName);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classAssembler.html">Assembler</a>();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;signals:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> consoleLog(QString message);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> assemble(QString inputFileName, QString outputFileName);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASSEMBLER_H</span></div>
-<div class="ttc" id="aclassAssembler_html"><div class="ttname"><a href="classAssembler.html">Assembler</a></div><div class="ttdoc">A classe Assembler:</div><div class="ttdef"><b>Definition:</b> <a href="assembler_8h_source.html#l00032">assembler.h:33</a></div></div>
-<div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word:</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00029">word.h:30</a></div></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;signals:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> consoleLog(QString message);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ASSEMBLER_H</span></div>
+<div class="ttc" id="aclassAssembler_html"><div class="ttname"><a href="classAssembler.html">Assembler</a></div><div class="ttdoc">A classe Assembler: responsável por gerar o código binario a partir das instruções assembler para os ...</div><div class="ttdef"><b>Definition:</b> <a href="assembler_8h_source.html#l00035">assembler.h:36</a></div></div>
+<div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word: Representação de uma palavra de 32 bits e suas operações.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00030">word.h:31</a></div></div>
 <div class="ttc" id="ainstructiontypei_8h_html"><div class="ttname"><a href="instructiontypei_8h.html">instructiontypei.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 <div class="ttc" id="ainstructiontyper_8h_html"><div class="ttname"><a href="instructiontyper_8h.html">instructiontyper.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 <div class="ttc" id="ainstructiontypes_8h_html"><div class="ttname"><a href="instructiontypes_8h.html">instructiontypes.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 <div class="ttc" id="ainstructiontypesb_8h_html"><div class="ttname"><a href="instructiontypesb_8h.html">instructiontypesb.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
-<div class="ttc" id="astructLabel_html"><div class="ttname"><a href="structLabel.html">Label</a></div><div class="ttdef"><b>Definition:</b> <a href="assembler_8h_source.html#l00022">assembler.h:22</a></div></div>
+<div class="ttc" id="astructLabel_html"><div class="ttname"><a href="structLabel.html">Label</a></div><div class="ttdoc">A estrutura Label: responsável por representar um label dentro do código assemble,...</div><div class="ttdef"><b>Definition:</b> <a href="assembler_8h_source.html#l00027">assembler.h:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

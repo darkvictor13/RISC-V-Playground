@@ -8,6 +8,10 @@
 #include "viewmainwindow.h"
 #include "ui_viewmainwindow.h"
 
+/**
+ * @brief ViewMainWindow::ViewMainWindow
+ * @param QWidget *parent
+ */
 ViewMainWindow::ViewMainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::ViewMainWindow)
@@ -101,17 +105,26 @@ ViewMainWindow::ViewMainWindow(QWidget *parent)
     treeWidgetInit();
 }
 
+/**
+ * @brief ViewMainWindow::~ViewMainWindow
+ */
 ViewMainWindow::~ViewMainWindow()
 {
     delete ui;
 }
 
+/**
+ * @brief ViewMainWindow::on_actionNew_triggered
+ */
 void ViewMainWindow::on_actionNew_triggered()
 {
     thisFile = "new";
     ui->plainTextEdit->setPlainText("");
 }
 
+/**
+ * @brief ViewMainWindow::on_actionOpen_triggered
+ */
 void ViewMainWindow::on_actionOpen_triggered()
 {
     thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../tests/", "");
@@ -126,6 +139,9 @@ void ViewMainWindow::on_actionOpen_triggered()
     thisFile = generateFileName(thisFile);
 }
 
+/**
+ * @brief ViewMainWindow::on_actionSave_triggered
+ */
 void ViewMainWindow::on_actionSave_triggered()
 {
     QFile file(thisFile);
@@ -137,6 +153,9 @@ void ViewMainWindow::on_actionSave_triggered()
     file.close();
 }
 
+/**
+ * @brief ViewMainWindow::on_actionSave_as_triggered
+ */
 void ViewMainWindow::on_actionSave_as_triggered()
 {
     thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../tests/", "");
@@ -150,26 +169,41 @@ void ViewMainWindow::on_actionSave_as_triggered()
     file.close();
 }
 
+/**
+ * @brief ViewMainWindow::on_actionPreferences_triggered
+ */
 void ViewMainWindow::on_actionPreferences_triggered()
 {
 
 }
 
+/**
+ * @brief ViewMainWindow::on_actionExit_triggered
+ */
 void ViewMainWindow::on_actionExit_triggered()
 {
     close();
 }
 
+/**
+ * @brief ViewMainWindow::on_actionAbut_us_triggered
+ */
 void ViewMainWindow::on_actionAbut_us_triggered()
 {
 
 }
 
+/**
+ * @brief ViewMainWindow::on_actionDocumentation_triggered
+ */
 void ViewMainWindow::on_actionDocumentation_triggered()
 {
 
 }
 
+/**
+ * @brief ViewMainWindow::on_actionLoad_triggered
+ */
 void ViewMainWindow::on_actionLoad_triggered()
 {
     emit assemble(thisFile + ".s", thisFile + ".b");
@@ -194,161 +228,259 @@ void ViewMainWindow::on_actionLoad_triggered()
     emit loadMemory(thisFile);
 }
 
+/**
+ * @brief ViewMainWindow::on_actionRun_triggered
+ */
 void ViewMainWindow::on_actionRun_triggered()
 {
     emit run();
 }
 
+/**
+ * @brief ViewMainWindow::on_actionStep_triggered
+ */
 void ViewMainWindow::on_actionStep_triggered()
 {
     treeWidgetClear();
     emit step();
 }
 
+/**
+ * @brief ViewMainWindow::on_actionRestart_triggered
+ */
 void ViewMainWindow::on_actionRestart_triggered()
 {
     emit restart();
 }
 
-
+/**
+ * @brief ViewMainWindow::receivedAddBranchValueA
+ * @param Word valueA
+ */
 void ViewMainWindow::receivedAddBranchValueA(Word valueA)
 {
     //consoleLog("AddBranch received ValueA equal to: " + valueA.getDecimal() + ".");
     addBranchValueAItem->setData(1, 0, valueA.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedAddBranchValueB
+ * @param Word valueB
+ */
 void ViewMainWindow::receivedAddBranchValueB(Word valueB)
 {
     //consoleLog("AddBranch received ValueB equal to: " + valueB.getDecimal() + ".");
     addBranchValueBItem->setData(1, 0, valueB.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedAddBranch
+ */
 void ViewMainWindow::executedAddBranch()
 {
     //consoleLog("AddBranch executed.");
     addBranchItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedAddNextValueA
+ * @param Word valueA
+ */
 void ViewMainWindow::receivedAddNextValueA(Word valueA)
 {
     //consoleLog("AddNext received ValueA equal to: " + valueA.getDecimal() + ".");
     addNextValueAItem->setData(1, 0, valueA.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedAddNextValueB
+ * @param Word valueB
+ */
 void ViewMainWindow::receivedAddNextValueB(Word valueB)
 {
     //consoleLog("AddNext received ValueB equal to: " + valueB.getDecimal() + ".");
     addNextValueBItem->setData(1, 0, valueB.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedAddNext
+ */
 void ViewMainWindow::executedAddNext()
 {
     //consoleLog("AddNext executed.");
     addNextItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedALUValueA
+ * @param Word valueA
+ */
 void ViewMainWindow::receivedALUValueA(Word valueA)
 {
     //consoleLog("ALU received ValueA equal to: " + valueA.getDecimal() + ".");
     aluValueAItem->setData(1, 0, valueA.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedALUValueB
+ * @param Word valueB
+ */
 void ViewMainWindow::receivedALUValueB(Word valueB)
 {
     //consoleLog("ALU received ValueB equal to: " + valueB.getDecimal() + ".");
     aluValueBItem->setData(1, 0, valueB.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedALUControl
+ * @param Word control
+ */
 void ViewMainWindow::receivedALUControl(Word control)
 {
     //consoleLog("ALU received control equal to: " + control.getDecimal() + ".");
     aluControlValueItem->setData(1, 0, control.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedALUReverse
+ * @param Word reverse
+ */
 void ViewMainWindow::receivedALUReverse(Word reverse)
 {
     //consoleLog("ALU received reverse equal to: " + reverse.getDecimal() + ".");
     aluReverseItem->setData(1, 0, reverse.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedALU
+ */
 void ViewMainWindow::executedALU()
 {
     //consoleLog("ALU executed.");
     aluItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedALUControlInstruction
+ * @param Word instruction
+ */
 void ViewMainWindow::receivedALUControlInstruction(Word instruction)
 {
     //consoleLog("ALUControl received instruction equal to: " + instruction.getDecimal() + ".");
     aluControlInstructionItem->setData(1, 0, instruction.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedALUControlALUOp
+ * @param Word aluOp
+ */
 void ViewMainWindow::receivedALUControlALUOp(Word aluOp)
 {
     //consoleLog("ALUControl received aluOp equal to: " + aluOp.getDecimal() + ".");
     aluControlOpItem->setData(1, 0, aluOp.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedALUControl
+ */
 void ViewMainWindow::executedALUControl()
 {
     //consoleLog("ALUControl executed.");
     aluControlItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedMakeBranchBransh
+ * @param Word branch
+ */
 void ViewMainWindow::receivedMakeBranchBransh(Word branch)
 {
     //consoleLog("MakeBranch received branch equal to: " + branch.getDecimal() + ".");
     makeBranchBranchItem->setData(1, 0, branch.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedMakeBranchZero
+ * @param Word zero
+ */
 void ViewMainWindow::receivedMakeBranchZero(Word zero)
 {
     //consoleLog("MakeBranch received zero equal to: " + zero.getDecimal() + ".");
     makeBranchZeroItem->setData(1, 0, zero.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedMakeBranch
+ */
 void ViewMainWindow::executedMakeBranch()
 {
     //consoleLog("MakeBranch executed.");
     makeBranchItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedControlOpcode
+ * @param Word opcode
+ */
 void ViewMainWindow::receivedControlOpcode(Word opcode)
 {
     //consoleLog("Control received opcode equal to: " + opcode.getDecimal() + ".");
     controlOpcodeItem->setData(1, 0, opcode.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedControl
+ */
 void ViewMainWindow::executedControl()
 {
     //consoleLog("Control executed.");
     controlItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedDataMemoryAddress
+ * @param Word address
+ */
 void ViewMainWindow::receivedDataMemoryAddress(Word address)
 {
     //consoleLog("DataMemory received address equal to: " + address.getDecimal() + ".");
     dataMemoryAddressItem->setData(1, 0, address.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedDataMemoryWriteData
+ * @param Word writeData
+ */
 void ViewMainWindow::receivedDataMemoryWriteData(Word writeData)
 {
     //consoleLog("DataMemory received writeData equal to: " + writeData.getDecimal() + ".");
     dataMemoryWriteDataItem->setData(1, 0, writeData.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedDataMemoryMemWrite
+ * @param Word memWrite
+ */
 void ViewMainWindow::receivedDataMemoryMemWrite(Word memWrite)
 {
     //consoleLog("DataMemory received memWrite equal to: " + memWrite.getDecimal() + ".");
     dataMemoryMemWriteItem->setData(1, 0, memWrite.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedDataMemoryMemRead
+ * @param Word memRead
+ */
 void ViewMainWindow::receivedDataMemoryMemRead(Word memRead)
 {
     //consoleLog("DataMemory received memRead equal to: " + memRead.getDecimal() + ".");
     dataMemoryMemReadItem->setData(1, 0, memRead.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::initDataMemory
+ * @param Word size
+ */
 void ViewMainWindow::initDataMemory(int size)
 {
     ui->dataMemoryTableWidget->verticalHeader()->setVisible(false);
@@ -370,6 +502,10 @@ void ViewMainWindow::initDataMemory(int size)
     consoleLog("DataMemory started.");
 }
 
+/**
+ * @brief ViewMainWindow::loadDataMemory
+ * @param Word memoryData
+ */
 void ViewMainWindow::loadDataMemory(vector<Word> memoryData)
 {
     int size = memoryData.size();
@@ -381,6 +517,11 @@ void ViewMainWindow::loadDataMemory(vector<Word> memoryData)
     consoleLog("Loaded DataMemory.");
 }
 
+/**
+ * @brief ViewMainWindow::updateDataMemory
+ * @param Word value
+ * @param Word address
+ */
 void ViewMainWindow::updateDataMemory(Word value, Word address)
 {
     ui->dataMemoryTableWidget->setItem(address.getInteger(), 1, new QTableWidgetItem(value.getDecimal()));
@@ -388,6 +529,9 @@ void ViewMainWindow::updateDataMemory(Word value, Word address)
     consoleLog("Updated DataMemory.");
 }
 
+/**
+ * @brief ViewMainWindow::restartDataMemory
+ */
 void ViewMainWindow::restartDataMemory()
 {
     int size = ui->dataMemoryTableWidget->rowCount();
@@ -399,18 +543,29 @@ void ViewMainWindow::restartDataMemory()
     consoleLog("DataMemory reset.");
 }
 
+/**
+ * @brief ViewMainWindow::executedDataMemory
+ */
 void ViewMainWindow::executedDataMemory()
 {
     //consoleLog("DataMemory executed.");
     dataMemoryItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedInstructionMemoryAddress
+ * @param Word address
+ */
 void ViewMainWindow::receivedInstructionMemoryAddress(Word address)
 {
     //consoleLog("InstructionMemory received address equals to: " + address.getDecimal() + ".");
     instructionMemoryAddressItem->setData(1, 0, address.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::initInstructionMemory
+ * @param Word size
+ */
 void ViewMainWindow::initInstructionMemory(int size)
 {
     ui->instructionMemoryTableWidget->verticalHeader()->setVisible(false);
@@ -432,6 +587,10 @@ void ViewMainWindow::initInstructionMemory(int size)
     consoleLog("InstructionMemory started.");
 }
 
+/**
+ * @brief ViewMainWindow::loadInstructionMemory
+ * @param Word memoryData
+ */
 void ViewMainWindow::loadInstructionMemory(vector<Word> memoryData)
 {
     int size = memoryData.size();
@@ -443,6 +602,11 @@ void ViewMainWindow::loadInstructionMemory(vector<Word> memoryData)
     consoleLog("Loaded InstructionMemory.");
 }
 
+/**
+ * @brief ViewMainWindow::updateInstructionMemory
+ * @param Word value
+ * @param Word address
+ */
 void ViewMainWindow::updateInstructionMemory(Word value, Word address)
 {
     ui->instructionMemoryTableWidget->setItem(address.getInteger(), 1, new QTableWidgetItem(value.getDecimal()));
@@ -450,6 +614,9 @@ void ViewMainWindow::updateInstructionMemory(Word value, Word address)
     consoleLog("Updated InstructionMemory.");
 }
 
+/**
+ * @brief ViewMainWindow::restartInstructionMemory
+ */
 void ViewMainWindow::restartInstructionMemory()
 {
     int size = ui->instructionMemoryTableWidget->rowCount();
@@ -461,138 +628,224 @@ void ViewMainWindow::restartInstructionMemory()
     consoleLog("InstructionMemory reset.");
 }
 
+/**
+ * @brief ViewMainWindow::executedInstructionMemory
+ */
 void ViewMainWindow::executedInstructionMemory()
 {
     //consoleLog("InstructionMemory executed.");
     instructionMemoryItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedImmGenInstruction
+ * @param Word instruction
+ */
 void ViewMainWindow::receivedImmGenInstruction(Word instruction)
 {
     //consoleLog("ImmGen received instruction equal to: " + instruction.getDecimal() + ".");
     immGenInstructionItem->setData(1, 0, instruction.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedImmGen
+ */
 void ViewMainWindow::executedImmGen()
 {
     //consoleLog("ImmGen executed.");
     immGenItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedMuxTypeAValueA
+ * @param Word valueA
+ */
 void ViewMainWindow::receivedMuxTypeAValueA(Word valueA)
 {
     //consoleLog("MuxTypeA received valueA equal to: " + valueA.getDecimal() + ".");
     muxAValueAItem->setData(1, 0, valueA.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedMuxTypeAValueB
+ * @param Word valueB
+ */
 void ViewMainWindow::receivedMuxTypeAValueB(Word valueB)
 {
     //consoleLog("MuxTypeA received valueB equal to: " + valueB.getDecimal() + ".");
     muxAValueBItem->setData(1, 0, valueB.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedMuxTypeASelection
+ * @param Word selection
+ */
 void ViewMainWindow::receivedMuxTypeASelection(Word selection)
 {
     //consoleLog("MuxTypeA received control equal to: " + selection.getDecimal() + ".");
     muxASelectionItem->setData(1, 0, selection.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedMuxTypeA
+ */
 void ViewMainWindow::executedMuxTypeA()
 {
     //consoleLog("MuxTypeA executed.");
     muxAItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedMuxTypeBValueA
+ * @param Word valueA
+ */
 void ViewMainWindow::receivedMuxTypeBValueA(Word valueA)
 {
     //consoleLog("MuxTypeB received valueA equal to: " + valueA.getDecimal() + ".");
     muxBValueAItem->setData(1, 0, valueA.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedMuxTypeBValueB
+ * @param Word valueB
+ */
 void ViewMainWindow::receivedMuxTypeBValueB(Word valueB)
 {
     //consoleLog("MuxTypeB received valueB equal to: " + valueB.getDecimal() + ".");
     muxBValueBItem->setData(1, 0, valueB.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedMuxTypeBSelection
+ * @param Word selection
+ */
 void ViewMainWindow::receivedMuxTypeBSelection(Word selection)
 {
     //consoleLog("MuxTypeB received control equal to: " + selection.getDecimal() + ".");
     muxBSelectionItem->setData(1, 0, selection.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedMuxTypeB
+ */
 void ViewMainWindow::executedMuxTypeB()
 {
     //consoleLog("MuxTypeB executed.");
     muxBItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedMuxTypeCValueA
+ * @param Word valueA
+ */
 void ViewMainWindow::receivedMuxTypeCValueA(Word valueA)
 {
     //consoleLog("MuxTypeC received valueA equal to: " + valueA.getDecimal() + ".");
     muxCValueAItem->setData(1, 0, valueA.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedMuxTypeCValueB
+ * @param Word valueB
+ */
 void ViewMainWindow::receivedMuxTypeCValueB(Word valueB)
 {
     //consoleLog("MuxTypeC received valueB equal to: " + valueB.getDecimal() + ".");
     muxCValueBItem->setData(1, 0, valueB.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedMuxTypeCSelection
+ * @param Word selection
+ */
 void ViewMainWindow::receivedMuxTypeCSelection(Word selection)
 {
     //consoleLog("MuxTypeC received control equal to: " + selection.getDecimal() + ".");
     muxCSelectionItem->setData(1, 0, selection.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedMuxTypeC
+ */
 void ViewMainWindow::executedMuxTypeC()
 {
     //consoleLog("MuxTypeC executed.");
     muxCItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedPCAddress
+ * @param Word address
+ */
 void ViewMainWindow::receivedPCAddress(Word address)
 {
     //consoleLog("PC received address equal to: " + address.getDecimal() + ".");
     pcAddressItem->setData(1, 0, address.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::executedPC
+ */
 void ViewMainWindow::executedPC()
 {
     //consoleLog("PC executed.");
     pcItem->setData(1, 0, "executed");
 }
 
+/**
+ * @brief ViewMainWindow::receivedRegistersReadRegister1
+ * @param Word readRegister1
+ */
 void ViewMainWindow::receivedRegistersReadRegister1(Word readRegister1)
 {
     //consoleLog("Registers received readRegister1 equal to: " + readRegister1.getDecimal() + ".");
     registerReadRegister1Item->setData(1, 0, readRegister1.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedRegistersReadRegister2
+ * @param Word readRegister2
+ */
 void ViewMainWindow::receivedRegistersReadRegister2(Word readRegister2)
 {
     //consoleLog("Registers received readRegister2 equal to: " + readRegister2.getDecimal() + ".");
     registerReadRegister2Item->setData(1, 0, readRegister2.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedRegistersWriteRegister
+ * @param Word writeRegister
+ */
 void ViewMainWindow::receivedRegistersWriteRegister(Word writeRegister)
 {
     //consoleLog("Registers received writeRegister equal to: " + writeRegister.getDecimal() + ".");
     registerWriteRegItem->setData(1, 0, writeRegister.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedRegistersWriteData
+ * @param Word writeData
+ */
 void ViewMainWindow::receivedRegistersWriteData(Word writeData)
 {
     //consoleLog("Registers received writeData equal to: " + writeData.getDecimal() + ".");
     registerWriteDataItem->setData(1, 0, writeData.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::receivedRegistersRegWrite
+ * @param Word regWrite
+ */
 void ViewMainWindow::receivedRegistersRegWrite(Word regWrite)
 {
     //consoleLog("Registers received regWrite equal to: " + regWrite.getDecimal() + ".");
     registerRegWriteItem->setData(1, 0, regWrite.getDecimal());
 }
 
+/**
+ * @brief ViewMainWindow::initRegisters
+ * @param int size
+ */
 void ViewMainWindow::initRegisters(int size)
 {
     ui->registersTableWidget->verticalHeader()->setVisible(false);
@@ -613,11 +866,19 @@ void ViewMainWindow::initRegisters(int size)
     consoleLog("");
 }
 
+/**
+ * @brief ViewMainWindow::updateRegister
+ * @param Word value
+ * @param Word address
+ */
 void ViewMainWindow::updateRegister(Word value, Word address)
 {
     ui->registersTableWidget->setItem(address.getInteger(), 1, new QTableWidgetItem(value.getDecimal()));
 }
 
+/**
+ * @brief ViewMainWindow::restartRegisters
+ */
 void ViewMainWindow::restartRegisters()
 {
     int size = ui->registersTableWidget->rowCount();
@@ -629,18 +890,27 @@ void ViewMainWindow::restartRegisters()
     consoleLog("");
 }
 
+/**
+ * @brief ViewMainWindow::executedReadRegisters
+ */
 void ViewMainWindow::executedReadRegisters()
 {
     //consoleLog("Registers Read executed.");
     registerItem->setData(1, 0, "executed read");
 }
 
+/**
+ * @brief ViewMainWindow::executedWriteRegisters
+ */
 void ViewMainWindow::executedWriteRegisters()
 {
     //consoleLog("Registers Write executed.");
     registerItem->setData(1, 0, "executed write");
 }
 
+/**
+ * @brief ViewMainWindow::treeWidgetInit
+ */
 void ViewMainWindow::treeWidgetInit()
 {
     pcItem = treeWidgetAddRoot("PC", "- - -");
@@ -706,6 +976,12 @@ void ViewMainWindow::treeWidgetInit()
     muxCSelectionItem = treeWidgetAddChild(muxCItem, "selection", "- - -");
 }
 
+/**
+ * @brief ViewMainWindow::treeWidgetAddRoot
+ * @param QString name
+ * @param QString value
+ * @return
+ */
 QTreeWidgetItem* ViewMainWindow::treeWidgetAddRoot(QString name, QString value)
 {
     QTreeWidgetItem *item = new QTreeWidgetItem(ui->treeWidget);
@@ -720,6 +996,13 @@ QTreeWidgetItem* ViewMainWindow::treeWidgetAddRoot(QString name, QString value)
     return item;
 }
 
+/**
+ * @brief ViewMainWindow::treeWidgetAddChild
+ * @param parent
+ * @param QString name
+ * @param QString value
+ * @return
+ */
 QTreeWidgetItem* ViewMainWindow::treeWidgetAddChild(QTreeWidgetItem *parent,  QString name, QString value)
 {
     QTreeWidgetItem *item = new QTreeWidgetItem(parent);
@@ -733,6 +1016,9 @@ QTreeWidgetItem* ViewMainWindow::treeWidgetAddChild(QTreeWidgetItem *parent,  QS
     return item;
 }
 
+/**
+ * @brief ViewMainWindow::treeWidgetClear
+ */
 void ViewMainWindow::treeWidgetClear()
 {
     pcItem->setData(1, 0, "- - -");
@@ -798,13 +1084,21 @@ void ViewMainWindow::treeWidgetClear()
     muxCSelectionItem->setData(1, 0, "- - -");
 }
 
+/**
+ * @brief ViewMainWindow::consoleLog
+ * @param QString message
+ */
 void ViewMainWindow::consoleLog(QString message)
 {
     ui->consoleListWidget->addItem(message);
 }
 
+/**
+ * @brief ViewMainWindow::generateFileName
+ * @param QString fileName
+ * @return QString:
+ */
 QString ViewMainWindow::generateFileName(QString fileName)
 {
     return fileName.mid(0, fileName.lastIndexOf("."));
 }
-
