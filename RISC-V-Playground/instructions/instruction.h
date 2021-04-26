@@ -41,8 +41,7 @@
 #define RS1_LAST 19
 
 /**
- * @brief A classe Instruction: Classe abstrata a qual é base para
- * todos os modos de instrução
+ * @brief A classe Instruction: é a base para todos os modos de instrução
  */
 class Instruction : public Word
 {

@@ -31,7 +31,7 @@
 #define IMMEDIATE_LAST 31
 
 /**
- * @brief A classe InstructionTypeI:
+ * @brief A classe InstructionTypeI: representa uma instrução do tipo I
  */
 class InstructionTypeI : public Instruction
 {

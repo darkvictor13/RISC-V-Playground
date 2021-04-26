@@ -61,7 +61,7 @@
 #define SIZE_IMMEDIATE_B (SB_IMMEDIATE_B_LAST - SB_IMMEDIATE_B_FIRST + 1)
 
 /**
- * @brief A classe InstructionTypeSB:
+ * @brief A classe InstructionTypeSB: representa uma instrução do tipo SB
  */
 class InstructionTypeSB : public Instruction
 {

@@ -41,7 +41,7 @@
 #define FUNCT7_LAST 31
 
 /**
- * @brief A classe InstructionTypeR:
+ * @brief A classe InstructionTypeR: representa uma instrução do tipo R
  */
 class InstructionTypeR : public Instruction
 {

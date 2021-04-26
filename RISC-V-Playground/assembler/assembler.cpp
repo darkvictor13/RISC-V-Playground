@@ -9,7 +9,7 @@
 #include "assembler.h"
 
 /**
- * @brief Assembler::Assembler
+ * @brief Assembler::Assembler: contrutor da classe Assembler
  */
 Assembler::Assembler()
 {
@@ -17,8 +17,9 @@ Assembler::Assembler()
 }
 
 /**
- * @brief Assembler::assemble
- * @param fileName
+ * @brief Assembler::assemble: método responsável por gerara a partir de um arquivo contendo o código assemble o código binário da arquitetura RISC-V e guardalo em um arquivo especificado
+ * @param QString inputFileName: nome do arquivo de origem do código assmeble
+ * @param QString outputFileName: nome do arquivo de destino do código binário
  */
 void Assembler::assemble(QString inputFileName, QString outputFileName)
 {
@@ -31,6 +32,11 @@ void Assembler::assemble(QString inputFileName, QString outputFileName)
     generateFile(instructions, outputFileName);
 }
 
+/**
+ * @brief Assembler::getLines: função responsável por ler o arquivo de origem do código assemble linha a linha e gerar uma lista de QStrings
+ * @param QString fileName: nome do arquivo de origem do código assemble
+ * @return QStringList: lista das linhas de código contidas no arquivo de origem
+ */
 QStringList Assembler::getLines(QString fileName)
 {
     emit consoleLog("Loading file to assemble ...\n");
@@ -55,6 +61,11 @@ QStringList Assembler::getLines(QString fileName)
     return lines;
 }
 
+/**
+ * @brief Assembler::splitLine: função responsável por serar o nome da instrução e seus argumentos, gerando assim uma lista com estes
+ * @param QString line: uma linha contendo uma instrução escrita em código assemble a ser separada
+ * @return QStringList: lista de strings contendo o nome e os arqumentos da instrução
+ */
 QStringList Assembler::splitLine(QString line)
 {
     QStringList words;
@@ -75,6 +86,11 @@ QStringList Assembler::splitLine(QString line)
     return words;
 }
 
+/**
+ * @brief Assembler::splitLines: função responsável por separar todas as palavras dentro de cada linha de código
+ * @param QStringList lines: linhas de código assemble
+ * @return vector<QStringList>: vector de listas de string contendo os nomes das instruções e seus argumentos
+ */
 vector<QStringList> Assembler::splitLines(QStringList lines)
 {
     vector<QStringList> words;
@@ -86,20 +102,40 @@ vector<QStringList> Assembler::splitLines(QStringList lines)
     return words;
 }
 
+/**
+ * @brief Assembler::isLabel: função responsável por identificar se uma string representa um label
+ * @param QStringList line: string a ser identificada como label ou não
+ * @return bool: valor booleano que indica se uma string é um label
+ */
 bool Assembler::isLabel(QStringList line)
 {
     return line.size() == 1 && line[0][line[0].size() - 1] == ':';
 }
 
+/**
+ * @brief Assembler::isData: função responsável por identificar se uma string representa um dado
+ * @param QStringList line: string a ser identificada como dado ou não
+ * @return bool: valor booleano que indica se uma string é um dado
+ */
 bool Assembler::isData(QStringList line)
 {
     return line[0][0] == '.';
 }
 
+/**
+ * @brief Assembler::isInstruction: função responsável por identificar se uma string representa uma instrução
+ * @param QStringList line: string a ser identificada como instrução ou não
+ * @return bool: valor booleano que indica se uma string é uma instrução ou não
+ */
 bool Assembler::isInstruction(QStringList line) {
     return !isLabel(line) && !isData(line);
 }
 
+/**
+ * @brief Assembler::mountLabelsTable: função responsável por gerar a tabela de labels para um arquivo de instruções
+ * @param vector<QStringList> words: lista de linhas do arquivo
+ * @return vector<Label>: tabela de labels
+ */
 vector<Label> Assembler::mountLabelsTable(vector<QStringList> words)
 {
     emit consoleLog("Creating table of labels ...\n");
@@ -133,6 +169,12 @@ vector<Label> Assembler::mountLabelsTable(vector<QStringList> words)
     return labelsTable;
 }
 
+/**
+ * @brief Assembler::mountInstructions: função responsável por percorrer a lista de instruções e gerar uma outra lista de instruções desta vez em binário
+ * @param vector<QStringList> words: lista de instruções ja separados por palávras
+ * @param vector<Label> labelsTable: tabela de labels
+ * @return vector<Word>: lista de instruções em binário
+ */
 vector<Word> Assembler::mountInstructions(vector<QStringList> words, vector<Label> labelsTable)
 {
     emit consoleLog("Assembling instructions ...\n");
@@ -154,9 +196,11 @@ vector<Word> Assembler::mountInstructions(vector<QStringList> words, vector<Labe
 }
 
 /**
- * @brief Assembler::translateInstructions
- * @param line
- * @return
+ * @brief Assembler::mountInstruction: função responsável por selecionar o tipo apropriado para uma isntrução e fazer a chamda da sua fnção geradora
+ * @param QStringList line: linha contendo uma instrução
+ * @param vector<Label> labelsTable: tabela de labels
+ * @param int position: posição da instrução
+ * @return Word: instrução completa em binário
  */
 Word Assembler::mountInstruction(QStringList line, vector<Label> labelsTable, int position)
 {
@@ -185,16 +229,31 @@ Word Assembler::mountInstruction(QStringList line, vector<Label> labelsTable, in
     return 0;
 }
 
+/**
+ * @brief Assembler::getRegister: função responsável por gerar o número do registrador a partir do seu identificador em formato string
+ * @param QString word: string contendo a identificação do registrador
+ * @return int: número do registrador
+ */
 int Assembler::getRegister(QString word)
 {
     return word.midRef(1).toInt();
 }
 
+/**
+ * @brief Assembler::getImmediate: função responsável por gerar o valor immediato
+ * @param QString word: string contendo o valor immediato da instrução
+ * @return int: valor immediato
+ */
 int Assembler::getImmediate(QString word)
 {
     return word.toInt();
 }
 
+/**
+ * @brief Assembler::mountADD: função responsável por gerar o código binário da instrução add
+ * @param QStringList line: lista contendo o nome e cada um dos parámetros da instrução
+ * @return Word: instrução completa em código binário
+ */
 Word Assembler::mountADD(QStringList line)
 {
     InstructionTypeR instruction;
@@ -211,6 +270,11 @@ Word Assembler::mountADD(QStringList line)
     return instruction;
 }
 
+/**
+ * @brief Assembler::mountSUB: função responsável por gerar o código binário da instrução sub
+ * @param QStringList line: lista contendo o nome e cada um dos parámetros da instrução
+ * @return Word: instrução completa em código binário
+ */
 Word Assembler::mountSUB(QStringList line)
 {
     InstructionTypeR instruction;
@@ -227,6 +291,11 @@ Word Assembler::mountSUB(QStringList line)
     return instruction;
 }
 
+/**
+ * @brief Assembler::mountAND: função responsável por gerar o código binário da instrução and
+ * @param QStringList line: lista contendo o nome e cada um dos parámetros da instrução
+ * @return Word: instrução completa em código binário
+ */
 Word Assembler::mountAND(QStringList line)
 {
     InstructionTypeR instruction;
@@ -243,6 +312,11 @@ Word Assembler::mountAND(QStringList line)
     return instruction;
 }
 
+/**
+ * @brief Assembler::mountOR: função responsável por gerar o código binário da instrução or
+ * @param QStringList line: lista contendo o nome e cada um dos parámetros da instrução
+ * @return Word: instrução completa em código binário
+ */
 Word Assembler::mountOR(QStringList line)
 {
     InstructionTypeR instruction;
@@ -259,6 +333,11 @@ Word Assembler::mountOR(QStringList line)
     return instruction;
 }
 
+/**
+ * @brief Assembler::mountADDI: função responsável por gerar o código binário da instrução addi
+ * @param QStringList line: lista contendo o nome e cada um dos parámetros da instrução
+ * @return Word: instrução completa em código binário
+ */
 Word Assembler::mountADDI(QStringList line)
 {
     InstructionTypeI instruction;
@@ -274,6 +353,11 @@ Word Assembler::mountADDI(QStringList line)
     return instruction;
 }
 
+/**
+ * @brief Assembler::mountLW: função responsável por gerar o código binário da instrução lw
+ * @param QStringList line: lista contendo o nome e cada um dos parámetros da instrução
+ * @return Word: instrução completa em código binário
+ */
 Word Assembler::mountLW(QStringList line)
 {
     InstructionTypeI instruction;
@@ -289,6 +373,11 @@ Word Assembler::mountLW(QStringList line)
     return instruction;
 }
 
+/**
+ * @brief Assembler::mountSW: função responsável por gerar o código binário da instrução sw
+ * @param QStringList line: lista contendo o nome e cada um dos parámetros da instrução
+ * @return Word: instrução completa em código binário
+ */
 Word Assembler::mountSW(QStringList line)
 {
     InstructionTypeS instruction;
@@ -304,6 +393,13 @@ Word Assembler::mountSW(QStringList line)
     return instruction;
 }
 
+/**
+ * @brief Assembler::mountBEQ: função responsável por gerar o código binário da instrução beq
+ * @param QStringList line: lista contendo o nome e cada um dos parámetros da instrução
+ * @param vector<Label> labelsTable: tabela de labels que associa cada um dos lebols lidos no arquivo de entrada à sua posição no arquivo
+ * @param int position: posição da instruçõe em relação às outras
+ * @return Word: instrução completa em código binário
+ */
 Word Assembler::mountBEQ(QStringList line, vector<Label> labelsTable, int position)
 {
     InstructionTypeSB instruction;
@@ -319,6 +415,13 @@ Word Assembler::mountBEQ(QStringList line, vector<Label> labelsTable, int positi
     return instruction;
 }
 
+/**
+ * @brief Assembler::mountBNE: função responsável por gerar o código binário da instrução bne
+ * @param QStringList line: lista contendo o nome e cada um dos parámetros da instrução
+ * @param vector<Label> labelsTable: tabela de labels que associa cada um dos lebols lidos no arquivo de entrada à sua posição no arquivo
+ * @param int position: posição da instruçõe em relação às outras
+ * @return Word: instrução completa em código binário
+ */
 Word Assembler::mountBNE(QStringList line, vector<Label> labelsTable, int position)
 {
     InstructionTypeSB instruction;
@@ -334,6 +437,13 @@ Word Assembler::mountBNE(QStringList line, vector<Label> labelsTable, int positi
     return instruction;
 }
 
+/**
+ * @brief Assembler::generateOffset: função responsável por cacular offset das instruções de salto
+ * @param QString label: nome do label contido na instrução
+ * @param vector<Label> labelsTable: tabela de labels que associa cada um dos lebols lidos no arquivo de entrada à sua posição no arquivo
+ * @param int position: posição da instruçõe em relação às outras
+ * @return int: valor que indica o real valor do offset para a instrução
+ */
 int Assembler::generateOffset(QString label, vector<Label> labelsTable, int position)
 {
     int size = labelsTable.size();
@@ -346,6 +456,11 @@ int Assembler::generateOffset(QString label, vector<Label> labelsTable, int posi
     return label.toInt();
 }
 
+/**
+ * @brief Assembler::generateFile: método que escrebe um conjunto de instruções em binário dentro de um arquivo de texto linha a linha
+ * @param vector<Word> instructions: vector de instrções contendo o código em binário de cada instrução, codificado para a arquii=tetura RISC-V
+ * @param QString fileName: nome do arquivo de destino do conjunto de instruções
+ */
 void Assembler::generateFile(vector<Word> instructions, QString fileName)
 {
 

@@ -19,15 +19,18 @@
 #include "instructions/instructiontypes.h"
 #include "instructions/instructiontypesb.h"
 
+using namespace std;
+
+/**
+ * @brief A estrutura Label: responsável por representar um label dentro do código assemble, para isso armazena a o nome do label e a posição em que este se encontra.
+ */
 struct Label{
     QString identifier;
     int position;
 };
 
-using namespace std;
-
 /**
- * @brief A classe Assembler:
+ * @brief A classe Assembler: responsável por gerar o código binario a partir das instruções assembler para os processadorees da arquitetura RISC-V
  */
 class Assembler : public QObject
 {

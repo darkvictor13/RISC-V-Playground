@@ -41,7 +41,7 @@
 #define S_IMMEDIATE_B_LAST 31
 
 /**
- * @brief A classe InstructionTypeS:
+ * @brief A classe InstructionTypeS: representa uma instrução do tipo S
  */
 class InstructionTypeS : public Instruction
 {
