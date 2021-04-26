@@ -1,6 +1,6 @@
 /**
  * @file word.h
- * @brief Arquivo responsável por definir a classe
+ * @brief Arquivo responsável por definir a classe Word
  * @author mGuerra
  * @version 0.1
 */

@@ -1,6 +1,6 @@
 /**
  * @file instructiontypesb.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @brief Arquivo responsável por implementar a classe InstructionTypeSB
  * @author mGuerra
  * @version 0.1
 */

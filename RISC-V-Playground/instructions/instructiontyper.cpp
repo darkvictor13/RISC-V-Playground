@@ -1,6 +1,6 @@
 /**
  * @file instructiontyper.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @brief Arquivo responsável por implementar a classe InstructionTypeR
  * @author mGuerra
  * @version 0.1
 */
