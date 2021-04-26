@@ -1,6 +1,6 @@
 /**
- * @file add.h
- * @brief Arquivo responsável por definir a classe
+ * @file addbranch.h
+ * @brief Arquivo responsável por definir a classe AddBranch
  * @author mGuerra
  * @version 0.1
 */
@@ -15,7 +15,8 @@
 class MuxTypeA;
 
 /**
- * @brief A classe AddBranch:
+ * @brief A classe AddBranch: Circuito somador que
+ * soma ao program counter o offset
  */
 class AddBranch : public Add
 {

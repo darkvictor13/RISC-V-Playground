@@ -79,37 +79,42 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="word_8h.html">word/word.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classAdd.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAdd.html">Add</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classWord.html">Word</a> valueA = 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classWord.html">Word</a> valueB = 0;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> hasValueA = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> hasValueB = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classAdd.html">Add</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> setValueA(<a class="code" href="classWord.html">Word</a> valueA);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> setValueB(<a class="code" href="classWord.html">Word</a> valueB);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> tryExecute();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">virtual</span> execute() = 0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    ~<a class="code" href="classAdd.html">Add</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;signals:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> receivedValueA(<a class="code" href="classWord.html">Word</a> valueA);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> receivedValueB(<a class="code" href="classWord.html">Word</a> valueB);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> executed();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ADD_H</span></div>
-<div class="ttc" id="aclassAdd_html"><div class="ttname"><a href="classAdd.html">Add</a></div><div class="ttdoc">A classe Add:</div><div class="ttdef"><b>Definition:</b> <a href="add_8h_source.html#l00018">add.h:19</a></div></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classAdd.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAdd.html">Add</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classWord.html">Word</a> valueA = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classWord.html">Word</a> valueB = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> hasValueA = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> hasValueB = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classAdd.html#a44b62ab4a0b9a4fb3e77427d35e411b9">Add</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAdd.html#a3eacbca110b1a6a39cbef72fdd831826">setValueA</a>(<a class="code" href="classWord.html">Word</a> valueA);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAdd.html#ad2648365eec73af5250fd863a13210b3">setValueB</a>(<a class="code" href="classWord.html">Word</a> valueB);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAdd.html#af4b55943ce65846384e5cfd085524828">tryExecute</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">virtual</span> execute() = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classAdd.html#a960ca471ede083983766bce089f9af64">~Add</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;signals:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> receivedValueA(<a class="code" href="classWord.html">Word</a> valueA);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> receivedValueB(<a class="code" href="classWord.html">Word</a> valueB);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> executed();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ADD_H</span></div>
+<div class="ttc" id="aclassAdd_html"><div class="ttname"><a href="classAdd.html">Add</a></div><div class="ttdoc">A classe Add: Classe base para todos os subcircuitos que realizam a soma de 2 valores.</div><div class="ttdef"><b>Definition:</b> <a href="add_8h_source.html#l00019">add.h:20</a></div></div>
+<div class="ttc" id="aclassAdd_html_a3eacbca110b1a6a39cbef72fdd831826"><div class="ttname"><a href="classAdd.html#a3eacbca110b1a6a39cbef72fdd831826">Add::setValueA</a></div><div class="ttdeci">void setValueA(Word valueA)</div><div class="ttdoc">Add::setValueA: Altera o valor da primeira entrada do circuito.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00022">add.cpp:22</a></div></div>
+<div class="ttc" id="aclassAdd_html_a44b62ab4a0b9a4fb3e77427d35e411b9"><div class="ttname"><a href="classAdd.html#a44b62ab4a0b9a4fb3e77427d35e411b9">Add::Add</a></div><div class="ttdeci">Add()</div><div class="ttdoc">Add::Add: Construtor da classe Add.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00013">add.cpp:13</a></div></div>
+<div class="ttc" id="aclassAdd_html_a960ca471ede083983766bce089f9af64"><div class="ttname"><a href="classAdd.html#a960ca471ede083983766bce089f9af64">Add::~Add</a></div><div class="ttdeci">~Add()</div><div class="ttdoc">Add::~Add: Destrutor da classe Add.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00069">add.cpp:69</a></div></div>
+<div class="ttc" id="aclassAdd_html_ad2648365eec73af5250fd863a13210b3"><div class="ttname"><a href="classAdd.html#ad2648365eec73af5250fd863a13210b3">Add::setValueB</a></div><div class="ttdeci">void setValueB(Word valueB)</div><div class="ttdoc">Add::setValueB: Altera o valor da segunda entrada do circuito.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00036">add.cpp:36</a></div></div>
+<div class="ttc" id="aclassAdd_html_af4b55943ce65846384e5cfd085524828"><div class="ttname"><a href="classAdd.html#af4b55943ce65846384e5cfd085524828">Add::tryExecute</a></div><div class="ttdeci">void tryExecute()</div><div class="ttdoc">Add::tryExecute: Tenta Executar o subcircuito.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00051">add.cpp:51</a></div></div>
 <div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word: Representação de uma palavra de 32 bits e suas operações.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00030">word.h:31</a></div></div>
 <div class="ttc" id="aword_8h_html"><div class="ttname"><a href="word_8h.html">word.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 </div><!-- fragment --></div><!-- contents -->

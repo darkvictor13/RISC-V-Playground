@@ -71,54 +71,59 @@ $(function() {
 <div class="title">add.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<a href="add_8cpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="add_8h.html">add.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;Add::Add()</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> Add::setValueA(<a class="code" href="classWord.html">Word</a> valueA)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    this-&gt;valueA = valueA;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    hasValueA = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    emit receivedValueA(valueA);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    tryExecute();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> Add::setValueB(<a class="code" href="classWord.html">Word</a> valueB)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    this-&gt;valueB = valueB;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    hasValueB = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    emit receivedValueB(valueB);</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classAdd.html#a44b62ab4a0b9a4fb3e77427d35e411b9">   13</a></span>&#160;<a class="code" href="classAdd.html#a44b62ab4a0b9a4fb3e77427d35e411b9">Add::Add</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classAdd.html#a3eacbca110b1a6a39cbef72fdd831826">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAdd.html#a3eacbca110b1a6a39cbef72fdd831826">Add::setValueA</a>(<a class="code" href="classWord.html">Word</a> valueA)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    this-&gt;valueA = valueA;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    hasValueA = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    emit receivedValueA(valueA);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classAdd.html#af4b55943ce65846384e5cfd085524828">tryExecute</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    tryExecute();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> Add::tryExecute()</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span>(hasValueA &amp;&amp; hasValueB) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        emit executed();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        hasValueA = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        hasValueB = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classAdd.html#ad2648365eec73af5250fd863a13210b3">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAdd.html#ad2648365eec73af5250fd863a13210b3">Add::setValueB</a>(<a class="code" href="classWord.html">Word</a> valueB)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    this-&gt;valueB = valueB;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    hasValueB = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    emit receivedValueB(valueB);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        execute();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        valueA = 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        valueB = 0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;Add::~Add()</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="ttc" id="aadd_8h_html"><div class="ttname"><a href="add_8h.html">add.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classAdd.html#af4b55943ce65846384e5cfd085524828">tryExecute</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classAdd.html#af4b55943ce65846384e5cfd085524828">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAdd.html#af4b55943ce65846384e5cfd085524828">Add::tryExecute</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span>(hasValueA &amp;&amp; hasValueB) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        emit executed();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        hasValueA = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        hasValueB = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        execute();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        valueA = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        valueB = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classAdd.html#a960ca471ede083983766bce089f9af64">   69</a></span>&#160;<a class="code" href="classAdd.html#a960ca471ede083983766bce089f9af64">Add::~Add</a>()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="ttc" id="aadd_8h_html"><div class="ttname"><a href="add_8h.html">add.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe Add.</div></div>
+<div class="ttc" id="aclassAdd_html_a3eacbca110b1a6a39cbef72fdd831826"><div class="ttname"><a href="classAdd.html#a3eacbca110b1a6a39cbef72fdd831826">Add::setValueA</a></div><div class="ttdeci">void setValueA(Word valueA)</div><div class="ttdoc">Add::setValueA: Altera o valor da primeira entrada do circuito.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00022">add.cpp:22</a></div></div>
+<div class="ttc" id="aclassAdd_html_a44b62ab4a0b9a4fb3e77427d35e411b9"><div class="ttname"><a href="classAdd.html#a44b62ab4a0b9a4fb3e77427d35e411b9">Add::Add</a></div><div class="ttdeci">Add()</div><div class="ttdoc">Add::Add: Construtor da classe Add.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00013">add.cpp:13</a></div></div>
+<div class="ttc" id="aclassAdd_html_a960ca471ede083983766bce089f9af64"><div class="ttname"><a href="classAdd.html#a960ca471ede083983766bce089f9af64">Add::~Add</a></div><div class="ttdeci">~Add()</div><div class="ttdoc">Add::~Add: Destrutor da classe Add.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00069">add.cpp:69</a></div></div>
+<div class="ttc" id="aclassAdd_html_ad2648365eec73af5250fd863a13210b3"><div class="ttname"><a href="classAdd.html#ad2648365eec73af5250fd863a13210b3">Add::setValueB</a></div><div class="ttdeci">void setValueB(Word valueB)</div><div class="ttdoc">Add::setValueB: Altera o valor da segunda entrada do circuito.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00036">add.cpp:36</a></div></div>
+<div class="ttc" id="aclassAdd_html_af4b55943ce65846384e5cfd085524828"><div class="ttname"><a href="classAdd.html#af4b55943ce65846384e5cfd085524828">Add::tryExecute</a></div><div class="ttdeci">void tryExecute()</div><div class="ttdoc">Add::tryExecute: Tenta Executar o subcircuito.</div><div class="ttdef"><b>Definition:</b> <a href="add_8cpp_source.html#l00051">add.cpp:51</a></div></div>
 <div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word: Representação de uma palavra de 32 bits e suas operações.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00030">word.h:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
