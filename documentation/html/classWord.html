@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A classe <a class="el" href="classWord.html" title="A classe Word:">Word</a>:  
+<p>A classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: Representação de uma palavra de 32 bits e suas operações.  
  <a href="classWord.html#details">Mais...</a></p>
 
 <p><code>#include &lt;<a class="el" href="word_8h_source.html">word.h</a>&gt;</code></p>
@@ -81,302 +81,1586 @@ Diagrama de hierarquia para Word:</div>
  <div class="center">
   <img src="classWord.png" usemap="#Word_map" alt=""/>
   <map id="Word_map" name="Word_map">
-<area href="classInstruction.html" title="A classe Instruction: Classe abstrata a qual é base para todos os modos de instrução." alt="Instruction" shape="rect" coords="186,112,300,136"/>
-<area href="classInstructionTypeI.html" title="A classe InstructionTypeI:" alt="InstructionTypeI" shape="rect" coords="0,168,114,192"/>
-<area href="classInstructionTypeR.html" title="A classe InstructionTypeR:" alt="InstructionTypeR" shape="rect" coords="124,168,238,192"/>
-<area href="classInstructionTypeS.html" title="A classe InstructionTypeS:" alt="InstructionTypeS" shape="rect" coords="248,168,362,192"/>
-<area href="classInstructionTypeSB.html" title="A classe InstructionTypeSB:" alt="InstructionTypeSB" shape="rect" coords="372,168,486,192"/>
+<area href="classInstruction.html" title="A classe Instruction: é a base para todos os modos de instrução." alt="Instruction" shape="rect" coords="186,56,300,80"/>
+<area href="classInstructionTypeI.html" title="A classe InstructionTypeI: representa uma instrução do tipo I." alt="InstructionTypeI" shape="rect" coords="0,112,114,136"/>
+<area href="classInstructionTypeR.html" title="A classe InstructionTypeR: representa uma instrução do tipo R." alt="InstructionTypeR" shape="rect" coords="124,112,238,136"/>
+<area href="classInstructionTypeS.html" title="A classe InstructionTypeS: representa uma instrução do tipo S." alt="InstructionTypeS" shape="rect" coords="248,112,362,136"/>
+<area href="classInstructionTypeSB.html" title="A classe InstructionTypeSB: representa uma instrução do tipo SB." alt="InstructionTypeSB" shape="rect" coords="372,112,486,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a047807e2fb3df4189d6cc428e10b57df"><td class="memItemLeft" align="right" valign="top"><a id="a047807e2fb3df4189d6cc428e10b57df"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Word</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</td></tr>
+<tr class="memitem:a047807e2fb3df4189d6cc428e10b57df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a047807e2fb3df4189d6cc428e10b57df">Word</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</td></tr>
+<tr class="memdesc:a047807e2fb3df4189d6cc428e10b57df"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a047807e2fb3df4189d6cc428e10b57df" title="Word::Word Construtor da classe Word.">Word::Word</a> Construtor da classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#a047807e2fb3df4189d6cc428e10b57df">Mais...</a><br /></td></tr>
 <tr class="separator:a047807e2fb3df4189d6cc428e10b57df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8332bc4b3afa282ce858e8cfcf2eeff1"><td class="memItemLeft" align="right" valign="top"><a id="a8332bc4b3afa282ce858e8cfcf2eeff1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Word</b> (<a class="el" href="classWord.html">Word</a> *word)</td></tr>
+<tr class="memitem:a8332bc4b3afa282ce858e8cfcf2eeff1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a8332bc4b3afa282ce858e8cfcf2eeff1">Word</a> (<a class="el" href="classWord.html">Word</a> *word)</td></tr>
+<tr class="memdesc:a8332bc4b3afa282ce858e8cfcf2eeff1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a047807e2fb3df4189d6cc428e10b57df" title="Word::Word Construtor da classe Word.">Word::Word</a> Construtor da classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#a8332bc4b3afa282ce858e8cfcf2eeff1">Mais...</a><br /></td></tr>
 <tr class="separator:a8332bc4b3afa282ce858e8cfcf2eeff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf50663778058667ba440e73ac0d46bc"><td class="memItemLeft" align="right" valign="top"><a id="abf50663778058667ba440e73ac0d46bc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Word</b> (bool set=false)</td></tr>
+<tr class="memitem:abf50663778058667ba440e73ac0d46bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#abf50663778058667ba440e73ac0d46bc">Word</a> (bool <a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">set</a>=false)</td></tr>
+<tr class="memdesc:abf50663778058667ba440e73ac0d46bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a047807e2fb3df4189d6cc428e10b57df" title="Word::Word Construtor da classe Word.">Word::Word</a>: Construtor da classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#abf50663778058667ba440e73ac0d46bc">Mais...</a><br /></td></tr>
 <tr class="separator:abf50663778058667ba440e73ac0d46bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac84c523cd6122ce65eb3dd1fa73bb814"><td class="memItemLeft" align="right" valign="top"><a id="ac84c523cd6122ce65eb3dd1fa73bb814"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Word</b> (QString binary, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base=2)</td></tr>
+<tr class="memitem:ac84c523cd6122ce65eb3dd1fa73bb814"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#ac84c523cd6122ce65eb3dd1fa73bb814">Word</a> (QString binary, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base=2)</td></tr>
+<tr class="memdesc:ac84c523cd6122ce65eb3dd1fa73bb814"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a047807e2fb3df4189d6cc428e10b57df" title="Word::Word Construtor da classe Word.">Word::Word</a> Construtor da classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#ac84c523cd6122ce65eb3dd1fa73bb814">Mais...</a><br /></td></tr>
 <tr class="separator:ac84c523cd6122ce65eb3dd1fa73bb814"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9eb04eebc3437a667493cb0301c02b00"><td class="memItemLeft" align="right" valign="top"><a id="a9eb04eebc3437a667493cb0301c02b00"></a>
-<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><b>length_of_base</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base)</td></tr>
+<tr class="memitem:a9eb04eebc3437a667493cb0301c02b00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a9eb04eebc3437a667493cb0301c02b00">length_of_base</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base)</td></tr>
+<tr class="memdesc:a9eb04eebc3437a667493cb0301c02b00"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a9eb04eebc3437a667493cb0301c02b00" title="Word::length_of_base: Indica o tamanho da base.">Word::length_of_base</a>: Indica o tamanho da base.  <a href="classWord.html#a9eb04eebc3437a667493cb0301c02b00">Mais...</a><br /></td></tr>
 <tr class="separator:a9eb04eebc3437a667493cb0301c02b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05ea4fffa16f698bb72a81876fc72e9f"><td class="memItemLeft" align="right" valign="top"><a id="a05ea4fffa16f698bb72a81876fc72e9f"></a>
-<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mask</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memitem:a05ea4fffa16f698bb72a81876fc72e9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a05ea4fffa16f698bb72a81876fc72e9f">mask</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memdesc:a05ea4fffa16f698bb72a81876fc72e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a05ea4fffa16f698bb72a81876fc72e9f" title="Word::mask: Gera uma máscara de bits ligados entre as posições passadas como parâmetro.">Word::mask</a>: Gera uma máscara de bits ligados entre as posições passadas como parâmetro.  <a href="classWord.html#a05ea4fffa16f698bb72a81876fc72e9f">Mais...</a><br /></td></tr>
 <tr class="separator:a05ea4fffa16f698bb72a81876fc72e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56a8b6c7007f3903d7381a8c1d0808de"><td class="memItemLeft" align="right" valign="top"><a id="a56a8b6c7007f3903d7381a8c1d0808de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> ()</td></tr>
+<tr class="memitem:a56a8b6c7007f3903d7381a8c1d0808de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">set</a> ()</td></tr>
+<tr class="memdesc:a56a8b6c7007f3903d7381a8c1d0808de"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">Mais...</a><br /></td></tr>
 <tr class="separator:a56a8b6c7007f3903d7381a8c1d0808de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1bd6f3f673d15e884b2c4fae0cd1da3"><td class="memItemLeft" align="right" valign="top"><a id="ae1bd6f3f673d15e884b2c4fae0cd1da3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="classWord.html">Word</a> word)</td></tr>
+<tr class="memitem:ae1bd6f3f673d15e884b2c4fae0cd1da3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#ae1bd6f3f673d15e884b2c4fae0cd1da3">set</a> (<a class="el" href="classWord.html">Word</a> word)</td></tr>
+<tr class="memdesc:ae1bd6f3f673d15e884b2c4fae0cd1da3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#ae1bd6f3f673d15e884b2c4fae0cd1da3">Mais...</a><br /></td></tr>
 <tr class="separator:ae1bd6f3f673d15e884b2c4fae0cd1da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1795d92d1874f6a6ab14255d99a5639b"><td class="memItemLeft" align="right" valign="top"><a id="a1795d92d1874f6a6ab14255d99a5639b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> position)</td></tr>
+<tr class="memitem:a1795d92d1874f6a6ab14255d99a5639b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a1795d92d1874f6a6ab14255d99a5639b">set</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> position)</td></tr>
+<tr class="memdesc:a1795d92d1874f6a6ab14255d99a5639b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#a1795d92d1874f6a6ab14255d99a5639b">Mais...</a><br /></td></tr>
 <tr class="separator:a1795d92d1874f6a6ab14255d99a5639b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3e1031c68269d6fc9b5ac283d7c466e"><td class="memItemLeft" align="right" valign="top"><a id="aa3e1031c68269d6fc9b5ac283d7c466e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memitem:aa3e1031c68269d6fc9b5ac283d7c466e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#aa3e1031c68269d6fc9b5ac283d7c466e">set</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memdesc:aa3e1031c68269d6fc9b5ac283d7c466e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#aa3e1031c68269d6fc9b5ac283d7c466e">Mais...</a><br /></td></tr>
 <tr class="separator:aa3e1031c68269d6fc9b5ac283d7c466e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23594ff42141728c2a0468db2fa747c3"><td class="memItemLeft" align="right" valign="top"><a id="a23594ff42141728c2a0468db2fa747c3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memitem:a23594ff42141728c2a0468db2fa747c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a23594ff42141728c2a0468db2fa747c3">set</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memdesc:a23594ff42141728c2a0468db2fa747c3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#a23594ff42141728c2a0468db2fa747c3">Mais...</a><br /></td></tr>
 <tr class="separator:a23594ff42141728c2a0468db2fa747c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b61402a8717051cccd4b11c6a61710a"><td class="memItemLeft" align="right" valign="top"><a id="a2b61402a8717051cccd4b11c6a61710a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (QString binary, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base=2)</td></tr>
+<tr class="memitem:a2b61402a8717051cccd4b11c6a61710a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a2b61402a8717051cccd4b11c6a61710a">set</a> (QString binary, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base=2)</td></tr>
+<tr class="memdesc:a2b61402a8717051cccd4b11c6a61710a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#a2b61402a8717051cccd4b11c6a61710a">Mais...</a><br /></td></tr>
 <tr class="separator:a2b61402a8717051cccd4b11c6a61710a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adad51582d2d810c9ad56dd03d763594a"><td class="memItemLeft" align="right" valign="top"><a id="adad51582d2d810c9ad56dd03d763594a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="memitem:adad51582d2d810c9ad56dd03d763594a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#adad51582d2d810c9ad56dd03d763594a">reset</a> ()</td></tr>
+<tr class="memdesc:adad51582d2d810c9ad56dd03d763594a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#adad51582d2d810c9ad56dd03d763594a" title="Word::reset: Zera todos os bits da Word.">Word::reset</a>: Zera todos os bits da <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#adad51582d2d810c9ad56dd03d763594a">Mais...</a><br /></td></tr>
 <tr class="separator:adad51582d2d810c9ad56dd03d763594a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74c83bda7075ef04e84d01232ed6b846"><td class="memItemLeft" align="right" valign="top"><a id="a74c83bda7075ef04e84d01232ed6b846"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> position)</td></tr>
+<tr class="memitem:a74c83bda7075ef04e84d01232ed6b846"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a74c83bda7075ef04e84d01232ed6b846">reset</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> position)</td></tr>
+<tr class="memdesc:a74c83bda7075ef04e84d01232ed6b846"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#adad51582d2d810c9ad56dd03d763594a" title="Word::reset: Zera todos os bits da Word.">Word::reset</a>: Zera o bit da <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> em determinada posição.  <a href="classWord.html#a74c83bda7075ef04e84d01232ed6b846">Mais...</a><br /></td></tr>
 <tr class="separator:a74c83bda7075ef04e84d01232ed6b846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca423011899bab82b849ba2f5405b566"><td class="memItemLeft" align="right" valign="top"><a id="aca423011899bab82b849ba2f5405b566"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memitem:aca423011899bab82b849ba2f5405b566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#aca423011899bab82b849ba2f5405b566">reset</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memdesc:aca423011899bab82b849ba2f5405b566"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#adad51582d2d810c9ad56dd03d763594a" title="Word::reset: Zera todos os bits da Word.">Word::reset</a>: Zera os bits da <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> de um bit até outro.  <a href="classWord.html#aca423011899bab82b849ba2f5405b566">Mais...</a><br /></td></tr>
 <tr class="separator:aca423011899bab82b849ba2f5405b566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac17539f8700b16ad8d5cd7f8ce9f721"><td class="memItemLeft" align="right" valign="top"><a id="aac17539f8700b16ad8d5cd7f8ce9f721"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>flip</b> ()</td></tr>
+<tr class="memitem:aac17539f8700b16ad8d5cd7f8ce9f721"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#aac17539f8700b16ad8d5cd7f8ce9f721">flip</a> ()</td></tr>
+<tr class="memdesc:aac17539f8700b16ad8d5cd7f8ce9f721"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#aac17539f8700b16ad8d5cd7f8ce9f721" title="Word::flip: Inverte todos os bits da palavra.">Word::flip</a>: Inverte todos os bits da palavra.  <a href="classWord.html#aac17539f8700b16ad8d5cd7f8ce9f721">Mais...</a><br /></td></tr>
 <tr class="separator:aac17539f8700b16ad8d5cd7f8ce9f721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa03d7ad039ead3400da3f7bdc06c00f4"><td class="memItemLeft" align="right" valign="top"><a id="aa03d7ad039ead3400da3f7bdc06c00f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>flip</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> position)</td></tr>
+<tr class="memitem:aa03d7ad039ead3400da3f7bdc06c00f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#aa03d7ad039ead3400da3f7bdc06c00f4">flip</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> position)</td></tr>
+<tr class="memdesc:aa03d7ad039ead3400da3f7bdc06c00f4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#aac17539f8700b16ad8d5cd7f8ce9f721" title="Word::flip: Inverte todos os bits da palavra.">Word::flip</a>: Inverte o bit de determinada posição.  <a href="classWord.html#aa03d7ad039ead3400da3f7bdc06c00f4">Mais...</a><br /></td></tr>
 <tr class="separator:aa03d7ad039ead3400da3f7bdc06c00f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21b6113160a34e06aa922404069774c3"><td class="memItemLeft" align="right" valign="top"><a id="a21b6113160a34e06aa922404069774c3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>flip</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memitem:a21b6113160a34e06aa922404069774c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a21b6113160a34e06aa922404069774c3">flip</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memdesc:a21b6113160a34e06aa922404069774c3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#aac17539f8700b16ad8d5cd7f8ce9f721" title="Word::flip: Inverte todos os bits da palavra.">Word::flip</a>: Inverte os bits de um trecho da <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>.  <a href="classWord.html#a21b6113160a34e06aa922404069774c3">Mais...</a><br /></td></tr>
 <tr class="separator:a21b6113160a34e06aa922404069774c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a021a498a8ba9220494186b2aec21f0b8"><td class="memItemLeft" align="right" valign="top"><a id="a021a498a8ba9220494186b2aec21f0b8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>test</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> position)</td></tr>
+<tr class="memitem:a021a498a8ba9220494186b2aec21f0b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a021a498a8ba9220494186b2aec21f0b8">test</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> position)</td></tr>
+<tr class="memdesc:a021a498a8ba9220494186b2aec21f0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a021a498a8ba9220494186b2aec21f0b8" title="Word::test: Testa se determinado bit da palavra está ligado.">Word::test</a>: Testa se determinado bit da palavra está ligado.  <a href="classWord.html#a021a498a8ba9220494186b2aec21f0b8">Mais...</a><br /></td></tr>
 <tr class="separator:a021a498a8ba9220494186b2aec21f0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacdb20182b122a706104b6d333232c7c"><td class="memItemLeft" align="right" valign="top"><a id="aacdb20182b122a706104b6d333232c7c"></a>
-<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> ()</td></tr>
-<tr class="separator:aacdb20182b122a706104b6d333232c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e1be536a6afbb2371edb7dd5a47122a"><td class="memItemLeft" align="right" valign="top"><a id="a9e1be536a6afbb2371edb7dd5a47122a"></a>
-<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
+<tr class="memitem:ac8d9804cf9120d36317fa08fccb1d813"><td class="memItemLeft" align="right" valign="top"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#ac8d9804cf9120d36317fa08fccb1d813">count</a> ()</td></tr>
+<tr class="memdesc:ac8d9804cf9120d36317fa08fccb1d813"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#ac8d9804cf9120d36317fa08fccb1d813" title="Word::count: Conta quantos bits da palavra estão ligados.">Word::count</a>: Conta quantos bits da palavra estão ligados.  <a href="classWord.html#ac8d9804cf9120d36317fa08fccb1d813">Mais...</a><br /></td></tr>
+<tr class="separator:ac8d9804cf9120d36317fa08fccb1d813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1be536a6afbb2371edb7dd5a47122a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a9e1be536a6afbb2371edb7dd5a47122a">size</a> ()</td></tr>
+<tr class="memdesc:a9e1be536a6afbb2371edb7dd5a47122a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a9e1be536a6afbb2371edb7dd5a47122a" title="Word::size: Indica o tamanho da palavra.">Word::size</a>: Indica o tamanho da palavra.  <a href="classWord.html#a9e1be536a6afbb2371edb7dd5a47122a">Mais...</a><br /></td></tr>
 <tr class="separator:a9e1be536a6afbb2371edb7dd5a47122a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a715c413d5942865c568cf41b74dfecd5"><td class="memItemLeft" align="right" valign="top"><a id="a715c413d5942865c568cf41b74dfecd5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>none</b> ()</td></tr>
+<tr class="memitem:a715c413d5942865c568cf41b74dfecd5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a715c413d5942865c568cf41b74dfecd5">none</a> ()</td></tr>
+<tr class="memdesc:a715c413d5942865c568cf41b74dfecd5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a715c413d5942865c568cf41b74dfecd5" title="Word::none: Testa se algum bit da palavra está desligado.">Word::none</a>: Testa se algum bit da palavra está desligado.  <a href="classWord.html#a715c413d5942865c568cf41b74dfecd5">Mais...</a><br /></td></tr>
 <tr class="separator:a715c413d5942865c568cf41b74dfecd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaee03a20761487dc9adf849f95ab968"><td class="memItemLeft" align="right" valign="top"><a id="aaaee03a20761487dc9adf849f95ab968"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>any</b> ()</td></tr>
+<tr class="memitem:aaaee03a20761487dc9adf849f95ab968"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#aaaee03a20761487dc9adf849f95ab968">any</a> ()</td></tr>
+<tr class="memdesc:aaaee03a20761487dc9adf849f95ab968"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#aaaee03a20761487dc9adf849f95ab968" title="Word::any: Testa se algum bit da palavra está ligado.">Word::any</a>: Testa se algum bit da palavra está ligado.  <a href="classWord.html#aaaee03a20761487dc9adf849f95ab968">Mais...</a><br /></td></tr>
 <tr class="separator:aaaee03a20761487dc9adf849f95ab968"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47915f528ce431a53ee7d54adc35baa3"><td class="memItemLeft" align="right" valign="top"><a id="a47915f528ce431a53ee7d54adc35baa3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>all</b> ()</td></tr>
+<tr class="memitem:a47915f528ce431a53ee7d54adc35baa3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a47915f528ce431a53ee7d54adc35baa3">all</a> ()</td></tr>
+<tr class="memdesc:a47915f528ce431a53ee7d54adc35baa3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a47915f528ce431a53ee7d54adc35baa3" title="Word::all: Testa se todos os bits da palavra estão ligados.">Word::all</a>: Testa se todos os bits da palavra estão ligados.  <a href="classWord.html#a47915f528ce431a53ee7d54adc35baa3">Mais...</a><br /></td></tr>
 <tr class="separator:a47915f528ce431a53ee7d54adc35baa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafb6e57e5cb190a9893804951e90510b"><td class="memItemLeft" align="right" valign="top"><a id="aafb6e57e5cb190a9893804951e90510b"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const int value)</td></tr>
+<tr class="memitem:aafb6e57e5cb190a9893804951e90510b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#aafb6e57e5cb190a9893804951e90510b">operator=</a> (const int value)</td></tr>
+<tr class="memdesc:aafb6e57e5cb190a9893804951e90510b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#aafb6e57e5cb190a9893804951e90510b" title="Word::operator =: Sobrecarga do operador =.">Word::operator =</a>: Sobrecarga do operador =.  <a href="classWord.html#aafb6e57e5cb190a9893804951e90510b">Mais...</a><br /></td></tr>
 <tr class="separator:aafb6e57e5cb190a9893804951e90510b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa58347e5dbccd86156cd5bb2bca32617"><td class="memItemLeft" align="right" valign="top"><a id="aa58347e5dbccd86156cd5bb2bca32617"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memitem:aa58347e5dbccd86156cd5bb2bca32617"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#aa58347e5dbccd86156cd5bb2bca32617">operator+</a> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memdesc:aa58347e5dbccd86156cd5bb2bca32617"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#aa58347e5dbccd86156cd5bb2bca32617" title="Word::operator +: Sobrecarga do operador +.">Word::operator +</a>: Sobrecarga do operador +.  <a href="classWord.html#aa58347e5dbccd86156cd5bb2bca32617">Mais...</a><br /></td></tr>
 <tr class="separator:aa58347e5dbccd86156cd5bb2bca32617"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07e781b7adc5256140a840350b78cfc8"><td class="memItemLeft" align="right" valign="top"><a id="a07e781b7adc5256140a840350b78cfc8"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memitem:a07e781b7adc5256140a840350b78cfc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a07e781b7adc5256140a840350b78cfc8">operator-</a> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memdesc:a07e781b7adc5256140a840350b78cfc8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a07e781b7adc5256140a840350b78cfc8" title="Word::operator -: Sobrecarga do operador -.">Word::operator -</a>: Sobrecarga do operador -.  <a href="classWord.html#a07e781b7adc5256140a840350b78cfc8">Mais...</a><br /></td></tr>
 <tr class="separator:a07e781b7adc5256140a840350b78cfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46092d9a82b4e425b075069f92a9396d"><td class="memItemLeft" align="right" valign="top"><a id="a46092d9a82b4e425b075069f92a9396d"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memitem:a46092d9a82b4e425b075069f92a9396d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a46092d9a82b4e425b075069f92a9396d">operator*</a> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memdesc:a46092d9a82b4e425b075069f92a9396d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a46092d9a82b4e425b075069f92a9396d" title="Word::operator *: Sobrecarga do operador *.">Word::operator *</a>: Sobrecarga do operador *.  <a href="classWord.html#a46092d9a82b4e425b075069f92a9396d">Mais...</a><br /></td></tr>
 <tr class="separator:a46092d9a82b4e425b075069f92a9396d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29a5457e029dba35d77f894d9103b811"><td class="memItemLeft" align="right" valign="top"><a id="a29a5457e029dba35d77f894d9103b811"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memitem:a29a5457e029dba35d77f894d9103b811"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a29a5457e029dba35d77f894d9103b811">operator/</a> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memdesc:a29a5457e029dba35d77f894d9103b811"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a29a5457e029dba35d77f894d9103b811" title="Word::operator /: Sobrecarga do operador /.">Word::operator /</a>: Sobrecarga do operador /.  <a href="classWord.html#a29a5457e029dba35d77f894d9103b811">Mais...</a><br /></td></tr>
 <tr class="separator:a29a5457e029dba35d77f894d9103b811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78da9db99cf47d93b8dcc191f560cd40"><td class="memItemLeft" align="right" valign="top"><a id="a78da9db99cf47d93b8dcc191f560cd40"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (const int &amp;word)</td></tr>
+<tr class="memitem:a78da9db99cf47d93b8dcc191f560cd40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a78da9db99cf47d93b8dcc191f560cd40">operator/</a> (const int &amp;word)</td></tr>
+<tr class="memdesc:a78da9db99cf47d93b8dcc191f560cd40"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a29a5457e029dba35d77f894d9103b811" title="Word::operator /: Sobrecarga do operador /.">Word::operator /</a>: Sobrecarga do operador /.  <a href="classWord.html#a78da9db99cf47d93b8dcc191f560cd40">Mais...</a><br /></td></tr>
 <tr class="separator:a78da9db99cf47d93b8dcc191f560cd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8c4b0dd756ca6d1634ded2cc005e1f6"><td class="memItemLeft" align="right" valign="top"><a id="ad8c4b0dd756ca6d1634ded2cc005e1f6"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator&amp;</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memitem:ad8c4b0dd756ca6d1634ded2cc005e1f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#ad8c4b0dd756ca6d1634ded2cc005e1f6">operator&amp;</a> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memdesc:ad8c4b0dd756ca6d1634ded2cc005e1f6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#ad8c4b0dd756ca6d1634ded2cc005e1f6" title="Word::operator &amp;: Sobrecarga do operador &amp;.">Word::operator &amp;</a>: Sobrecarga do operador &amp;.  <a href="classWord.html#ad8c4b0dd756ca6d1634ded2cc005e1f6">Mais...</a><br /></td></tr>
 <tr class="separator:ad8c4b0dd756ca6d1634ded2cc005e1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ef6d102cbea81dafdb460dec9ced6a7"><td class="memItemLeft" align="right" valign="top"><a id="a8ef6d102cbea81dafdb460dec9ced6a7"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator|</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memitem:a8ef6d102cbea81dafdb460dec9ced6a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a8ef6d102cbea81dafdb460dec9ced6a7">operator|</a> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memdesc:a8ef6d102cbea81dafdb460dec9ced6a7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a8ef6d102cbea81dafdb460dec9ced6a7" title="Word::operator |: Sobrecarga do operador |.">Word::operator |</a>: Sobrecarga do operador |.  <a href="classWord.html#a8ef6d102cbea81dafdb460dec9ced6a7">Mais...</a><br /></td></tr>
 <tr class="separator:a8ef6d102cbea81dafdb460dec9ced6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7f3e506edf31a2cfb0483f32bfd4337"><td class="memItemLeft" align="right" valign="top"><a id="ab7f3e506edf31a2cfb0483f32bfd4337"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&amp;&amp;</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memitem:ab7f3e506edf31a2cfb0483f32bfd4337"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#ab7f3e506edf31a2cfb0483f32bfd4337">operator&amp;&amp;</a> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memdesc:ab7f3e506edf31a2cfb0483f32bfd4337"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#ab7f3e506edf31a2cfb0483f32bfd4337" title="Word::operator &amp;&amp;: Sobrecarga do operador &amp;&amp;.">Word::operator &amp;&amp;</a>: Sobrecarga do operador &amp;&amp;.  <a href="classWord.html#ab7f3e506edf31a2cfb0483f32bfd4337">Mais...</a><br /></td></tr>
 <tr class="separator:ab7f3e506edf31a2cfb0483f32bfd4337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addda8d374c82e1488b1a5bdee3b2a4a0"><td class="memItemLeft" align="right" valign="top"><a id="addda8d374c82e1488b1a5bdee3b2a4a0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator||</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memitem:addda8d374c82e1488b1a5bdee3b2a4a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#addda8d374c82e1488b1a5bdee3b2a4a0">operator||</a> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memdesc:addda8d374c82e1488b1a5bdee3b2a4a0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#addda8d374c82e1488b1a5bdee3b2a4a0" title="Word::operator ||: Sobrecarga do operador ||.">Word::operator ||</a>: Sobrecarga do operador ||.  <a href="classWord.html#addda8d374c82e1488b1a5bdee3b2a4a0">Mais...</a><br /></td></tr>
 <tr class="separator:addda8d374c82e1488b1a5bdee3b2a4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa44cf452cce7687e19463056e51426"><td class="memItemLeft" align="right" valign="top"><a id="affa44cf452cce7687e19463056e51426"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator~</b> ()</td></tr>
+<tr class="memitem:affa44cf452cce7687e19463056e51426"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#affa44cf452cce7687e19463056e51426">operator~</a> ()</td></tr>
+<tr class="memdesc:affa44cf452cce7687e19463056e51426"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#affa44cf452cce7687e19463056e51426" title="Word::operator ~: Sobrecarga do operador ~.">Word::operator ~</a>: Sobrecarga do operador ~.  <a href="classWord.html#affa44cf452cce7687e19463056e51426">Mais...</a><br /></td></tr>
 <tr class="separator:affa44cf452cce7687e19463056e51426"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcc4dfaa260ad47db87d34fd2bf67786"><td class="memItemLeft" align="right" valign="top"><a id="afcc4dfaa260ad47db87d34fd2bf67786"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!</b> ()</td></tr>
+<tr class="memitem:afcc4dfaa260ad47db87d34fd2bf67786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#afcc4dfaa260ad47db87d34fd2bf67786">operator!</a> ()</td></tr>
+<tr class="memdesc:afcc4dfaa260ad47db87d34fd2bf67786"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#afcc4dfaa260ad47db87d34fd2bf67786" title="Word::operator !: Sobrecarga do operador !">Word::operator !</a>: Sobrecarga do operador !  <a href="classWord.html#afcc4dfaa260ad47db87d34fd2bf67786">Mais...</a><br /></td></tr>
 <tr class="separator:afcc4dfaa260ad47db87d34fd2bf67786"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5acd1b4c17610e217245951db1b2d561"><td class="memItemLeft" align="right" valign="top"><a id="a5acd1b4c17610e217245951db1b2d561"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memitem:a5acd1b4c17610e217245951db1b2d561"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a5acd1b4c17610e217245951db1b2d561">operator==</a> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
+<tr class="memdesc:a5acd1b4c17610e217245951db1b2d561"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a5acd1b4c17610e217245951db1b2d561" title="Word::operator ==: Sobrecarga do operador ==.">Word::operator ==</a>: Sobrecarga do operador ==.  <a href="classWord.html#a5acd1b4c17610e217245951db1b2d561">Mais...</a><br /></td></tr>
 <tr class="separator:a5acd1b4c17610e217245951db1b2d561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a620c6246d8bc9c2e471626a4f50d9af7"><td class="memItemLeft" align="right" valign="top"><a id="a620c6246d8bc9c2e471626a4f50d9af7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const int &amp;value)</td></tr>
+<tr class="memitem:a620c6246d8bc9c2e471626a4f50d9af7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a620c6246d8bc9c2e471626a4f50d9af7">operator==</a> (const int &amp;value)</td></tr>
+<tr class="memdesc:a620c6246d8bc9c2e471626a4f50d9af7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a5acd1b4c17610e217245951db1b2d561" title="Word::operator ==: Sobrecarga do operador ==.">Word::operator ==</a>: Sobrecarga do operador ==.  <a href="classWord.html#a620c6246d8bc9c2e471626a4f50d9af7">Mais...</a><br /></td></tr>
 <tr class="separator:a620c6246d8bc9c2e471626a4f50d9af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e12829f77e7a5ab30b78fb93611fd75"><td class="memItemLeft" align="right" valign="top"><a id="a4e12829f77e7a5ab30b78fb93611fd75"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>extendInt</b> (int position)</td></tr>
+<tr class="memitem:a756ffb92a2cc54adad3b83d09e333947"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a756ffb92a2cc54adad3b83d09e333947">operator!=</a> (const int &amp;value)</td></tr>
+<tr class="memdesc:a756ffb92a2cc54adad3b83d09e333947"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a756ffb92a2cc54adad3b83d09e333947" title="Word::operator !=: Sobrecarga do operador !=.">Word::operator !=</a>: Sobrecarga do operador !=.  <a href="classWord.html#a756ffb92a2cc54adad3b83d09e333947">Mais...</a><br /></td></tr>
+<tr class="separator:a756ffb92a2cc54adad3b83d09e333947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e12829f77e7a5ab30b78fb93611fd75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a4e12829f77e7a5ab30b78fb93611fd75">extendInt</a> (int position)</td></tr>
+<tr class="memdesc:a4e12829f77e7a5ab30b78fb93611fd75"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a4e12829f77e7a5ab30b78fb93611fd75" title="Word::extendInt: transforma um número com poucos bits em um número de 32 bits.">Word::extendInt</a>: transforma um número com poucos bits em um número de 32 bits.  <a href="classWord.html#a4e12829f77e7a5ab30b78fb93611fd75">Mais...</a><br /></td></tr>
 <tr class="separator:a4e12829f77e7a5ab30b78fb93611fd75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00bbb9065cdd9a71d4d3e58c7d34d2cb"><td class="memItemLeft" align="right" valign="top"><a id="a00bbb9065cdd9a71d4d3e58c7d34d2cb"></a>
-<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getInteger</b> ()</td></tr>
-<tr class="separator:a00bbb9065cdd9a71d4d3e58c7d34d2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93460113c4f9a82470a262fcf1cf0aff"><td class="memItemLeft" align="right" valign="top"><a id="a93460113c4f9a82470a262fcf1cf0aff"></a>
-<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getInteger</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memitem:a2fa49c6651bf133d453996867a30fb9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a> ()</td></tr>
+<tr class="memdesc:a2fa49c6651bf133d453996867a30fb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c" title="Word::getInteger: Indica o valor decimal da palavra.">Word::getInteger</a>: Indica o valor decimal da palavra.  <a href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">Mais...</a><br /></td></tr>
+<tr class="separator:a2fa49c6651bf133d453996867a30fb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93460113c4f9a82470a262fcf1cf0aff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a93460113c4f9a82470a262fcf1cf0aff">getInteger</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last)</td></tr>
+<tr class="memdesc:a93460113c4f9a82470a262fcf1cf0aff"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c" title="Word::getInteger: Indica o valor decimal da palavra.">Word::getInteger</a>: Indica o valor decimal da palavra.  <a href="classWord.html#a93460113c4f9a82470a262fcf1cf0aff">Mais...</a><br /></td></tr>
 <tr class="separator:a93460113c4f9a82470a262fcf1cf0aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada1b59ea14347894397bad01488a3d98"><td class="memItemLeft" align="right" valign="top"><a id="ada1b59ea14347894397bad01488a3d98"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>to_int</b> (char value)</td></tr>
+<tr class="memitem:ada1b59ea14347894397bad01488a3d98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#ada1b59ea14347894397bad01488a3d98">to_int</a> (char value)</td></tr>
+<tr class="memdesc:ada1b59ea14347894397bad01488a3d98"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#ada1b59ea14347894397bad01488a3d98" title="Word::to_int: Converte um caractere numérico para seu valor decimal.">Word::to_int</a>: Converte um caractere numérico para seu valor decimal.  <a href="classWord.html#ada1b59ea14347894397bad01488a3d98">Mais...</a><br /></td></tr>
 <tr class="separator:ada1b59ea14347894397bad01488a3d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a003f155561319759fb38e9804b2a6d24"><td class="memItemLeft" align="right" valign="top"><a id="a003f155561319759fb38e9804b2a6d24"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>to_int</b> (QChar value)</td></tr>
+<tr class="memitem:a003f155561319759fb38e9804b2a6d24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a003f155561319759fb38e9804b2a6d24">to_int</a> (QChar value)</td></tr>
 <tr class="separator:a003f155561319759fb38e9804b2a6d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d96f42a15fe62b9a44a766b8f659b5"><td class="memItemLeft" align="right" valign="top"><a id="ab6d96f42a15fe62b9a44a766b8f659b5"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>to_char</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</td></tr>
+<tr class="memitem:ab6d96f42a15fe62b9a44a766b8f659b5"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#ab6d96f42a15fe62b9a44a766b8f659b5">to_char</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</td></tr>
+<tr class="memdesc:ab6d96f42a15fe62b9a44a766b8f659b5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#ab6d96f42a15fe62b9a44a766b8f659b5" title="Word::to_char: Converte um dígito decimal para um caractere.">Word::to_char</a>: Converte um dígito decimal para um caractere.  <a href="classWord.html#ab6d96f42a15fe62b9a44a766b8f659b5">Mais...</a><br /></td></tr>
 <tr class="separator:ab6d96f42a15fe62b9a44a766b8f659b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9f48422ff4a19072a7de1262bf1294e"><td class="memItemLeft" align="right" valign="top"><a id="af9f48422ff4a19072a7de1262bf1294e"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>getString</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base=2)</td></tr>
+<tr class="memitem:af9f48422ff4a19072a7de1262bf1294e"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#af9f48422ff4a19072a7de1262bf1294e">getString</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base=2)</td></tr>
+<tr class="memdesc:af9f48422ff4a19072a7de1262bf1294e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#af9f48422ff4a19072a7de1262bf1294e" title="Word::getString: Obtém o número decimal que representa a palavra no formato de string.">Word::getString</a>: Obtém o número decimal que representa a palavra no formato de string.  <a href="classWord.html#af9f48422ff4a19072a7de1262bf1294e">Mais...</a><br /></td></tr>
 <tr class="separator:af9f48422ff4a19072a7de1262bf1294e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b4ef9522bee8400bb8240187782a0df"><td class="memItemLeft" align="right" valign="top"><a id="a5b4ef9522bee8400bb8240187782a0df"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>getString</b> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base=2)</td></tr>
+<tr class="memitem:a5b4ef9522bee8400bb8240187782a0df"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a5b4ef9522bee8400bb8240187782a0df">getString</a> (<a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> first, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> last, <a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> base=2)</td></tr>
+<tr class="memdesc:a5b4ef9522bee8400bb8240187782a0df"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#af9f48422ff4a19072a7de1262bf1294e" title="Word::getString: Obtém o número decimal que representa a palavra no formato de string.">Word::getString</a>: Obtém o número decimal que representa a palavra no formato de string.  <a href="classWord.html#a5b4ef9522bee8400bb8240187782a0df">Mais...</a><br /></td></tr>
 <tr class="separator:a5b4ef9522bee8400bb8240187782a0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a415fc9d3a9633e528c83ae371241ba78"><td class="memItemLeft" align="right" valign="top"><a id="a415fc9d3a9633e528c83ae371241ba78"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>getDecimal</b> ()</td></tr>
+<tr class="memitem:a415fc9d3a9633e528c83ae371241ba78"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a415fc9d3a9633e528c83ae371241ba78">getDecimal</a> ()</td></tr>
+<tr class="memdesc:a415fc9d3a9633e528c83ae371241ba78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a415fc9d3a9633e528c83ae371241ba78" title="Word::getDecimal: Obtém o número decimal que representa a palavra no formato de QString.">Word::getDecimal</a>: Obtém o número decimal que representa a palavra no formato de QString.  <a href="classWord.html#a415fc9d3a9633e528c83ae371241ba78">Mais...</a><br /></td></tr>
 <tr class="separator:a415fc9d3a9633e528c83ae371241ba78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfedadf66cf9a3738d0b1444909d7dc1"><td class="memItemLeft" align="right" valign="top"><a id="adfedadf66cf9a3738d0b1444909d7dc1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Word</b> (int value)</td></tr>
-<tr class="separator:adfedadf66cf9a3738d0b1444909d7dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8332bc4b3afa282ce858e8cfcf2eeff1"><td class="memItemLeft" align="right" valign="top"><a id="a8332bc4b3afa282ce858e8cfcf2eeff1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Word</b> (<a class="el" href="classWord.html">Word</a> *word)</td></tr>
-<tr class="separator:a8332bc4b3afa282ce858e8cfcf2eeff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05465a335170ee945d42207c7db3358"><td class="memItemLeft" align="right" valign="top"><a id="ad05465a335170ee945d42207c7db3358"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Word</b> (bool value=false)</td></tr>
-<tr class="separator:ad05465a335170ee945d42207c7db3358"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea10c946f73eb17cf0bda0876b406176"><td class="memItemLeft" align="right" valign="top"><a id="aea10c946f73eb17cf0bda0876b406176"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Word</b> (QString binary, int base=2)</td></tr>
-<tr class="separator:aea10c946f73eb17cf0bda0876b406176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5776d6a01d60b5972c711deabfbd7d01"><td class="memItemLeft" align="right" valign="top"><a id="a5776d6a01d60b5972c711deabfbd7d01"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>length_of_base</b> (int base)</td></tr>
-<tr class="separator:a5776d6a01d60b5972c711deabfbd7d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0d8a095018c69cd3299f007cfe9d65a"><td class="memItemLeft" align="right" valign="top"><a id="aa0d8a095018c69cd3299f007cfe9d65a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mask</b> (int first, int last)</td></tr>
-<tr class="separator:aa0d8a095018c69cd3299f007cfe9d65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56a8b6c7007f3903d7381a8c1d0808de"><td class="memItemLeft" align="right" valign="top"><a id="a56a8b6c7007f3903d7381a8c1d0808de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> ()</td></tr>
-<tr class="separator:a56a8b6c7007f3903d7381a8c1d0808de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1bd6f3f673d15e884b2c4fae0cd1da3"><td class="memItemLeft" align="right" valign="top"><a id="ae1bd6f3f673d15e884b2c4fae0cd1da3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="classWord.html">Word</a> word)</td></tr>
-<tr class="separator:ae1bd6f3f673d15e884b2c4fae0cd1da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ac01b87ef0fd1bcd3a8eb737fbcde2c"><td class="memItemLeft" align="right" valign="top"><a id="a3ac01b87ef0fd1bcd3a8eb737fbcde2c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (int position)</td></tr>
-<tr class="separator:a3ac01b87ef0fd1bcd3a8eb737fbcde2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bf833ae3199f17ef99b36016095da0c"><td class="memItemLeft" align="right" valign="top"><a id="a0bf833ae3199f17ef99b36016095da0c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (int first, int last)</td></tr>
-<tr class="separator:a0bf833ae3199f17ef99b36016095da0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba057df2455c82eab839adb0fe8ae073"><td class="memItemLeft" align="right" valign="top"><a id="aba057df2455c82eab839adb0fe8ae073"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (int value, int first, int last)</td></tr>
-<tr class="separator:aba057df2455c82eab839adb0fe8ae073"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a687a1630476865585ad4523a2d96f14b"><td class="memItemLeft" align="right" valign="top"><a id="a687a1630476865585ad4523a2d96f14b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (QString binary, int first, int last, int base=2)</td></tr>
-<tr class="separator:a687a1630476865585ad4523a2d96f14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adad51582d2d810c9ad56dd03d763594a"><td class="memItemLeft" align="right" valign="top"><a id="adad51582d2d810c9ad56dd03d763594a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
-<tr class="separator:adad51582d2d810c9ad56dd03d763594a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42cc328b5157eea6abb5a39e78fe9e41"><td class="memItemLeft" align="right" valign="top"><a id="a42cc328b5157eea6abb5a39e78fe9e41"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (int position)</td></tr>
-<tr class="separator:a42cc328b5157eea6abb5a39e78fe9e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1db75e5710c18ff735395e5e40c6bb23"><td class="memItemLeft" align="right" valign="top"><a id="a1db75e5710c18ff735395e5e40c6bb23"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (int first, int last)</td></tr>
-<tr class="separator:a1db75e5710c18ff735395e5e40c6bb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac17539f8700b16ad8d5cd7f8ce9f721"><td class="memItemLeft" align="right" valign="top"><a id="aac17539f8700b16ad8d5cd7f8ce9f721"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>flip</b> ()</td></tr>
-<tr class="separator:aac17539f8700b16ad8d5cd7f8ce9f721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13ca4cecb8d27a526d5f3846c54a57bd"><td class="memItemLeft" align="right" valign="top"><a id="a13ca4cecb8d27a526d5f3846c54a57bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>flip</b> (int position)</td></tr>
-<tr class="separator:a13ca4cecb8d27a526d5f3846c54a57bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1415d017ae669ddb4c1ae524b98e4ee9"><td class="memItemLeft" align="right" valign="top"><a id="a1415d017ae669ddb4c1ae524b98e4ee9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>flip</b> (int first, int last)</td></tr>
-<tr class="separator:a1415d017ae669ddb4c1ae524b98e4ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0089f18513df40958909318cd846e3"><td class="memItemLeft" align="right" valign="top"><a id="a1e0089f18513df40958909318cd846e3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>test</b> (int position)</td></tr>
-<tr class="separator:a1e0089f18513df40958909318cd846e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacdb20182b122a706104b6d333232c7c"><td class="memItemLeft" align="right" valign="top"><a id="aacdb20182b122a706104b6d333232c7c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> ()</td></tr>
-<tr class="separator:aacdb20182b122a706104b6d333232c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a715c413d5942865c568cf41b74dfecd5"><td class="memItemLeft" align="right" valign="top"><a id="a715c413d5942865c568cf41b74dfecd5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>none</b> ()</td></tr>
-<tr class="separator:a715c413d5942865c568cf41b74dfecd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaee03a20761487dc9adf849f95ab968"><td class="memItemLeft" align="right" valign="top"><a id="aaaee03a20761487dc9adf849f95ab968"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>any</b> ()</td></tr>
-<tr class="separator:aaaee03a20761487dc9adf849f95ab968"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47915f528ce431a53ee7d54adc35baa3"><td class="memItemLeft" align="right" valign="top"><a id="a47915f528ce431a53ee7d54adc35baa3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>all</b> ()</td></tr>
-<tr class="separator:a47915f528ce431a53ee7d54adc35baa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafb6e57e5cb190a9893804951e90510b"><td class="memItemLeft" align="right" valign="top"><a id="aafb6e57e5cb190a9893804951e90510b"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const int value)</td></tr>
-<tr class="separator:aafb6e57e5cb190a9893804951e90510b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa58347e5dbccd86156cd5bb2bca32617"><td class="memItemLeft" align="right" valign="top"><a id="aa58347e5dbccd86156cd5bb2bca32617"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
-<tr class="separator:aa58347e5dbccd86156cd5bb2bca32617"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07e781b7adc5256140a840350b78cfc8"><td class="memItemLeft" align="right" valign="top"><a id="a07e781b7adc5256140a840350b78cfc8"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
-<tr class="separator:a07e781b7adc5256140a840350b78cfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46092d9a82b4e425b075069f92a9396d"><td class="memItemLeft" align="right" valign="top"><a id="a46092d9a82b4e425b075069f92a9396d"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
-<tr class="separator:a46092d9a82b4e425b075069f92a9396d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29a5457e029dba35d77f894d9103b811"><td class="memItemLeft" align="right" valign="top"><a id="a29a5457e029dba35d77f894d9103b811"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
-<tr class="separator:a29a5457e029dba35d77f894d9103b811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8c4b0dd756ca6d1634ded2cc005e1f6"><td class="memItemLeft" align="right" valign="top"><a id="ad8c4b0dd756ca6d1634ded2cc005e1f6"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator&amp;</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
-<tr class="separator:ad8c4b0dd756ca6d1634ded2cc005e1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ef6d102cbea81dafdb460dec9ced6a7"><td class="memItemLeft" align="right" valign="top"><a id="a8ef6d102cbea81dafdb460dec9ced6a7"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator|</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
-<tr class="separator:a8ef6d102cbea81dafdb460dec9ced6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7f3e506edf31a2cfb0483f32bfd4337"><td class="memItemLeft" align="right" valign="top"><a id="ab7f3e506edf31a2cfb0483f32bfd4337"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&amp;&amp;</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
-<tr class="separator:ab7f3e506edf31a2cfb0483f32bfd4337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addda8d374c82e1488b1a5bdee3b2a4a0"><td class="memItemLeft" align="right" valign="top"><a id="addda8d374c82e1488b1a5bdee3b2a4a0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator||</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
-<tr class="separator:addda8d374c82e1488b1a5bdee3b2a4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa44cf452cce7687e19463056e51426"><td class="memItemLeft" align="right" valign="top"><a id="affa44cf452cce7687e19463056e51426"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator~</b> ()</td></tr>
-<tr class="separator:affa44cf452cce7687e19463056e51426"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcc4dfaa260ad47db87d34fd2bf67786"><td class="memItemLeft" align="right" valign="top"><a id="afcc4dfaa260ad47db87d34fd2bf67786"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator!</b> ()</td></tr>
-<tr class="separator:afcc4dfaa260ad47db87d34fd2bf67786"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5acd1b4c17610e217245951db1b2d561"><td class="memItemLeft" align="right" valign="top"><a id="a5acd1b4c17610e217245951db1b2d561"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classWord.html">Word</a> &amp;word)</td></tr>
-<tr class="separator:a5acd1b4c17610e217245951db1b2d561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00bbb9065cdd9a71d4d3e58c7d34d2cb"><td class="memItemLeft" align="right" valign="top"><a id="a00bbb9065cdd9a71d4d3e58c7d34d2cb"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getInteger</b> ()</td></tr>
-<tr class="separator:a00bbb9065cdd9a71d4d3e58c7d34d2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19451a74fd20ef9305484b74ba5b215c"><td class="memItemLeft" align="right" valign="top"><a id="a19451a74fd20ef9305484b74ba5b215c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getInteger</b> (int first, int last)</td></tr>
-<tr class="separator:a19451a74fd20ef9305484b74ba5b215c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada1b59ea14347894397bad01488a3d98"><td class="memItemLeft" align="right" valign="top"><a id="ada1b59ea14347894397bad01488a3d98"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>to_int</b> (char value)</td></tr>
-<tr class="separator:ada1b59ea14347894397bad01488a3d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6694d7031e9ebf043264d2b9f444ad50"><td class="memItemLeft" align="right" valign="top"><a id="a6694d7031e9ebf043264d2b9f444ad50"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>to_char</b> (int value)</td></tr>
-<tr class="separator:a6694d7031e9ebf043264d2b9f444ad50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24521892172bf393192c2de02db5073b"><td class="memItemLeft" align="right" valign="top"><a id="a24521892172bf393192c2de02db5073b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_bit_in_integer</b> (int *number, int position, bool value)</td></tr>
-<tr class="separator:a24521892172bf393192c2de02db5073b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a245f10327f4225c018c703d065b60bb7"><td class="memItemLeft" align="right" valign="top"><a id="a245f10327f4225c018c703d065b60bb7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>test_bit_in_integer</b> (int *value, int position)</td></tr>
-<tr class="separator:a245f10327f4225c018c703d065b60bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae50c12d40c762d96813b89449fb97c26"><td class="memItemLeft" align="right" valign="top"><a id="ae50c12d40c762d96813b89449fb97c26"></a>
-<a class="el" href="classWord.html">Word</a>&#160;</td><td class="memItemRight" valign="bottom"><b>integer_to_booleanVector</b> (int value)</td></tr>
-<tr class="separator:ae50c12d40c762d96813b89449fb97c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2788b8fac1ac723a6027a8b90da34d5e"><td class="memItemLeft" align="right" valign="top"><a id="a2788b8fac1ac723a6027a8b90da34d5e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>booleanVector_to_integer</b> (<a class="el" href="classWord.html">Word</a> word)</td></tr>
-<tr class="separator:a2788b8fac1ac723a6027a8b90da34d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f497be68fdf372d75e982fcd51a0c02"><td class="memItemLeft" align="right" valign="top"><a id="a1f497be68fdf372d75e982fcd51a0c02"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>getString</b> (int base=2)</td></tr>
-<tr class="separator:a1f497be68fdf372d75e982fcd51a0c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a465439b798fdced2e2e0104b94fdf697"><td class="memItemLeft" align="right" valign="top"><a id="a465439b798fdced2e2e0104b94fdf697"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>getString</b> (int first, int last, int base=2)</td></tr>
-<tr class="separator:a465439b798fdced2e2e0104b94fdf697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fbcaae6859604d92e94cab540cb3523"><td class="memItemLeft" align="right" valign="top"><a id="a1fbcaae6859604d92e94cab540cb3523"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWord.html#a1fbcaae6859604d92e94cab540cb3523">~Word</a> ()</td></tr>
+<tr class="memdesc:a1fbcaae6859604d92e94cab540cb3523"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWord.html#a1fbcaae6859604d92e94cab540cb3523" title="Word::~Word: Destrutor da classe Word.">Word::~Word</a>: Destrutor da classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. <br /></td></tr>
+<tr class="separator:a1fbcaae6859604d92e94cab540cb3523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p>A classe <a class="el" href="classWord.html" title="A classe Word:">Word</a>: </p>
+<div class="textblock"><p>A classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: Representação de uma palavra de 32 bits e suas operações. </p>
 
-<p class="definition">Definição na linha <a class="el" href="word_8h_source.html#l00029">29</a> do arquivo <a class="el" href="word_8h_source.html">word.h</a>.</p>
-</div><hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<p class="definition">Definição na linha <a class="el" href="word_8h_source.html#l00030">30</a> do arquivo <a class="el" href="word_8h_source.html">word.h</a>.</p>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a047807e2fb3df4189d6cc428e10b57df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047807e2fb3df4189d6cc428e10b57df">&#9670;&nbsp;</a></span>Word() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Word::Word </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a047807e2fb3df4189d6cc428e10b57df" title="Word::Word Construtor da classe Word.">Word::Word</a> Construtor da classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Inicializa a partir de um valor inteiro </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>value: um valor inteiro </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00041">41</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8332bc4b3afa282ce858e8cfcf2eeff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8332bc4b3afa282ce858e8cfcf2eeff1">&#9670;&nbsp;</a></span>Word() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Word::Word </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classWord.html">Word</a> *&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a047807e2fb3df4189d6cc428e10b57df" title="Word::Word Construtor da classe Word.">Word::Word</a> Construtor da classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Inicializa a nova palavra a partir de uma antiga </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a></td><td>word: Local de memória de outra <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00031">31</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abf50663778058667ba440e73ac0d46bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf50663778058667ba440e73ac0d46bc">&#9670;&nbsp;</a></span>Word() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Word::Word </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>set</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a047807e2fb3df4189d6cc428e10b57df" title="Word::Word Construtor da classe Word.">Word::Word</a>: Construtor da classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Inicializa todos os bits ligados ou desligados </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bool</td><td>set: liga todos os bits da palavra quando true </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00016">16</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac84c523cd6122ce65eb3dd1fa73bb814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac84c523cd6122ce65eb3dd1fa73bb814">&#9670;&nbsp;</a></span>Word() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Word::Word </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>binary</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>base</em> = <code>2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a047807e2fb3df4189d6cc428e10b57df" title="Word::Word Construtor da classe Word.">Word::Word</a> Construtor da classe <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Inicializa a partir de uma string que representa um número em determinada base </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QString</td><td>binary: representação textual de um número </td></tr>
+    <tr><td class="paramname">DATA</td><td>base: base do número representado na string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00054">54</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a47915f528ce431a53ee7d54adc35baa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47915f528ce431a53ee7d54adc35baa3">&#9670;&nbsp;</a></span>all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Word::all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a47915f528ce431a53ee7d54adc35baa3" title="Word::all: Testa se todos os bits da palavra estão ligados.">Word::all</a>: Testa se todos os bits da palavra estão ligados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>bool: Verdadeiro quando todos os bits da palavra estão ligados </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00302">302</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaaee03a20761487dc9adf849f95ab968"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaee03a20761487dc9adf849f95ab968">&#9670;&nbsp;</a></span>any()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Word::any </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#aaaee03a20761487dc9adf849f95ab968" title="Word::any: Testa se algum bit da palavra está ligado.">Word::any</a>: Testa se algum bit da palavra está ligado. </p>
+<dl class="section return"><dt>Retorna</dt><dd>bool: Verdadeiro quando todos os bits estão ligados </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00279">279</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac8d9804cf9120d36317fa08fccb1d813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d9804cf9120d36317fa08fccb1d813">&#9670;&nbsp;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> Word::count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#ac8d9804cf9120d36317fa08fccb1d813" title="Word::count: Conta quantos bits da palavra estão ligados.">Word::count</a>: Conta quantos bits da palavra estão ligados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>DATA: Quantidade de de bits ligados </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00243">243</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4e12829f77e7a5ab30b78fb93611fd75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e12829f77e7a5ab30b78fb93611fd75">&#9670;&nbsp;</a></span>extendInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::extendInt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a4e12829f77e7a5ab30b78fb93611fd75" title="Word::extendInt: transforma um número com poucos bits em um número de 32 bits.">Word::extendInt</a>: transforma um número com poucos bits em um número de 32 bits. </p>
+<p>Copia o último bit para todos os de mais alta ordem </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>último bit carregado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00520">520</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aac17539f8700b16ad8d5cd7f8ce9f721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac17539f8700b16ad8d5cd7f8ce9f721">&#9670;&nbsp;</a></span>flip() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::flip </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#aac17539f8700b16ad8d5cd7f8ce9f721" title="Word::flip: Inverte todos os bits da palavra.">Word::flip</a>: Inverte todos os bits da palavra. </p>
+<p>Cada bit da palavra é negado </p>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00210">210</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a21b6113160a34e06aa922404069774c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b6113160a34e06aa922404069774c3">&#9670;&nbsp;</a></span>flip() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::flip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#aac17539f8700b16ad8d5cd7f8ce9f721" title="Word::flip: Inverte todos os bits da palavra.">Word::flip</a>: Inverte os bits de um trecho da <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Somente (last - first) bits da palavra são negados </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>first: posição incial para alterar </td></tr>
+    <tr><td class="paramname">DATA</td><td>last: posição incial para alterar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00233">233</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa03d7ad039ead3400da3f7bdc06c00f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa03d7ad039ead3400da3f7bdc06c00f4">&#9670;&nbsp;</a></span>flip() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::flip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#aac17539f8700b16ad8d5cd7f8ce9f721" title="Word::flip: Inverte todos os bits da palavra.">Word::flip</a>: Inverte o bit de determinada posição. </p>
+<p>Somente um bit da palavra é negado </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>position: bit a ser invertido </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00221">221</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a415fc9d3a9633e528c83ae371241ba78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a415fc9d3a9633e528c83ae371241ba78">&#9670;&nbsp;</a></span>getDecimal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Word::getDecimal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a415fc9d3a9633e528c83ae371241ba78" title="Word::getDecimal: Obtém o número decimal que representa a palavra no formato de QString.">Word::getDecimal</a>: Obtém o número decimal que representa a palavra no formato de QString. </p>
+<dl class="section return"><dt>Retorna</dt><dd>QString: Representação do número da palavra </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00642">642</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2fa49c6651bf133d453996867a30fb9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa49c6651bf133d453996867a30fb9c">&#9670;&nbsp;</a></span>getInteger() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> Word::getInteger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c" title="Word::getInteger: Indica o valor decimal da palavra.">Word::getInteger</a>: Indica o valor decimal da palavra. </p>
+<p>Valor da palavra completa </p><dl class="section return"><dt>Retorna</dt><dd>DATA: Valor decimal da palavra </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00533">533</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a93460113c4f9a82470a262fcf1cf0aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93460113c4f9a82470a262fcf1cf0aff">&#9670;&nbsp;</a></span>getInteger() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> Word::getInteger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c" title="Word::getInteger: Indica o valor decimal da palavra.">Word::getInteger</a>: Indica o valor decimal da palavra. </p>
+<p>Valor dos bits delimitados pelos parâmetros </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>first: posição incial </td></tr>
+    <tr><td class="paramname">DATA</td><td>last: posição incial </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>DATA: Valor inteiro da posição delimitada </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00546">546</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af9f48422ff4a19072a7de1262bf1294e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f48422ff4a19072a7de1262bf1294e">&#9670;&nbsp;</a></span>getString() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Word::getString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>base</em> = <code>2</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#af9f48422ff4a19072a7de1262bf1294e" title="Word::getString: Obtém o número decimal que representa a palavra no formato de string.">Word::getString</a>: Obtém o número decimal que representa a palavra no formato de string. </p>
+<p>Sempre pega o valor de toda a palavra </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>base </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd></dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00597">597</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5b4ef9522bee8400bb8240187782a0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4ef9522bee8400bb8240187782a0df">&#9670;&nbsp;</a></span>getString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Word::getString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>base</em> = <code>2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#af9f48422ff4a19072a7de1262bf1294e" title="Word::getString: Obtém o número decimal que representa a palavra no formato de string.">Word::getString</a>: Obtém o número decimal que representa a palavra no formato de string. </p>
+<p>Pega o valor apenas de um trecho da palavra </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>first: posição incial </td></tr>
+    <tr><td class="paramname">DATA</td><td>last: posição incial </td></tr>
+    <tr><td class="paramname">DATA</td><td>base: Base do número </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd></dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00612">612</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9eb04eebc3437a667493cb0301c02b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb04eebc3437a667493cb0301c02b00">&#9670;&nbsp;</a></span>length_of_base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> Word::length_of_base </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a9eb04eebc3437a667493cb0301c02b00" title="Word::length_of_base: Indica o tamanho da base.">Word::length_of_base</a>: Indica o tamanho da base. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>número inteiro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>DATA tamanho da base </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00064">64</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a05ea4fffa16f698bb72a81876fc72e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ea4fffa16f698bb72a81876fc72e9f">&#9670;&nbsp;</a></span>mask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> Word::mask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a05ea4fffa16f698bb72a81876fc72e9f" title="Word::mask: Gera uma máscara de bits ligados entre as posições passadas como parâmetro.">Word::mask</a>: Gera uma máscara de bits ligados entre as posições passadas como parâmetro. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>first: posição incial da máscara </td></tr>
+    <tr><td class="paramname">DATA</td><td>last: posição incial da máscara </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>DATA: A máscara gerada </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00081">81</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a715c413d5942865c568cf41b74dfecd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715c413d5942865c568cf41b74dfecd5">&#9670;&nbsp;</a></span>none()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Word::none </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a715c413d5942865c568cf41b74dfecd5" title="Word::none: Testa se algum bit da palavra está desligado.">Word::none</a>: Testa se algum bit da palavra está desligado. </p>
+<dl class="section return"><dt>Retorna</dt><dd>bool: Verdadeiro quando todos os bits estão desligados </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00293">293</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afcc4dfaa260ad47db87d34fd2bf67786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc4dfaa260ad47db87d34fd2bf67786">&#9670;&nbsp;</a></span>operator!()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator! </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#afcc4dfaa260ad47db87d34fd2bf67786" title="Word::operator !: Sobrecarga do operador !">Word::operator !</a>: Sobrecarga do operador ! </p>
+<p>Negação lógica os bits da palavra </p><dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00470">470</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a756ffb92a2cc54adad3b83d09e333947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a756ffb92a2cc54adad3b83d09e333947">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classWord.html#afcc4dfaa260ad47db87d34fd2bf67786">Word::operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a756ffb92a2cc54adad3b83d09e333947" title="Word::operator !=: Sobrecarga do operador !=.">Word::operator !=</a>: Sobrecarga do operador !=. </p>
+<p>Verifica se duas palavras são diferentes </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td>int value: valor a ser comparado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>bool: Se a palavra é igual ao valor passado por referência </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00508">508</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad8c4b0dd756ca6d1634ded2cc005e1f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c4b0dd756ca6d1634ded2cc005e1f6">&#9670;&nbsp;</a></span>operator&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWord.html">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#ad8c4b0dd756ca6d1634ded2cc005e1f6" title="Word::operator &amp;: Sobrecarga do operador &amp;.">Word::operator &amp;</a>: Sobrecarga do operador &amp;. </p>
+<p>Realiza o and bit a bit com duas palavras </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> word: palavra de referência para a operação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00402">402</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab7f3e506edf31a2cfb0483f32bfd4337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f3e506edf31a2cfb0483f32bfd4337">&#9670;&nbsp;</a></span>operator&amp;&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Word::operator&amp;&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWord.html">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#ab7f3e506edf31a2cfb0483f32bfd4337" title="Word::operator &amp;&amp;: Sobrecarga do operador &amp;&amp;.">Word::operator &amp;&amp;</a>: Sobrecarga do operador &amp;&amp;. </p>
+<p>Realiza o and lógico com duas palavras </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> word: palavra de referência para a operação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00430">430</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a46092d9a82b4e425b075069f92a9396d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46092d9a82b4e425b075069f92a9396d">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWord.html">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a46092d9a82b4e425b075069f92a9396d" title="Word::operator *: Sobrecarga do operador *.">Word::operator *</a>: Sobrecarga do operador *. </p>
+<p>Multiplica duas palavras </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> word: Constante a ser multiplicada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00360">360</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa58347e5dbccd86156cd5bb2bca32617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa58347e5dbccd86156cd5bb2bca32617">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWord.html">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#aa58347e5dbccd86156cd5bb2bca32617" title="Word::operator +: Sobrecarga do operador +.">Word::operator +</a>: Sobrecarga do operador +. </p>
+<p>Soma duas palavras </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> word: Constante a ser somada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00332">332</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a07e781b7adc5256140a840350b78cfc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e781b7adc5256140a840350b78cfc8">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWord.html">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a07e781b7adc5256140a840350b78cfc8" title="Word::operator -: Sobrecarga do operador -.">Word::operator -</a>: Sobrecarga do operador -. </p>
+<p>Subtração da palavra atual com constante </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> word: Constante a ser subtraída </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00346">346</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a78da9db99cf47d93b8dcc191f560cd40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78da9db99cf47d93b8dcc191f560cd40">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a29a5457e029dba35d77f894d9103b811" title="Word::operator /: Sobrecarga do operador /.">Word::operator /</a>: Sobrecarga do operador /. </p>
+<p>Divide a palavra por uma constante </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td>int word: Constante utilizada como divisor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00374">374</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a29a5457e029dba35d77f894d9103b811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29a5457e029dba35d77f894d9103b811">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWord.html">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a29a5457e029dba35d77f894d9103b811" title="Word::operator /: Sobrecarga do operador /.">Word::operator /</a>: Sobrecarga do operador /. </p>
+<p>Divide a palavra por outra </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> word: Constante utilizada como divisor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00388">388</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aafb6e57e5cb190a9893804951e90510b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb6e57e5cb190a9893804951e90510b">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#aafb6e57e5cb190a9893804951e90510b" title="Word::operator =: Sobrecarga do operador =.">Word::operator =</a>: Sobrecarga do operador =. </p>
+<p>Carrega uma palavra </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td>int value: valor a ser colocado na palavra </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00318">318</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a620c6246d8bc9c2e471626a4f50d9af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620c6246d8bc9c2e471626a4f50d9af7">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Word::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a5acd1b4c17610e217245951db1b2d561" title="Word::operator ==: Sobrecarga do operador ==.">Word::operator ==</a>: Sobrecarga do operador ==. </p>
+<p>Verifica se uma constante é igual a palavra </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td>int value: valor a ser comparado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>bool: Se a palavra é igual ao valor passado por referência </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00484">484</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5acd1b4c17610e217245951db1b2d561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5acd1b4c17610e217245951db1b2d561">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Word::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWord.html">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a5acd1b4c17610e217245951db1b2d561" title="Word::operator ==: Sobrecarga do operador ==.">Word::operator ==</a>: Sobrecarga do operador ==. </p>
+<p>Verifica se duas palavras são iguais </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> word: valor a ser comparado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>bool: Se a palavra é igual ao valor passado por referência </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00496">496</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8ef6d102cbea81dafdb460dec9ced6a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef6d102cbea81dafdb460dec9ced6a7">&#9670;&nbsp;</a></span>operator|()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator| </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWord.html">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a8ef6d102cbea81dafdb460dec9ced6a7" title="Word::operator |: Sobrecarga do operador |.">Word::operator |</a>: Sobrecarga do operador |. </p>
+<p>Realiza o or bit a bit com duas palavras </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> word: palavra de referência para a operação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00416">416</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="addda8d374c82e1488b1a5bdee3b2a4a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addda8d374c82e1488b1a5bdee3b2a4a0">&#9670;&nbsp;</a></span>operator||()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Word::operator|| </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classWord.html">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#addda8d374c82e1488b1a5bdee3b2a4a0" title="Word::operator ||: Sobrecarga do operador ||.">Word::operator ||</a>: Sobrecarga do operador ||. </p>
+<p>Realiza o or lógico com duas palavras </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> word: palavra de referência para a operação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00444">444</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="affa44cf452cce7687e19463056e51426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa44cf452cce7687e19463056e51426">&#9670;&nbsp;</a></span>operator~()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWord.html">Word</a> Word::operator~ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#affa44cf452cce7687e19463056e51426" title="Word::operator ~: Sobrecarga do operador ~.">Word::operator ~</a>: Sobrecarga do operador ~. </p>
+<p>Negação bit a bit da palavra </p><dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>: uma palavra com o valor correto </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00457">457</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adad51582d2d810c9ad56dd03d763594a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad51582d2d810c9ad56dd03d763594a">&#9670;&nbsp;</a></span>reset() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#adad51582d2d810c9ad56dd03d763594a" title="Word::reset: Zera todos os bits da Word.">Word::reset</a>: Zera todos os bits da <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Valor da <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> fica zerado </p>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00177">177</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aca423011899bab82b849ba2f5405b566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca423011899bab82b849ba2f5405b566">&#9670;&nbsp;</a></span>reset() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#adad51582d2d810c9ad56dd03d763594a" title="Word::reset: Zera todos os bits da Word.">Word::reset</a>: Zera os bits da <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> de um bit até outro. </p>
+<p>Altera do bit first até o bit last </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>first: posição incial para alterar </td></tr>
+    <tr><td class="paramname">DATA</td><td>last: posição incial para alterar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00200">200</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a74c83bda7075ef04e84d01232ed6b846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c83bda7075ef04e84d01232ed6b846">&#9670;&nbsp;</a></span>reset() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#adad51582d2d810c9ad56dd03d763594a" title="Word::reset: Zera todos os bits da Word.">Word::reset</a>: Zera o bit da <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a> em determinada posição. </p>
+<p>Altera um unico bit </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>bit a ser zerado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00188">188</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a56a8b6c7007f3903d7381a8c1d0808de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a8b6c7007f3903d7381a8c1d0808de">&#9670;&nbsp;</a></span>set() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::set </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Sempre coloca o valor em -1 </p>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00089">89</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa3e1031c68269d6fc9b5ac283d7c466e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3e1031c68269d6fc9b5ac283d7c466e">&#9670;&nbsp;</a></span>set() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Altera os bits de uma posição incial até a final </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>first: posição incial para alterar </td></tr>
+    <tr><td class="paramname">DATA</td><td>last: posição incial para alterar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00123">123</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1795d92d1874f6a6ab14255d99a5639b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1795d92d1874f6a6ab14255d99a5639b">&#9670;&nbsp;</a></span>set() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Altera o valor do bit na posição passada por referência </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00111">111</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a23594ff42141728c2a0468db2fa747c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23594ff42141728c2a0468db2fa747c3">&#9670;&nbsp;</a></span>set() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Coloca o valor binário contido em value dentro dos bits passados por parâmetro </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>value: valor a ser escrito na palavra </td></tr>
+    <tr><td class="paramname">DATA</td><td>first: posição incial para alterar </td></tr>
+    <tr><td class="paramname">DATA</td><td>last: posição incial para alterar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00137">137</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2b61402a8717051cccd4b11c6a61710a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b61402a8717051cccd4b11c6a61710a">&#9670;&nbsp;</a></span>set() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::set </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>binary</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>base</em> = <code>2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Coloca o valor de uma base qualquer dentro dos bits passados por parâmetro </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">QString</td><td>binary: representação textual do valor a ser escrito </td></tr>
+    <tr><td class="paramname">DATA</td><td>first: posição incial para alterar </td></tr>
+    <tr><td class="paramname">DATA</td><td>last: posição incial para alterar </td></tr>
+    <tr><td class="paramname">base</td><td>Em qual base está a QString </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00154">154</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae1bd6f3f673d15e884b2c4fae0cd1da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1bd6f3f673d15e884b2c4fae0cd1da3">&#9670;&nbsp;</a></span>set() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Word::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classWord.html">Word</a>&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de" title="Word::set: Altera o valor contido na Word.">Word::set</a>: Altera o valor contido na <a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a>. </p>
+<p>Copia o valor contido em uma palavra para a atual </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classWord.html" title="A classe Word: Representação de uma palavra de 32 bits e suas operações.">Word</a></td><td>word </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00100">100</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9e1be536a6afbb2371edb7dd5a47122a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e1be536a6afbb2371edb7dd5a47122a">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> Word::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a9e1be536a6afbb2371edb7dd5a47122a" title="Word::size: Indica o tamanho da palavra.">Word::size</a>: Indica o tamanho da palavra. </p>
+<dl class="section return"><dt>Retorna</dt><dd>DATA: Quantidade de bits da palavra </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00260">260</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a021a498a8ba9220494186b2aec21f0b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a021a498a8ba9220494186b2aec21f0b8">&#9670;&nbsp;</a></span>test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Word::test </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#a021a498a8ba9220494186b2aec21f0b8" title="Word::test: Testa se determinado bit da palavra está ligado.">Word::test</a>: Testa se determinado bit da palavra está ligado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DATA</td><td>position: Posição do bit a ser testado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd></dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00270">270</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab6d96f42a15fe62b9a44a766b8f659b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d96f42a15fe62b9a44a766b8f659b5">&#9670;&nbsp;</a></span>to_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Word::to_char </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#ab6d96f42a15fe62b9a44a766b8f659b5" title="Word::to_char: Converte um dígito decimal para um caractere.">Word::to_char</a>: Converte um dígito decimal para um caractere. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>char: Caractere que representa um dígito decimal </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00580">580</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ada1b59ea14347894397bad01488a3d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1b59ea14347894397bad01488a3d98">&#9670;&nbsp;</a></span>to_int() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Word::to_int </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWord.html#ada1b59ea14347894397bad01488a3d98" title="Word::to_int: Converte um caractere numérico para seu valor decimal.">Word::to_int</a>: Converte um caractere numérico para seu valor decimal. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>value: Caractere ASCII representando um dígito decimal </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>int: Valor numérico do caractere </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00557">557</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a003f155561319759fb38e9804b2a6d24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003f155561319759fb38e9804b2a6d24">&#9670;&nbsp;</a></span>to_int() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Word::to_int </td>
+          <td>(</td>
+          <td class="paramtype">QChar&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Esse é um método provido por conveniência. Ele difere do método acima apenas na lista de argumentos que devem ser utilizados.</p>
+
+<p class="definition">Definição na linha <a class="el" href="word_8cpp_source.html#l00569">569</a> do arquivo <a class="el" href="word_8cpp_source.html">word.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
 <li><a class="el" href="word_8h_source.html">word.h</a></li>
-<li><a class="el" href="word__v0_8h_source.html">word_v0.h</a></li>
 <li><a class="el" href="word_8cpp_source.html">word.cpp</a></li>
-<li><a class="el" href="word__v0_8cpp_source.html">word_v0.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

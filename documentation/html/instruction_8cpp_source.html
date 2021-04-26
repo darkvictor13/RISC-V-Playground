@@ -74,76 +74,90 @@ $(function() {
 <a href="instruction_8cpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="instruction_8h.html">instruction.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;Instruction::Instruction()</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> Instruction::setOpcode(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    set(value, <a class="code" href="instruction_8h.html#a794b71dd9e66ff37100f472cac441b8e">OPCODE_FIRST</a>, <a class="code" href="instruction_8h.html#a642b200e72fb22f16f738e0a2a11b0fa">OPCODE_LAST</a>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> Instruction::setOpcode(QString binary)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    set(binary, <a class="code" href="instruction_8h.html#a794b71dd9e66ff37100f472cac441b8e">OPCODE_FIRST</a>, <a class="code" href="instruction_8h.html#a642b200e72fb22f16f738e0a2a11b0fa">OPCODE_LAST</a>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> Instruction::getIntegerOpcode()</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> getInteger(<a class="code" href="instruction_8h.html#a794b71dd9e66ff37100f472cac441b8e">OPCODE_FIRST</a>, <a class="code" href="instruction_8h.html#a642b200e72fb22f16f738e0a2a11b0fa">OPCODE_LAST</a>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QString Instruction::getStringOpcode()</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> getString(<a class="code" href="instruction_8h.html#a794b71dd9e66ff37100f472cac441b8e">OPCODE_FIRST</a>, <a class="code" href="instruction_8h.html#a642b200e72fb22f16f738e0a2a11b0fa">OPCODE_LAST</a>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> Instruction::setFunct3(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    set(value, <a class="code" href="instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad">FUNCT3_FIRST</a>, <a class="code" href="instruction_8h.html#a4c4c54f2edf4aff22b92e2907670829e">FUNCT3_LAST</a>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> Instruction::setFunct3(QString binary)</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classInstruction.html#aebd15229c1651af49dcb203707e7a2d5">   13</a></span>&#160;<a class="code" href="classInstruction.html#aebd15229c1651af49dcb203707e7a2d5">Instruction::Instruction</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classInstruction.html#a6f4dd11dbb83c2b859cffd25dac3f199">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstruction.html#a6f4dd11dbb83c2b859cffd25dac3f199">Instruction::setOpcode</a>(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">set</a>(value, <a class="code" href="instruction_8h.html#a794b71dd9e66ff37100f472cac441b8e">OPCODE_FIRST</a>, <a class="code" href="instruction_8h.html#a642b200e72fb22f16f738e0a2a11b0fa">OPCODE_LAST</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classInstruction.html#a0ecc00d0c757328b979cb3049347b25f">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstruction.html#a6f4dd11dbb83c2b859cffd25dac3f199">Instruction::setOpcode</a>(QString binary)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">set</a>(binary, <a class="code" href="instruction_8h.html#a794b71dd9e66ff37100f472cac441b8e">OPCODE_FIRST</a>, <a class="code" href="instruction_8h.html#a642b200e72fb22f16f738e0a2a11b0fa">OPCODE_LAST</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classInstruction.html#a73db2dc4a67bb66e8fe1eadb495a59d3">   40</a></span>&#160;<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> <a class="code" href="classInstruction.html#a73db2dc4a67bb66e8fe1eadb495a59d3">Instruction::getIntegerOpcode</a>()</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    set(binary, <a class="code" href="instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad">FUNCT3_FIRST</a>, <a class="code" href="instruction_8h.html#a4c4c54f2edf4aff22b92e2907670829e">FUNCT3_LAST</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(<a class="code" href="instruction_8h.html#a794b71dd9e66ff37100f472cac441b8e">OPCODE_FIRST</a>, <a class="code" href="instruction_8h.html#a642b200e72fb22f16f738e0a2a11b0fa">OPCODE_LAST</a>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> Instruction::getIntegerFunct3()</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> getInteger(<a class="code" href="instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad">FUNCT3_FIRST</a>, <a class="code" href="instruction_8h.html#a4c4c54f2edf4aff22b92e2907670829e">FUNCT3_LAST</a>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;QString Instruction::getStringFunct3()</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> getString(<a class="code" href="instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad">FUNCT3_FIRST</a>, <a class="code" href="instruction_8h.html#a4c4c54f2edf4aff22b92e2907670829e">FUNCT3_LAST</a>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> Instruction::setRS1(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    set(value, <a class="code" href="instruction_8h.html#a090a7ad6582064c7ea44098e7fb11b12">RS1_FIRST</a>, <a class="code" href="instruction_8h.html#ad8af028f8c11bd6b1bd431f88e6844a1">RS1_LAST</a>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> Instruction::setRS1(QString binary)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    set(binary, <a class="code" href="instruction_8h.html#a090a7ad6582064c7ea44098e7fb11b12">RS1_FIRST</a>, <a class="code" href="instruction_8h.html#ad8af028f8c11bd6b1bd431f88e6844a1">RS1_LAST</a>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> Instruction::getIntegerRS1()</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> getInteger(<a class="code" href="instruction_8h.html#a090a7ad6582064c7ea44098e7fb11b12">RS1_FIRST</a>, <a class="code" href="instruction_8h.html#ad8af028f8c11bd6b1bd431f88e6844a1">RS1_LAST</a>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;QString Instruction::getStringRS1()</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> getString(<a class="code" href="instruction_8h.html#a090a7ad6582064c7ea44098e7fb11b12">RS1_FIRST</a>, <a class="code" href="instruction_8h.html#ad8af028f8c11bd6b1bd431f88e6844a1">RS1_LAST</a>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;Instruction::~Instruction()</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classInstruction.html#a5ea0607443c2314c5ccbd61b85885e65">   49</a></span>&#160;QString <a class="code" href="classInstruction.html#a5ea0607443c2314c5ccbd61b85885e65">Instruction::getStringOpcode</a>()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classWord.html#af9f48422ff4a19072a7de1262bf1294e">getString</a>(<a class="code" href="instruction_8h.html#a794b71dd9e66ff37100f472cac441b8e">OPCODE_FIRST</a>, <a class="code" href="instruction_8h.html#a642b200e72fb22f16f738e0a2a11b0fa">OPCODE_LAST</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classInstruction.html#a750cfe5946191d432414a20d2759c9a8">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstruction.html#a750cfe5946191d432414a20d2759c9a8">Instruction::setFunct3</a>(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">set</a>(value, <a class="code" href="instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad">FUNCT3_FIRST</a>, <a class="code" href="instruction_8h.html#a4c4c54f2edf4aff22b92e2907670829e">FUNCT3_LAST</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classInstruction.html#a0fd2fee0ec0b9e320caee6eb00f4ec05">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstruction.html#a750cfe5946191d432414a20d2759c9a8">Instruction::setFunct3</a>(QString binary)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">set</a>(binary, <a class="code" href="instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad">FUNCT3_FIRST</a>, <a class="code" href="instruction_8h.html#a4c4c54f2edf4aff22b92e2907670829e">FUNCT3_LAST</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classInstruction.html#a6f820a6c406162cd4da5c9580c5e41e4">   76</a></span>&#160;<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> <a class="code" href="classInstruction.html#a6f820a6c406162cd4da5c9580c5e41e4">Instruction::getIntegerFunct3</a>()</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(<a class="code" href="instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad">FUNCT3_FIRST</a>, <a class="code" href="instruction_8h.html#a4c4c54f2edf4aff22b92e2907670829e">FUNCT3_LAST</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classInstruction.html#aef65fc2520c19d611c70eebc63cd1bd4">   85</a></span>&#160;QString <a class="code" href="classInstruction.html#aef65fc2520c19d611c70eebc63cd1bd4">Instruction::getStringFunct3</a>()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classWord.html#af9f48422ff4a19072a7de1262bf1294e">getString</a>(<a class="code" href="instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad">FUNCT3_FIRST</a>, <a class="code" href="instruction_8h.html#a4c4c54f2edf4aff22b92e2907670829e">FUNCT3_LAST</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classInstruction.html#a68dc63515d33b824b48a10fb405b2372">   94</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstruction.html#a68dc63515d33b824b48a10fb405b2372">Instruction::setRS1</a>(<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> value)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">set</a>(value, <a class="code" href="instruction_8h.html#a090a7ad6582064c7ea44098e7fb11b12">RS1_FIRST</a>, <a class="code" href="instruction_8h.html#ad8af028f8c11bd6b1bd431f88e6844a1">RS1_LAST</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classInstruction.html#aace27fff315e6a81fae97da3bb096c82">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstruction.html#a68dc63515d33b824b48a10fb405b2372">Instruction::setRS1</a>(QString binary)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">set</a>(binary, <a class="code" href="instruction_8h.html#a090a7ad6582064c7ea44098e7fb11b12">RS1_FIRST</a>, <a class="code" href="instruction_8h.html#ad8af028f8c11bd6b1bd431f88e6844a1">RS1_LAST</a>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classInstruction.html#a0269f8dcd4da75de4e363049a73cea17">  112</a></span>&#160;<a class="code" href="word_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045">DATA</a> <a class="code" href="classInstruction.html#a0269f8dcd4da75de4e363049a73cea17">Instruction::getIntegerRS1</a>()</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(<a class="code" href="instruction_8h.html#a090a7ad6582064c7ea44098e7fb11b12">RS1_FIRST</a>, <a class="code" href="instruction_8h.html#ad8af028f8c11bd6b1bd431f88e6844a1">RS1_LAST</a>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classInstruction.html#a3cd4bbcd1176fbd9209e974519669c24">  121</a></span>&#160;QString <a class="code" href="classInstruction.html#a3cd4bbcd1176fbd9209e974519669c24">Instruction::getStringRS1</a>()</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classWord.html#af9f48422ff4a19072a7de1262bf1294e">getString</a>(<a class="code" href="instruction_8h.html#a090a7ad6582064c7ea44098e7fb11b12">RS1_FIRST</a>, <a class="code" href="instruction_8h.html#ad8af028f8c11bd6b1bd431f88e6844a1">RS1_LAST</a>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classInstruction.html#a26eb634480beff1ad7a20235c11f521d">  129</a></span>&#160;<a class="code" href="classInstruction.html#a26eb634480beff1ad7a20235c11f521d">Instruction::~Instruction</a>()</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="ttc" id="aclassInstruction_html_a0269f8dcd4da75de4e363049a73cea17"><div class="ttname"><a href="classInstruction.html#a0269f8dcd4da75de4e363049a73cea17">Instruction::getIntegerRS1</a></div><div class="ttdeci">DATA getIntegerRS1()</div><div class="ttdoc">Instruction::getIntegerRS1: função que permite extrair o valor do RS1 de uma instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00112">instruction.cpp:112</a></div></div>
+<div class="ttc" id="aclassInstruction_html_a26eb634480beff1ad7a20235c11f521d"><div class="ttname"><a href="classInstruction.html#a26eb634480beff1ad7a20235c11f521d">Instruction::~Instruction</a></div><div class="ttdeci">~Instruction()</div><div class="ttdoc">Instruction::~Instruction: destrutor da classe Instruction.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00129">instruction.cpp:129</a></div></div>
+<div class="ttc" id="aclassInstruction_html_a3cd4bbcd1176fbd9209e974519669c24"><div class="ttname"><a href="classInstruction.html#a3cd4bbcd1176fbd9209e974519669c24">Instruction::getStringRS1</a></div><div class="ttdeci">QString getStringRS1()</div><div class="ttdoc">Instruction::getStringRS1: função que permite extrair o valor do RS1 de uma instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00121">instruction.cpp:121</a></div></div>
+<div class="ttc" id="aclassInstruction_html_a5ea0607443c2314c5ccbd61b85885e65"><div class="ttname"><a href="classInstruction.html#a5ea0607443c2314c5ccbd61b85885e65">Instruction::getStringOpcode</a></div><div class="ttdeci">QString getStringOpcode()</div><div class="ttdoc">Instruction::getStringOpcode: função que permite extrair o valor do Opcode de uma instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00049">instruction.cpp:49</a></div></div>
+<div class="ttc" id="aclassInstruction_html_a68dc63515d33b824b48a10fb405b2372"><div class="ttname"><a href="classInstruction.html#a68dc63515d33b824b48a10fb405b2372">Instruction::setRS1</a></div><div class="ttdeci">void setRS1(DATA value)</div><div class="ttdoc">Instruction::setRS1.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00094">instruction.cpp:94</a></div></div>
+<div class="ttc" id="aclassInstruction_html_a6f4dd11dbb83c2b859cffd25dac3f199"><div class="ttname"><a href="classInstruction.html#a6f4dd11dbb83c2b859cffd25dac3f199">Instruction::setOpcode</a></div><div class="ttdeci">void setOpcode(DATA value)</div><div class="ttdoc">Instruction::setOpcode: função que coloca o Opcode de uma função.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00022">instruction.cpp:22</a></div></div>
+<div class="ttc" id="aclassInstruction_html_a6f820a6c406162cd4da5c9580c5e41e4"><div class="ttname"><a href="classInstruction.html#a6f820a6c406162cd4da5c9580c5e41e4">Instruction::getIntegerFunct3</a></div><div class="ttdeci">DATA getIntegerFunct3()</div><div class="ttdoc">Instruction::getIntegerFunct3: função que permite extrair o valor do Funct3 de uma instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00076">instruction.cpp:76</a></div></div>
+<div class="ttc" id="aclassInstruction_html_a73db2dc4a67bb66e8fe1eadb495a59d3"><div class="ttname"><a href="classInstruction.html#a73db2dc4a67bb66e8fe1eadb495a59d3">Instruction::getIntegerOpcode</a></div><div class="ttdeci">DATA getIntegerOpcode()</div><div class="ttdoc">Instruction::getIntegerOpcode: função que permite extrair o valor do Opcode de uma instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00040">instruction.cpp:40</a></div></div>
+<div class="ttc" id="aclassInstruction_html_a750cfe5946191d432414a20d2759c9a8"><div class="ttname"><a href="classInstruction.html#a750cfe5946191d432414a20d2759c9a8">Instruction::setFunct3</a></div><div class="ttdeci">void setFunct3(DATA value)</div><div class="ttdoc">Instruction::setFunct3.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00058">instruction.cpp:58</a></div></div>
+<div class="ttc" id="aclassInstruction_html_aebd15229c1651af49dcb203707e7a2d5"><div class="ttname"><a href="classInstruction.html#aebd15229c1651af49dcb203707e7a2d5">Instruction::Instruction</a></div><div class="ttdeci">Instruction()</div><div class="ttdoc">Instruction::Instruction: contrutor da classe Instruction.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00013">instruction.cpp:13</a></div></div>
+<div class="ttc" id="aclassInstruction_html_aef65fc2520c19d611c70eebc63cd1bd4"><div class="ttname"><a href="classInstruction.html#aef65fc2520c19d611c70eebc63cd1bd4">Instruction::getStringFunct3</a></div><div class="ttdeci">QString getStringFunct3()</div><div class="ttdoc">Instruction::getStringFunct3: função que permite extrair o valor do Funct3 de uma instrução.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00085">instruction.cpp:85</a></div></div>
+<div class="ttc" id="aclassWord_html_a2fa49c6651bf133d453996867a30fb9c"><div class="ttname"><a href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">Word::getInteger</a></div><div class="ttdeci">DATA getInteger()</div><div class="ttdoc">Word::getInteger: Indica o valor decimal da palavra.</div><div class="ttdef"><b>Definition:</b> <a href="word_8cpp_source.html#l00533">word.cpp:533</a></div></div>
+<div class="ttc" id="aclassWord_html_a56a8b6c7007f3903d7381a8c1d0808de"><div class="ttname"><a href="classWord.html#a56a8b6c7007f3903d7381a8c1d0808de">Word::set</a></div><div class="ttdeci">void set()</div><div class="ttdoc">Word::set: Altera o valor contido na Word.</div><div class="ttdef"><b>Definition:</b> <a href="word_8cpp_source.html#l00089">word.cpp:89</a></div></div>
+<div class="ttc" id="aclassWord_html_af9f48422ff4a19072a7de1262bf1294e"><div class="ttname"><a href="classWord.html#af9f48422ff4a19072a7de1262bf1294e">Word::getString</a></div><div class="ttdeci">QString getString(DATA base=2)</div><div class="ttdoc">Word::getString: Obtém o número decimal que representa a palavra no formato de string.</div><div class="ttdef"><b>Definition:</b> <a href="word_8cpp_source.html#l00597">word.cpp:597</a></div></div>
 <div class="ttc" id="ainstruction_8h_html"><div class="ttname"><a href="instruction_8h.html">instruction.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 <div class="ttc" id="ainstruction_8h_html_a090a7ad6582064c7ea44098e7fb11b12"><div class="ttname"><a href="instruction_8h.html#a090a7ad6582064c7ea44098e7fb11b12">RS1_FIRST</a></div><div class="ttdeci">#define RS1_FIRST</div><div class="ttdoc">Indica o início do Registrador Source 1.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00036">instruction.h:36</a></div></div>
 <div class="ttc" id="ainstruction_8h_html_a3ce850ce32c1bce024a95b3e11a557ad"><div class="ttname"><a href="instruction_8h.html#a3ce850ce32c1bce024a95b3e11a557ad">FUNCT3_FIRST</a></div><div class="ttdeci">#define FUNCT3_FIRST</div><div class="ttdoc">Indica o início do funct 3.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00026">instruction.h:26</a></div></div>

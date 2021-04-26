@@ -79,14 +79,14 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="word_8h.html">word/word.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;andgate.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="makebranch_8h.html">makebranch.h</a>&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;datamemory.h&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;muxtypeb.h&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;muxtypec.h&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;alucontrol.h&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="registers_8h.html">registers.h</a>&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="classAndGate.html">AndGate</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="classMakeBranch.html">MakeBranch</a>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span><a class="code" href="classDataMemory.html">DataMemory</a>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span><a class="code" href="classMuxTypeB.html">MuxTypeB</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">class </span><a class="code" href="classMuxTypeC.html">MuxTypeC</a>;</div>
@@ -98,7 +98,7 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classAndGate.html">AndGate</a> *andGate = NULL;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classMakeBranch.html">MakeBranch</a> *makeBranch = NULL;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classDataMemory.html">DataMemory</a> *dataMemory = NULL;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classMuxTypeB.html">MuxTypeB</a> *muxB = NULL;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classMuxTypeC.html">MuxTypeC</a> *muxC = NULL;</div>
@@ -112,7 +112,7 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classControl.html">Control</a>();</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> connect(<a class="code" href="classAndGate.html">AndGate</a> *andGate, <a class="code" href="classDataMemory.html">DataMemory</a> *dataMemory, <a class="code" href="classMuxTypeB.html">MuxTypeB</a> *muxB, <a class="code" href="classMuxTypeC.html">MuxTypeC</a> *muxC, <a class="code" href="classALUControl.html">ALUControl</a> *aluControl, <a class="code" href="classRegisters.html">Registers</a> *registers);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> connect(<a class="code" href="classMakeBranch.html">MakeBranch</a> *makeBranch, <a class="code" href="classDataMemory.html">DataMemory</a> *dataMemory, <a class="code" href="classMuxTypeB.html">MuxTypeB</a> *muxB, <a class="code" href="classMuxTypeC.html">MuxTypeC</a> *muxC, <a class="code" href="classALUControl.html">ALUControl</a> *aluControl, <a class="code" href="classRegisters.html">Registers</a> *registers);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> setOpcode(<a class="code" href="classWord.html">Word</a> opcode);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
@@ -130,13 +130,14 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// CONTROL_H</span></div>
 <div class="ttc" id="aclassALUControl_html"><div class="ttname"><a href="classALUControl.html">ALUControl</a></div><div class="ttdoc">A classe ALUControl:</div><div class="ttdef"><b>Definition:</b> <a href="alucontrol_8h_source.html#l00024">alucontrol.h:25</a></div></div>
-<div class="ttc" id="aclassAndGate_html"><div class="ttname"><a href="classAndGate.html">AndGate</a></div><div class="ttdoc">A classe AndGate:</div><div class="ttdef"><b>Definition:</b> <a href="andgate_8h_source.html#l00022">andgate.h:23</a></div></div>
 <div class="ttc" id="aclassControl_html"><div class="ttname"><a href="classControl.html">Control</a></div><div class="ttdoc">A classe Control:</div><div class="ttdef"><b>Definition:</b> <a href="control_8h_source.html#l00032">control.h:33</a></div></div>
 <div class="ttc" id="aclassDataMemory_html"><div class="ttname"><a href="classDataMemory.html">DataMemory</a></div><div class="ttdoc">A classe DataMemory:</div><div class="ttdef"><b>Definition:</b> <a href="datamemory_8h_source.html#l00020">datamemory.h:21</a></div></div>
+<div class="ttc" id="aclassMakeBranch_html"><div class="ttname"><a href="classMakeBranch.html">MakeBranch</a></div><div class="ttdoc">A classe MakeBranch:</div><div class="ttdef"><b>Definition:</b> <a href="makebranch_8h_source.html#l00022">makebranch.h:23</a></div></div>
 <div class="ttc" id="aclassMuxTypeB_html"><div class="ttname"><a href="classMuxTypeB.html">MuxTypeB</a></div><div class="ttdoc">A classe MuxTypeB:</div><div class="ttdef"><b>Definition:</b> <a href="muxtypeb_8h_source.html#l00020">muxtypeb.h:21</a></div></div>
 <div class="ttc" id="aclassMuxTypeC_html"><div class="ttname"><a href="classMuxTypeC.html">MuxTypeC</a></div><div class="ttdoc">A classe MuxTypeC:</div><div class="ttdef"><b>Definition:</b> <a href="muxtypec_8h_source.html#l00020">muxtypec.h:21</a></div></div>
 <div class="ttc" id="aclassRegisters_html"><div class="ttname"><a href="classRegisters.html">Registers</a></div><div class="ttdoc">A classe Registers:</div><div class="ttdef"><b>Definition:</b> <a href="registers_8h_source.html#l00035">registers.h:36</a></div></div>
-<div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word:</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00029">word.h:30</a></div></div>
+<div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word: Representação de uma palavra de 32 bits e suas operações.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00030">word.h:31</a></div></div>
+<div class="ttc" id="amakebranch_8h_html"><div class="ttname"><a href="makebranch_8h.html">makebranch.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 <div class="ttc" id="aregisters_8h_html"><div class="ttname"><a href="registers_8h.html">registers.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 <div class="ttc" id="aword_8h_html"><div class="ttname"><a href="word_8h.html">word.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 </div><!-- fragment --></div><!-- contents -->
