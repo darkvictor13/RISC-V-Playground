@@ -31,21 +31,39 @@
   - BEQ
   - BNE
 
+  @section uso Instruções para uso
+
+
   @section D Descrevendo a experiência
 
   Escrever algo aqui
 
-  @subsection positivos Pontos positivos
+  @subsection softwares Softwares utilizados para o desenvolvimento:
 
-  - Alguma coisa
+  - Controle de Versão: Git;
+  - Hospedagem do controle de Versão: Github;
+  - Framework: Qt;
+  - Documentação: Doxygen;
+  - Hospedagem do Site gerado pela documentação: Github
 
-  @subsection negativos Pontos negativos
+  Escrever algo aqui
 
-  - Alguma coisa
+  @subsection positivos Pontos positivos:
+
+  - Falar coisas positivas sobre a experiencia;
+  - O Software atinge o objetivo de simular uma máquina RISC-V;
+  - O Software representa o simula exatamente o caminho de dados
+  proposto em sala;
+  - O Software representa cada instrução no nível binário;
+  -
+
+  @subsection negativos Pontos negativos:
+
+  - Falar coisas negativas sobre a experiencia;
+  - Houve trabalho feito a toa;
 
   @section trabalho Descrição da dinâmica de trabalho do grupo
-  Dentro da documentação de cada método e classe possui o nome do author
-
+  Dentro da documentação de cada método e classe possui o nome do autor
 */
 
 /**

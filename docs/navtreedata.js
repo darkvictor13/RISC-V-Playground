@@ -27,9 +27,11 @@ var NAVTREE =
   [ "RISC-V-Playground", "index.html", [
     [ "Algorítimo para Simulador RISC-V", "index.html", [
       [ "Objetivo", "index.html#Objetivo", null ],
+      [ "Instruções para uso", "index.html#uso", null ],
       [ "Descrevendo a experiência", "index.html#D", [
-        [ "Pontos positivos", "index.html#positivos", null ],
-        [ "Pontos negativos", "index.html#negativos", null ]
+        [ "Softwares utilizados para o desenvolvimento:", "index.html#softwares", null ],
+        [ "Pontos positivos:", "index.html#positivos", null ],
+        [ "Pontos negativos:", "index.html#negativos", null ]
       ] ],
       [ "Descrição da dinâmica de trabalho do grupo", "index.html#trabalho", null ]
     ] ],
