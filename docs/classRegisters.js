@@ -1,0 +1,28 @@
+var classRegisters =
+[
+    [ "Registers", "classRegisters.html#a3b172e33c0ee567e8d5f6a0e6729f5f3", null ],
+    [ "~Registers", "classRegisters.html#a0d0f1d2adc4d03b33be699db0ae11761", null ],
+    [ "connect", "classRegisters.html#a049d6b90bd23fb9924c8b8002c3315d8", null ],
+    [ "executedRead", "classRegisters.html#a6de4c2e4bc95a4e038938bb262cb479d", null ],
+    [ "executedWrite", "classRegisters.html#a1e5f4cbc16a371d6b1aad627ce27160f", null ],
+    [ "executeRead", "classRegisters.html#a86952fe2d9e88fd906ed589caf14b6f4", null ],
+    [ "executeWrite", "classRegisters.html#ae8375b9946b796cc622a9b8f6b2d1c71", null ],
+    [ "getValue", "classRegisters.html#a34c7406babae365bf14177d38371a3d3", null ],
+    [ "init", "classRegisters.html#a533552e32599a390587212086b4e7d83", null ],
+    [ "initRegisters", "classRegisters.html#a122281260bbf5854ae1fbe0405345f14", null ],
+    [ "receivedReadRegister1", "classRegisters.html#a89c46609f7f9828f57c45aa55aa1ed07", null ],
+    [ "receivedReadRegister2", "classRegisters.html#abd783f516c0c05e272c799fe9e3fada5", null ],
+    [ "receivedRegWrite", "classRegisters.html#a1951e9f30c3dc4f15240e7c53a16d332", null ],
+    [ "receivedWriteData", "classRegisters.html#a868ac451e2d7477c2a7f5bbe10d9855b", null ],
+    [ "receivedWriteRegister", "classRegisters.html#a7bc171ae53089f4591f5c44c5c46f871", null ],
+    [ "restart", "classRegisters.html#a04b347222faeabfb96230a2b135e09ea", null ],
+    [ "restartRegisters", "classRegisters.html#a1fe4b7250799ade679fe337a245c2312", null ],
+    [ "setReadRegister1", "classRegisters.html#acfcedd92a05dc6fadf1392467db002e6", null ],
+    [ "setReadRegister2", "classRegisters.html#aa29d335f4280c9230379a14dc0edd909", null ],
+    [ "setRegWrite", "classRegisters.html#a7f65c2b4e2bb59380b71ef13e58751c3", null ],
+    [ "setValue", "classRegisters.html#a10b873b7246d5edd65c2b31c4c3bd26e", null ],
+    [ "setWriteData", "classRegisters.html#a2d21255a3f3c7cb76a7a427807013bf2", null ],
+    [ "setWriteRegister", "classRegisters.html#a8259f1facc4dc6b02aa6dc8b34168e07", null ],
+    [ "tryExecute", "classRegisters.html#ac17bac2d928c69c0f55e7f2f99503cfd", null ],
+    [ "updateRegister", "classRegisters.html#a664e6c3b1c8846184236187a5db9f419", null ]
+];
