@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['_7eadd_278',['~Add',['../classAdd.html#a960ca471ede083983766bce089f9af64',1,'Add']]],
-  ['_7eaddbranch_279',['~AddBranch',['../classAddBranch.html#a984ea6224a7e9c8b19679824c1730f18',1,'AddBranch']]],
-  ['_7eaddnext_280',['~AddNext',['../classAddNext.html#a68d51e92b32956430b53d464a6912653',1,'AddNext']]],
-  ['_7einstruction_281',['~Instruction',['../classInstruction.html#a26eb634480beff1ad7a20235c11f521d',1,'Instruction']]],
-  ['_7einstructiontypei_282',['~InstructionTypeI',['../classInstructionTypeI.html#aadf032f02f47d38140ba365f12079d54',1,'InstructionTypeI']]],
-  ['_7einstructiontyper_283',['~InstructionTypeR',['../classInstructionTypeR.html#aa4cbc97cc8b03b7aa47252489482fdc3',1,'InstructionTypeR']]],
-  ['_7einstructiontypes_284',['~InstructionTypeS',['../classInstructionTypeS.html#a251c6a9e53acd63533606fe36cc3b28e',1,'InstructionTypeS']]],
-  ['_7einstructiontypesb_285',['~InstructionTypeSB',['../classInstructionTypeSB.html#a87136323be84dee83b84c1036362ecd1',1,'InstructionTypeSB']]],
-  ['_7eword_286',['~Word',['../classWord.html#a1fbcaae6859604d92e94cab540cb3523',1,'Word']]]
+  ['test_339',['test',['../classWord.html#a021a498a8ba9220494186b2aec21f0b8',1,'Word']]],
+  ['to_5fchar_340',['to_char',['../classWord.html#ab6d96f42a15fe62b9a44a766b8f659b5',1,'Word']]],
+  ['to_5fint_341',['to_int',['../classWord.html#ada1b59ea14347894397bad01488a3d98',1,'Word::to_int(char value)'],['../classWord.html#a003f155561319759fb38e9804b2a6d24',1,'Word::to_int(QChar value)']]],
+  ['tryexecute_342',['tryExecute',['../classAdd.html#af4b55943ce65846384e5cfd085524828',1,'Add::tryExecute()'],['../classALU.html#a7901d34fe7829641e8b7331f9e708b26',1,'ALU::tryExecute()'],['../classALUControl.html#a4d97ca79bdbbae9d93a653176c88a55e',1,'ALUControl::tryExecute()'],['../classControl.html#aa166c60c88e23f3a9a9e3bcf61ead78a',1,'Control::tryExecute()'],['../classDataMemory.html#ad4c464320e0ab179a2fcc988f5d938fe',1,'DataMemory::tryExecute()'],['../classImmGen.html#a1a47aad8f4e6b54c30225eb4223a9135',1,'ImmGen::tryExecute()'],['../classInstructionMemory.html#afe9d029af49b5e3af87a90626567ffee',1,'InstructionMemory::tryExecute()'],['../classMakeBranch.html#a38fb6241213d3398aa32a25d4663e2a7',1,'MakeBranch::tryExecute()'],['../classMux.html#acee2ca8d05ba06844a6b2fc4db1e2b8a',1,'Mux::tryExecute()'],['../classPC.html#ad682a348fa2a6136ceaf55f8d7d6b7f4',1,'PC::tryExecute()'],['../classRegisters.html#ac17bac2d928c69c0f55e7f2f99503cfd',1,'Registers::tryExecute()']]]
 ];

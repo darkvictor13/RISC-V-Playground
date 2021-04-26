@@ -1,22 +1,35 @@
 /**
- * @file instructiontypesb.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @file alucontrol.cpp
+ * @brief Arquivo responsável por implementar a classe ALUControl
  * @author mGuerra
  * @version 0.1
 */
 
 #include "alucontrol.h"
 
+/**
+ * @brief ALUControl::ALUControl: Construtor da classe
+ */
 ALUControl::ALUControl()
 {
 
 }
 
+/**
+ * @brief ALUControl::connect: Conecta via ponteiro
+ * aos elementos necessários para passagem de dados
+ * @param ALU alu: A unidade lógica e aritimética
+ */
 void ALUControl::connect(ALU *alu)
 {
     this->alu = alu;
 }
 
+/**
+ * @brief ALUControl::setInstruction: Recebe uma instrução
+ * a ser decodificada
+ * @param Word instruction: Palavra recebida
+ */
 void ALUControl::setInstruction(Word instruction)
 {
     this->instruction = instruction;
@@ -27,6 +40,11 @@ void ALUControl::setInstruction(Word instruction)
     tryExecute();
 }
 
+/**
+ * @brief ALUControl::setALUOp: Altera o valor contido
+ * na variável aluOp
+ * @param aluOp: Valor a ser escrito
+ */
 void ALUControl::setALUOp(Word aluOp)
 {
     this->aluOp = aluOp;
@@ -37,6 +55,11 @@ void ALUControl::setALUOp(Word aluOp)
     tryExecute();
 }
 
+/**
+ * @brief ALUControl::tryExecute: Tenta Executar o subcircuito
+ *
+ * @warning Executa apenas quando Possui todos os valores
+ */
 void ALUControl::tryExecute()
 {
     if(hasALUOp && hasInstruction) {
@@ -52,6 +75,9 @@ void ALUControl::tryExecute()
     }
 }
 
+/**
+ * @brief ALUControl::execute: Realiza todas as ações propostas pela classe
+ */
 void ALUControl::execute()
 {
     alu->setReverse(instruction.getInteger(0, 0));
@@ -89,6 +115,9 @@ void ALUControl::execute()
     }
 }
 
+/**
+ * @brief ALUControl::~ALUControl: Destrutor da classe
+ */
 ALUControl::~ALUControl()
 {
 

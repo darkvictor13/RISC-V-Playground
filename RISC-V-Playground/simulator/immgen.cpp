@@ -1,17 +1,27 @@
 /**
- * @file instructiontypesb.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @file immgen.cpp
+ * @brief Arquivo responsável por implementar a classe ImmGen
  * @author mGuerra
  * @version 0.1
 */
 
 #include "immgen.h"
 
+/**
+ * @brief ImmGen::ImmGen: Construtor da classe
+ */
 ImmGen::ImmGen()
 {
 
 }
 
+/**
+ * @brief ImmGen::connect: Conecta via ponteiro
+ * aos elementos necessários para passagem de dados
+
+ * @param AddBranch addBranch: Circuito Somador
+ * @param MuxTypeB muxB: Multiplexador do tipo B
+ */
 void ImmGen::connect(AddBranch *addBranch, MuxTypeB *muxB)
 {
     this->addBranch = addBranch;
@@ -28,6 +38,12 @@ void ImmGen::setInstruction(Word instruction)
     tryExecute();
 }
 
+/**
+ * @brief ImmGen::tryExecute: Tenta Executar o subcircuito
+ *
+ * @warning Executa apenas quando Possui todos os valores
+
+ */
 void ImmGen::tryExecute()
 {
     if(hasInstruction) {
@@ -41,6 +57,9 @@ void ImmGen::tryExecute()
     }
 }
 
+/**
+ * @brief ImmGen::execute: Realiza todas as ações propostas pela classe
+ */
 void ImmGen::execute()
 {
     Instruction instructionFormat(&instruction);
@@ -68,6 +87,9 @@ void ImmGen::execute()
     addBranch->setValueB(value);
 }
 
+/**
+ * @brief ImmGen::~ImmGen: Destrutor da classe
+ */
 ImmGen::~ImmGen()
 {
 

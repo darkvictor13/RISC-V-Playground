@@ -1,17 +1,26 @@
 /**
- * @file instructiontypesb.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @file makebranch.cpp
+ * @brief Arquivo responsável por implementar a classe MakeBranch
  * @author mGuerra
  * @version 0.1
 */
 
 #include "makebranch.h"
 
+/**
+ * @brief MakeBranch::MakeBranch(): Construtor da classe
+ */
 MakeBranch::MakeBranch()
 {
 
 }
 
+/**
+ * @brief MakeBranch::connect: Conecta via ponteiro
+ * aos elementos necessários para passagem de dados
+
+ * @param MuxTypeA muxA
+ */
 void MakeBranch::connect(MuxTypeA *muxA)
 {
     this->muxA = muxA;
@@ -37,6 +46,12 @@ void MakeBranch::setZero(Word zero)
     tryExecute();
 }
 
+/**
+ * @brief MakeBranch::tryExecute: Tenta Executar o subcircuito
+ *
+ * @warning Executa apenas quando Possui todos os valores
+
+ */
 void MakeBranch::tryExecute()
 {
     if(hasBranch && hasZero) {
@@ -52,6 +67,9 @@ void MakeBranch::tryExecute()
     }
 }
 
+/**
+ * @brief MakeBranch::execute: Realiza todas as ações propostas pela classe
+ */
 void MakeBranch::execute()
 {
     if(branch == 1 && zero == 1) {
@@ -61,6 +79,9 @@ void MakeBranch::execute()
     }
 }
 
+/**
+ * @brief MakeBranch::~MakeBranch: Destrutor da classe
+ */
 MakeBranch::~MakeBranch()
 {
 

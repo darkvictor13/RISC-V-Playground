@@ -17,7 +17,7 @@ AddNext::AddNext()
 
 /**
  * @brief AddNext::connect: Conecta o Multiplexador ao somador
- * @param muxA: Multiplexador que seleciona entre
+ * @param MuxTypeA muxA: Multiplexador que seleciona entre
  * o valor 4 ou o offset
  */
 void AddNext::connect(MuxTypeA *muxA)

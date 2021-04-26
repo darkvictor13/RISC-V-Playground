@@ -1,6 +1,6 @@
 /**
- * @file add.h
- * @brief Arquivo responsável por definir a classe
+ * @file addnext.h
+ * @brief Arquivo responsável por definir a classe AddNext
  * @author mGuerra
  * @version 0.1
 */
@@ -15,7 +15,8 @@
 class MuxTypeA;
 
 /**
- * @brief A classe AddNext:
+ * @brief A classe AddNext: Calcula para onde o Pc deve
+ * apontar para obter a próxima instrução
  */
 class AddNext : public Add
 {

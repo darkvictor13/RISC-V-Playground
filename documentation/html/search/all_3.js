@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['execute_24',['execute',['../classAddBranch.html#aaf14c2d505a80fa2962bbb716c33859e',1,'AddBranch::execute()'],['../classAddNext.html#ab1989f49935eb070e4c5091b7ea70281',1,'AddNext::execute()']]],
-  ['extendint_25',['extendInt',['../classWord.html#a4e12829f77e7a5ab30b78fb93611fd75',1,'Word']]]
+  ['execute_30',['execute',['../classAddBranch.html#aaf14c2d505a80fa2962bbb716c33859e',1,'AddBranch::execute()'],['../classAddNext.html#ab1989f49935eb070e4c5091b7ea70281',1,'AddNext::execute()'],['../classALU.html#a98afffe05f0797c234c40e4dd90be6e6',1,'ALU::execute()'],['../classALUControl.html#a28e03fb4eee97d0c6f40bf8743701531',1,'ALUControl::execute()'],['../classControl.html#a32cc57074b3dfc4719020e80e66389b2',1,'Control::execute()'],['../classDataMemory.html#a66fc7cbee2c4f68be31d9af95194cd7d',1,'DataMemory::execute()'],['../classImmGen.html#a38a1e9712d2e132b62a1067da77a7356',1,'ImmGen::execute()'],['../classInstructionMemory.html#a07a27027e4bfce04b90a96bf9230d91e',1,'InstructionMemory::execute()'],['../classMakeBranch.html#a909b850021bbccdd1132706edaea9e96',1,'MakeBranch::execute()'],['../classMuxTypeA.html#abbca6be2689adf64d6a2a457b41912fd',1,'MuxTypeA::execute()'],['../classMuxTypeB.html#add653dee1e27d0631aa726466e39f428',1,'MuxTypeB::execute()'],['../classMuxTypeC.html#abc9d5106d503ce75584dab5a626773b6',1,'MuxTypeC::execute()'],['../classPC.html#a9249d3927bba71f229e39f2f41f8a61a',1,'PC::execute()']]],
+  ['extendint_31',['extendInt',['../classWord.html#a4e12829f77e7a5ab30b78fb93611fd75',1,'Word']]]
 ];

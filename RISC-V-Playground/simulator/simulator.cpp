@@ -7,6 +7,9 @@
 
 #include "simulator.h"
 
+/**
+ * @brief Simulator::Simulator: Construtor da classe
+ */
 Simulator::Simulator()
 {
     pc->connect(instructionMemory, addBranch, addNext);
@@ -64,6 +67,9 @@ void Simulator::loadMemory(QString file)
     instructionMemory->takeMemoryData(file);
 }
 
+/**
+ * @brief Simulator::~Simulator: Destrutor da classe
+ */
 Simulator::~Simulator()
 {
 

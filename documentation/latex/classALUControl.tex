@@ -30,21 +30,23 @@ void {\bfseries executed} ()
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classALUControl_a415c54caa88842d137a5783cdfd45905}\label{classALUControl_a415c54caa88842d137a5783cdfd45905}} 
-void {\bfseries connect} (\mbox{\hyperlink{classALU}{ALU}} $\ast$alu)
-\item 
-\mbox{\Hypertarget{classALUControl_affe18c7ecc53bacbaa4f1a260a5e58ad}\label{classALUControl_affe18c7ecc53bacbaa4f1a260a5e58ad}} 
-void {\bfseries set\+Instruction} (\mbox{\hyperlink{classWord}{Word}} instruction)
-\item 
-\mbox{\Hypertarget{classALUControl_a15975a1bb1a923a64fa4391b2dd14660}\label{classALUControl_a15975a1bb1a923a64fa4391b2dd14660}} 
-void {\bfseries set\+ALUOp} (\mbox{\hyperlink{classWord}{Word}} alu\+Op)
-\item 
-\mbox{\Hypertarget{classALUControl_a4d97ca79bdbbae9d93a653176c88a55e}\label{classALUControl_a4d97ca79bdbbae9d93a653176c88a55e}} 
-void {\bfseries try\+Execute} ()
-\item 
+\mbox{\Hypertarget{classALUControl_af5565b9adabc28014ee56a7c6d501591}\label{classALUControl_af5565b9adabc28014ee56a7c6d501591}} 
+\mbox{\hyperlink{classALUControl_af5565b9adabc28014ee56a7c6d501591}{ALUControl}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classALUControl_af5565b9adabc28014ee56a7c6d501591}{ALUControl\+::\+ALUControl}}\+: Construtor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classALUControl_a415c54caa88842d137a5783cdfd45905}{connect}} (\mbox{\hyperlink{classALU}{ALU}} $\ast$alu)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classALUControl_a415c54caa88842d137a5783cdfd45905}{ALUControl\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classALUControl_affe18c7ecc53bacbaa4f1a260a5e58ad}{set\+Instruction}} (\mbox{\hyperlink{classWord}{Word}} instruction)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classALUControl_affe18c7ecc53bacbaa4f1a260a5e58ad}{ALUControl\+::set\+Instruction}}\+: Recebe uma instrução a ser decodificada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classALUControl_a15975a1bb1a923a64fa4391b2dd14660}{set\+ALUOp}} (\mbox{\hyperlink{classWord}{Word}} alu\+Op)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classALUControl_a15975a1bb1a923a64fa4391b2dd14660}{ALUControl\+::set\+ALUOp}}\+: Altera o valor contido na variável alu\+Op. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classALUControl_a4d97ca79bdbbae9d93a653176c88a55e}{try\+Execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classALUControl_a4d97ca79bdbbae9d93a653176c88a55e}{ALUControl\+::try\+Execute}}\+: Tenta Executar o subcircuito. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classALUControl_a28e03fb4eee97d0c6f40bf8743701531}\label{classALUControl_a28e03fb4eee97d0c6f40bf8743701531}} 
-void {\bfseries execute} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classALUControl_a28e03fb4eee97d0c6f40bf8743701531}{execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classALUControl_a28e03fb4eee97d0c6f40bf8743701531}{ALUControl\+::execute}}\+: Realiza todas as ações propostas pela classe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classALUControl_af90c0119a9d6a68a6594a6571e454bfc}\label{classALUControl_af90c0119a9d6a68a6594a6571e454bfc}} 
+\mbox{\hyperlink{classALUControl_af90c0119a9d6a68a6594a6571e454bfc}{$\sim$\+ALUControl}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classALUControl_af90c0119a9d6a68a6594a6571e454bfc}{ALUControl\+::$\sim$\+ALUControl}}\+: Destrutor da classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
@@ -54,7 +56,84 @@ Definição na linha 24 do arquivo alucontrol.\+h.
 
 
 
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classALUControl_a415c54caa88842d137a5783cdfd45905}\label{classALUControl_a415c54caa88842d137a5783cdfd45905}} 
+\index{ALUControl@{ALUControl}!connect@{connect}}
+\index{connect@{connect}!ALUControl@{ALUControl}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void ALUControl\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classALU}{ALU}} $\ast$}]{alu }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classALUControl_a415c54caa88842d137a5783cdfd45905}{ALUControl\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{\hyperlink{classALU}{ALU}}} & alu\+: A unidade lógica e aritimética \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 23 do arquivo alucontrol.\+cpp.
+
+\mbox{\Hypertarget{classALUControl_a15975a1bb1a923a64fa4391b2dd14660}\label{classALUControl_a15975a1bb1a923a64fa4391b2dd14660}} 
+\index{ALUControl@{ALUControl}!setALUOp@{setALUOp}}
+\index{setALUOp@{setALUOp}!ALUControl@{ALUControl}}
+\doxysubsubsection{\texorpdfstring{setALUOp()}{setALUOp()}}
+{\footnotesize\ttfamily void ALUControl\+::set\+ALUOp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWord}{Word}}}]{alu\+Op }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classALUControl_a15975a1bb1a923a64fa4391b2dd14660}{ALUControl\+::set\+ALUOp}}\+: Altera o valor contido na variável alu\+Op. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em alu\+Op} & Valor a ser escrito \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 48 do arquivo alucontrol.\+cpp.
+
+\mbox{\Hypertarget{classALUControl_affe18c7ecc53bacbaa4f1a260a5e58ad}\label{classALUControl_affe18c7ecc53bacbaa4f1a260a5e58ad}} 
+\index{ALUControl@{ALUControl}!setInstruction@{setInstruction}}
+\index{setInstruction@{setInstruction}!ALUControl@{ALUControl}}
+\doxysubsubsection{\texorpdfstring{setInstruction()}{setInstruction()}}
+{\footnotesize\ttfamily void ALUControl\+::set\+Instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWord}{Word}}}]{instruction }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classALUControl_affe18c7ecc53bacbaa4f1a260a5e58ad}{ALUControl\+::set\+Instruction}}\+: Recebe uma instrução a ser decodificada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{\hyperlink{classWord}{Word}}} & instruction\+: Palavra recebida \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 33 do arquivo alucontrol.\+cpp.
+
+\mbox{\Hypertarget{classALUControl_a4d97ca79bdbbae9d93a653176c88a55e}\label{classALUControl_a4d97ca79bdbbae9d93a653176c88a55e}} 
+\index{ALUControl@{ALUControl}!tryExecute@{tryExecute}}
+\index{tryExecute@{tryExecute}!ALUControl@{ALUControl}}
+\doxysubsubsection{\texorpdfstring{tryExecute()}{tryExecute()}}
+{\footnotesize\ttfamily void ALUControl\+::try\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classALUControl_a4d97ca79bdbbae9d93a653176c88a55e}{ALUControl\+::try\+Execute}}\+: Tenta Executar o subcircuito. 
+
+\begin{DoxyWarning}{Aviso}
+Executa apenas quando Possui todos os valores 
+\end{DoxyWarning}
+
+
+Definição na linha 63 do arquivo alucontrol.\+cpp.
+
+
+
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
 alucontrol.\+h\item 
-alucontrol.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{alucontrol_8cpp}{alucontrol.\+cpp}}\end{DoxyCompactItemize}

@@ -71,67 +71,73 @@ $(function() {
 <div class="title">instructionmemory.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<a href="instructionmemory_8cpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;instructionmemory.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;InstructionMemory::InstructionMemory()</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> InstructionMemory::connect(<a class="code" href="classControl.html">Control</a> *control, <a class="code" href="classRegisters.html">Registers</a> *registers, <a class="code" href="classImmGen.html">ImmGen</a> *immGen, <a class="code" href="classALUControl.html">ALUControl</a> *aluControl)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    this-&gt;control = control;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    this-&gt;registers = registers;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    this-&gt;immGen = immGen;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    this-&gt;aluControl = aluControl;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> InstructionMemory::setAddress(<a class="code" href="classWord.html">Word</a> address)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    this-&gt;address = address;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    hasAddress = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    emit receivedAddress(address);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    tryExecute();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> InstructionMemory::tryExecute()</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span>(hasAddress) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        emit executed();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        hasAddress = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classInstructionMemory.html#ab8cf52c9d90ee839882175f1f0d092da">   13</a></span>&#160;<a class="code" href="classInstructionMemory.html#ab8cf52c9d90ee839882175f1f0d092da">InstructionMemory::InstructionMemory</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classInstructionMemory.html#a88379e2a589a2a8c5a4735aac06ba8e3">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstructionMemory.html#a88379e2a589a2a8c5a4735aac06ba8e3">InstructionMemory::connect</a>(<a class="code" href="classControl.html">Control</a> *control, <a class="code" href="classRegisters.html">Registers</a> *registers, <a class="code" href="classImmGen.html">ImmGen</a> *immGen, <a class="code" href="classALUControl.html">ALUControl</a> *aluControl)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    this-&gt;control = control;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    this-&gt;registers = registers;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    this-&gt;immGen = immGen;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    this-&gt;aluControl = aluControl;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> InstructionMemory::setAddress(<a class="code" href="classWord.html">Word</a> address)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    this-&gt;address = address;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    hasAddress = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        execute();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    emit receivedAddress(address);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        address = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> InstructionMemory::execute()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classWord.html">Word</a> value = getValue(address);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    control-&gt;setOpcode(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(0, 6));</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    registers-&gt;setReadRegister1(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(15, 19));</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    registers-&gt;setReadRegister2(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(20, 24));</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    registers-&gt;setWriteRegister(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(7, 11));</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    immGen-&gt;setInstruction(value);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classInstructionMemory.html#afe9d029af49b5e3af87a90626567ffee">tryExecute</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classInstructionMemory.html#afe9d029af49b5e3af87a90626567ffee">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstructionMemory.html#afe9d029af49b5e3af87a90626567ffee">InstructionMemory::tryExecute</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span>(hasAddress) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        emit executed();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classWord.html">Word</a> instruction = (value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(30, 30) &lt;&lt; 3) | value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(12, 14);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        hasAddress = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    aluControl-&gt;setInstruction(instruction);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;InstructionMemory::~InstructionMemory()</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classInstructionMemory.html#a07a27027e4bfce04b90a96bf9230d91e">execute</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        address = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classInstructionMemory.html#a07a27027e4bfce04b90a96bf9230d91e">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classInstructionMemory.html#a07a27027e4bfce04b90a96bf9230d91e">InstructionMemory::execute</a>()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classWord.html">Word</a> value = getValue(address);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    control-&gt;setOpcode(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(0, 6));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    registers-&gt;setReadRegister1(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(15, 19));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    registers-&gt;setReadRegister2(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(20, 24));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    registers-&gt;setWriteRegister(value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(7, 11));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    immGen-&gt;setInstruction(value);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classWord.html">Word</a> instruction = (value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(30, 30) &lt;&lt; 3) | value.<a class="code" href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">getInteger</a>(12, 14);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    aluControl-&gt;<a class="code" href="classALUControl.html#affe18c7ecc53bacbaa4f1a260a5e58ad">setInstruction</a>(instruction);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classInstructionMemory.html#ae0fcf7e69fb2698cd49d58e73f61f45b">   85</a></span>&#160;<a class="code" href="classInstructionMemory.html#ae0fcf7e69fb2698cd49d58e73f61f45b">InstructionMemory::~InstructionMemory</a>()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 <div class="ttc" id="aclassALUControl_html"><div class="ttname"><a href="classALUControl.html">ALUControl</a></div><div class="ttdoc">A classe ALUControl:</div><div class="ttdef"><b>Definition:</b> <a href="alucontrol_8h_source.html#l00024">alucontrol.h:25</a></div></div>
+<div class="ttc" id="aclassALUControl_html_affe18c7ecc53bacbaa4f1a260a5e58ad"><div class="ttname"><a href="classALUControl.html#affe18c7ecc53bacbaa4f1a260a5e58ad">ALUControl::setInstruction</a></div><div class="ttdeci">void setInstruction(Word instruction)</div><div class="ttdoc">ALUControl::setInstruction: Recebe uma instrução a ser decodificada.</div><div class="ttdef"><b>Definition:</b> <a href="alucontrol_8cpp_source.html#l00033">alucontrol.cpp:33</a></div></div>
 <div class="ttc" id="aclassControl_html"><div class="ttname"><a href="classControl.html">Control</a></div><div class="ttdoc">A classe Control:</div><div class="ttdef"><b>Definition:</b> <a href="control_8h_source.html#l00032">control.h:33</a></div></div>
 <div class="ttc" id="aclassImmGen_html"><div class="ttname"><a href="classImmGen.html">ImmGen</a></div><div class="ttdoc">A classe ImmGen:</div><div class="ttdef"><b>Definition:</b> <a href="immgen_8h_source.html#l00029">immgen.h:30</a></div></div>
+<div class="ttc" id="aclassInstructionMemory_html_a07a27027e4bfce04b90a96bf9230d91e"><div class="ttname"><a href="classInstructionMemory.html#a07a27027e4bfce04b90a96bf9230d91e">InstructionMemory::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">InstructionMemory::execute: Realiza todas as ações propostas pela classe.</div><div class="ttdef"><b>Definition:</b> <a href="instructionmemory_8cpp_source.html#l00067">instructionmemory.cpp:67</a></div></div>
+<div class="ttc" id="aclassInstructionMemory_html_a88379e2a589a2a8c5a4735aac06ba8e3"><div class="ttname"><a href="classInstructionMemory.html#a88379e2a589a2a8c5a4735aac06ba8e3">InstructionMemory::connect</a></div><div class="ttdeci">void connect(Control *control, Registers *registers, ImmGen *immGen, ALUControl *aluControl)</div><div class="ttdoc">InstructionMemory::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="instructionmemory_8cpp_source.html#l00027">instructionmemory.cpp:27</a></div></div>
+<div class="ttc" id="aclassInstructionMemory_html_ab8cf52c9d90ee839882175f1f0d092da"><div class="ttname"><a href="classInstructionMemory.html#ab8cf52c9d90ee839882175f1f0d092da">InstructionMemory::InstructionMemory</a></div><div class="ttdeci">InstructionMemory()</div><div class="ttdoc">InstructionMemory::InstructionMemory: Construtor da classe.</div><div class="ttdef"><b>Definition:</b> <a href="instructionmemory_8cpp_source.html#l00013">instructionmemory.cpp:13</a></div></div>
+<div class="ttc" id="aclassInstructionMemory_html_ae0fcf7e69fb2698cd49d58e73f61f45b"><div class="ttname"><a href="classInstructionMemory.html#ae0fcf7e69fb2698cd49d58e73f61f45b">InstructionMemory::~InstructionMemory</a></div><div class="ttdeci">~InstructionMemory()</div><div class="ttdoc">InstructionMemory::~InstructionMemory: Destrutor da classe.</div><div class="ttdef"><b>Definition:</b> <a href="instructionmemory_8cpp_source.html#l00085">instructionmemory.cpp:85</a></div></div>
+<div class="ttc" id="aclassInstructionMemory_html_afe9d029af49b5e3af87a90626567ffee"><div class="ttname"><a href="classInstructionMemory.html#afe9d029af49b5e3af87a90626567ffee">InstructionMemory::tryExecute</a></div><div class="ttdeci">void tryExecute()</div><div class="ttdoc">InstructionMemory::tryExecute: Tenta Executar o subcircuito.</div><div class="ttdef"><b>Definition:</b> <a href="instructionmemory_8cpp_source.html#l00051">instructionmemory.cpp:51</a></div></div>
 <div class="ttc" id="aclassRegisters_html"><div class="ttname"><a href="classRegisters.html">Registers</a></div><div class="ttdoc">A classe Registers:</div><div class="ttdef"><b>Definition:</b> <a href="registers_8h_source.html#l00035">registers.h:36</a></div></div>
 <div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word: Representação de uma palavra de 32 bits e suas operações.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00030">word.h:31</a></div></div>
 <div class="ttc" id="aclassWord_html_a2fa49c6651bf133d453996867a30fb9c"><div class="ttname"><a href="classWord.html#a2fa49c6651bf133d453996867a30fb9c">Word::getInteger</a></div><div class="ttdeci">DATA getInteger()</div><div class="ttdoc">Word::getInteger: Indica o valor decimal da palavra.</div><div class="ttdef"><b>Definition:</b> <a href="word_8cpp_source.html#l00533">word.cpp:533</a></div></div>

@@ -1,6 +1,6 @@
 /**
- * @file add.h
- * @brief Arquivo responsável por definir a classe
+ * @file alu.h
+ * @brief Arquivo responsável por definir a classe ALU
  * @author mGuerra
  * @version 0.1
 */
@@ -21,7 +21,8 @@ class MakeBranch;
 class MuxTypeC;
 
 /**
- * @brief A classe ALU:
+ * @brief A classe ALU: Representa a unidade lógica e aritimética
+ * responsável por executar toda operação do programa
  */
 class ALU : public QObject
 {

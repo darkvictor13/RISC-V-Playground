@@ -81,7 +81,7 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;instructionmemory.h&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="addbranch_8h.html">addbranch.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;addnext.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="addnext_8h.html">addnext.h</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="classInstructionMemory.html">InstructionMemory</a>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span><a class="code" href="classAddBranch.html">AddBranch</a>;</div>
@@ -102,9 +102,9 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> hasAddress = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classPC.html">PC</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classPC.html#a213092addb3a1d89b761f780a055f0a3">PC</a>();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> connect(<a class="code" href="classInstructionMemory.html">InstructionMemory</a> *instructionMemory, <a class="code" href="classAddBranch.html">AddBranch</a> *addBranch, <a class="code" href="classAddNext.html">AddNext</a> *addNext);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPC.html#af1ad0f73a3f6536a276fe5ea721b5474">connect</a>(<a class="code" href="classInstructionMemory.html">InstructionMemory</a> *instructionMemory, <a class="code" href="classAddBranch.html">AddBranch</a> *addBranch, <a class="code" href="classAddNext.html">AddNext</a> *addNext);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> run();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> restart();</div>
@@ -112,10 +112,10 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> setAddress(<a class="code" href="classWord.html">Word</a> address);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> tryExecute();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> execute();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPC.html#ad682a348fa2a6136ceaf55f8d7d6b7f4">tryExecute</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPC.html#a9249d3927bba71f229e39f2f41f8a61a">execute</a>();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ~<a class="code" href="classPC.html">PC</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classPC.html#a115da8404d548672d21556278fbcf3d9">~PC</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;signals:</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> receivedAddress(<a class="code" href="classWord.html">Word</a> address);</div>
@@ -126,10 +126,16 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// PC_H</span></div>
 <div class="ttc" id="aaddbranch_8h_html"><div class="ttname"><a href="addbranch_8h.html">addbranch.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe AddBranch.</div></div>
+<div class="ttc" id="aaddnext_8h_html"><div class="ttname"><a href="addnext_8h.html">addnext.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe AddNext.</div></div>
 <div class="ttc" id="aclassAddBranch_html"><div class="ttname"><a href="classAddBranch.html">AddBranch</a></div><div class="ttdoc">A classe AddBranch: Circuito somador que soma ao program counter o offset.</div><div class="ttdef"><b>Definition:</b> <a href="addbranch_8h_source.html#l00021">addbranch.h:22</a></div></div>
-<div class="ttc" id="aclassAddNext_html"><div class="ttname"><a href="classAddNext.html">AddNext</a></div><div class="ttdoc">A classe AddNext:</div><div class="ttdef"><b>Definition:</b> <a href="addnext_8h_source.html#l00020">addnext.h:21</a></div></div>
+<div class="ttc" id="aclassAddNext_html"><div class="ttname"><a href="classAddNext.html">AddNext</a></div><div class="ttdoc">A classe AddNext: Calcula para onde o Pc deve apontar para obter a próxima instrução.</div><div class="ttdef"><b>Definition:</b> <a href="addnext_8h_source.html#l00021">addnext.h:22</a></div></div>
 <div class="ttc" id="aclassInstructionMemory_html"><div class="ttname"><a href="classInstructionMemory.html">InstructionMemory</a></div><div class="ttdoc">A classe InstructionMemory:</div><div class="ttdef"><b>Definition:</b> <a href="instructionmemory_8h_source.html#l00026">instructionmemory.h:27</a></div></div>
 <div class="ttc" id="aclassPC_html"><div class="ttname"><a href="classPC.html">PC</a></div><div class="ttdoc">A classe PC:</div><div class="ttdef"><b>Definition:</b> <a href="pc_8h_source.html#l00026">pc.h:27</a></div></div>
+<div class="ttc" id="aclassPC_html_a115da8404d548672d21556278fbcf3d9"><div class="ttname"><a href="classPC.html#a115da8404d548672d21556278fbcf3d9">PC::~PC</a></div><div class="ttdeci">~PC()</div><div class="ttdoc">PC::~PC: Destrutor da classe.</div><div class="ttdef"><b>Definition:</b> <a href="pc_8cpp_source.html#l00091">pc.cpp:91</a></div></div>
+<div class="ttc" id="aclassPC_html_a213092addb3a1d89b761f780a055f0a3"><div class="ttname"><a href="classPC.html#a213092addb3a1d89b761f780a055f0a3">PC::PC</a></div><div class="ttdeci">PC()</div><div class="ttdoc">PC::PC: Construtor da classe.</div><div class="ttdef"><b>Definition:</b> <a href="pc_8cpp_source.html#l00013">pc.cpp:13</a></div></div>
+<div class="ttc" id="aclassPC_html_a9249d3927bba71f229e39f2f41f8a61a"><div class="ttname"><a href="classPC.html#a9249d3927bba71f229e39f2f41f8a61a">PC::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">PC::execute: Realiza todas as ações propostas pela classe.</div><div class="ttdef"><b>Definition:</b> <a href="pc_8cpp_source.html#l00080">pc.cpp:80</a></div></div>
+<div class="ttc" id="aclassPC_html_ad682a348fa2a6136ceaf55f8d7d6b7f4"><div class="ttname"><a href="classPC.html#ad682a348fa2a6136ceaf55f8d7d6b7f4">PC::tryExecute</a></div><div class="ttdeci">void tryExecute()</div><div class="ttdoc">PC::tryExecute: Tenta alterar o valor de Pc.</div><div class="ttdef"><b>Definition:</b> <a href="pc_8cpp_source.html#l00065">pc.cpp:65</a></div></div>
+<div class="ttc" id="aclassPC_html_af1ad0f73a3f6536a276fe5ea721b5474"><div class="ttname"><a href="classPC.html#af1ad0f73a3f6536a276fe5ea721b5474">PC::connect</a></div><div class="ttdeci">void connect(InstructionMemory *instructionMemory, AddBranch *addBranch, AddNext *addNext)</div><div class="ttdoc">PC::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="pc_8cpp_source.html#l00026">pc.cpp:26</a></div></div>
 <div class="ttc" id="aclassWord_html"><div class="ttname"><a href="classWord.html">Word</a></div><div class="ttdoc">A classe Word: Representação de uma palavra de 32 bits e suas operações.</div><div class="ttdef"><b>Definition:</b> <a href="word_8h_source.html#l00030">word.h:31</a></div></div>
 <div class="ttc" id="aword_8h_html"><div class="ttname"><a href="word_8h.html">word.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 </div><!-- fragment --></div><!-- contents -->

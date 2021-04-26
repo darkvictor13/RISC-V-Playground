@@ -51,6 +51,9 @@ void {\bfseries executed\+Write} ()
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}\label{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}} 
+\mbox{\hyperlink{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}{Registers}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRegisters_a3b172e33c0ee567e8d5f6a0e6729f5f3}{Registers\+::\+Registers}}\+: Construtor da classe. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRegisters_a533552e32599a390587212086b4e7d83}\label{classRegisters_a533552e32599a390587212086b4e7d83}} 
 void {\bfseries init} ()
 \item 
@@ -63,9 +66,8 @@ void {\bfseries set\+Value} (\mbox{\hyperlink{classWord}{Word}} value, \mbox{\hy
 \mbox{\Hypertarget{classRegisters_a04b347222faeabfb96230a2b135e09ea}\label{classRegisters_a04b347222faeabfb96230a2b135e09ea}} 
 void {\bfseries restart} ()
 \item 
-\mbox{\Hypertarget{classRegisters_a049d6b90bd23fb9924c8b8002c3315d8}\label{classRegisters_a049d6b90bd23fb9924c8b8002c3315d8}} 
-void {\bfseries connect} (\mbox{\hyperlink{classALU}{ALU}} $\ast$alu, \mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}} $\ast$muxB, \mbox{\hyperlink{classDataMemory}{Data\+Memory}} $\ast$data\+Memory)
-\item 
+void \mbox{\hyperlink{classRegisters_a049d6b90bd23fb9924c8b8002c3315d8}{connect}} (\mbox{\hyperlink{classALU}{ALU}} $\ast$alu, \mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}} $\ast$muxB, \mbox{\hyperlink{classDataMemory}{Data\+Memory}} $\ast$data\+Memory)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRegisters_a049d6b90bd23fb9924c8b8002c3315d8}{Registers\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRegisters_acfcedd92a05dc6fadf1392467db002e6}\label{classRegisters_acfcedd92a05dc6fadf1392467db002e6}} 
 void {\bfseries set\+Read\+Register1} (\mbox{\hyperlink{classWord}{Word}} read\+Register1)
 \item 
@@ -81,21 +83,66 @@ void {\bfseries set\+Write\+Data} (\mbox{\hyperlink{classWord}{Word}} write\+Dat
 \mbox{\Hypertarget{classRegisters_a7f65c2b4e2bb59380b71ef13e58751c3}\label{classRegisters_a7f65c2b4e2bb59380b71ef13e58751c3}} 
 void {\bfseries set\+Reg\+Write} (\mbox{\hyperlink{classWord}{Word}} reg\+Write)
 \item 
-\mbox{\Hypertarget{classRegisters_ac17bac2d928c69c0f55e7f2f99503cfd}\label{classRegisters_ac17bac2d928c69c0f55e7f2f99503cfd}} 
-void {\bfseries try\+Execute} ()
-\item 
+void \mbox{\hyperlink{classRegisters_ac17bac2d928c69c0f55e7f2f99503cfd}{try\+Execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRegisters_ac17bac2d928c69c0f55e7f2f99503cfd}{Registers\+::try\+Execute}}\+: Tenta Executar o subcircuito. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRegisters_a86952fe2d9e88fd906ed589caf14b6f4}\label{classRegisters_a86952fe2d9e88fd906ed589caf14b6f4}} 
 void {\bfseries execute\+Read} ()
 \item 
 \mbox{\Hypertarget{classRegisters_ae8375b9946b796cc622a9b8f6b2d1c71}\label{classRegisters_ae8375b9946b796cc622a9b8f6b2d1c71}} 
 void {\bfseries execute\+Write} ()
-\end{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRegisters_a0d0f1d2adc4d03b33be699db0ae11761}\label{classRegisters_a0d0f1d2adc4d03b33be699db0ae11761}} 
+\mbox{\hyperlink{classRegisters_a0d0f1d2adc4d03b33be699db0ae11761}{$\sim$\+Registers}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRegisters_a0d0f1d2adc4d03b33be699db0ae11761}{Registers\+::$\sim$\+Registers}}\+: Destrutor da classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 A classe \mbox{\hyperlink{classRegisters}{Registers}}\+: 
 
 Definição na linha 35 do arquivo registers.\+h.
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classRegisters_a049d6b90bd23fb9924c8b8002c3315d8}\label{classRegisters_a049d6b90bd23fb9924c8b8002c3315d8}} 
+\index{Registers@{Registers}!connect@{connect}}
+\index{connect@{connect}!Registers@{Registers}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void Registers\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classALU}{ALU}} $\ast$}]{alu,  }\item[{\mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}} $\ast$}]{muxB,  }\item[{\mbox{\hyperlink{classDataMemory}{Data\+Memory}} $\ast$}]{data\+Memory }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classRegisters_a049d6b90bd23fb9924c8b8002c3315d8}{Registers\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{\hyperlink{classALU}{ALU}}} & alu \\
+\hline
+{\em \mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}}} & muxB \\
+\hline
+{\em \mbox{\hyperlink{classDataMemory}{Data\+Memory}}} & data\+Memory \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 56 do arquivo registers.\+cpp.
+
+\mbox{\Hypertarget{classRegisters_ac17bac2d928c69c0f55e7f2f99503cfd}\label{classRegisters_ac17bac2d928c69c0f55e7f2f99503cfd}} 
+\index{Registers@{Registers}!tryExecute@{tryExecute}}
+\index{tryExecute@{tryExecute}!Registers@{Registers}}
+\doxysubsubsection{\texorpdfstring{tryExecute()}{tryExecute()}}
+{\footnotesize\ttfamily void Registers\+::try\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classRegisters_ac17bac2d928c69c0f55e7f2f99503cfd}{Registers\+::try\+Execute}}\+: Tenta Executar o subcircuito. 
+
+\begin{DoxyWarning}{Aviso}
+Executa apenas quando Possui todos os valores 
+\end{DoxyWarning}
+
+
+Definição na linha 119 do arquivo registers.\+cpp.
 
 
 

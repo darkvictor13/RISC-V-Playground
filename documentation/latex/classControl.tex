@@ -27,18 +27,22 @@ void {\bfseries executed} ()
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classControl_ad42ec77fa7dde73a69b549d6ec7f8aa6}\label{classControl_ad42ec77fa7dde73a69b549d6ec7f8aa6}} 
-void {\bfseries connect} (\mbox{\hyperlink{classMakeBranch}{Make\+Branch}} $\ast$make\+Branch, \mbox{\hyperlink{classDataMemory}{Data\+Memory}} $\ast$data\+Memory, \mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}} $\ast$muxB, \mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}} $\ast$muxC, \mbox{\hyperlink{classALUControl}{ALUControl}} $\ast$alu\+Control, \mbox{\hyperlink{classRegisters}{Registers}} $\ast$registers)
-\item 
+\mbox{\Hypertarget{classControl_aa730aeda4517f40bc48ba1e46ebded77}\label{classControl_aa730aeda4517f40bc48ba1e46ebded77}} 
+\mbox{\hyperlink{classControl_aa730aeda4517f40bc48ba1e46ebded77}{Control}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classControl_aa730aeda4517f40bc48ba1e46ebded77}{Control\+::\+Control}}\+: Construtor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classControl_ad42ec77fa7dde73a69b549d6ec7f8aa6}{connect}} (\mbox{\hyperlink{classMakeBranch}{Make\+Branch}} $\ast$make\+Branch, \mbox{\hyperlink{classDataMemory}{Data\+Memory}} $\ast$data\+Memory, \mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}} $\ast$muxB, \mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}} $\ast$muxC, \mbox{\hyperlink{classALUControl}{ALUControl}} $\ast$alu\+Control, \mbox{\hyperlink{classRegisters}{Registers}} $\ast$registers)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classControl_ad42ec77fa7dde73a69b549d6ec7f8aa6}{Control\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classControl_a16974160069233d7b010e072d7583f22}\label{classControl_a16974160069233d7b010e072d7583f22}} 
 void {\bfseries set\+Opcode} (\mbox{\hyperlink{classWord}{Word}} opcode)
 \item 
-\mbox{\Hypertarget{classControl_aa166c60c88e23f3a9a9e3bcf61ead78a}\label{classControl_aa166c60c88e23f3a9a9e3bcf61ead78a}} 
-void {\bfseries try\+Execute} ()
-\item 
+void \mbox{\hyperlink{classControl_aa166c60c88e23f3a9a9e3bcf61ead78a}{try\+Execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classControl_aa166c60c88e23f3a9a9e3bcf61ead78a}{Control\+::try\+Execute}}\+: Tenta Executar o subcircuito. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classControl_a32cc57074b3dfc4719020e80e66389b2}\label{classControl_a32cc57074b3dfc4719020e80e66389b2}} 
-void {\bfseries execute} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classControl_a32cc57074b3dfc4719020e80e66389b2}{execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classControl_a32cc57074b3dfc4719020e80e66389b2}{Control\+::execute}}\+: Realiza todas as ações propostas pela classe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControl_aedda1328c4f8b8d49bca8f0812d3bfd1}\label{classControl_aedda1328c4f8b8d49bca8f0812d3bfd1}} 
+\mbox{\hyperlink{classControl_aedda1328c4f8b8d49bca8f0812d3bfd1}{$\sim$\+Control}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classControl_aedda1328c4f8b8d49bca8f0812d3bfd1}{Control\+::$\sim$\+Control}}\+: Destrutor da classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
@@ -48,7 +52,56 @@ Definição na linha 32 do arquivo control.\+h.
 
 
 
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classControl_ad42ec77fa7dde73a69b549d6ec7f8aa6}\label{classControl_ad42ec77fa7dde73a69b549d6ec7f8aa6}} 
+\index{Control@{Control}!connect@{connect}}
+\index{connect@{connect}!Control@{Control}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void Control\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMakeBranch}{Make\+Branch}} $\ast$}]{make\+Branch,  }\item[{\mbox{\hyperlink{classDataMemory}{Data\+Memory}} $\ast$}]{data\+Memory,  }\item[{\mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}} $\ast$}]{muxB,  }\item[{\mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}} $\ast$}]{muxC,  }\item[{\mbox{\hyperlink{classALUControl}{ALUControl}} $\ast$}]{alu\+Control,  }\item[{\mbox{\hyperlink{classRegisters}{Registers}} $\ast$}]{registers }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classControl_ad42ec77fa7dde73a69b549d6ec7f8aa6}{Control\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{\hyperlink{classMakeBranch}{Make\+Branch}}} & make\+Branch \\
+\hline
+{\em \mbox{\hyperlink{classDataMemory}{Data\+Memory}}} & data\+Memory \\
+\hline
+{\em \mbox{\hyperlink{classMuxTypeB}{Mux\+TypeB}}} & muxB \\
+\hline
+{\em \mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}}} & muxC \\
+\hline
+{\em \mbox{\hyperlink{classALUControl}{ALUControl}}} & alu\+Control \\
+\hline
+{\em \mbox{\hyperlink{classRegisters}{Registers}}} & registers \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 29 do arquivo control.\+cpp.
+
+\mbox{\Hypertarget{classControl_aa166c60c88e23f3a9a9e3bcf61ead78a}\label{classControl_aa166c60c88e23f3a9a9e3bcf61ead78a}} 
+\index{Control@{Control}!tryExecute@{tryExecute}}
+\index{tryExecute@{tryExecute}!Control@{Control}}
+\doxysubsubsection{\texorpdfstring{tryExecute()}{tryExecute()}}
+{\footnotesize\ttfamily void Control\+::try\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classControl_aa166c60c88e23f3a9a9e3bcf61ead78a}{Control\+::try\+Execute}}\+: Tenta Executar o subcircuito. 
+
+\begin{DoxyWarning}{Aviso}
+Executa apenas quando Possui todos os valores 
+\end{DoxyWarning}
+
+
+Definição na linha 55 do arquivo control.\+cpp.
+
+
+
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
 control.\+h\item 
-control.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{control_8cpp}{control.\+cpp}}\end{DoxyCompactItemize}

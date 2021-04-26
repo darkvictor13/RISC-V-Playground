@@ -36,9 +36,11 @@ void {\bfseries executed} ()
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDataMemory_a407b1dec19925ccd9a70fb657b73bf4d}\label{classDataMemory_a407b1dec19925ccd9a70fb657b73bf4d}} 
-void {\bfseries connect} (\mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}} $\ast$muxC)
-\item 
+\mbox{\Hypertarget{classDataMemory_af27e74a463cfa8d051d1fdc7a1a1c2b0}\label{classDataMemory_af27e74a463cfa8d051d1fdc7a1a1c2b0}} 
+\mbox{\hyperlink{classDataMemory_af27e74a463cfa8d051d1fdc7a1a1c2b0}{Data\+Memory}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDataMemory_af27e74a463cfa8d051d1fdc7a1a1c2b0}{Data\+Memory\+::\+Data\+Memory}}\+: Construtor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataMemory_a407b1dec19925ccd9a70fb657b73bf4d}{connect}} (\mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}} $\ast$muxC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDataMemory_a407b1dec19925ccd9a70fb657b73bf4d}{Data\+Memory\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDataMemory_a29560168ddabc58230b7619520fd0e9d}\label{classDataMemory_a29560168ddabc58230b7619520fd0e9d}} 
 void {\bfseries set\+Address} (\mbox{\hyperlink{classWord}{Word}} address)
 \item 
@@ -51,12 +53,14 @@ void {\bfseries set\+Mem\+Write} (\mbox{\hyperlink{classWord}{Word}} mem\+Write)
 \mbox{\Hypertarget{classDataMemory_a4d5fc83cbac6ad6723432cc6a9e7cce8}\label{classDataMemory_a4d5fc83cbac6ad6723432cc6a9e7cce8}} 
 void {\bfseries set\+Mem\+Read} (\mbox{\hyperlink{classWord}{Word}} mem\+Read)
 \item 
-\mbox{\Hypertarget{classDataMemory_ad4c464320e0ab179a2fcc988f5d938fe}\label{classDataMemory_ad4c464320e0ab179a2fcc988f5d938fe}} 
-void {\bfseries try\+Execute} ()
-\item 
+void \mbox{\hyperlink{classDataMemory_ad4c464320e0ab179a2fcc988f5d938fe}{try\+Execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDataMemory_ad4c464320e0ab179a2fcc988f5d938fe}{Data\+Memory\+::try\+Execute}}\+: Tenta Executar o subcircuito. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDataMemory_a66fc7cbee2c4f68be31d9af95194cd7d}\label{classDataMemory_a66fc7cbee2c4f68be31d9af95194cd7d}} 
-void {\bfseries execute} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classDataMemory_a66fc7cbee2c4f68be31d9af95194cd7d}{execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDataMemory_a66fc7cbee2c4f68be31d9af95194cd7d}{Data\+Memory\+::execute}}\+: Realiza todas as ações propostas pela classe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataMemory_ad0c86836c8730e111c983ba5bd7bd0df}\label{classDataMemory_ad0c86836c8730e111c983ba5bd7bd0df}} 
+\mbox{\hyperlink{classDataMemory_ad0c86836c8730e111c983ba5bd7bd0df}{$\sim$\+Data\+Memory}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDataMemory_ad0c86836c8730e111c983ba5bd7bd0df}{Data\+Memory\+::$\sim$\+Data\+Memory}}\+: Destrutor da classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Outros membros herdados}
 
 
@@ -67,7 +71,46 @@ Definição na linha 20 do arquivo datamemory.\+h.
 
 
 
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classDataMemory_a407b1dec19925ccd9a70fb657b73bf4d}\label{classDataMemory_a407b1dec19925ccd9a70fb657b73bf4d}} 
+\index{DataMemory@{DataMemory}!connect@{connect}}
+\index{connect@{connect}!DataMemory@{DataMemory}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void Data\+Memory\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}} $\ast$}]{muxC }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classDataMemory_a407b1dec19925ccd9a70fb657b73bf4d}{Data\+Memory\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{\hyperlink{classMuxTypeC}{Mux\+TypeC}}} & muxC\+: Multiplexador do tipo C \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 24 do arquivo datamemory.\+cpp.
+
+\mbox{\Hypertarget{classDataMemory_ad4c464320e0ab179a2fcc988f5d938fe}\label{classDataMemory_ad4c464320e0ab179a2fcc988f5d938fe}} 
+\index{DataMemory@{DataMemory}!tryExecute@{tryExecute}}
+\index{tryExecute@{tryExecute}!DataMemory@{DataMemory}}
+\doxysubsubsection{\texorpdfstring{tryExecute()}{tryExecute()}}
+{\footnotesize\ttfamily void Data\+Memory\+::try\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classDataMemory_ad4c464320e0ab179a2fcc988f5d938fe}{Data\+Memory\+::try\+Execute}}\+: Tenta Executar o subcircuito. 
+
+\begin{DoxyWarning}{Aviso}
+Executa apenas quando Possui todos os valores 
+\end{DoxyWarning}
+
+
+Definição na linha 75 do arquivo datamemory.\+cpp.
+
+
+
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
 datamemory.\+h\item 
-datamemory.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{datamemory_8cpp}{datamemory.\+cpp}}\end{DoxyCompactItemize}

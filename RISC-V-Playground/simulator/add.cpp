@@ -17,7 +17,7 @@ Add::Add()
 
 /**
  * @brief Add::setValueA: Altera o valor da primeira entrada do circuito
- * @param valueA
+ * @param Word valueA
  */
 void Add::setValueA(Word valueA)
 {
@@ -31,7 +31,7 @@ void Add::setValueA(Word valueA)
 
 /**
  * @brief Add::setValueB: Altera o valor da segunda entrada do circuito
- * @param valueB
+ * @param Word valueB
  */
 void Add::setValueB(Word valueB)
 {

@@ -74,69 +74,83 @@ $(function() {
 <a href="simulator_8cpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="simulator_8h.html">simulator.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;Simulator::Simulator()</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    pc-&gt;connect(instructionMemory, addBranch, addNext);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    aluControl-&gt;connect(alu);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    control-&gt;connect(makeBranch, dataMemory, muxB, muxC, aluControl, registers);</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classSimulator.html#a031573bfcfe2e0f5c9539bcc1c7fc5d9">   13</a></span>&#160;<a class="code" href="classSimulator.html#a031573bfcfe2e0f5c9539bcc1c7fc5d9">Simulator::Simulator</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    pc-&gt;<a class="code" href="classPC.html#af1ad0f73a3f6536a276fe5ea721b5474">connect</a>(instructionMemory, addBranch, addNext);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    registers-&gt;connect(alu, muxB, dataMemory);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    instructionMemory-&gt;connect(control, registers, immGen, aluControl);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    dataMemory-&gt;connect(muxC);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    alu-&gt;connect(dataMemory, makeBranch, muxC);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    addNext-&gt;<a class="code" href="classAddNext.html#afff8640a1a555e60f27c8ababb0a1b33">connect</a>(muxA);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    addBranch-&gt;<a class="code" href="classAddBranch.html#a851af78f35b02bb783d2caff42032f83">connect</a>(muxA);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    immGen-&gt;connect(addBranch, muxB);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    muxA-&gt;connect(pc);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    muxB-&gt;connect(alu);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    muxC-&gt;connect(registers);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    makeBranch-&gt;connect(muxA);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    aluControl-&gt;<a class="code" href="classALUControl.html#a415c54caa88842d137a5783cdfd45905">connect</a>(alu);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    control-&gt;<a class="code" href="classControl.html#ad42ec77fa7dde73a69b549d6ec7f8aa6">connect</a>(makeBranch, dataMemory, muxB, muxC, aluControl, registers);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    registers-&gt;<a class="code" href="classRegisters.html#a049d6b90bd23fb9924c8b8002c3315d8">connect</a>(alu, muxB, dataMemory);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    instructionMemory-&gt;<a class="code" href="classInstructionMemory.html#a88379e2a589a2a8c5a4735aac06ba8e3">connect</a>(control, registers, immGen, aluControl);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    dataMemory-&gt;<a class="code" href="classDataMemory.html#a407b1dec19925ccd9a70fb657b73bf4d">connect</a>(muxC);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    alu-&gt;<a class="code" href="classALU.html#a1f31fce148abd5456f156b56b75b43d9">connect</a>(dataMemory, makeBranch, muxC);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    addNext-&gt;<a class="code" href="classAddNext.html#afff8640a1a555e60f27c8ababb0a1b33">connect</a>(muxA);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    addBranch-&gt;<a class="code" href="classAddBranch.html#a851af78f35b02bb783d2caff42032f83">connect</a>(muxA);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    immGen-&gt;<a class="code" href="classImmGen.html#a9f33cfef4428c5bb978cd33405c8ff65">connect</a>(addBranch, muxB);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    muxA-&gt;<a class="code" href="classMuxTypeA.html#a1f36d4f7df73f2d4f78c6e913ebc0378">connect</a>(pc);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    muxB-&gt;<a class="code" href="classMuxTypeB.html#abcc422043d103781a662e9a9ec489d27">connect</a>(alu);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    muxC-&gt;<a class="code" href="classMuxTypeC.html#a0913221ab3e7c03f575c41d11378d13d">connect</a>(registers);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> Simulator::init()</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    registers-&gt;init();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    instructionMemory-&gt;init();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    dataMemory-&gt;init();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> Simulator::run()</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">while</span>(instructionMemory-&gt;testInstruction(pc-&gt;getAddress())) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        pc-&gt;run();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> Simulator::step()</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    pc-&gt;run();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> Simulator::restart()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    pc-&gt;restart();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    dataMemory-&gt;restart();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> Simulator::loadMemory(QString file)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    pc-&gt;restart();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    dataMemory-&gt;restart();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    instructionMemory-&gt;restart();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    instructionMemory-&gt;takeMemoryData(file);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;Simulator::~Simulator()</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    makeBranch-&gt;<a class="code" href="classMakeBranch.html#ac41b9eadd1a89c95373f518cf5df5e54">connect</a>(muxA);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> Simulator::init()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    registers-&gt;init();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    instructionMemory-&gt;init();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    dataMemory-&gt;init();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> Simulator::run()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">while</span>(instructionMemory-&gt;testInstruction(pc-&gt;getAddress())) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        pc-&gt;run();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> Simulator::step()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    pc-&gt;run();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> Simulator::restart()</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    pc-&gt;restart();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    dataMemory-&gt;restart();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> Simulator::loadMemory(QString file)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    pc-&gt;restart();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    dataMemory-&gt;restart();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    instructionMemory-&gt;restart();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    instructionMemory-&gt;takeMemoryData(file);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classSimulator.html#a0f49aa04f42060a785adf77346b9de9f">   73</a></span>&#160;<a class="code" href="classSimulator.html#a0f49aa04f42060a785adf77346b9de9f">Simulator::~Simulator</a>()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="ttc" id="aclassALUControl_html_a415c54caa88842d137a5783cdfd45905"><div class="ttname"><a href="classALUControl.html#a415c54caa88842d137a5783cdfd45905">ALUControl::connect</a></div><div class="ttdeci">void connect(ALU *alu)</div><div class="ttdoc">ALUControl::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="alucontrol_8cpp_source.html#l00023">alucontrol.cpp:23</a></div></div>
+<div class="ttc" id="aclassALU_html_a1f31fce148abd5456f156b56b75b43d9"><div class="ttname"><a href="classALU.html#a1f31fce148abd5456f156b56b75b43d9">ALU::connect</a></div><div class="ttdeci">void connect(DataMemory *dataMemory, MakeBranch *makeBranch, MuxTypeC *muxC)</div><div class="ttdoc">ALU::connect: Conecta a Alu com suas saídas.</div><div class="ttdef"><b>Definition:</b> <a href="alu_8cpp_source.html#l00024">alu.cpp:24</a></div></div>
 <div class="ttc" id="aclassAddBranch_html_a851af78f35b02bb783d2caff42032f83"><div class="ttname"><a href="classAddBranch.html#a851af78f35b02bb783d2caff42032f83">AddBranch::connect</a></div><div class="ttdeci">void connect(MuxTypeA *muxA)</div><div class="ttdoc">AddBranch::connect: Conecta o Multiplexador ao somador.</div><div class="ttdef"><b>Definition:</b> <a href="addbranch_8cpp_source.html#l00023">addbranch.cpp:23</a></div></div>
 <div class="ttc" id="aclassAddNext_html_afff8640a1a555e60f27c8ababb0a1b33"><div class="ttname"><a href="classAddNext.html#afff8640a1a555e60f27c8ababb0a1b33">AddNext::connect</a></div><div class="ttdeci">void connect(MuxTypeA *muxA)</div><div class="ttdoc">AddNext::connect: Conecta o Multiplexador ao somador.</div><div class="ttdef"><b>Definition:</b> <a href="addnext_8cpp_source.html#l00023">addnext.cpp:23</a></div></div>
+<div class="ttc" id="aclassControl_html_ad42ec77fa7dde73a69b549d6ec7f8aa6"><div class="ttname"><a href="classControl.html#ad42ec77fa7dde73a69b549d6ec7f8aa6">Control::connect</a></div><div class="ttdeci">void connect(MakeBranch *makeBranch, DataMemory *dataMemory, MuxTypeB *muxB, MuxTypeC *muxC, ALUControl *aluControl, Registers *registers)</div><div class="ttdoc">Control::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00029">control.cpp:29</a></div></div>
+<div class="ttc" id="aclassDataMemory_html_a407b1dec19925ccd9a70fb657b73bf4d"><div class="ttname"><a href="classDataMemory.html#a407b1dec19925ccd9a70fb657b73bf4d">DataMemory::connect</a></div><div class="ttdeci">void connect(MuxTypeC *muxC)</div><div class="ttdoc">DataMemory::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="datamemory_8cpp_source.html#l00024">datamemory.cpp:24</a></div></div>
+<div class="ttc" id="aclassImmGen_html_a9f33cfef4428c5bb978cd33405c8ff65"><div class="ttname"><a href="classImmGen.html#a9f33cfef4428c5bb978cd33405c8ff65">ImmGen::connect</a></div><div class="ttdeci">void connect(AddBranch *addBranch, MuxTypeB *muxB)</div><div class="ttdoc">ImmGen::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="immgen_8cpp_source.html#l00025">immgen.cpp:25</a></div></div>
+<div class="ttc" id="aclassInstructionMemory_html_a88379e2a589a2a8c5a4735aac06ba8e3"><div class="ttname"><a href="classInstructionMemory.html#a88379e2a589a2a8c5a4735aac06ba8e3">InstructionMemory::connect</a></div><div class="ttdeci">void connect(Control *control, Registers *registers, ImmGen *immGen, ALUControl *aluControl)</div><div class="ttdoc">InstructionMemory::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="instructionmemory_8cpp_source.html#l00027">instructionmemory.cpp:27</a></div></div>
+<div class="ttc" id="aclassMakeBranch_html_ac41b9eadd1a89c95373f518cf5df5e54"><div class="ttname"><a href="classMakeBranch.html#ac41b9eadd1a89c95373f518cf5df5e54">MakeBranch::connect</a></div><div class="ttdeci">void connect(MuxTypeA *muxA)</div><div class="ttdoc">MakeBranch::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="makebranch_8cpp_source.html#l00024">makebranch.cpp:24</a></div></div>
+<div class="ttc" id="aclassMuxTypeA_html_a1f36d4f7df73f2d4f78c6e913ebc0378"><div class="ttname"><a href="classMuxTypeA.html#a1f36d4f7df73f2d4f78c6e913ebc0378">MuxTypeA::connect</a></div><div class="ttdeci">void connect(PC *pc)</div><div class="ttdoc">MuxTypeA::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="muxtypea_8cpp_source.html#l00024">muxtypea.cpp:24</a></div></div>
+<div class="ttc" id="aclassMuxTypeB_html_abcc422043d103781a662e9a9ec489d27"><div class="ttname"><a href="classMuxTypeB.html#abcc422043d103781a662e9a9ec489d27">MuxTypeB::connect</a></div><div class="ttdeci">void connect(ALU *alu)</div><div class="ttdoc">MuxTypeB::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="muxtypeb_8cpp_source.html#l00024">muxtypeb.cpp:24</a></div></div>
+<div class="ttc" id="aclassMuxTypeC_html_a0913221ab3e7c03f575c41d11378d13d"><div class="ttname"><a href="classMuxTypeC.html#a0913221ab3e7c03f575c41d11378d13d">MuxTypeC::connect</a></div><div class="ttdeci">void connect(Registers *registers)</div><div class="ttdoc">MuxTypeC::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="muxtypec_8cpp_source.html#l00024">muxtypec.cpp:24</a></div></div>
+<div class="ttc" id="aclassPC_html_af1ad0f73a3f6536a276fe5ea721b5474"><div class="ttname"><a href="classPC.html#af1ad0f73a3f6536a276fe5ea721b5474">PC::connect</a></div><div class="ttdeci">void connect(InstructionMemory *instructionMemory, AddBranch *addBranch, AddNext *addNext)</div><div class="ttdoc">PC::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="pc_8cpp_source.html#l00026">pc.cpp:26</a></div></div>
+<div class="ttc" id="aclassRegisters_html_a049d6b90bd23fb9924c8b8002c3315d8"><div class="ttname"><a href="classRegisters.html#a049d6b90bd23fb9924c8b8002c3315d8">Registers::connect</a></div><div class="ttdeci">void connect(ALU *alu, MuxTypeB *muxB, DataMemory *dataMemory)</div><div class="ttdoc">Registers::connect: Conecta via ponteiro aos elementos necessários para passagem de dados.</div><div class="ttdef"><b>Definition:</b> <a href="registers_8cpp_source.html#l00056">registers.cpp:56</a></div></div>
+<div class="ttc" id="aclassSimulator_html_a031573bfcfe2e0f5c9539bcc1c7fc5d9"><div class="ttname"><a href="classSimulator.html#a031573bfcfe2e0f5c9539bcc1c7fc5d9">Simulator::Simulator</a></div><div class="ttdeci">Simulator()</div><div class="ttdoc">Simulator::Simulator: Construtor da classe.</div><div class="ttdef"><b>Definition:</b> <a href="simulator_8cpp_source.html#l00013">simulator.cpp:13</a></div></div>
+<div class="ttc" id="aclassSimulator_html_a0f49aa04f42060a785adf77346b9de9f"><div class="ttname"><a href="classSimulator.html#a0f49aa04f42060a785adf77346b9de9f">Simulator::~Simulator</a></div><div class="ttdeci">~Simulator()</div><div class="ttdoc">Simulator::~Simulator: Destrutor da classe.</div><div class="ttdef"><b>Definition:</b> <a href="simulator_8cpp_source.html#l00073">simulator.cpp:73</a></div></div>
 <div class="ttc" id="asimulator_8h_html"><div class="ttname"><a href="simulator_8h.html">simulator.h</a></div><div class="ttdoc">Arquivo responsável por definir a classe.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

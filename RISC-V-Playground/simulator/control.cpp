@@ -1,17 +1,31 @@
 /**
- * @file instructiontypesb.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @file control.cpp
+ * @brief Arquivo responsável por implementar a classe Control
  * @author mGuerra
  * @version 0.1
 */
 
 #include "control.h"
 
+/**
+ * @brief Control::Control: Construtor da classe
+ */
 Control::Control()
 {
 
 }
 
+/**
+ * @brief Control::connect: Conecta via ponteiro
+ * aos elementos necessários para passagem de dados
+
+ * @param MakeBranch makeBranch
+ * @param DataMemory dataMemory
+ * @param MuxTypeB muxB
+ * @param MuxTypeC muxC
+ * @param ALUControl aluControl
+ * @param Registers registers
+ */
 void Control::connect(MakeBranch *makeBranch, DataMemory *dataMemory, MuxTypeB *muxB, MuxTypeC *muxC, ALUControl *aluControl, Registers *registers)
 {
     this->makeBranch = makeBranch;
@@ -32,6 +46,12 @@ void Control::setOpcode(Word opcode)
     tryExecute();
 }
 
+/**
+ * @brief Control::tryExecute: Tenta Executar o subcircuito
+ *
+ * @warning Executa apenas quando Possui todos os valores
+
+ */
 void Control::tryExecute()
 {
     if(hasOpcode) {
@@ -45,6 +65,9 @@ void Control::tryExecute()
     }
 }
 
+/**
+ * @brief Control::execute: Realiza todas as ações propostas pela classe
+ */
 void Control::execute()
 {
     if(opcode == 3) { // lw
@@ -113,6 +136,9 @@ void Control::execute()
     }
 }
 
+/**
+ * @brief Control::~Control: Destrutor da classe
+ */
 Control::~Control()
 {
 

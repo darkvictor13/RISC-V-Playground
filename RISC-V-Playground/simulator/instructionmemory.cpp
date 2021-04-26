@@ -1,17 +1,29 @@
 /**
- * @file instructiontypesb.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @file instructionmemory.cpp
+ * @brief Arquivo responsável por implementar a classe InstructionMemory
  * @author mGuerra
  * @version 0.1
 */
 
 #include "instructionmemory.h"
 
+/**
+ * @brief InstructionMemory::InstructionMemory: Construtor da classe
+ */
 InstructionMemory::InstructionMemory()
 {
 
 }
 
+/**
+ * @brief InstructionMemory::connect: Conecta via ponteiro
+ * aos elementos necessários para passagem de dados
+
+ * @param Control control
+ * @param Registers registers
+ * @param ImmGen immGen
+ * @param ALUControl aluControl
+ */
 void InstructionMemory::connect(Control *control, Registers *registers, ImmGen *immGen, ALUControl *aluControl)
 {
     this->control = control;
@@ -30,6 +42,12 @@ void InstructionMemory::setAddress(Word address)
     tryExecute();
 }
 
+/**
+ * @brief InstructionMemory::tryExecute: Tenta Executar o subcircuito
+ *
+ * @warning Executa apenas quando Possui todos os valores
+
+ */
 void InstructionMemory::tryExecute()
 {
     if(hasAddress) {
@@ -43,6 +61,9 @@ void InstructionMemory::tryExecute()
     }
 }
 
+/**
+ * @brief InstructionMemory::execute: Realiza todas as ações propostas pela classe
+ */
 void InstructionMemory::execute()
 {
     Word value = getValue(address);
@@ -58,6 +79,9 @@ void InstructionMemory::execute()
     aluControl->setInstruction(instruction);
 }
 
+/**
+ * @brief InstructionMemory::~InstructionMemory: Destrutor da classe
+ */
 InstructionMemory::~InstructionMemory()
 {
 

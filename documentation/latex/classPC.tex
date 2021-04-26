@@ -27,9 +27,11 @@ void {\bfseries executed} ()
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classPC_af1ad0f73a3f6536a276fe5ea721b5474}\label{classPC_af1ad0f73a3f6536a276fe5ea721b5474}} 
-void {\bfseries connect} (\mbox{\hyperlink{classInstructionMemory}{Instruction\+Memory}} $\ast$instruction\+Memory, \mbox{\hyperlink{classAddBranch}{Add\+Branch}} $\ast$add\+Branch, \mbox{\hyperlink{classAddNext}{Add\+Next}} $\ast$add\+Next)
-\item 
+\mbox{\Hypertarget{classPC_a213092addb3a1d89b761f780a055f0a3}\label{classPC_a213092addb3a1d89b761f780a055f0a3}} 
+\mbox{\hyperlink{classPC_a213092addb3a1d89b761f780a055f0a3}{PC}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPC_a213092addb3a1d89b761f780a055f0a3}{PC\+::\+PC}}\+: Construtor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPC_af1ad0f73a3f6536a276fe5ea721b5474}{connect}} (\mbox{\hyperlink{classInstructionMemory}{Instruction\+Memory}} $\ast$instruction\+Memory, \mbox{\hyperlink{classAddBranch}{Add\+Branch}} $\ast$add\+Branch, \mbox{\hyperlink{classAddNext}{Add\+Next}} $\ast$add\+Next)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPC_af1ad0f73a3f6536a276fe5ea721b5474}{PC\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPC_aeb3c926b2db0fa51e01ddea076589fa7}\label{classPC_aeb3c926b2db0fa51e01ddea076589fa7}} 
 void {\bfseries run} ()
 \item 
@@ -42,12 +44,14 @@ void {\bfseries restart} ()
 \mbox{\Hypertarget{classPC_a2a29aa44e0753aaa44f60fce6f35a2ed}\label{classPC_a2a29aa44e0753aaa44f60fce6f35a2ed}} 
 void {\bfseries set\+Address} (\mbox{\hyperlink{classWord}{Word}} address)
 \item 
-\mbox{\Hypertarget{classPC_ad682a348fa2a6136ceaf55f8d7d6b7f4}\label{classPC_ad682a348fa2a6136ceaf55f8d7d6b7f4}} 
-void {\bfseries try\+Execute} ()
-\item 
+void \mbox{\hyperlink{classPC_ad682a348fa2a6136ceaf55f8d7d6b7f4}{try\+Execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPC_ad682a348fa2a6136ceaf55f8d7d6b7f4}{PC\+::try\+Execute}}\+: Tenta alterar o valor de Pc. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPC_a9249d3927bba71f229e39f2f41f8a61a}\label{classPC_a9249d3927bba71f229e39f2f41f8a61a}} 
-void {\bfseries execute} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classPC_a9249d3927bba71f229e39f2f41f8a61a}{execute}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPC_a9249d3927bba71f229e39f2f41f8a61a}{PC\+::execute}}\+: Realiza todas as ações propostas pela classe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPC_a115da8404d548672d21556278fbcf3d9}\label{classPC_a115da8404d548672d21556278fbcf3d9}} 
+\mbox{\hyperlink{classPC_a115da8404d548672d21556278fbcf3d9}{$\sim$\+PC}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPC_a115da8404d548672d21556278fbcf3d9}{PC\+::$\sim$\+PC}}\+: Destrutor da classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
@@ -57,7 +61,50 @@ Definição na linha 26 do arquivo pc.\+h.
 
 
 
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classPC_af1ad0f73a3f6536a276fe5ea721b5474}\label{classPC_af1ad0f73a3f6536a276fe5ea721b5474}} 
+\index{PC@{PC}!connect@{connect}}
+\index{connect@{connect}!PC@{PC}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void PC\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInstructionMemory}{Instruction\+Memory}} $\ast$}]{instruction\+Memory,  }\item[{\mbox{\hyperlink{classAddBranch}{Add\+Branch}} $\ast$}]{add\+Branch,  }\item[{\mbox{\hyperlink{classAddNext}{Add\+Next}} $\ast$}]{add\+Next }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classPC_af1ad0f73a3f6536a276fe5ea721b5474}{PC\+::connect}}\+: Conecta via ponteiro aos elementos necessários para passagem de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \mbox{\hyperlink{classInstructionMemory}{Instruction\+Memory}}} & instruction\+Memory \\
+\hline
+{\em \mbox{\hyperlink{classAddBranch}{Add\+Branch}}} & add\+Branch \\
+\hline
+{\em \mbox{\hyperlink{classAddNext}{Add\+Next}}} & add\+Next \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 26 do arquivo pc.\+cpp.
+
+\mbox{\Hypertarget{classPC_ad682a348fa2a6136ceaf55f8d7d6b7f4}\label{classPC_ad682a348fa2a6136ceaf55f8d7d6b7f4}} 
+\index{PC@{PC}!tryExecute@{tryExecute}}
+\index{tryExecute@{tryExecute}!PC@{PC}}
+\doxysubsubsection{\texorpdfstring{tryExecute()}{tryExecute()}}
+{\footnotesize\ttfamily void PC\+::try\+Execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classPC_ad682a348fa2a6136ceaf55f8d7d6b7f4}{PC\+::try\+Execute}}\+: Tenta alterar o valor de Pc. 
+
+\begin{DoxyWarning}{Aviso}
+Executa apenas quando Possui todos os valores 
+\end{DoxyWarning}
+
+
+Definição na linha 65 do arquivo pc.\+cpp.
+
+
+
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
 pc.\+h\item 
-pc.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{pc_8cpp}{pc.\+cpp}}\end{DoxyCompactItemize}

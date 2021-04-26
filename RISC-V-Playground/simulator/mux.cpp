@@ -1,12 +1,15 @@
 /**
- * @file memory.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @file mux.cpp
+ * @brief Arquivo responsável por implementar a classe Mux
  * @author mGuerra
  * @version 0.1
 */
 
 #include "mux.h"
 
+/**
+ * @brief Mux::Mux: Construtor da classe
+ */
 Mux::Mux()
 {
 
@@ -42,6 +45,12 @@ void Mux::setSelection(Word selection)
     tryExecute();
 }
 
+/**
+ * @brief Mux::tryExecute: Tenta Executar o subcircuito
+ *
+ * @warning Executa apenas quando Possui todos os valores
+
+ */
 void Mux::tryExecute()
 {
     if(hasValueA && hasValueB && hasSelection) {
@@ -59,6 +68,9 @@ void Mux::tryExecute()
     }
 }
 
+/**
+ * @brief Mux::~Mux: Destrutor da classe
+ */
 Mux::~Mux()
 {
 

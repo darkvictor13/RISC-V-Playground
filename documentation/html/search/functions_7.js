@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_245',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['mask_246',['mask',['../classWord.html#a05ea4fffa16f698bb72a81876fc72e9f',1,'Word']]]
+  ['length_5fof_5fbase_297',['length_of_base',['../classWord.html#a9eb04eebc3437a667493cb0301c02b00',1,'Word']]]
 ];

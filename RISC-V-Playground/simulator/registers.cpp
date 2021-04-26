@@ -1,12 +1,15 @@
 /**
  * @file registers.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @brief Arquivo responsável por implementar a classe Registers
  * @author mGuerra
  * @version 0.1
 */
 
 #include "registers.h"
 
+/**
+ * @brief Registers::Registers: Construtor da classe
+ */
 Registers::Registers()
 {
 
@@ -42,6 +45,14 @@ void Registers::restart()
     emit restartRegisters();
 }
 
+/**
+ * @brief Registers::connect: Conecta via ponteiro
+ * aos elementos necessários para passagem de dados
+
+ * @param ALU alu
+ * @param MuxTypeB muxB
+ * @param DataMemory dataMemory
+ */
 void Registers::connect(ALU *alu, MuxTypeB *muxB, DataMemory *dataMemory)
 {
     this->alu = alu;
@@ -99,6 +110,12 @@ void Registers::setRegWrite(Word regWrite)
     tryExecute();
 }
 
+/**
+ * @brief Registers::tryExecute: Tenta Executar o subcircuito
+ *
+ * @warning Executa apenas quando Possui todos os valores
+
+ */
 void Registers::tryExecute()
 {
     if(hasReadRegister1 && hasReadRegister2 && hasWriteRegister) {
@@ -138,6 +155,9 @@ void Registers::executeWrite()
     }
 }
 
+/**
+ * @brief Registers::~Registers: Destrutor da classe
+ */
 Registers::~Registers()
 {
 

@@ -17,7 +17,7 @@ AddBranch::AddBranch()
 
 /**
  * @brief AddBranch::connect: Conecta o Multiplexador ao somador
- * @param muxA: Multiplexador que seleciona entre
+ * @param MuxTypeA muxA: Multiplexador que seleciona entre
  * o valor 4 ou o offset
  */
 void AddBranch::connect(MuxTypeA *muxA)

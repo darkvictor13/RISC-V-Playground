@@ -1,12 +1,15 @@
 /**
  * @file memory.cpp
- * @brief Arquivo responsável por implementar a classe
+ * @brief Arquivo responsável por implementar a classe Memory
  * @author mGuerra
  * @version 0.1
 */
 
 #include "memory.h"
 
+/**
+ * @brief Memory::Memory: Construtor da classe
+ */
 Memory::Memory()
 {
 
@@ -98,6 +101,9 @@ bool Memory::testInstruction(Word address)
     return false;
 }
 
+/**
+ * @brief Memory::~Memory: Destrutor da classe
+ */
 Memory::~Memory()
 {
 
