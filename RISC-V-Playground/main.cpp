@@ -33,10 +33,39 @@
 
   @section uso Instruções para uso
 
+  Uma vez iniciada a execução do programa esses são os passos necessários para o uso do Software:
+  
+  - Abrindo o arquivo
 
-  @section D Descrevendo a experiência
+  @image html img1.png
 
-  Escrever algo aqui
+  - Selecionando o arquivo
+
+  @image html img2.png
+
+  - Carregando as instruções
+
+  @image html img3.png
+
+  - Execute passo a passo
+
+  @image html img4.png
+
+  @section j Abas do Programa:
+  - Registers: Mostra o conteúdo dos registradores.
+  -
+  -
+  -
+
+  @section Como Como foi implementado
+
+  @subsection caminho O caminho de Dados:
+  O caminho de dados foi implementado de forma igual ao explicado em sala de aula:
+
+  @image html caminho.png
+
+  Porém para a implementação da instrução BNE, faz-se necessário a inclusão de mais uma "flag",
+  chamada de reverse a qual nega o valor da flag "Zero" quando a instrução chamada é a BNE.
 
   @subsection softwares Softwares utilizados para o desenvolvimento:
 
@@ -48,6 +77,12 @@
 
   Escrever algo aqui
 
+
+  @section D Descrevendo a experiência
+
+  Escrever algo aqui
+
+  
   @subsection positivos Pontos positivos:
 
   - Falar coisas positivas sobre a experiencia;

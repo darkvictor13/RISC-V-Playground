@@ -28,8 +28,12 @@ var NAVTREE =
     [ "Algorítimo para Simulador RISC-V", "index.html", [
       [ "Objetivo", "index.html#Objetivo", null ],
       [ "Instruções para uso", "index.html#uso", null ],
+      [ "Abas do Programa:", "index.html#j", null ],
+      [ "Como foi implementado", "index.html#Como", [
+        [ "O caminho de Dados:", "index.html#caminho", null ],
+        [ "Softwares utilizados para o desenvolvimento:", "index.html#softwares", null ]
+      ] ],
       [ "Descrevendo a experiência", "index.html#D", [
-        [ "Softwares utilizados para o desenvolvimento:", "index.html#softwares", null ],
         [ "Pontos positivos:", "index.html#positivos", null ],
         [ "Pontos negativos:", "index.html#negativos", null ]
       ] ],
