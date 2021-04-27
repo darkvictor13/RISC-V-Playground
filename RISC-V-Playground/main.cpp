@@ -52,10 +52,22 @@
   @image html img4.png
 
   @section j Abas do Programa:
-  - Registers: Mostra o conteúdo dos registradores.
-  -
-  -
-  -
+  - Registradores: Mostra o conteúdo dos registradores, implementados na classe Registers.
+
+    @image html reg.png "" width=\textwidth
+
+  - Flags: Mostra o conteúdo das flags, listadas na ViewMainWindow.
+
+    @image html flag.png
+
+  - Instruction Memory: Mostra o conteúdo da Memória de instruções, implementada pela classe InstructionMemory.
+
+    @image html instMem.png
+
+  - Data Memory: Mostra o conteúdo da Memória de dados, implementada pela classe DataMemory.
+
+    @image html dataMem.png
+
 
   @section Como Como foi implementado
 

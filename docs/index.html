@@ -16,7 +16,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -132,10 +132,27 @@ Instruções para uso</h1>
 <h1><a class="anchor" id="j"></a>
 Abas do Programa:</h1>
 <ul>
-<li><a class="el" href="classRegisters.html" title="A classe Registers: Representa os registradores visíveis ao programador.">Registers</a>: Mostra o conteúdo dos registradores.</li>
-<li></li>
-<li></li>
-<li></li>
+<li><p class="startli">Registradores: Mostra o conteúdo dos registradores, implementados na classe <a class="el" href="classRegisters.html" title="A classe Registers: Representa os registradores visíveis ao programador.">Registers</a>.</p>
+<div class="image">
+<img src="reg.png" alt="" width="\textwidth"/>
+</div>
+</li>
+<li><p class="startli">Flags: Mostra o conteúdo das flags, listadas na <a class="el" href="classViewMainWindow.html" title="A classe ViewMainWindow: responsável pela representação dos dados de estado do simulador en tela,...">ViewMainWindow</a>.</p>
+<div class="image">
+<img src="flag.png" alt="" width="1300px"/>
+<div class="caption">
+Flags</div></div>
+</li>
+<li><p class="startli"><a class="el" href="classInstruction.html" title="A classe Instruction: é a base para todos os modos de instrução.">Instruction</a> <a class="el" href="classMemory.html" title="A classe Memory: Classe abstrata base para os diferentes tipos de memória.">Memory</a>: Mostra o conteúdo da Memória de instruções, implementada pela classe <a class="el" href="classInstructionMemory.html" title="A classe InstructionMemory: Representa a memória de instruções.">InstructionMemory</a>.</p>
+<div class="image">
+<img src="instMem.png" alt="" width="\textwidth"/>
+</div>
+</li>
+<li><p class="startli">Data <a class="el" href="classMemory.html" title="A classe Memory: Classe abstrata base para os diferentes tipos de memória.">Memory</a>: Mostra o conteúdo da Memória de dados, implementada pela classe <a class="el" href="classDataMemory.html" title="A classe DataMemory: Representa a memória de Dados.">DataMemory</a>.</p>
+<div class="image">
+<img src="dataMem.png" alt="" width="\textwidth"/>
+</div>
+</li>
 </ul>
 <h1><a class="anchor" id="Como"></a>
 Como foi implementado</h1>
