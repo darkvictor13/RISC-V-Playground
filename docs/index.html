@@ -16,7 +16,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -87,7 +87,8 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">Algorítimo para Simulador RISC-V </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="Objetivo"></a>
+<div class="textblock"><p>Software desenvolvido como segundo trabalho da diciplina de Organização e Arquitetura de Computadores do curso de Ciêcia da Computação da UNIOESTE, Universidade Estadual do Oeste do Paraná, Campus de Foz do Iguaçu ministrada no ano de 2021, pela professora Fabiana Frata Furlan Peres, pelos alunos Marco A. G. Pedroso, Milena L. dos Santos, Victor E. Almeida</p>
+<h1><a class="anchor" id="Objetivo"></a>
 Objetivo</h1>
 <p>Aplicativo tem como objetivo simular o comportamento de uma máquina RISC-V.</p>
 <p>Considerando um conjunto limitado de instruções:</p>
@@ -104,6 +105,8 @@ Objetivo</h1>
 </ul>
 <h1><a class="anchor" id="uso"></a>
 Instruções para uso</h1>
+<p>Para a execução do programa é recomendado o uso de um sistema GNU/Linux, preferencialmente da familia de distribuições Arch.</p>
+<p>Caso queira compilar o software para outro sistema operacional, faz-se necessário instalar o Qt-creator.</p>
 <p>Uma vez iniciada a execução do programa esses são os passos necessários para o uso do Software:</p>
 <ul>
 <li>Abrindo o arquivo</li>
@@ -130,27 +133,27 @@ Instruções para uso</h1>
 <img src="img4.png" alt=""/>
 </div>
 <h1><a class="anchor" id="j"></a>
-Abas do Programa:</h1>
+Abas do Programa</h1>
+<p>Partes secundárias da interface gráfica que visam disponibilizar informações valiosas a respeito do atual funcionamento do simulador, tais como:</p>
 <ul>
-<li><p class="startli">Registradores: Mostra o conteúdo dos registradores, implementados na classe <a class="el" href="classRegisters.html" title="A classe Registers: Representa os registradores visíveis ao programador.">Registers</a>.</p>
+<li><p class="startli">Registradores: Mostra o conteúdo de cada um dos registradores, implementados na classe <a class="el" href="classRegisters.html" title="A classe Registers: Representa os registradores visíveis ao programador.">Registers</a>.</p>
 <div class="image">
-<img src="reg.png" alt="" width="\textwidth"/>
+<img src="reg.png" alt=""/>
 </div>
 </li>
-<li><p class="startli">Flags: Mostra o conteúdo das flags, listadas na <a class="el" href="classViewMainWindow.html" title="A classe ViewMainWindow: responsável pela representação dos dados de estado do simulador en tela,...">ViewMainWindow</a>.</p>
+<li><p class="startli">Flags: Mostra o conteúdo das flags geradas por cada um dos componentes, listadas na <a class="el" href="classViewMainWindow.html" title="A classe ViewMainWindow: responsável pela representação dos dados de estado do simulador en tela,...">ViewMainWindow</a>.</p>
 <div class="image">
-<img src="flag.png" alt="" width="1300px"/>
-<div class="caption">
-Flags</div></div>
-</li>
-<li><p class="startli"><a class="el" href="classInstruction.html" title="A classe Instruction: é a base para todos os modos de instrução.">Instruction</a> <a class="el" href="classMemory.html" title="A classe Memory: Classe abstrata base para os diferentes tipos de memória.">Memory</a>: Mostra o conteúdo da Memória de instruções, implementada pela classe <a class="el" href="classInstructionMemory.html" title="A classe InstructionMemory: Representa a memória de instruções.">InstructionMemory</a>.</p>
-<div class="image">
-<img src="instMem.png" alt="" width="\textwidth"/>
+<img src="flag.png" alt=""/>
 </div>
 </li>
-<li><p class="startli">Data <a class="el" href="classMemory.html" title="A classe Memory: Classe abstrata base para os diferentes tipos de memória.">Memory</a>: Mostra o conteúdo da Memória de dados, implementada pela classe <a class="el" href="classDataMemory.html" title="A classe DataMemory: Representa a memória de Dados.">DataMemory</a>.</p>
+<li><p class="startli">Memória de instrução: Mostra o conteúdo da Memória de instruções, implementada pela classe <a class="el" href="classInstructionMemory.html" title="A classe InstructionMemory: Representa a memória de instruções.">InstructionMemory</a>.</p>
 <div class="image">
-<img src="dataMem.png" alt="" width="\textwidth"/>
+<img src="instMem.png" alt=""/>
+</div>
+</li>
+<li><p class="startli">Memória de Dados: Mostra o conteúdo da Memória de dados, implementada pela classe <a class="el" href="classDataMemory.html" title="A classe DataMemory: Representa a memória de Dados.">DataMemory</a>.</p>
+<div class="image">
+<img src="dataMem.png" alt=""/>
 </div>
 </li>
 </ul>
@@ -162,38 +165,42 @@ O caminho de Dados:</h2>
 <div class="image">
 <img src="caminho.png" alt=""/>
 </div>
-<p>Porém para a implementação da instrução BNE, faz-se necessário a inclusão de mais uma "flag", chamada de reverse a qual nega o valor da flag "Zero" quando a instrução chamada é a BNE.</p>
+<p>Porém para a implementação da instrução BNE, faz-se necessário a inclusão de mais uma "flag", chamada de reverse a qual sai da <a class="el" href="classALUControl.html" title="A classe ALUControl: Responsável por indicar que operação a ALU deve executar.">ALUControl</a> e vai para <a class="el" href="classALU.html" title="A classe ALU: Representa a unidade lógica e aritimética responsável por executar toda operação do pro...">ALU</a> negando assim o valor da flag "Zero" quando a instrução chamada é a BNE.</p>
+<p>Qualquer outra dúvida a respeito de como foi implementada as classes ou o relacionamento entre as mesmas a resposta pode ser encontrada observando a lista de classes e arquivos.</p>
 <h2><a class="anchor" id="softwares"></a>
 Softwares utilizados para o desenvolvimento:</h2>
 <ul>
 <li>Controle de Versão: Git;</li>
 <li>Hospedagem do controle de Versão: Github;</li>
-<li>Framework: Qt;</li>
+<li>Linguagem: C++;</li>
+<li>Framework Gráfico: Qt;</li>
+<li>IDE para desenvolvimento: QT-Creator;</li>
 <li>Documentação: Doxygen;</li>
-<li>Hospedagem do Site gerado pela documentação: Github</li>
+<li>Hospedagem do Site gerado pela documentação: Github.</li>
 </ul>
-<p>Escrever algo aqui</p>
 <h1><a class="anchor" id="D"></a>
 Descrevendo a experiência</h1>
-<p>Escrever algo aqui</p>
+<p>A realização desse trabalho, como proposto pela professora, permitiu verificar e colocar em prática os conceitos por ela apresentados em sala sobre a implementação monociclo da arquitetura livre RISC-V. Nesse sentido, a continuação são abordados os pontos positivos e negativos relevantes relativos à experiência de criação do simulador.</p>
 <h2><a class="anchor" id="positivos"></a>
 Pontos positivos:</h2>
 <ul>
-<li>Falar coisas positivas sobre a experiencia;</li>
 <li>O Software atinge o objetivo de simular uma máquina RISC-V;</li>
 <li>O Software representa o simula exatamente o caminho de dados proposto em sala;</li>
 <li>O Software representa cada instrução no nível binário;</li>
-<li></li>
+<li>A criação do trabalho permitiu aprofundar os conceitos a respeito da Arquitetura RISC-V, em sua implementação monociclo;</li>
+<li>O Trabalho em grupo permitiu melhorar a capacitade de desenvolver trabalhos complexos como uma equipe;</li>
+<li>Pode-se colocar em prática conhecimentos de engenharia de software, tais como: padrões de projeto, divisão de tarefas, controle de versão.</li>
 </ul>
 <h2><a class="anchor" id="negativos"></a>
 Pontos negativos:</h2>
 <ul>
-<li>Falar coisas negativas sobre a experiencia;</li>
-<li>Houve trabalho feito a toa;</li>
+<li>No início do projeto hoveram dúvidas a respeito de que caminho seguir com a implementação do projeto, dessa forma, trechos de código implementados de forma diferente, sendo necessário um "merge" no git;</li>
+<li>Escassez de tempo, o que provocou a tomada de decisões que diminuiram o escopo do trabalho, porém mantendo-o dentro das exigências trazidas pela professora;</li>
 </ul>
 <h1><a class="anchor" id="trabalho"></a>
-Descrição da dinâmica de trabalho do grupo</h1>
-<p>Dentro da documentação de cada método e classe possui o nome do autor </p>
+Dinâmica de trabalho do grupo</h1>
+<p>Inicialmente foi realizada uma vídeo chamada para definir os componentes a serem implementados no trabalho, prestando atenção as necessidades do mesmo, para dessa forma possibilitar o trabalho paralelo dos estudantes, dessa forma estabeleceu-se metas e prazos que permitissem no final do prazo ter o trabalho realizado.</p>
+<p>Porém houve divergência quanto a implementação das instruções, motivo pelo qual até certo ponto do trabalho foram mantidas duas versões diferentes, tentando decidir qual delas se adaptava melhor às exigências do mesmo. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
