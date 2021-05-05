@@ -41,22 +41,9 @@ void Simulator::init()
     dataMemory->init();
 }
 
-void Simulator::run()
-{
-    while(instructionMemory->testInstruction(pc->getAddress())) {
-        pc->run();
-    }
-}
-
 void Simulator::step()
 {
     pc->run();
-}
-
-void Simulator::restart()
-{
-    pc->restart();
-    dataMemory->restart();
 }
 
 void Simulator::loadMemory(QString file)

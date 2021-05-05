@@ -54,11 +54,11 @@ private:
     QString generateFileName(QString fileName);
 
 public slots:
-    void on_actionNew_triggered();
+    //void on_actionNew_triggered();
     void on_actionOpen_triggered();
 
-    void on_actionSave_triggered();
-    void on_actionSave_as_triggered();
+    //void on_actionSave_triggered();
+    //void on_actionSave_as_triggered();
 
     void on_actionPreferences_triggered();
 
@@ -68,9 +68,7 @@ public slots:
     void on_actionDocumentation_triggered();
 
     void on_actionLoad_triggered();
-    void on_actionRun_triggered();
     void on_actionStep_triggered();
-    void on_actionRestart_triggered();
 
     void receivedAddBranchValueA(Word valueA);
     void receivedAddBranchValueB(Word valueB);

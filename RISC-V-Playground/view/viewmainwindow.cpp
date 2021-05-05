@@ -22,9 +22,7 @@ ViewMainWindow::ViewMainWindow(QWidget *parent)
     QObject::connect(assembler, &Assembler::consoleLog, this, &ViewMainWindow::consoleLog);
 
     QObject::connect(this, &ViewMainWindow::init, simulator, &Simulator::init);
-    QObject::connect(this, &ViewMainWindow::run, simulator, &Simulator::run);
     QObject::connect(this, &ViewMainWindow::step, simulator, &Simulator::step);
-    QObject::connect(this, &ViewMainWindow::restart, simulator, &Simulator::restart);
     QObject::connect(this, &ViewMainWindow::loadMemory, simulator, &Simulator::loadMemory);
 
     QObject::connect(simulator->addBranch, &AddBranch::receivedValueA, this, &ViewMainWindow::receivedAddBranchValueA);
@@ -116,18 +114,22 @@ ViewMainWindow::~ViewMainWindow()
 /**
  * @brief ViewMainWindow::on_actionNew_triggered
  */
+/*
 void ViewMainWindow::on_actionNew_triggered()
 {
     thisFile = "new";
     ui->plainTextEdit->setPlainText("");
+    consoleLog(thisFile);
 }
+*/
 
 /**
  * @brief ViewMainWindow::on_actionOpen_triggered
  */
 void ViewMainWindow::on_actionOpen_triggered()
 {
-    thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../tests/", "");
+    thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", ".", "");
+    consoleLog(thisFile);
 
     QFile file(thisFile);
     file.open(QFile::ReadOnly | QFile::Text);
@@ -137,12 +139,14 @@ void ViewMainWindow::on_actionOpen_triggered()
     file.close();
 
     thisFile = generateFileName(thisFile);
+    consoleLog(thisFile);
 }
 
 /**
  * @brief ViewMainWindow::on_actionSave_triggered
  */
-void ViewMainWindow::on_actionSave_triggered()
+/*
+ * void ViewMainWindow::on_actionSave_triggered()
 {
     QFile file(thisFile);
     file.open(QFile::WriteOnly | QFile::Text);
@@ -151,23 +155,28 @@ void ViewMainWindow::on_actionSave_triggered()
     outputFile << ui->plainTextEdit->toPlainText();
 
     file.close();
+    consoleLog(thisFile);
 }
+*/
 
 /**
  * @brief ViewMainWindow::on_actionSave_as_triggered
  */
+/*
 void ViewMainWindow::on_actionSave_as_triggered()
 {
-    thisFile = QFileDialog::getOpenFileName(this, "Open assembly file", "../tests/", "");
+    thisFile = QFileDialog::getSaveFileName(this, "Save assembly file", ".", "");
 
-    QFile file(thisFile);
+    QFile file(thisFile + ".s");
     file.open(QFile::WriteOnly | QFile::Text);
 
     QTextStream outputFile(&file);
     outputFile << ui->plainTextEdit->toPlainText();
 
     file.close();
+    consoleLog(thisFile);
 }
+*/
 
 /**
  * @brief ViewMainWindow::on_actionPreferences_triggered
@@ -206,6 +215,10 @@ void ViewMainWindow::on_actionDocumentation_triggered()
  */
 void ViewMainWindow::on_actionLoad_triggered()
 {
+    //if (!QFile::exists(thisFile)) {
+    //    return;
+    //}
+
     emit assemble(thisFile + ".s", thisFile + ".b");
 
     ui->instructionListWidget->clear();
@@ -226,14 +239,7 @@ void ViewMainWindow::on_actionLoad_triggered()
     file.close();
 
     emit loadMemory(thisFile);
-}
-
-/**
- * @brief ViewMainWindow::on_actionRun_triggered
- */
-void ViewMainWindow::on_actionRun_triggered()
-{
-    emit run();
+    consoleLog(thisFile);
 }
 
 /**
@@ -243,14 +249,6 @@ void ViewMainWindow::on_actionStep_triggered()
 {
     treeWidgetClear();
     emit step();
-}
-
-/**
- * @brief ViewMainWindow::on_actionRestart_triggered
- */
-void ViewMainWindow::on_actionRestart_triggered()
-{
-    emit restart();
 }
 
 /**
@@ -610,8 +608,6 @@ void ViewMainWindow::loadInstructionMemory(vector<Word> memoryData)
 void ViewMainWindow::updateInstructionMemory(Word value, Word address)
 {
     ui->instructionMemoryTableWidget->setItem(address.getInteger(), 1, new QTableWidgetItem(value.getDecimal()));
-
-    consoleLog("Updated InstructionMemory.");
 }
 
 /**

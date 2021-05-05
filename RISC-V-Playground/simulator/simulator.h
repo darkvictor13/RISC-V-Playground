@@ -62,9 +62,7 @@ public:
 
 public slots:
     void init();
-    void run();
     void step();
-    void restart();
 
     void loadMemory(QString file);
 
