@@ -4,8 +4,6 @@ var classSimulator =
     [ "~Simulator", "classSimulator.html#a0f49aa04f42060a785adf77346b9de9f", null ],
     [ "init", "classSimulator.html#a630ca1f9cba087798058d6b0d5c8564d", null ],
     [ "loadMemory", "classSimulator.html#a2e5648e4bec42b934b0ef5ca14eb7f96", null ],
-    [ "restart", "classSimulator.html#a6554f29192af1ef8f735da97a79cdf06", null ],
-    [ "run", "classSimulator.html#aa2de7e32b04cc3e8fc60aec23997621b", null ],
     [ "step", "classSimulator.html#ac11a8e1119c88c075853f11a23518d0d", null ],
     [ "addBranch", "classSimulator.html#a1f56e086a9e6e8f1cda51d863be142dd", null ],
     [ "addNext", "classSimulator.html#a227669b3d726adc0f67501a7d2c9c71c", null ],

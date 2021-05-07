@@ -14,8 +14,8 @@
 /**
   @mainpage Algorítimo para Simulador RISC-V
 
-  Software desenvolvido como segundo trabalho da diciplina de Organização e Arquitetura de Computadores
-  do curso de Ciêcia da Computação da UNIOESTE, Universidade Estadual do Oeste do Paraná, Campus de Foz do Iguaçu
+  Software desenvolvido como segundo trabalho da disciplina de Organização e Arquitetura de Computadores
+  do curso de Ciência da Computação da UNIOESTE, Universidade Estadual do Oeste do Paraná, Campus de Foz do Iguaçu
   ministrada no ano de 2021, pela professora Fabiana Frata Furlan Peres, pelos alunos Marco A. G. Pedroso, Milena L. dos Santos,
   Victor E. Almeida
 
@@ -39,7 +39,7 @@
   @section uso Instruções para uso
 
   Para a execução do programa é recomendado o uso de um sistema GNU/Linux,
-  preferencialmente da familia de distribuições Arch.
+  preferencialmente da família de distribuições Arch.
 
   Caso queira compilar o software para outro sistema operacional, faz-se necessário instalar o Qt-creator.
 
@@ -116,19 +116,19 @@
   @subsection positivos Pontos positivos:
 
   - O Software atinge o objetivo de simular uma máquina RISC-V;
-  - O Software representa o simula exatamente o caminho de dados
+  - O Software simula exatamente o caminho de dados
   proposto em sala;
   - O Software representa cada instrução no nível binário;
   - A criação do trabalho permitiu aprofundar os conceitos a respeito da Arquitetura RISC-V, em sua implementação monociclo;
-  - O Trabalho em grupo permitiu melhorar a capacitade de desenvolver trabalhos complexos como uma equipe;
+  - O Trabalho em grupo permitiu melhorar a capacidade de desenvolver trabalhos complexos como uma equipe;
   - Pode-se colocar em prática conhecimentos de engenharia de software, tais como: padrões de projeto, divisão de tarefas,
   controle de versão.
 
   @subsection negativos Pontos negativos:
 
-  - No início do projeto hoveram dúvidas a respeito de que caminho seguir com a implementação do projeto,
+  - No início do projeto houveram dúvidas a respeito de que caminho seguir com a implementação do projeto,
   dessa forma, trechos de código implementados de forma diferente, sendo necessário um "merge" no git;
-  - Escassez de tempo, o que provocou a tomada de decisões que diminuiram o escopo do trabalho, porém mantendo-o
+  - Escassez de tempo, o que provocou a tomada de decisões que diminuíram o escopo do trabalho, porém mantendo-o
   dentro das exigências trazidas pela professora;
 
   @section trabalho Dinâmica de trabalho do grupo

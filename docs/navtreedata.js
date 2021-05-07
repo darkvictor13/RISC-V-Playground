@@ -63,7 +63,7 @@ var NAVTREEINDEX =
 [
 "add_8cpp.html",
 "classMuxTypeC.html#ad4677c4276b2fe9688bdffcc99a70328",
-"globals_defs.html"
+"index.html"
 ];
 
 var SYNCONMSG = 'clique para desativar a sincronização do painel';
